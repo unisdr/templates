@@ -1,0 +1,96 @@
+#promoModuleRight {
+	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color:#3b3b3b;
+	border-bottom:none;
+	position:relative;
+}
+#promoModuleRight .moduleHead div {
+  padding-bottom: 5px;
+  padding-top: 8px;
+  font-size:14px;
+}
+#promoModuleRight .moduleBody {
+  padding:0;
+  background-color:#ececec;
+}
+#promoModuleRight .promoTitle {
+	font-size:18px;
+	font-weight:700;
+	color:#fff;
+	padding:7px 10px 5px;
+}
+#promoModuleRight .expert .promoTitle {
+	background:url('../img/promo-module-header-expert.png') top left no-repeat;
+}
+#promoModuleRight .editor .promoTitle {
+	background:url('../img/promo-module-header-editor.png') top left no-repeat;
+}
+#promoModuleRight .promoContent {
+	padding:15px 10px 1px;
+	text-align:center;
+}
+#promoModuleRight .theme {
+	font-size:12px;
+	font-weight:500;
+	margin-bottom:15px;
+}
+#promoModuleRight .name {
+	font-size:14px;
+	font-weight:700;
+}
+#promoModuleRight .job {
+	font-size:12px;
+	font-weight:500;
+	color:#999999;
+	margin-bottom:20px;
+}
+#promoModuleRight .job span {
+	font-size:12px;
+	font-weight:700;
+	display:block;
+}
+#promoModuleRight .job .uppercase {
+	text-transform:uppercase;
+	font-weight:400;
+}
+#promoModuleRight .promoContent a {
+	font-size:16px;
+	color:#4a68a6;
+	font-weight:700;
+	display:inline-block;
+	margin-bottom:18px;
+}
+#promoModuleRight .session {
+	font-size:18px;
+	font-weight:700;
+	margin-bottom:20px;
+}
+#promoModuleRight .session span {
+	margin:0 5px;
+	color: #959595;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-style: italic;
+    font-weight: 400;
+}
+#promoModuleRight .promoNav {
+	padding:0 10px;
+	text-align:center;
+	background-color:#ececec;
+	border-left: 1px solid #D4D4D4;
+	border-right: 1px solid #D4D4D4;
+	position:relative;
+}
+#promoModuleRight .promoNav a {
+	display:inline-block;
+	width:17px;
+	height:17px;
+	background:url('../img/ico-promonav.png') top left no-repeat;
+	margin-bottom:0;
+}
+#promoModuleRight .promoNav a.current {
+	background:url('../img/ico-promonav-current.png') top left no-repeat;
+}
+#promoModuleRight .pipe {
+	background:none;
+}

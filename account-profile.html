@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html  lang="en" id="doc" class="ie8 no-js"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]>
+<!--> <html lang="en" id="doc" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Account - Profile | PreventionWeb.net</title>
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
+	<!--<link rel="stylesheet" type="text/css" href="assets/shared/zurb-foundation-wysihtml5/lib/css/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="assets/shared/zurb-foundation-wysihtml5/lib/css/foundation-glyphicons.css" />
+    <link rel="stylesheet" type="text/css" href="assets/shared/zurb-foundation-wysihtml5/src/zurb-foundation-wysihtml5.css" />-->
+<!-- RP new WYSIWYG editor: replace css above with the one below -->                                                    
+    <link rel="stylesheet" href="assets/shared/jQuery-TE_v.1.4.0/jquery-te-1.4.0.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+	<!-- RP: IE9 css for select background -->	
+    <!--[if IE 9]><link rel="stylesheet" href="assets/css/app_ie9.css" /><![endif]-->
+	<!-- RP: set status text for each switch with CSS -->	
+    <style>
+		#switch01 label:after {content: 'No';}
+		#switch01 input:checked + label:after {content: 'Yes';		}
+    </style>
+    <script src="assets/shared/foundation/v5.2.3/js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/f5a1d61e-8421-43db-82ac-6053b84c9bc4.js"></script>
+</head>
+<body>
+    <div class="baseContainer bg-black">
+        <div class="hfaRibbon"></div>
+        <div class="bg-black" style="color:#fff">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="contentContainer" id="top-header">
+                        <div class="wrapper">
+                            <ul>
+                                <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                <li class="current"><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                            </ul>
+                            <img id="menu-igniter" class="icon-menu" src="assets/img/icon-grid-menu.png" alt="Image unavailable">
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="wrapper" id="top-menu">
+                            <div id="#igniter-target" class="top-dropdown-menu">
+                                <a id="menu-close" class="closer" href="">x</a>
+                                <div class="large-4">
+                                    <ul>
+                                        <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                                        <li><a href="http://www.wcdrr.org/" class="internal">World Conference on DRR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/gar/2013/en/home/index.html" class="internal">Global Assessment Report</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/hfa-monitoring/" class="internal">HFA Monitor</a></li>
+                                        <li><a href="http://www.unisdr.org/campaign/resilientcities/" class="internal">Making Cities Resilient</a></li>
+                                        <li><a href="http://www.preventionweb.net/posthfa/" class="internal">Post-2015 Framework for DRR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="PWHeader" class="fullScreenContainer">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="contentContainer headerContainer">
+                    <div class="headerContainerCol1">
+                        <a href="/"><img alt="" src="assets/img/redesign-logo.png"></a>
+                    </div>
+                    <div class="headerContainerCol2">
+                        <div style="padding-bottom:9px;">
+<!-- RP User popup change: replace whole content of <div style="padding-bottom:9px;"> with following  -->
+                            <a href="#" id="currentUser" data-dropdown="userMenu" class="dropdown">Ben Wisner</a><a href="">Logout</a>
+                            <ul id="userMenu" data-dropdown-content class="f-dropdown">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Social Networks</a></li>
+                                <li><a href="">Areas of Interest</a></li>
+                                <li><a href="">Languages</a></li>
+                                <li><a href="">Saved Content</a></li>
+                                <li><a href="">Activities</a></li>
+                                <li><a href="">Submissions</a></li>
+                                <li><a href="">Password</a></li>
+                            </ul>
+	                    </div>
+                        <div style="float:right">
+                            <form action="http://search.preventionweb.net/" method="get" name="headerSearch">
+                            <div class="search-bar">
+                                <input type="text" value="" placeholder="Search PreventionWeb" maxlength="280" name="q" class="search-field">
+                                <input type="image" alt="Search" src="assets/img/search-button.png" name="search" class="search-button">
+                            </div>
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>    
+	        </div>
+        </div>
+        <div class="row line">
+            <div class="large-12 columns">
+	        </div>
+        </div>
+        <div class="row">
+            <div class="large-10 columns">
+            	<ul id="mainMenu" class="inline-list">
+                    <li><a href="#">Risk <span>&amp;</span> Hazards</a></li>
+                    <li><a href="#">Countries <span>&amp;</span> Cities</a></li>
+                    <li><a href="#">Framework <span>for</span> Action</a></li>
+                    <li><a href="#">Themes<span></span></a></li>
+                    <li><a href="#">Community services<span></span></a></li>
+                </ul>
+	        </div>
+            <div class="large-2 columns clearfix">
+            	<a class="subscribe right" href="#">Subscribe</a>
+	        </div>
+        </div>
+    </div>
+
+    <div id="PWContent" class="fullScreenContainer">
+	    <div class="background color02"></div>
+        <div class="row">
+            <div class="large-12 columns">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li class="current"><a href="#">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contentPage" class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-3 columns">
+						<div class="panel radius no-padding module">
+                            <ul class="sub-menu">
+                                <li><div><a href="account-home.html">Home</a></div></li>
+                                <li class="current"><div><a href="account-profile.html">Profile</a></div></li>
+                                <li><div><a href="account-social.html">Social Networks</a></div></li>
+                                <li><div><a href="account-interest.html">Areas of Interest</a></div></li>
+                                <li><div><a href="account-languages.html">Languages</a></div></li>
+                                <li><div><a href="account-content.html">Saved Content</a></div></li>
+                                <li><div><a href="account-activities.html">Activities</a></div></li>
+                                <li><div><a href="account-submissions.html">Submissions</a></div></li>
+                                <li><div><a href="account-password.html">Password</a></div></li>
+                            </ul>
+	                    </div>
+                        <p class="small-text"><span class="normal">this form expires on</span></p>
+                        <div id="countdown" class="clearfix module">
+                            <div>7</div>
+                            <div class="left">Nov<br>2014</div>
+                        </div>
+                    </div>
+                    <div class="large-9 columns">
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <h1>Profile</h1>
+                            </div>
+                            <div class="large-6 columns clearfix">
+                            <!-- RP: Case 1, Meter progress object -->
+                                <div class="progress large-6 success round">
+                                  <span class="meter" style="width:35%"></span>
+                                  <!-- text position is calculated setting margin-right as "100-percentage", see below -->
+                                  <span class="percentage right" style="margin-right:65%">35%</span>
+                                  <!-- when % reaches 100, text in span is "Complete", see below
+                                  <span class="meter" style="width:100%"></span>
+                                  <span class="percentage right" style="margin-right:0%">Complete</span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <div data-alert class="alert-box success radius module">
+                                    <p>Your data has been saved</p>
+                                    <a href="#" class="close">&times;</a>
+                                </div>
+                                <div class="panel radius no-padding">
+                                    <form class="whole-page">
+                                    	<div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Personal Details</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-3 columns">
+                                                    <label>Salutation<span class="optional">Optional</span>
+                                                        <select class="radius">
+                                                            <option value="">Select</option>
+                                                            <option value="Mr.">Mr.</option>
+                                                            <option value="Mrs.">Mrs.</option>
+                                                            <option value="Ms.">Ms.</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                                <div class="large-3 large-offset-3 columns">
+                                                    <label>Gender<span class="optional">Optional</span>
+                                                        <select class="radius">
+                                                            <option value="">Select</option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                                <div class="large-3 columns">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>First name
+                                                        <input type="text" class="radius" />
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>Last name
+                                                        <input type="text" class="radius" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Photo<span class="optional">Optional</span>
+                                                        <div class="panel radius photo">
+                                                            <div id="profilePhotoBig"><img src="assets/img/background-photo.png"></div>
+                                                            <div id="profilePhoto">
+                                                                <!-- RP: No photo available, display generic avatar picture below -->
+                                                                <!-- <img src="assets/img/thumb-noPhoto.jpg"> -->
+                                                                <!-- RP: Photo available, display it -->
+                                                                <img src="assets/img/placeholders/thumb-WisnerBen.jpg">
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>&nbsp;
+                                                        <!-- RP: No photo available, browse file to upload
+                                                        <input type="file" class="radius">-->
+                                                        <!-- RP: Photo available, either change it or remove it -->
+                                                        <select class="radius">
+                                                            <option value="">Change photo</option>
+                                                            <option value="">Upload photo</option>
+                                                            <option value="">Remove</option>
+                                                        </select>
+                                                        <p>Your photo will display at many sizes throughout the PreventionWeb network. We recommend uploading a photo at least 260px x 260px.</p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    	<div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Contact Information</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Primary email address
+														<span data-tooltip class="has-tip radius right" data-width="250" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span>
+                                                        <input type="text" class="radius" disabled="disabled" value="your@emailaddress.com" />
+                                                    </label>
+                                                    <div class="field-extra">
+                                                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Hide on profile</label>
+                                                        <a href="" class="right">Change email</a>
+                                                        <!-- RP: launch a modal with explanation text for entering new email (see use of modal 'Ask your question' on 'Expert of the week' page) -->
+                                                    </div>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>Assistant's email address<span class="optional">Optional</span>
+                                                        <input type="text" class="radius" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Secondary  email address<span class="optional">Optional</span>
+                                                        <input type="text" class="radius" />
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Primary phone<span class="optional">Optional</span>
+														<span data-tooltip class="has-tip radius right" data-width="250" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span>
+                                                        <div class="row collapse">
+                                                            <div class="large-4 columns">
+	                                                            <select class="radius">
+                                                                    <option value="">Work</option>
+                                                                    <option value="">Mobile</option>
+                                                                    <option value="">Home</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="large-8 columns end">
+    	                                                        <input type="text" class="radius" />
+                                                            </div>
+                                                        </div>                                                        
+                                                    </label>
+                                                    <div class="field-extra">
+                                                        <input id="checkbox2" type="checkbox"><label for="checkbox2">Hide on profile</label>
+                                                    </div>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>Secondary phone<span class="optional">Optional</span>
+                                                        <div class="row collapse">
+                                                            <div class="large-4 columns">
+	                                                            <select class="radius">
+                                                                    <option value="">Mobile</option>
+                                                                    <option value="">Work</option>
+                                                                    <option value="">Home</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="large-8 columns end">
+    	                                                        <input type="text" class="radius" />
+                                                            </div>
+                                                        </div>                                                        
+                                                    </label>
+                                                    <div class="field-extra">
+                                                        <input id="checkbox3" type="checkbox"><label for="checkbox3">Hide on profile</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Skype ID<span class="optional">Optional</span>
+                                                        <input type="text" class="radius" />
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>Fax<span class="optional">Optional</span>
+                                                        <input type="text" class="radius" />
+                                                    </label>
+                                                    <div class="field-extra">
+                                                        <input id="checkbox4" type="checkbox"><label for="checkbox4">Hide on profile</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <a href="mailto:address@email.ext" class="email right">Contact us to edit</a>
+                                                    <h3>Where you work</h3>
+                                                </div>
+                                            </div>
+                                            <div id="position01" class="form-subsection">
+                                                <div class="row">
+                                                    <div class="large-12 columns">
+                                                        <label>Radical Interpretations of Disasters and Radical Solutions</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-6 columns">
+                                                        <label>Type<span class="optional">Optional</span>
+                                                            <select class="radius">
+                                                                <option value="">Non-governmental organization</option>
+                                                                <option value="">Lorem ipsum</option>
+                                                                <option value="">Something else</option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                    <div class="large-6 columns">
+                                                        <label>Location<span class="optional">Optional</span>
+                                                            <select class="radius">
+                                                                <option value="">United States of America</option>
+                                                                <option value="">Switzerland</option>
+                                                                <option value="">Italy</option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-6 columns">
+                                                        <label>Job title<span class="optional">Optional</span>
+                                                            <input type="text" class="radius" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="large-6 columns">
+                                                        <label>Department<span class="optional">Optional</span>
+                                                            <input type="text" class="radius" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-6 columns">
+                                                        <div class="field-extra standalone">
+                                                            <input id="checkbox5" type="checkbox"><label for="checkbox5">Publish this organization on the HFA Report</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="large-6 columns">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-12 columns clearfix">
+<!-- RP fix1: moved Remove link to an own row, so to be easily added at the bottom of any form section, -->
+                                                    	<!-- RP: Clicking on this link should dinamically delete the relevant block (such as "position01") -->
+                                                        <a href="" class="remove right" data-confirm='{"title":"Are you sure you want to remove this position?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'>Remove this position</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="position02" class="form-subsection">
+                                                <div class="row">
+                                                    <div class="large-12 columns">
+                                                        <label>Organization name<span class="optional">Optional</span>
+                                                            <input type="text" class="radius" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-6 columns">
+                                                        <label>Type<span class="optional">Optional</span>
+                                                            <select class="radius">
+                                                                <option value="">Non-governmental organization</option>
+                                                                <option value="">Lorem ipsum</option>
+                                                                <option value="">Something else</option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                    <div class="large-6 columns">
+                                                        <label>Location<span class="optional">Optional</span>
+                                                            <select class="radius">
+                                                                <option value="">United States of America</option>
+                                                                <option value="">Switzerland</option>
+                                                                <option value="">Italy</option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-6 columns">
+                                                        <label>Job title<span class="optional">Optional</span>
+                                                            <input type="text" class="radius" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="large-6 columns">
+                                                        <label>Department<span class="optional">Optional</span>
+                                                            <input type="text" class="radius" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-6 columns">
+                                                        <div class="field-extra standalone">
+                                                            <input id="checkbox6" type="checkbox"><label for="checkbox6">Publish this organization on the HFA Report</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="large-12 columns clearfix">
+                                                        <a href="" class="remove right" data-confirm='{"title":"Are you sure you want to remove this position?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'>Remove this position</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- RP: New position placeholder -->
+                                            <div class="form-subsection">
+                                                <div class="row">
+                                                    <div class="large-12 columns clearfix">
+                                                    	<!-- RP: Clicking on this link should dinamically create another block such as "position02" and display it at the placeholder above -->
+                                                        <a href="" class="add left">Add a new position</a>
+                                                    </div>
+                                                </div>                                            
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Biography</h3>
+                                                </div>
+	                                        </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label class="clearfix">Expert profile<span class="right">250 characters left</span>
+                                                        <textarea class="radius"></textarea>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label class="clearfix">Guest editor profile
+														<!--<textarea id="textarea01" class="radius textarea"></textarea>-->
+<!-- RP new WYSIWYG editor: replace textarea tag above with the one below -->                                                    
+								                        <textarea class="jqte-widget"></textarea>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label class="clearfix">Another special profile
+														<!--<textarea id="textarea02" class="radius textarea"></textarea>-->
+<!-- RP new WYSIWYG editor: replace textarea tag above with the one below -->                                                    
+								                        <textarea class="jqte-widget"></textarea>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label>Curriculum Vitae<span class="optional">Optional</span>
+                                                    	<a class="fileUpload" href="">cv_ivan_ipsum_2014.pdf</a>
+                                                    	<a class="fileUpload" href="">attachment_ivan_ipsum_2014.pdf</a>
+                                                        <input type="file" class="radius">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label>Business Card<span class="optional">Optional</span>
+                                                    	<span class="fileUpload">No file has been uploaded</span>
+                                                        <input type="file" class="radius">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Privacy</h3>
+                                                </div>
+	                                        </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label>Make your profile public?
+                                                        <div id="switch01" class="switch round">
+                                                            <input id="checkbox7" name="switch-x" type="checkbox" checked>
+															<label for="checkbox7" onClick=""></label>
+                                                        </div> 
+	                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam leo erat, tincidunt in sagittis sit amet, accumsan.</p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+<!-- RP fix2: moved buttons row to an own 'form-section', so to be easily added at the bottom of any form page, no matter its structure -->
+                                        <div class="form-section button-section">
+                                            <div class="row">
+                                                <div class="large-12 columns button-bar clearfix">
+                                                    <a class="button radius" href="#">Preview</a>
+                                                    <a class="button radius primary right" href="#">Save</a>
+                                                    <a class="button radius right" href="">Cancel</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+    		                </div>
+	                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-2 large-centered columns">
+				<ul id="socialBar" class="inline-list">
+                	<li><a href="#" class="facebook"></a></li>
+                	<li><a href="#" class="twitter"></a></li>
+                	<li><a href="#" class="goggle"></a></li>
+                </ul>            
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-8 large-centered columns">
+            	<ul id="footerMenu" class="inline-list">
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Donor</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<!--<script src="assets/shared/zurb-foundation-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>-->
+	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
+	<!--<script src="assets/shared/zurb-foundation-wysihtml5/lib/js/prettify.js"></script>-->
+    <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+    <script src="assets/shared/agoragames-confirm-with-reveal/confirm_with_reveal.min.js"></script>
+	<!--<script src="assets/shared/zurb-foundation-wysihtml5/lib/js/jquery.foundation.reveal.js"></script>
+	<script src="assets/shared/zurb-foundation-wysihtml5/lib/js/jquery.foundation.buttons.js"></script>
+	<script src="assets/shared/zurb-foundation-wysihtml5/src/zurb-foundation-wysihtml5.js"></script>-->
+<!-- RP new WYSIWYG editor: replace all js above from folder 'zurb-foundation-wysihtml5' with the one below -->                                                    
+	<script src="assets/shared/jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js"></script>
+    <script>
+		$(document).foundation();
+		$(document).ready(function() {
+			$('#menu-igniter').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+		
+			$('#menu-close').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+		});
+		/* RP: WYSIWYG editor startup and configuration */
+		/*IMPORTANT!: each editor must be started up for each textarea element 
+		$('#textarea01').wysihtml5({
+			"font-styles": false,
+			"lists": true,
+			"link": true,
+			"image": true,
+			"color": false
+		});		
+		$('#textarea02').wysihtml5({
+			"font-styles": false,
+			"lists": true,
+			"link": true,
+			"image": true,
+			"color": false
+		});*/
+/* RP new WYSIWYG editor: replace configuration and startup functions above with the one below
+		IMPORTANT!: all instances are now started up together by referencing their class */
+		$('.jqte-widget').jqte({
+			format: false,
+			fsize: false,
+			color: false,
+			sub: false,
+			sup: false,
+			strike: false,
+			rule: false,
+			remove: false,
+			source: false
+		});
+		
+		//RP: activate confirmation dialogs
+		$(document).confirmWithReveal();
+<!-- RP User popup change: remove all instructions related to User popup  -->
+    </script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html  lang="en" id="doc" class="ie8 no-js"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]>
+<!--> <html lang="en" id="doc" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Risk & Hazards - Datasets & Viewers | PreventionWeb.net</title>
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+	<!-- RP print version: include specific CSS file -->    
+    <link rel="stylesheet" href="assets/css/print.css" media="print" />
+	<!-- RP: IE9 css for select background -->	
+    <!--[if IE 9]><link rel="stylesheet" href="assets/css/app_ie9.css" /><![endif]-->
+    <script src="assets/shared/foundation/v5.2.3/js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/f5a1d61e-8421-43db-82ac-6053b84c9bc4.js"></script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+    </script>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+    <div class="baseContainer bg-black hide-for-print">
+        <div class="hfaRibbon"></div>
+        <div class="bg-black" style="color:#fff">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="contentContainer" id="top-header">
+                        <div class="wrapper">
+                            <ul>
+                                <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                <li class="current"><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                            </ul>
+                            <img id="menu-igniter" class="icon-menu" src="assets/img/icon-grid-menu.png" alt="Image unavailable">
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="wrapper" id="top-menu">
+                            <div id="#igniter-target" class="top-dropdown-menu">
+                                <a id="menu-close" class="closer" href="">x</a>
+                                <div class="large-4">
+                                    <ul>
+                                        <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                                        <li><a href="http://www.wcdrr.org/" class="internal">World Conference on DRR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/gar/2013/en/home/index.html" class="internal">Global Assessment Report</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/hfa-monitoring/" class="internal">HFA Monitor</a></li>
+                                        <li><a href="http://www.unisdr.org/campaign/resilientcities/" class="internal">Making Cities Resilient</a></li>
+                                        <li><a href="http://www.preventionweb.net/posthfa/" class="internal">Post-2015 Framework for DRR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="PWHeader" class="fullScreenContainer">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="contentContainer headerContainer">
+                    <div class="headerContainerCol1">
+                        <a href="/"><img alt="" src="assets/img/redesign-logo.png"></a>
+                    </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                    <div class="headerContainerCol2 hide-for-print">
+                        <div style="padding-bottom:9px;">
+                            <a href="#" id="currentUser" data-dropdown="userMenu" class="dropdown">Ben Wisner</a><a href="">Logout</a>
+                            <ul id="userMenu" data-dropdown-content class="f-dropdown">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Social Networks</a></li>
+                                <li><a href="">Areas of Interest</a></li>
+                                <li><a href="">Languages</a></li>
+                                <li><a href="">Saved Content</a></li>
+                                <li><a href="">Activities</a></li>
+                                <li><a href="">Submissions</a></li>
+                                <li><a href="">Password</a></li>
+                            </ul>
+	                    </div>
+                        <div style="float:right">
+                            <form action="http://search.preventionweb.net/" method="get" name="headerSearch">
+                            <div class="search-bar">
+                                <input type="text" value="" placeholder="Search PreventionWeb" maxlength="280" name="q" class="search-field">
+                                <input type="image" alt="Search" src="assets/img/search-button.png" name="search" class="search-button">
+                            </div>
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>    
+	        </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row line hide-for-print">
+            <div class="large-12 columns">
+	        </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-10 columns">
+            	<ul id="mainMenu" class="inline-list">
+                    <li class="current"><a href="#">Risk <span>&amp;</span> Hazards</a></li>
+                    <li><a href="#">Countries <span>&amp;</span> Cities</a></li>
+                    <li><a href="#">Framework <span>for</span> Action</a></li>
+                    <li><a href="#">Themes<span></span></a></li>
+                    <li><a href="#">Community services<span></span></a></li>
+                </ul>
+	        </div>
+            <div class="large-2 columns clearfix">
+            	<a class="subscribe right" href="#">Subscribe</a>
+	        </div>
+        </div>
+    </div>
+
+    <div id="PWContent" class="fullScreenContainer">
+	    <div class="background color01"></div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-12 columns">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Risk & Hazards</a></li>
+                    <li class="current"><a href="#">Datasets & Viewers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contentPage" class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-6 columns">
+<!-- RP print version: added 'bkg-print' class for printing background -->    
+                    	<div class="bkg-print"><p class="small-text heading statistics">data</p></div>
+                    </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                    <div class="large-6 columns clearfix hide-for-print">
+                    	<ul class="button-group right">
+                            <li>
+                            	<a href="javascript:window.print();" class="button radius print">Print</a>
+                            </li>
+                            <li>
+                            	<a data-dropdown="sharePopup" data-options="align:left" class="button radius share" href="">Share</a>
+                                <div id="sharePopup" data-dropdown-content class="f-dropdown content small">
+                                	<form>
+                                        <div class="row">
+                                            <div class="large-12 columns clearfix">
+                                                <label>Short URL
+                                                    <input type="text" class="radius" placeholder="http://preventionweb.net/go/37350" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <label>Share via</label>
+                                                <div class="social-buttons">
+                                                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                                                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <label>Share via email:
+                                                    <input type="text" class="radius" placeholder="Email address" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <div class="panel radius">
+                                                    <span>Expert of the Week for May 5-9, 2014</span>
+                                                    Ms. Marisol Estrella<br>Programme Coordinator, Post-Conflict and Diasster Branch Management
+                                                    <a href="">http://preventionweb.net/go/37350</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns button-bar clearfix">
+                                                <a class="button radius" href="#">Print</a>
+                                                <a class="button radius primary right" href="#">Send</a>
+                                                <a class="button radius right close" href="">Cancel</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row module">
+                    <div class="large-12 columns">
+	                    <h1 class="big">Datasets & Viewers</h1>
+		                <div class="row">
+                            <div class="large-4 columns">
+                                <div class="image-container">
+                                    <div style="background:#ccc; height:200px; text-align:center;"><br><br><br><br><br><br>Image placeholder</div>
+                                </div>
+                            </div>
+                            <div class="large-8 columns">
+                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row module">
+                    <div class="large-12 columns">
+                        <div class="separator-line"></div>
+                    </div>
+                </div>
+                <div class="row module">
+                    <div class="large-12 columns">
+                    	<h2>Data Viewers</h2>
+                        <div class="panel radius no-padding-bottom module">
+                            <div class="row">
+                                <div class="large-12 columns">
+<!-- RP print version: added 'bkg-print' class for printing background -->    
+			                    	<div class="bkg-print"><p class="small-text heading statistics">Data Viewer</p></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-4 columns">
+	                            	<div class="module" style="background:#ccc; height:200px; text-align:center;"><br><br><br><br><br><br>Image placeholder</div>
+                                </div>
+                                <div class="large-8 columns">
+                                    <h4>Risk Data Platform CAPRAViewer</h4>
+                                    <p class="small-text"><span class="normal lower">Provided by: Global Assessment Report on Disaster Risk Reduction</span></p>
+                                    <p class="text small">Visualize, download or extract data on past hazardous events, human & economical hazard exposure and risk from natural hazards.</p>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                    <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel radius no-padding-bottom module">
+                            <div class="row">
+                                <div class="large-12 columns">
+<!-- RP print version: added 'bkg-print' class for printing background -->    
+			                    	<div class="bkg-print"><p class="small-text heading statistics">Data Viewer</p></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-4 columns">
+	                            	<div class="module" style="background:#ccc; height:200px; text-align:center;"><br><br><br><br><br><br>Image placeholder</div>
+                                </div>
+                                <div class="large-8 columns">
+                                    <h4>Other CAPRAViewer</h4>
+                                    <p class="small-text"><span class="normal lower">Provided by: Global Assessment Report on Disaster Risk Reduction</span></p>
+                                    <p class="text small">Visualize, download or extract data on past hazardous events, human & economical hazard exposure and risk from natural hazards.</p>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                    <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row module">
+                    <div class="large-12 columns">
+                        <div class="separator-line"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                    	<h2>Datasets</h2>
+                        <ul data-tab="" class="tabs">
+                            <li class="tab-title active"><a href="#panel1-1">Disaster loss and damage<span>66625</span></a></li>
+                            <li class="tab-title"><a href="#panel1-2">Socio economic indicators<span>23</span></a></li>
+                        </ul>
+                        <div class="tabs-content">
+                            <div class="content active" id="panel1-1">
+                            	<div class="panel radius no-padding-bottom module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading statistics">Data</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <h3 class="big">EM DAT</h3>
+                                            <p class="small-text"><span class="normal lower">Provided by: Centre for Research on the Epidemiology of Disasters - CRED</span></p>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <p class="text small">EM-DAT provides an objective basis for vulnerability assessment and rational decision-making in disaster situations. It helps identify disaster types that are most common in a given country and have had significant historical impacts on specific human populations. In addition to providing information on the human impact of disasters, such as the number of people killed.</p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel radius no-padding-bottom module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading statistics">Data</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <h3 class="big">Disaster Inventory System - DesInventar</h3>
+                                            <p class="small-text"><span class="normal lower">Provided by: Corporación OSSO - La Red - UNISDR</span></p>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <p class="text small">DesInventar is a conceptual and methodological tool for the construction of databases of loss, damage, or effects caused by emergencies or disasters. It includes: Methodology (definitions and help in the management of data) Database with flexible structure.</p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel radius no-padding-bottom module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading statistics">Data</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <h3 class="big">Sigma explorer</h3>
+                                            <p class="small-text"><span class="normal lower">Provided by: SwissRe</span></p>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <p class="text small">Global natural and man-made disaster database. Events are recorded from 1970 to the present. There are approximately 7,000 entries in the database with 300 new entries per year probably due to the more stringent inclusion criteria. Sigma requires at least one of the following for inclusion in the database.</p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel radius no-padding-bottom module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading statistics">Data</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <h3 class="big">CatNet</h3>
+                                            <p class="small-text"><span class="normal lower">Provided by: Centre for Research on the Epidemiology of Disasters - CRED</span></p>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <p class="text small">Natural hazard information combined with Google Maps&trade; and satellite imagery. The CatNet&reg; functions and data facilitate a professional overview and assessment of natural hazard exposure for any location worldwide. This makes CatNet&reg; a valuable tool in preparing local, regional and cross-regional risk profiles.</p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+		                        <div id="info1" class="moreinfo">
+                                	<div class="panel radius no-padding-bottom module">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+            <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                                <div class="bkg-print"><p class="small-text heading statistics">Data</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-4 columns">
+                                                <h3 class="big">EM DAT</h3>
+                                                <p class="small-text"><span class="normal lower">Provided by: Centre for Research on the Epidemiology of Disasters - CRED</span></p>
+                                            </div>
+                                            <div class="large-8 columns">
+                                                <p class="text small">EM-DAT provides an objective basis for vulnerability assessment and rational decision-making in disaster situations. It helps identify disaster types that are most common in a given country and have had significant historical impacts on specific human populations. In addition to providing information on the human impact of disasters, such as the number of people killed.</p>
+                                                <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                                <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+    <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                                <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                	<div class="panel radius no-padding-bottom module">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+            <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                                <div class="bkg-print"><p class="small-text heading statistics">Data</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-4 columns">
+                                                <h3 class="big">EM DAT</h3>
+                                                <p class="small-text"><span class="normal lower">Provided by: Centre for Research on the Epidemiology of Disasters - CRED</span></p>
+                                            </div>
+                                            <div class="large-8 columns">
+                                                <p class="text small">EM-DAT provides an objective basis for vulnerability assessment and rational decision-making in disaster situations. It helps identify disaster types that are most common in a given country and have had significant historical impacts on specific human populations. In addition to providing information on the human impact of disasters, such as the number of people killed.</p>
+                                                <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                                <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+    <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                                <p class="text-right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+		                        <a class="button radius expand more hide-for-print" href="#" target="1">SHOW MORE</a>
+                            </div>
+                            <div class="content" id="panel1-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row prefooter">
+                    <div class="large-8 columns">
+                    </div>
+                    <div class="large-4 columns">
+                        <p class="small-text">LAST EDITED FEB 2, 2014 BY:<a href="">PETER MORAN</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-2 large-centered columns">
+				<ul id="socialBar" class="inline-list">
+                	<li><a href="#" class="facebook"></a></li>
+                	<li><a href="#" class="twitter"></a></li>
+                	<li><a href="#" class="goggle"></a></li>
+                </ul>            
+            </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-8 large-centered columns">
+            	<ul id="footerMenu" class="inline-list">
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Donor</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<div id="viewStory" class="reveal-modal medium" data-reveal></div>
+    <a class="btn-close-reveal"></a>
+	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
+    <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+    <script>
+		$(document).foundation();
+		
+		$(document).ready(function() {
+			//RP: show/hide functions for topbar popup menu
+			$('#menu-igniter').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+			$('#menu-close').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+			//show/hide function for text/questions
+			$('.more').click(function (ev) {
+			   var t = ev.target
+			   $('#info' + $(this).attr('target')).toggle(100, function(){
+				  console.log(ev.target)
+				  $(t).html($(this).is(':visible')? 'HIDE MORE' : 'SHOW MORE')
+			   });
+			   return false;
+			});
+			//RP: show all models when printing
+			$( window ).bind( "beforeprint", function() { 
+				$('.moreinfo').show();
+			});
+			if (window.matchMedia) { /* Chrome hack */
+				var mediaQueryList = window.matchMedia('print');
+				mediaQueryList.addListener(function(mql) {
+					if (mql.matches) {
+						$('.moreinfo').show();
+					}
+				});
+			}			
+		});
+    </script>    
+</body>
+</html>

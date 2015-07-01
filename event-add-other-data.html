@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html  lang="en" id="doc" class="ie8 no-js"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]>
+<!--> <html lang="en" id="doc" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Event - Add tags, social media, embellish | PreventionWeb.net</title>
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
+    <link href="assets/shared/select2/select2.css" rel="stylesheet" />
+    <link href="assets/shared/select2/select2-foundation5.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+	<!-- RP: IE9 css for select background -->	
+    <!--[if IE 9]><link rel="stylesheet" href="assets/css/app_ie9.css" /><![endif]-->
+	<!-- RP: set status text for each switch with CSS -->	
+    <style>
+		#switch01 label:after {content: 'No';}
+		#switch01 input:checked + label:after {content: 'Yes';		}
+    </style>
+    <script src="assets/shared/foundation/v5.2.3/js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/f5a1d61e-8421-43db-82ac-6053b84c9bc4.js"></script>
+</head>
+<body>
+    <div class="baseContainer bg-black">
+        <div class="hfaRibbon"></div>
+        <div class="bg-black" style="color:#fff">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="contentContainer" id="top-header">
+                        <div class="wrapper">
+                            <ul>
+                                <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                <li class="current"><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                            </ul>
+                            <img id="menu-igniter" class="icon-menu" src="assets/img/icon-grid-menu.png" alt="Image unavailable">
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="wrapper" id="top-menu">
+                            <div id="#igniter-target" class="top-dropdown-menu">
+                                <a id="menu-close" class="closer" href="">x</a>
+                                <div class="large-4">
+                                    <ul>
+                                        <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                                        <li><a href="http://www.wcdrr.org/" class="internal">World Conference on DRR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/gar/2013/en/home/index.html" class="internal">Global Assessment Report</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/hfa-monitoring/" class="internal">HFA Monitor</a></li>
+                                        <li><a href="http://www.unisdr.org/campaign/resilientcities/" class="internal">Making Cities Resilient</a></li>
+                                        <li><a href="http://www.preventionweb.net/posthfa/" class="internal">Post-2015 Framework for DRR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="PWHeader" class="fullScreenContainer">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="contentContainer headerContainer">
+                    <div class="headerContainerCol1">
+                        <a href="/"><img alt="" src="assets/img/redesign-logo.png"></a>
+                    </div>
+                    <div class="headerContainerCol2">
+                        <div style="padding-bottom:9px;">
+                            <a href="#" id="currentUser" data-dropdown="userMenu" class="dropdown">Ben Wisner</a><a href="">Logout</a>
+                            <ul id="userMenu" data-dropdown-content class="f-dropdown">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Social Networks</a></li>
+                                <li><a href="">Areas of Interest</a></li>
+                                <li><a href="">Languages</a></li>
+                                <li><a href="">Saved Content</a></li>
+                                <li><a href="">Activities</a></li>
+                                <li><a href="">Submissions</a></li>
+                                <li><a href="">Password</a></li>
+                            </ul>
+	                    </div>
+                        <div style="float:right">
+                            <form action="http://search.preventionweb.net/" method="get" name="headerSearch">
+                            <div class="search-bar">
+                                <input type="text" value="" placeholder="Search PreventionWeb" maxlength="280" name="q" class="search-field">
+                                <input type="image" alt="Search" src="assets/img/search-button.png" name="search" class="search-button">
+                            </div>
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>    
+	        </div>
+        </div>
+        <div class="row line">
+            <div class="large-12 columns">
+	        </div>
+        </div>
+        <div class="row">
+            <div class="large-10 columns">
+            	<ul id="mainMenu" class="inline-list">
+                    <li><a href="#">Risk <span>&amp;</span> Hazards</a></li>
+                    <li><a href="#">Countries <span>&amp;</span> Cities</a></li>
+                    <li><a href="#">Framework <span>for</span> Action</a></li>
+                    <li><a href="#">Themes<span></span></a></li>
+                    <li><a href="#">Community services<span></span></a></li>
+                </ul>
+	        </div>
+            <div class="large-2 columns clearfix">
+            	<a class="subscribe right" href="#">Subscribe</a>
+	        </div>
+        </div>
+    </div>
+
+    <div id="PWContent" class="fullScreenContainer">
+	    <div class="background color01"></div>
+        <div class="row">
+            <div class="large-12 columns">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Countries & Cities</a></li>
+                    <li class="current"><a href="#">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contentPage" class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-3 columns">
+						<div class="panel radius no-padding module">
+                            <ul class="sub-menu">
+                                <li><div><a href="event-add-basic-data.html">Add basic information</a></div></li>
+                                <li class="current"><div><a href="event-add-other-data.html">Add tags, social media, embellish</a></div></li>
+                                <li><div><span>Add sources</span></div></li>
+                                <li><div><span>Share</span></div></li>
+                                <li><div><span>Disclaimer</span></div></li>
+                            </ul>
+	                    </div>
+                    </div>
+                    <div class="large-9 columns">
+<!-- RP Title and Steps: added 'module' class to row for spacing, moved H1 to row below and changed Step container to 12-columns -->                            
+                        <div class="row module">
+		                    <div class="large-12 columns clearfix">
+<!-- RP html steps bar: replace 'steps' div with 'steps-text' div -->                            
+<!-- usage: use 'off'class for non completed steps (grey color), use 'on' class for completed steps (green color), use 'on' and 'last' classes for the last completed step -->                            
+<!-- CSS width: set it accordingly to number of steps to be displayed (maybe dynamically?), and possibly place Style block in the Head section of the page -->                            
+                                <!--<div class="steps step-1"></div>-->
+                                <style type="text/css">.steps-text span{width:75px;}</style>
+                                <div class="steps-text right"><span class="on">1</span><span class="on last">2</span><span class="off">3</span><span class="off">4</span><span class="off">&bull;</span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <h1><span>[Submit][Update]&nbsp;&nbsp;</span> Event</h1>
+                                <div class="panel radius no-padding">
+                                    <form class="whole-page">
+                                    	<div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Tag this event<span data-tooltip class="has-tip radius" data-width="250" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span></h3>
+<!-- RP fix paragraph: replaced 'label' tag with 'p' and 'span' -->                            
+                                                    <p><span>You can add up to 5 tags for themes, hazards or countries</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="row module">
+                                                <div class="large-6 columns">
+                                                    <label>Tag with up to 5 themes or issues
+                                                        <select class="selectTwo radius" multiple data-placeholder="Select">
+                                                            <option></option>
+                                                            <option>theme1</option>
+                                                            <option>theme2</option>
+                                                            <option>theme3</option>
+                                                            <option>theme5</option>
+                                                            <option>theme6</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>Tag with up to 5 hazards<span data-tooltip class="has-tip radius right" data-width="250" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span>
+                                                        <select class="selectTwo radius" multiple data-placeholder="Select">
+                                                            <option></option>
+                                                            <option>hazard1</option>
+                                                            <option>hazard2</option>
+                                                            <option>hazard3</option>
+                                                            <option>hazard5</option>
+                                                            <option>hazard6</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row module">
+                                                <div class="large-6 columns">
+                                                    <label>Tag with up to 5 countries or regions
+                                                        <select class="selectTwo radius" multiple data-placeholder="Select">
+                                                            <option></option>
+                                                            <option>country1</option>
+                                                            <option>country2</option>
+                                                            <option>country3</option>
+                                                            <option>country5</option>
+                                                            <option>country6</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>Got tags of your own?
+                                                        <input type="hidden" id="addTags" class="radius" multiple data-placeholder="Digit and press Enter">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+<!-- RP fix paragraph: replaced 'label' tag with 'h4', 'p' and 'span' -->                            
+                                                    <h4>What are tags?</h4>
+                                                    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></p>
+                                                    <p><span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Social media<span data-tooltip class="has-tip radius" data-width="250" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span></h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Twitter hashtag for this event</label>
+                                                    <input type="text" class="radius" placeholder="Example: #wcdrr2015" />
+                                                </div>
+                                                <div class="large-6 columns">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Live translation</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Is there live translation available?
+                                                        <div id="switch01" class="switch round">
+                                                            <input id="checkbox1" name="switch-x" type="checkbox" checked>
+															<label for="checkbox1" onClick=""></label>
+                                                        </div> 
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>If yes, then which language(s)?
+                                                        <select class="selectTwo radius" multiple data-placeholder="Select">
+                                                            <option></option>
+                                                            <option>English</option>
+                                                            <option>French</option>
+                                                            <option>Italian</option>
+                                                            <option>Japanese</option>
+                                                            <option>Chinese</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Live streaming or webcast</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label>URL of the live webcast on the day(s) of the event
+                                                        <input type="text" class="radius" placeholder="http://" />
+                                                    </label>
+<!-- RP fix paragraph: replaced 'label' tag with 'p' and 'span' -->                            
+                                                    <p><span>The link to this webcast will be displayed only on the days of the event.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Documentation and links</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+<!-- RP fix paragraph: replaced 'label' tag with 'h4' and added 'span' -->                            
+                                                    <h4>Suggested documents</h4>
+                                                    <ul>
+                                                        <li><span>Before the event: Concept note, Background paper, Agenda, provisional participants list</span></li>
+                                                        <li><span>After the event: outcome documents - post-2015 framework or other, final participants list, declarations</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns clearfix">
+                                                    <a href="" class="add left">Add a document or link</a>
+                                                </div>
+                                            </div>                                            
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Agenda</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Document/link name</th>
+                                                                <th width="150">Language</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Agenda</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Agenda</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Agenda</a></td>
+                                                                <td>Spanish</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Participants list</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Document/link name</th>
+                                                                <th width="150">Language</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Participants list</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Participants list</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Participants list</a></td>
+                                                                <td>Spanish</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Presentations</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Document/link name</th>
+                                                                <th width="150">Language</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Presentations</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Presentations</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Presentations</a></td>
+                                                                <td>Spanish</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Outcome documents</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Document/link name</th>
+                                                                <th width="150">Language</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Déclaration: troisième conférence ministerielle africaine pour la réduction des risques de catastrophe</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Déclaration sommaire: contribution africaine au cadre post-2015 pour la réduction des risques de catastrophe</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Compte-Rendu</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Declaration: third African ministerial meeting for disaster risk reduction</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Summary Statement: Africa's contribution to the post-2015 framework for disaster risk reductione</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Summary Report</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Post-2015 framework outcome documents</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Document/link name</th>
+                                                                <th width="150">Language</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Other documents</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Document/link name</th>
+                                                                <th width="150">Language</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</a></td>
+                                                                <td>French</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</a></td>
+                                                                <td>English</td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Photos and short video clips</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+<!-- RP fix paragraph: replaced 'label' tag with 'h4' and added 'span' -->                            
+                                                    <h4>Suggested photos or videos</h4>
+                                                    <ul>
+                                                        <li><span>Before the event: Photos or videos from past events if any, activities leading up to the event, event promos</span></li>
+                                                        <li><span>During or after the event: photos or videos from the event, statements</span></li>
+                                                    </ul>
+<!-- RP fix paragraph: replaced 'label' tag with 'h4' and added 'span' -->                            
+                                                    <h4>Important notes:</h4>
+                                                    <ul>
+                                                        <li><span>Add images that are good quality.</span></li>
+                                                        <li><span>Videos must first be uploaded to YouTube, and only the 'embed link' must be added here.</span></li>
+                                                        <li><span>Find out more about sharing videos: <a href="">YouTube</a> | <a href="">Vimeo</a></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns clearfix">
+                                                    <a href="" class="add left">Add a photo or video</a>
+                                                </div>
+                                            </div>                                            
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Photos</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Title</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Joint meeting of the 2013 Pacific platform for disaster risk management and Pacific climate</a><span>Credit: David Dubovny</span></td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Building Resilience to Disasters in Europe: Protecting Cultural Heritage and Adapting to Climate Change</a><span>Credit: David Dubovny</span></td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                	<label>Videos</label>
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Title</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">The City of Dubrovnik signing the Making Cities Resilient Campaign Certificate of Participation</a><span>Credit: Mayor's office, City of Dubrovnik </span></td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">The Mayor of Venice, Giorgio Orsoni, congratulating the Mayor of Dubrovnik, Mr Andro Vlahusic, upon signing on the Making Cities Resilient Campaign</a><span>Credit: Mayor's office, City of Venice</span></td>
+                                                                <td><a href="" class="remove" data-confirm='{"title":"Are you sure you want to remove this item?","body":"If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","ok":"YES","cancel":"NO"}'></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section button-section">
+                                            <div class="row">
+                                                <div class="large-12 columns button-bar clearfix">
+                                                    <a class="button radius" href="">Previous</a>
+                                                    <a class="button radius primary right" href="">Next</a>
+                                                    <a class="button radius right" href="">Preview</a>
+                                                    <a class="button radius right" href="">Cancel</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+    		                </div>
+	                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-2 large-centered columns">
+				<ul id="socialBar" class="inline-list">
+                	<li><a href="#" class="facebook"></a></li>
+                	<li><a href="#" class="twitter"></a></li>
+                	<li><a href="#" class="goggle"></a></li>
+                </ul>            
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-8 large-centered columns">
+            	<ul id="footerMenu" class="inline-list">
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Donor</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
+    <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+    <script src="assets/shared/agoragames-confirm-with-reveal/confirm_with_reveal.min.js"></script>
+    <script src="assets/shared/select2/select2.min.js"></script>
+    <script>
+		$(document).foundation();
+		$(document).ready(function() {
+			$('#menu-igniter').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+		
+			$('#menu-close').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+		});
+
+		//RP: multiple select startup and configuration
+		$(document).ready(function() {
+			$(".large-6 .selectTwo").select2({
+				width: "100%"
+			});
+			//RP: add tags widget startup and configuration
+			$("#addTags").select2({
+				tags:[],
+				width: "100%",
+				maximumInputLength: 20 //optional
+			});		
+		});
+		
+		//RP: activate confirmation dialogs
+		$(document).confirmWithReveal();
+    </script>
+</body>
+</html>

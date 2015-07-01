@@ -1,0 +1,468 @@
+@charset "utf-8";
+/* Print Styles */
+@media print {
+/*** No link underlining ***/
+a[href]:after {
+    content: "";
+}
+#contentPage {
+  border-bottom:none;
+}
+/*** No element breaking ***/
+table, .panel, .quote, .no-break {page-break-inside:avoid;}
+/*** Background image printing ***/
+.bkg-print {
+    overflow:hidden;
+}
+p.small-text.documents {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.documents:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-740px;
+	margin-left:-40px;
+	height:760px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.documents:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-740px;
+	position:absolute;
+}
+p.small-text.editor {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.editor:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-440px;
+	margin-left:-40px;
+	height:460px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.editor:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-440px;
+	position:absolute;
+}
+p.small-text.educational {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.educational:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-770px;
+	margin-left:-40px;
+	height:790px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.educational:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-770px;
+	position:absolute;
+}
+p.small-text.organization {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.organization:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-800px;
+	margin-left:-40px;
+	height:820px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.organization:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-800px;
+	position:absolute;
+}
+p.small-text.news {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.news:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-830px;
+	margin-left:-40px;
+	height:850px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.news:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-830px;
+	position:absolute;
+}
+p.small-text.network {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.network:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-860px;
+	margin-left:-40px;
+	height:880px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.network:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-860px;
+	position:absolute;
+}
+p.small-text.academic {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.academic:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-890px;
+	margin-left:-40px;
+	height:910px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.academic:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-890px;
+	position:absolute;
+}
+p.small-text.job {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.job:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-920px;
+	margin-left:-40px;
+	height:940px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.job:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-920px;
+	position:absolute;
+}
+p.small-text.map {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.map:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-950px;
+	margin-left:-40px;
+	height:970px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.map:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-950px;
+	position:absolute;
+}
+p.small-text.statistics {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.statistics:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-980px;
+	margin-left:-40px;
+	height:1000px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.statistics:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-980px;
+	position:absolute;
+}
+p.small-text.trend {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.trend:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-1099px;
+	margin-left:-40px;
+	height:1119px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.trend:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-1099px;
+	position:absolute;
+}
+p.small-text.key {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.key:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-1215px;
+	margin-left:-40px;
+	height:1235px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.key:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-1215px;
+	position:absolute;
+}
+p.small-text.event {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.event:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-709px;
+	margin-left:-40px;
+	height:729px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.event:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-709px;
+	position:absolute;
+}
+p.small-text.external {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.external:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-1325px;
+	margin-left:-40px;
+	height:1345px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.external:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-1325px;
+	position:absolute;
+}
+p.small-text.profile {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.profile:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-1475px;
+	margin-left:-40px;
+	height:1495px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.profile:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-1475px;
+	position:absolute;
+}
+p.small-text.twitterblack {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.twitterblack:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-51px;
+	margin-left:-40px;
+	height:71px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.twitterblack:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-51px;
+	position:absolute;
+}
+p.small-text.story {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.story:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2249px;
+	margin-left:-40px;
+	height:2269px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.story:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2249px;
+	position:absolute;
+}
+p.small-text.expert {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.expert:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2400px;
+	margin-left:-40px;
+	height:2420px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.expert:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2400px;
+	position:absolute;
+}
+h4.geo {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+h4.geo:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2311px;
+	margin-left:-40px;
+	height:2331px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+h4.geo:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2311px;
+	position:absolute;
+}
+/*** Background color printing ***/
+.meter {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+}
+/* background print for Firefox and IE */
+.meter {
+	position: relative;
+	overflow: hidden;
+}
+.meter:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	border: 99999px #4a68a6 solid;
+	z-index: 0;
+}
+.table2.hfa-progress .light .progress .meter:before{
+	border: 99999px #a4b3d2 solid;
+}
+.meter * {
+	position: relative;
+	z-index: 1;
+}
+.button.grey, .button.orange {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+}
+/* background print for Firefox and IE */
+.button.grey, .button.orange {
+	position: relative;
+	overflow: hidden;
+}
+.button.grey:before, .button.orange:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 0;
+}
+.button.grey:before {
+	border: 99999px #d8d8d8 solid;
+}
+.button.orange:before {
+	border: 99999px #f36649 solid;
+}
+.button.grey *, .button.orange * {
+	position: relative;
+	z-index: 1;
+}
+.label.selected{/* background print for Chrome and Safari */
+	-webkit-print-color-adjust: exact;
+}
+/* background print for Firefox and IE */
+.label.selected {
+	position: relative;
+	overflow: hidden;
+	top:15px;
+}
+.label.selected:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	border: 99999px #f36649 solid;
+	z-index: 0;
+}
+.label.selected * {
+	position: relative;
+	z-index: 1;
+}
+/*** Specific pattern styles ***/
+.large-3 {
+  width:23%;
+}
+.large-9.width-for-print {
+  width:77%;
+}
+.large-12 {
+	position:relative;
+}
+
+/* RP print change 01: removed What's this panels from print */
+.button.toggle-panel {
+/*	right:15px;*/
+	display:none;
+}
+/*.panel.gradient.what {
+	display:block;
+}*/
+/**** end *****/
+
+.panel.gradient .close{
+	display:none;
+}
+.moreinfo{
+	display:block;
+}
+#contentPage #profilePhotoBig {
+  position: inherit;
+}
+}

@@ -1,0 +1,45 @@
+.pw20-promoBox{
+	border:1px solid #acb9bf;
+	border-radius:3px;
+	position:relative;
+	margin:8px 0 10px;
+	padding-top:70px;
+	padding-bottom:10px;
+	background-color:#f6f8f7;
+}
+.pw20-promoBox a.promo{
+	position:absolute;
+	z-index:20;
+	width:183px;
+	height:68px;
+	top:-8px;
+	left:5px;
+}
+.pw20-promoBox a.promo.guesteditor{
+	background:url("../img/promo-editor-top.png") no-repeat scroll 0 0;
+}
+.pw20-promoBox .moduleHead span{
+	display:block;
+	font-size:10px;
+	margin-bottom:5px;
+}
+.pw20-promoBox .moduleHead a{
+	color:#444;
+}
+.pw20-promoBox h5 {
+	font-size:12px;
+	margin-top:5px;
+}
+.pw20-promoBox h6 {
+	font-size:12px;
+	font-weight:500;
+	color:#3b3b3b;
+}
+.pw20-promoBox h6 span {
+	color:#717171;
+	display:block;
+	text-transform:uppercase;
+	font-weight:400;
+	font-size:12px;
+	margin-top:5px;
+}

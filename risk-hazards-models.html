@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html  lang="en" id="doc" class="ie8 no-js"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]>
+<!--> <html lang="en" id="doc" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Risk & Hazards - Risk Assessment Models | PreventionWeb.net</title>
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+	<!-- RP print version: include specific CSS file -->    
+    <link rel="stylesheet" href="assets/css/print.css" media="print" />
+	<!-- RP: IE9 css for select background -->	
+    <!--[if IE 9]><link rel="stylesheet" href="assets/css/app_ie9.css" /><![endif]-->
+    <script src="assets/shared/foundation/v5.2.3/js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/f5a1d61e-8421-43db-82ac-6053b84c9bc4.js"></script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+    </script>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+    <div class="baseContainer bg-black hide-for-print">
+        <div class="hfaRibbon"></div>
+        <div class="bg-black" style="color:#fff">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="contentContainer" id="top-header">
+                        <div class="wrapper">
+                            <ul>
+                                <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                <li class="current"><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                            </ul>
+                            <img id="menu-igniter" class="icon-menu" src="assets/img/icon-grid-menu.png" alt="Image unavailable">
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="wrapper" id="top-menu">
+                            <div id="#igniter-target" class="top-dropdown-menu">
+                                <a id="menu-close" class="closer" href="">x</a>
+                                <div class="large-4">
+                                    <ul>
+                                        <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                                        <li><a href="http://www.wcdrr.org/" class="internal">World Conference on DRR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/gar/2013/en/home/index.html" class="internal">Global Assessment Report</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/hfa-monitoring/" class="internal">HFA Monitor</a></li>
+                                        <li><a href="http://www.unisdr.org/campaign/resilientcities/" class="internal">Making Cities Resilient</a></li>
+                                        <li><a href="http://www.preventionweb.net/posthfa/" class="internal">Post-2015 Framework for DRR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="PWHeader" class="fullScreenContainer">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="contentContainer headerContainer">
+                    <div class="headerContainerCol1">
+                        <a href="/"><img alt="" src="assets/img/redesign-logo.png"></a>
+                    </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                    <div class="headerContainerCol2 hide-for-print">
+                        <div style="padding-bottom:9px;">
+                            <a href="#" id="currentUser" data-dropdown="userMenu" class="dropdown">Ben Wisner</a><a href="">Logout</a>
+                            <ul id="userMenu" data-dropdown-content class="f-dropdown">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Social Networks</a></li>
+                                <li><a href="">Areas of Interest</a></li>
+                                <li><a href="">Languages</a></li>
+                                <li><a href="">Saved Content</a></li>
+                                <li><a href="">Activities</a></li>
+                                <li><a href="">Submissions</a></li>
+                                <li><a href="">Password</a></li>
+                            </ul>
+	                    </div>
+                        <div style="float:right">
+                            <form action="http://search.preventionweb.net/" method="get" name="headerSearch">
+                            <div class="search-bar">
+                                <input type="text" value="" placeholder="Search PreventionWeb" maxlength="280" name="q" class="search-field">
+                                <input type="image" alt="Search" src="assets/img/search-button.png" name="search" class="search-button">
+                            </div>
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>    
+	        </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row line hide-for-print">
+            <div class="large-12 columns">
+	        </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-10 columns">
+            	<ul id="mainMenu" class="inline-list">
+                    <li class="current"><a href="#">Risk <span>&amp;</span> Hazards</a></li>
+                    <li><a href="#">Countries <span>&amp;</span> Cities</a></li>
+                    <li><a href="#">Framework <span>for</span> Action</a></li>
+                    <li><a href="#">Themes<span></span></a></li>
+                    <li><a href="#">Community services<span></span></a></li>
+                </ul>
+	        </div>
+            <div class="large-2 columns clearfix">
+            	<a class="subscribe right" href="#">Subscribe</a>
+	        </div>
+        </div>
+    </div>
+
+    <div id="PWContent" class="fullScreenContainer">
+	    <div class="background color01"></div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-12 columns">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Risk & Hazards</a></li>
+                    <li class="current"><a href="#">Risk assessment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contentPage" class="row">
+            <div class="large-12 columns">
+                <div class="row module">
+                    <div class="large-6 columns">
+	                    <h1 class="big">Risk Models</h1>
+                    </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                    <div class="large-6 columns clearfix hide-for-print">
+                    	<ul class="button-group right">
+                            <li>
+                            	<a href="javascript:window.print();" class="button radius print">Print</a>
+                            </li>
+                            <li>
+                            	<a data-dropdown="sharePopup" data-options="align:left" class="button radius share" href="">Share</a>
+                                <div id="sharePopup" data-dropdown-content class="f-dropdown content small">
+                                	<form>
+                                        <div class="row">
+                                            <div class="large-12 columns clearfix">
+                                                <label>Short URL
+                                                    <input type="text" class="radius" placeholder="http://preventionweb.net/go/37350" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <label>Share via</label>
+                                                <div class="social-buttons">
+                                                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                                                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <label>Share via email:
+                                                    <input type="text" class="radius" placeholder="Email address" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <div class="panel radius">
+                                                    <span>Expert of the Week for May 5-9, 2014</span>
+                                                    Ms. Marisol Estrella<br>Programme Coordinator, Post-Conflict and Diasster Branch Management
+                                                    <a href="">http://preventionweb.net/go/37350</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-12 columns button-bar clearfix">
+                                                <a class="button radius" href="#">Print</a>
+                                                <a class="button radius primary right" href="#">Send</a>
+                                                <a class="button radius right close" href="">Cancel</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row module">
+                    <div class="large-12 columns">
+                    	<h2>Understanding risk modelling</h2>
+                        <p class="text">Computational risk modelling allows us to couple exposure data with vulnerability and hazard models to generate deterministic and probabilistic risk estimates.  The modelling of synthetic events is a way of compensating for the limited available historical information, particularly in the case of extreme events related to intensive risk (UNISDR, 2015a).</p>
+<!-- RP quote styles: replaced div 'quote' with blockquote --> 
+						<blockquote>Models differ in their resolution, computational power and number of variables, are highly technical but only as good as the data used.</blockquote>
+                        <p class="text">Since we do not fully understand nor can we fully replicate reality, a model is a representation of reality and is therefore defined by a series of assumptions.  These assumptions are informed by an imperfect historical record of past events, our incomplete knowledge of natural processes and vulnerability, as well as uncertainties in exposure data.  Consequently, each of the components within the risk model has its own set of associated uncertainties.  As these uncertainties build, the model output may move further away from accuracy.  For instance, although a risk model might appear to produce a precise output, e.g. ‘1 in 100 year flood will affect 388,123 people’, in reality the accuracy of the model and input data may provide only an order of magnitude estimate (GFDRR, 2014a).  Being aware of the uncertainty and assumptions behind models is therefore critical when applying a model output, however these are not always apparent to the users of model outputs.</p>
+                        <p class="text">The following list of models is not exhaustive, but indicates the range of open (public) and closed (private) models, which are local, national, regional and or global in scope. Global refers to those models that consider several, but not necessarily all countries.  Deterministic approaches model a single or small number of scenarios without considering the likelihood of occurrence, whereas probabilistic approaches consider the full range of possible events as well as quantifying the likelihood of occurrence.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                    	<ul data-tab="" class="tabs">
+                            <li class="tab-title active"><a href="#panel1-1">Risk Models</a></li>
+                            <li class="tab-title"><a href="#panel1-2">Hazard, Exposure & Vulnerability Models</a></li>
+                        </ul>
+                        <div class="tabs-content">
+							<div id="panel1-1" class="content active">
+	                            <div class="module">
+                                    <p class="text small">Risk modelling involves combining hazard models with exposure data and vulnerability models (or ‘functions’). The output of the risk model depends on its purpose, but they often estimate potential economic losses, for instance the average annual loss (estimated loss averaged by year considering the full range of loss scenarios relating to different return periods).  However, economic losses are not of concern to many DRR decision-makers, who instead want to know for instance how many homes might be damaged in a community given different hazard severities.</p>
+				                </div>
+                                <div class="panel radius module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading trend">model</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <div class="module" style="background:#ccc; height:240px; text-align:center;"><br><br><br><br><br><br>Image placeholder<br><br>Image can have any height</div>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <h3 class="module">INFORM model</h3>
+                                            <p class="small-text module"><span class="normal lower case-none"><strong>Provided by</strong>: Inter-Agency Standing Committee (IASC) and the European Commission</span></p>
+                                            <p class="text small">The Global Risk Model featured in the Global Assessment Report 2015 is based on a joint efforst by leading scientific institutions, governemnts, UN agencies and development banks, the private sector and non-governmental organisations.  The Global Risk Model is a multiple agencies effort to share spatial data on global risk from natural hazards.  Data on past hazardous events, human and economical hazard exposure and risk from natural hazards can be visualised and downloaded.  Probabilistic hazard models have been developed for earthquake, tropical cyclone wind and storm surge, tsunami and river flooding worldwide, for volcanic ash in the Asia-Pacific region and for drought in parts of Africa. A global exposure model for the built environment has been developed at a 1kmx1km resolution along coastlines and ....</p>
+        <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+                                        </div>
+                                    </div>
+                                    <div class="row separator-full">
+                                        <div class="large-12 columns">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                        	<h4 class="text-right">HAZARDS</h4>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <a href="" class="button round"><span>EARTHQUAKE</span></a>
+                                            <a href="" class="button round"><span>CYCLONE</span></a>
+                                            <a href="" class="button round"><span>FLOOD</span></a>
+                                            <a href="" class="button round"><span>STORM SURGE</span></a>
+                                            <a href="" class="button round"><span>LANDSLIDE</span></a>
+                                            <a href="" class="button round"><span>TSUNAMI</span></a>
+                                            <a href="" class="button round"><span>VOLCANO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel radius module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading trend">model</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <div class="module" style="background:#ccc; height:240px; text-align:center;"><br><br><br><br><br><br>Image placeholder<br><br>Image can have any height</div>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <h3 class="module">INFORM model</h3>
+                                            <p class="small-text module"><span class="normal lower case-none"><strong>Provided by</strong>: Inter-Agency Standing Committee (IASC) and the European Commission</span></p>
+                                            <p class="text small">The Global Risk Model featured in the Global Assessment Report 2015 is based on a joint efforst by leading scientific institutions, governemnts, UN agencies and development banks, the private sector and non-governmental organisations.  The Global Risk Model is a multiple agencies effort to share spatial data on global risk from natural hazards.  Data on past hazardous events, human and economical hazard exposure and risk from natural hazards can be visualised and downloaded.  Probabilistic hazard models have been developed for earthquake, tropical cyclone wind and storm surge, tsunami and river flooding worldwide, for volcanic ash in the Asia-Pacific region and for drought in parts of Africa. A global exposure model for the built environment has been developed at a 1kmx1km resolution along coastlines and ....</p>
+        <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+                                        </div>
+                                    </div>
+                                    <div class="row separator-full">
+                                        <div class="large-12 columns">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                        	<h4 class="text-right">HAZARDS</h4>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <a href="" class="button round"><span>EARTHQUAKE</span></a>
+                                            <a href="" class="button round"><span>CYCLONE</span></a>
+                                            <a href="" class="button round"><span>FLOOD</span></a>
+                                            <a href="" class="button round"><span>STORM SURGE</span></a>
+                                            <a href="" class="button round"><span>LANDSLIDE</span></a>
+                                            <a href="" class="button round"><span>TSUNAMI</span></a>
+                                            <a href="" class="button round"><span>VOLCANO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel radius module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading trend">model</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <div class="module" style="background:#ccc; height:240px; text-align:center;"><br><br><br><br><br><br>Image placeholder<br><br>Image can have any height</div>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <h3 class="module">INFORM model</h3>
+                                            <p class="small-text module"><span class="normal lower case-none"><strong>Provided by</strong>: Inter-Agency Standing Committee (IASC) and the European Commission</span></p>
+                                            <p class="text small">The Global Risk Model featured in the Global Assessment Report 2015 is based on a joint efforst by leading scientific institutions, governemnts, UN agencies and development banks, the private sector and non-governmental organisations.  The Global Risk Model is a multiple agencies effort to share spatial data on global risk from natural hazards.  Data on past hazardous events, human and economical hazard exposure and risk from natural hazards can be visualised and downloaded.  Probabilistic hazard models have been developed for earthquake, tropical cyclone wind and storm surge, tsunami and river flooding worldwide, for volcanic ash in the Asia-Pacific region and for drought in parts of Africa. A global exposure model for the built environment has been developed at a 1kmx1km resolution along coastlines and ....</p>
+        <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+                                        </div>
+                                    </div>
+                                    <div class="row separator-full">
+                                        <div class="large-12 columns">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                        	<h4 class="text-right">HAZARDS</h4>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <a href="" class="button round"><span>EARTHQUAKE</span></a>
+                                            <a href="" class="button round"><span>CYCLONE</span></a>
+                                            <a href="" class="button round"><span>FLOOD</span></a>
+                                            <a href="" class="button round"><span>STORM SURGE</span></a>
+                                            <a href="" class="button round"><span>LANDSLIDE</span></a>
+                                            <a href="" class="button round"><span>TSUNAMI</span></a>
+                                            <a href="" class="button round"><span>VOLCANO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="info1" class="moreinfo">
+                                    <div class="panel radius module">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+            <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                                <div class="bkg-print"><p class="small-text heading trend">model</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-4 columns">
+                                                <div class="module" style="background:#ccc; height:240px; text-align:center;"><br><br><br><br><br><br>Image placeholder<br><br>Image can have any height</div>
+                                            </div>
+                                            <div class="large-8 columns">
+                                                <h3 class="module">INFORM model</h3>
+                                                <p class="small-text module"><span class="normal lower case-none"><strong>Provided by</strong>: Inter-Agency Standing Committee (IASC) and the European Commission</span></p>
+                                                <p class="text small">The Global Risk Model featured in the Global Assessment Report 2015 is based on a joint efforst by leading scientific institutions, governemnts, UN agencies and development banks, the private sector and non-governmental organisations.  The Global Risk Model is a multiple agencies effort to share spatial data on global risk from natural hazards.  Data on past hazardous events, human and economical hazard exposure and risk from natural hazards can be visualised and downloaded.  Probabilistic hazard models have been developed for earthquake, tropical cyclone wind and storm surge, tsunami and river flooding worldwide, for volcanic ash in the Asia-Pacific region and for drought in parts of Africa. A global exposure model for the built environment has been developed at a 1kmx1km resolution along coastlines and ....</p>
+            <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                                <p class="right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                                <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                                <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+                                            </div>
+                                        </div>
+                                        <div class="row separator-full">
+                                            <div class="large-12 columns">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-4 columns">
+                                                <h4 class="text-right">HAZARDS</h4>
+                                            </div>
+                                            <div class="large-8 columns">
+                                                <a href="" class="button round"><span>EARTHQUAKE</span></a>
+                                                <a href="" class="button round"><span>CYCLONE</span></a>
+                                                <a href="" class="button round"><span>FLOOD</span></a>
+                                                <a href="" class="button round"><span>STORM SURGE</span></a>
+                                                <a href="" class="button round"><span>LANDSLIDE</span></a>
+                                                <a href="" class="button round"><span>TSUNAMI</span></a>
+                                                <a href="" class="button round"><span>VOLCANO</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                <a class="button radius expand more hide-for-print" href="#" target="1">SHOW MORE</a>
+                            </div>
+							<div id="panel1-2" class="content">
+	                            <div class="module">
+                                    <h3>Hazard Models</h3>
+                                    <p class="text small">Hazard models estimate the probability of occurrence of a specific hazard, in a specific future time period, as well as its intensity and area of impact.  Natural hazard models replicate the physics of natural processes, including their propagation through the atmosphere (e.g. windstorm), the Earth's sub-surface (e.g. earthquake) and surface (e.g. flood), or a combination of all three. Hazard is estimated in terms of the occurrence, frequency and severity of the event(s).</p>
+                                    <p class="small-text"><span class="case-none normal">Source: adapted from Michel-Kerjan et al. (2012)</span></p>
+                                </div>
+                                <div class="panel radius module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading trend">model</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <div class="module" style="background:#ccc; height:240px; text-align:center;"><br><br><br><br><br><br>Image placeholder<br><br>Image can have any height</div>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <h3 class="module">INFORM model</h3>
+                                            <p class="small-text module"><span class="normal lower case-none"><strong>Provided by</strong>: Inter-Agency Standing Committee (IASC) and the European Commission</span></p>
+                                            <p class="text small">The Global Risk Model featured in the Global Assessment Report 2015 is based on a joint efforst by leading scientific institutions, governemnts, UN agencies and development banks, the private sector and non-governmental organisations.  The Global Risk Model is a multiple agencies effort to share spatial data on global risk from natural hazards.  Data on past hazardous events, human and economical hazard exposure and risk from natural hazards can be visualised and downloaded.  Probabilistic hazard models have been developed for earthquake, tropical cyclone wind and storm surge, tsunami and river flooding worldwide, for volcanic ash in the Asia-Pacific region and for drought in parts of Africa. A global exposure model for the built environment has been developed at a 1kmx1km resolution along coastlines and ....</p>
+        <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+                                        </div>
+                                    </div>
+                                    <div class="row separator-full">
+                                        <div class="large-12 columns">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <h4 class="text-right">HAZARDS</h4>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <a href="" class="button round"><span>EARTHQUAKE</span></a>
+                                            <a href="" class="button round"><span>CYCLONE</span></a>
+                                            <a href="" class="button round"><span>FLOOD</span></a>
+                                            <a href="" class="button round"><span>STORM SURGE</span></a>
+                                            <a href="" class="button round"><span>LANDSLIDE</span></a>
+                                            <a href="" class="button round"><span>TSUNAMI</span></a>
+                                            <a href="" class="button round"><span>VOLCANO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <h3>Exposure Models</h3>
+                                    <p class="text small">Exposure accounts for the people and properties identified, along with numerous specific characteristics such as the occupancy, construction type and age of buildings, as well as their replacement value.  If fatalities and injuries are included in the risk model, then different scenarios characterizing the number of people in the buildings at different times of the day should also be included.</p>
+                                    <p class="small-text"><span class="case-none normal">Source: adapted from Michel-Kerjan et al. (2012)</span></p>
+                                </div>
+                                <div class="panel radius module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading trend">model</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <div class="module" style="background:#ccc; height:240px; text-align:center;"><br><br><br><br><br><br>Image placeholder<br><br>Image can have any height</div>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <h3 class="module">INFORM model</h3>
+                                            <p class="small-text module"><span class="normal lower case-none"><strong>Provided by</strong>: Inter-Agency Standing Committee (IASC) and the European Commission</span></p>
+                                            <p class="text small">The Global Risk Model featured in the Global Assessment Report 2015 is based on a joint efforst by leading scientific institutions, governemnts, UN agencies and development banks, the private sector and non-governmental organisations.  The Global Risk Model is a multiple agencies effort to share spatial data on global risk from natural hazards.  Data on past hazardous events, human and economical hazard exposure and risk from natural hazards can be visualised and downloaded.  Probabilistic hazard models have been developed for earthquake, tropical cyclone wind and storm surge, tsunami and river flooding worldwide, for volcanic ash in the Asia-Pacific region and for drought in parts of Africa. A global exposure model for the built environment has been developed at a 1kmx1km resolution along coastlines and ....</p>
+        <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+                                        </div>
+                                    </div>
+                                    <div class="row separator-full">
+                                        <div class="large-12 columns">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <h4 class="text-right">HAZARDS</h4>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <a href="" class="button round"><span>EARTHQUAKE</span></a>
+                                            <a href="" class="button round"><span>CYCLONE</span></a>
+                                            <a href="" class="button round"><span>FLOOD</span></a>
+                                            <a href="" class="button round"><span>STORM SURGE</span></a>
+                                            <a href="" class="button round"><span>LANDSLIDE</span></a>
+                                            <a href="" class="button round"><span>TSUNAMI</span></a>
+                                            <a href="" class="button round"><span>VOLCANO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <h3>Vulnerability Models</h3>
+                                    <p class="text small">
+Vulnerability models typically replicate structural vulnerability through the use of vulnerability functions (or ‘curves’) that describe a probable damage severity or economic loss for a particular type of infrastructure when it is subjected to a type and intensity of hazard.  There exists a shortfall in social vulnerability models, but it can be estimated, to a limited extent, by using demographic and socio-economic data.</p>
+                                    <p class="small-text"><span class="case-none normal">Source: adapted from Michel-Kerjan et al. (2012)</span></p>
+                                </div>
+                                <div class="panel radius module">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+        <!-- RP print version: added 'bkg-print' class for printing background -->    
+                                            <div class="bkg-print"><p class="small-text heading trend">model</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <div class="module" style="background:#ccc; height:240px; text-align:center;"><br><br><br><br><br><br>Image placeholder<br><br>Image can have any height</div>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <h3 class="module">INFORM model</h3>
+                                            <p class="small-text module"><span class="normal lower case-none"><strong>Provided by</strong>: Inter-Agency Standing Committee (IASC) and the European Commission</span></p>
+                                            <p class="text small">The Global Risk Model featured in the Global Assessment Report 2015 is based on a joint efforst by leading scientific institutions, governemnts, UN agencies and development banks, the private sector and non-governmental organisations.  The Global Risk Model is a multiple agencies effort to share spatial data on global risk from natural hazards.  Data on past hazardous events, human and economical hazard exposure and risk from natural hazards can be visualised and downloaded.  Probabilistic hazard models have been developed for earthquake, tropical cyclone wind and storm surge, tsunami and river flooding worldwide, for volcanic ash in the Asia-Pacific region and for drought in parts of Africa. A global exposure model for the built environment has been developed at a 1kmx1km resolution along coastlines and ....</p>
+        <!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+                                            <p class="right hide-for-print"><a href="" target="_blank" class="more">VIEW WEBSITE</a></p>
+                                            <p class="small-text"><span class="normal lower">scope</span> global</p>
+                                            <p class="small-text"><span class="normal lower">ACCESS</span> Open</p>
+                                        </div>
+                                    </div>
+                                    <div class="row separator-full">
+                                        <div class="large-12 columns">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <h4 class="text-right">HAZARDS</h4>
+                                        </div>
+                                        <div class="large-8 columns">
+                                            <a href="" class="button round"><span>EARTHQUAKE</span></a>
+                                            <a href="" class="button round"><span>CYCLONE</span></a>
+                                            <a href="" class="button round"><span>FLOOD</span></a>
+                                            <a href="" class="button round"><span>STORM SURGE</span></a>
+                                            <a href="" class="button round"><span>LANDSLIDE</span></a>
+                                            <a href="" class="button round"><span>TSUNAMI</span></a>
+                                            <a href="" class="button round"><span>VOLCANO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row prefooter">
+                    <div class="large-8 columns">
+                    </div>
+                    <div class="large-4 columns">
+                        <p class="small-text">LAST EDITED FEB 2, 2014 BY:<a href="">PETER MORAN</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-2 large-centered columns">
+				<ul id="socialBar" class="inline-list">
+                	<li><a href="#" class="facebook"></a></li>
+                	<li><a href="#" class="twitter"></a></li>
+                	<li><a href="#" class="goggle"></a></li>
+                </ul>            
+            </div>
+        </div>
+<!-- RP print version: added 'hide-for-print' class to avoid printing -->    
+        <div class="row hide-for-print">
+            <div class="large-8 large-centered columns">
+            	<ul id="footerMenu" class="inline-list">
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Donor</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<div id="viewStory" class="reveal-modal medium" data-reveal></div>
+    <a class="btn-close-reveal"></a>
+	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
+    <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+    <script>
+		$(document).foundation();
+		
+		$(document).ready(function() {
+			//RP: show/hide functions for topbar popup menu
+			$('#menu-igniter').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+			$('#menu-close').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+			//show/hide function for text/questions
+			$('.more').click(function (ev) {
+			   var t = ev.target
+			   $('#info' + $(this).attr('target')).toggle(100, function(){
+				  console.log(ev.target)
+				  $(t).html($(this).is(':visible')? 'HIDE MORE' : 'SHOW MORE')
+			   });
+			   return false;
+			});
+			//RP: show all models when printing
+			$( window ).bind( "beforeprint", function() { 
+				$('.moreinfo').show();
+			});
+			if (window.matchMedia) { /* Chrome hack */
+				var mediaQueryList = window.matchMedia('print');
+				mediaQueryList.addListener(function(mql) {
+					if (mql.matches) {
+						$('.moreinfo').show();
+					}
+				});
+			}			
+		});
+    </script>    
+</body>
+</html>
