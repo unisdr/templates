@@ -1580,7 +1580,7 @@ p.text, ul.text, ol.text, .text p {
 ol.text li {
     padding-left: 5px;
 }
-ol.text ol {
+ol.text ol, ol.letter {
 	list-style-type:lower-latin;
 }
 .text.small, .text.small p, .two-columns.small {
