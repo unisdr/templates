@@ -1571,7 +1571,7 @@ blockquote.indent {
 	font-weight:500;
 }
 
-p.text, ul.text, ol.text, .text p {
+p.text, ul.text, ol.text, .text p, .text ul {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size:16px;
 	font-weight:400;
@@ -1718,6 +1718,10 @@ p.small-text.policy {
 }
 p.small-text.expert {
 	background:url("../img/sprite.png") no-repeat -20px -2399px;
+	padding:0 0 0 25px;
+}
+p.small-text.pwcontent {
+	background:url("../img/sprite.png") no-repeat -20px -2425px;
 	padding:0 0 0 25px;
 }
 .panel.grey p.small-text {
@@ -2837,6 +2841,17 @@ form.countries .button {
 	padding-top:30px;
 	height:95px;
 }
+#PWContent .row.preview-band.preview {
+	border-bottom:10px solid #f04124;
+}
+#PWContent .row.preview-band.published {
+	border-bottom:10px solid #86b73d;
+}
+#PWContent .row.preview-band .large-9 {
+	color:#fff;
+	padding:0 0 0 40px;
+	width:75%;
+}
 #PWContent .row.preview-band .large-7 {
 	color:#fff;
 	padding:0 0 0 40px;
@@ -2846,10 +2861,15 @@ form.countries .button {
 	padding:0 40px 0 0;
 	width: 41.6667%;
 }
+#PWContent .row.preview-band .large-3 {
+	padding:0 40px 0 0;
+	width: 25%;
+}
 #PWContent .row.preview-band h1 {
 	font-size:21px;
-	background:url("../img/sprite.png") no-repeat -20px -1440px;
+	background:url("../img/sprite.png") no-repeat -20px -1443px;
 	padding-left:25px;
+	line-height:1;
 }
 #PWContent .row.preview-band h1 span{
 	font-style: normal;

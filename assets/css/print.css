@@ -230,11 +230,14 @@ p.small-text.key:not(*:root):before {/* background print for Chrome and Safari *
 	top:-1215px;
 	position:absolute;
 }
+.top-banner p.small-text.academic, .top-banner p.small-text.job, .top-banner p.small-text.event {
+	margin-left:0;
+}
 p.small-text.event {
 	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
 	position:relative;
 }
-p.small-text.event:before {/* background print for Firefox and IE */
+p.small-text.event:before, .top-banner p.small-text.event:before {/* background print for Firefox and IE */
 	content: url("../img/sprite.png");
 	display:inline-block;
 	margin-top:-709px;
@@ -243,7 +246,7 @@ p.small-text.event:before {/* background print for Firefox and IE */
 	overflow:hidden;
 	vertical-align:middle;
 }
-p.small-text.event:not(*:root):before {/* background print for Chrome and Safari */
+p.small-text.event:not(*:root):before, .top-banner p.small-text.event:not(*:root):before {/* background print for Chrome and Safari */
 	margin-top:0;
 	top:-709px;
 	position:absolute;
@@ -336,6 +339,24 @@ p.small-text.expert:before {/* background print for Firefox and IE */
 p.small-text.expert:not(*:root):before {/* background print for Chrome and Safari */
 	margin-top:0;
 	top:-2400px;
+	position:absolute;
+}
+p.small-text.pwcontent {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.pwcontent:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2426px;
+	margin-left:-40px;
+	height:2446px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.pwcontent:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2426px;
 	position:absolute;
 }
 h4.geo {
