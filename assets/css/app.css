@@ -617,18 +617,18 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 	padding-left:40px;
 	background-color:#f6f6f6;
 	background-image:url("../img/sprite.png");
-	background-position:-10px -1742px;
+	background-position:-10px -1741px;
 	background-repeat:no-repeat;
 	background: -webkit-linear-gradient(#fff, #f6f6f6);
 	background: -o-linear-gradient(#fff, #f6f6f6);
 	background: -moz-linear-gradient(#fff, #f6f6f6);
-	background: url("../img/sprite.png") no-repeat -10px -1742px, linear-gradient(#fff, #f6f6f6);
+	background: url("../img/sprite.png") no-repeat -10px -1741px, linear-gradient(#fff, #f6f6f6);
 }
 .button.back:hover, .button.back:focus {
 	background: -webkit-linear-gradient(#455e92, #3b5384);
 	background: -o-linear-gradient(#455e92, #3b5384);
 	background: -moz-linear-gradient(#455e92, #3b5384);
-	background: url("../img/sprite.png") no-repeat -10px -1742px, linear-gradient(#fff, #f6f6f6);
+	background: url("../img/sprite.png") no-repeat -10px -1741px, linear-gradient(#fff, #f6f6f6);
 }
 .button.list {
 	padding-left:20px;
