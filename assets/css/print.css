@@ -359,6 +359,24 @@ p.small-text.pwcontent:not(*:root):before {/* background print for Chrome and Sa
 	top:-2426px;
 	position:absolute;
 }
+p.small-text.search {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.search:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2447px;
+	margin-left:-40px;
+	height:2487px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.search:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2447px;
+	position:absolute;
+}
 h4.geo {
 	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
 	position:relative;
