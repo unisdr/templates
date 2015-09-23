@@ -848,6 +848,12 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 	border-left:none;
 	border-right:none;
 }
+.panel.story {
+  margin-top:2.5rem;
+}
+.large-6 .panel.story {
+  margin-top:0;
+}
 .sessionNav .current {
 	position:relative;
 }
@@ -1559,7 +1565,7 @@ h5.labeled {
 }
 blockquote {
 	border-left:none;
-	margin:40px 0;
+	margin:40px 5%;
 	padding:0;
 	font-family: Georgia,"Times New Roman",Times,serif;
 	font-size:22px;
@@ -1569,6 +1575,10 @@ blockquote {
 }
 blockquote.indent {
 	margin:40px 18%;
+}
+blockquote p {
+  color: inherit;
+  line-height: inherit;
 }
 
 .quote{
@@ -1605,6 +1615,9 @@ p.text, ul.text, ol.text, .text p, .text ul {
 	font-weight:400;
 	line-height: 1.8;
 }
+ul.text li {
+    margin-bottom: 0.5rem;
+}
 ol.text li {
     padding-left: 5px;
 }
@@ -1638,6 +1651,8 @@ p.small-text {
 }
 .panel.story .columns p.small-text {
 	margin-bottom:30px;
+	border-top:1px solid #d8d8d8;
+	padding-top:5px;
 }
 p.small-text.heading {
 	font-size:16px;
@@ -2493,7 +2508,8 @@ _:-ms-input-placeholder, :root .panel .panel.gradient.what { /* For IE 10+ */
 .photo-caption {
 	font-size:13px;
 	text-align:right;
-	margin-top:10px;
+	margin-top:20px;
+	line-height:1.5em;
 }
 .full-left .photo-caption {
 	text-align:left;
@@ -2504,7 +2520,6 @@ _:-ms-input-placeholder, :root .panel .panel.gradient.what { /* For IE 10+ */
 	margin-right:20px;
 }
 .photo-caption span {
-	display:block;
 	color:#717171;
 }
 .image-container {
