@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html  lang="en" id="doc" class="ie8 no-js"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]>
+<!--> <html lang="en" id="doc" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Event view | PreventionWeb.net</title>
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
+    <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
+    <link rel="stylesheet" href="assets/css/corporate-menu.css" />
+    <script src="assets/shared/foundation/v5.2.3/js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/f5a1d61e-8421-43db-82ac-6053b84c9bc4.js"></script>
+</head>
+<body>
+<!-- RP: Foundation 'hide-for-print' class to avoid printing this item -->    
+    <div class="baseContainer bg-black hide-for-print">
+        <div class="hfaRibbon"></div>
+        <div class="bg-black" style="color:#fff">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="contentContainer" id="top-header">
+                        <div class="wrapper">
+                            <ul>
+                                <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                <li class="current"><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                            </ul>
+                            <img id="menu-igniter" class="icon-menu" src="assets/img/icon-grid-menu.png" alt="Image unavailable">
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="wrapper" id="top-menu">
+                            <div id="#igniter-target" class="top-dropdown-menu">
+                                <a id="menu-close" class="closer" href="">x</a>
+                                <div class="large-4">
+                                    <ul>
+                                        <li><a href="http://www.unisdr.org/" class="internal">UNISDR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/" class="internal">PreventionWeb</a></li>
+                                        <li><a href="http://www.wcdrr.org/" class="internal">World Conference on DRR</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/gar/2013/en/home/index.html" class="internal">Global Assessment Report</a></li>
+                                        <li><a href="http://www.preventionweb.net/english/hyogo/hfa-monitoring/" class="internal">HFA Monitor</a></li>
+                                        <li><a href="http://www.unisdr.org/campaign/resilientcities/" class="internal">Making Cities Resilient</a></li>
+                                        <li><a href="http://www.preventionweb.net/posthfa/" class="internal">Post-2015 Framework for DRR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
+    <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+    <script>
+		//RP: Foundation framework launch
+		$(document).foundation();
+		
+		//RP: show/hide functions for top corporate menu dropdown
+		$(document).ready(function() {
+			$('#menu-igniter').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+			$('#menu-close').click(function() {
+				$('.top-dropdown-menu').slideToggle();
+			});
+		});
+    </script>    
+</body>
+</html>

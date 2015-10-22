@@ -1,0 +1,98 @@
+@charset "utf-8";
+body {
+	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color:#3b3b3b;
+}
+a:hover, a:focus {
+  text-decoration:underline;
+}
+.bg-black {
+    background-color: #000;
+}
+.hfaRibbon {
+    background:#e74934 url('../img/ribbon.png') no-repeat top center;
+    background-size:100% 4px;
+    height:4px;
+}
+.contentContainer {
+	width: auto;
+    margin: auto;
+    text-align: left;
+}
+#top-header {
+    background-color: #000;
+    height: 43px;
+}
+#top-header .wrapper {
+    margin: 0 auto;
+    background-color: #fff;
+    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 43px;
+}
+#top-header li.current a {
+    color: #FFF;
+}
+#top-header a {
+    color: #CCC;
+}
+#top-header ul {
+	margin:0;
+	line-height:inherit;
+}
+#top-header ul li {
+    float: left;
+    color: #FFF;
+    display: inline-block;
+    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+	font-weight:700;
+    margin-right: 40px;
+}
+#top-header .icon-menu {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 11px;
+}
+#top-menu.wrapper {
+    position: relative;
+}
+.top-dropdown-menu {
+    background-color: #25292F;
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 320px;
+    z-index: 9999;
+}
+.top-dropdown-menu ul {
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 0;
+    width: 340px;
+}
+.top-dropdown-menu ul li {
+    display: block;
+    list-style: none outside none;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    text-align: left;
+}
+.top-dropdown-menu ul li a {
+    color: #FFFFFF;
+    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.top-dropdown-menu a.closer {
+    color: #FFFFFF;
+    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
