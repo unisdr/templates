@@ -851,6 +851,9 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 .panel.story {
   margin-top:2.5rem;
 }
+.panel.story.equalized {
+	height:255px;
+}
 .large-6 .panel.story {
   margin-top:0;
 }
@@ -1649,7 +1652,7 @@ p.small-text {
 	margin-bottom: 0.5rem;
 	font-weight:700;
 }
-.panel.story .columns p.small-text {
+.panel.story p.small-text {
 	margin-bottom:30px;
 	border-top:1px solid #d8d8d8;
 	padding-top:5px;
@@ -1658,13 +1661,15 @@ p.small-text.heading {
 	font-size:16px;
 	margin-top:5px;
 }
-.text-center p.small-text.heading {
-	display:inline-block;
-	margin:auto;
-}
 .panel.story p.small-text.heading {
 	margin-top:0;
 	margin-bottom: 1.25rem;
+	border-top:none;
+	padding-top:0;
+}
+.text-center p.small-text.heading {
+	display:inline-block;
+	margin:auto;
 }
 .large-3 p.small-text.heading {
 /*	font-size:13px;*/
