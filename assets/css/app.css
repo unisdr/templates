@@ -1460,6 +1460,8 @@ h3.margin {
 }
 .panel.story h3.margin {
 	font-size:17px;
+	max-height:68px;
+	overflow:hidden;
 }
 .whole-page h3 {
 	margin-bottom:1rem;
@@ -2526,6 +2528,7 @@ _:-ms-input-placeholder, :root .panel .panel.gradient.what { /* For IE 10+ */
 }
 .photo-caption span {
 	color:#717171;
+	display:block;
 }
 .image-container {
 	position:relative;
