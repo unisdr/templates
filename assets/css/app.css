@@ -110,6 +110,10 @@ form .large-3, .module .large-3 {
   padding-left:0;
 }
 .large-10 {width: 83.33333%;}
+.large-9 .large-10 {
+  padding-right:25px;
+  padding-left:25px;
+}
 .large-11 {width: 91.66667%;}
 .popup .large-11, form .row .popup .row .columns.large-11 {
   width: 85%;
