@@ -1468,7 +1468,7 @@ h3.margin {
 	overflow:hidden;
 }
 .whole-page h3 {
-	margin-bottom:1rem;
+	margin-bottom:1.5rem;
 }
 .panel.grey h3 {
 	font-size:16px;
@@ -2259,8 +2259,6 @@ form span.optional {
 	border-radius:3px 0 3px 3px;
 }
 .panel.gradient.what {
-/*	margin-top:-22px;
-	display:none;*/
 	position:relative;
 	top:-22px;
 	z-index:10;
@@ -2268,16 +2266,19 @@ form span.optional {
 	display:none;
 }
 .panel .panel.gradient.what {
-/*	margin-top:-6px;*/
 	top:-21px;
 }
-_:-ms-input-placeholder, :root .panel.gradient.what { /* For IE 10+ */
-/*	margin-top:-23px;*/
+_:-ms-input-placeholder, :root .panel.gradient.what { /* IE 10+ */
 	top:-23px;
 }
-_:-ms-input-placeholder, :root .panel .panel.gradient.what { /* For IE 10+ */
-/*	margin-top:-7px;*/
+_:-ms-lang(x), _:-webkit-full-screen, .panel.gradient.what { /* MS Edge */
+	top:-23px !important;
+}
+_:-ms-input-placeholder, :root .panel .panel.gradient.what { /* IE 10+ */
 	top:-22px;
+}
+_:-ms-lang(x), _:-webkit-full-screen, .panel .panel.gradient.what { /* MS Edge */
+	top:-22px !important;
 }
 .panel.gradient .close{
 	text-align:right;
