@@ -2280,6 +2280,12 @@ _:-ms-input-placeholder, :root .panel .panel.gradient.what { /* IE 10+ */
 _:-ms-lang(x), _:-webkit-full-screen, .panel .panel.gradient.what { /* MS Edge */
 	top:-22px !important;
 }
+.panel.gradient.what h4{
+	padding-top:0.8rem;
+}
+.panel.gradient.what a{
+	color:#3b3b3b;
+}
 .panel.gradient .close{
 	text-align:right;
 }
