@@ -1547,6 +1547,12 @@ h4.light {
 	border:1px solid #d8d8d8;
 	border-bottom:none;
 }
+h4.white {
+	font-size:15px;
+	background:#fff;
+	border:1px solid #d8d8d8;
+	border-bottom:none;
+}
 h5.labeled {
 	color:#717171;
 	font-size:13px;
@@ -1705,7 +1711,7 @@ p.small-text.documents {
 	padding:0 0 0 25px;
 }
 p.small-text.educational {
-	background:url("../img/sprite.png") no-repeat -20px -770px;
+	background:url("../img/sprite.png") no-repeat -20px -2475px;
 	padding:0 0 0 25px;
 }
 p.small-text.organization {
@@ -1793,6 +1799,10 @@ p.small-text.pwcontent {
 }
 p.small-text.search {
 	background:url("../img/sprite.png") no-repeat -20px -2447px;
+	padding:0 0 0 25px;
+}
+p.small-text.attachment {
+	background:url("../img/sprite.png") no-repeat -20px -2499px;
 	padding:0 0 0 25px;
 }
 .panel.grey p.small-text {
@@ -3598,7 +3608,6 @@ body:last-child #contentPage #sharePopup .twitter-share-button, x:-moz-any-link,
 .module.documents li a {
 	display:block;
 	padding: 12px 60px 10px 15px;
-/*	background:url("../img/sprite.png") no-repeat right -605px;*/
 	font-weight:500;
 }
 .module.documents li a span {
@@ -3615,9 +3624,6 @@ body:last-child #contentPage #sharePopup .twitter-share-button, x:-moz-any-link,
 #eventTitles.module.documents li, #eventTitles.module.documents li span {
 	font-size:12px;
 }
-#eventTitles.module.documents li a {
-	background:none;
-}
 #eventTitles.module.documents li:first-child {
 	display:block;
 	padding: 12px 60px 10px 15px;
@@ -3629,6 +3635,31 @@ body:last-child #contentPage #sharePopup .twitter-share-button, x:-moz-any-link,
 }
 .title-widget .module.documents {
 	border-top:none;
+}
+.meta-links ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.meta-links li {
+	padding:20px 0 0;
+}
+.meta-links li:first-child {
+	border-bottom:1px solid #d8d8d8;
+	padding:0 0 15px;
+}
+.meta-links p.small-text{
+  font-size: inherit;
+  text-transform: none;
+  margin-bottom:0;
+  line-height: 1.2;
+}
+.meta-links p.small-text a{
+  font-weight: 500;
+}
+.meta-links p.small-text span{
+  font-weight: 400;
+  margin-left:10px;
 }
 .slider.main-feature {
 /*	border:1px solid #d8d8d8;

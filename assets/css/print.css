@@ -57,15 +57,15 @@ p.small-text.educational {
 p.small-text.educational:before {/* background print for Firefox and IE */
 	content: url("../img/sprite.png");
 	display:inline-block;
-	margin-top:-770px;
+	margin-top:-2475px;
 	margin-left:-40px;
-	height:790px;
+	height:2495px;
 	overflow:hidden;
 	vertical-align:middle;
 }
 p.small-text.educational:not(*:root):before {/* background print for Chrome and Safari */
 	margin-top:0;
-	top:-770px;
+	top:-2475px;
 	position:absolute;
 }
 p.small-text.organization {
@@ -375,6 +375,24 @@ p.small-text.search:before {/* background print for Firefox and IE */
 p.small-text.search:not(*:root):before {/* background print for Chrome and Safari */
 	margin-top:0;
 	top:-2447px;
+	position:absolute;
+}
+p.small-text.attachment {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.attachment:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2499px;
+	margin-left:-40px;
+	height:2519px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.attachment:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2499px;
 	position:absolute;
 }
 h4.geo {
