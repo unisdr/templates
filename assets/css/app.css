@@ -51,6 +51,9 @@ body > .row, .fullScreenContainer > .row {
 .large-3.photo {
 	min-height:260px;
 }
+.large-3.padding {
+	padding-top:12px;
+}
 form .large-3, .module .large-3 {
   width:25%;
 }
@@ -1563,6 +1566,9 @@ h5.labeled {
 	display:table;
 	min-width:100px;
 }
+.large-4 h5.text-left {
+	margin-bottom:20px;
+}
 .list-header {
 	padding-bottom:10px;
 	border-bottom:1px solid #d8d8d8;
@@ -1682,9 +1688,6 @@ p.small-text.heading {
 .text-center p.small-text.heading {
 	display:inline-block;
 	margin:auto;
-}
-.large-3 p.small-text.heading {
-/*	font-size:13px;*/
 }
 .top-banner {
 	margin:-15px -10px 10px -53px;
