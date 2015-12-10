@@ -1678,6 +1678,7 @@ p.small-text {
 p.small-text.heading {
 	font-size:16px;
 	margin-top:5px;
+	padding-top:0 !important;
 }
 .panel.story p.small-text.heading {
 	margin-top:0;
@@ -1707,31 +1708,31 @@ p.small-text.heading {
 }
 p.small-text.editor {
 	background:url("../img/sprite.png") no-repeat -20px -440px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.documents {
 	background:url("../img/sprite.png") no-repeat -20px -740px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.educational {
 	background:url("../img/sprite.png") no-repeat -20px -2475px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.organization {
 	background:url("../img/sprite.png") no-repeat -20px -800px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.news {
 	background:url("../img/sprite.png") no-repeat -20px -830px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.network {
 	background:url("../img/sprite.png") no-repeat -20px -860px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.academic {
 	background:url("../img/sprite.png") no-repeat -20px -890px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 .top-banner p.small-text.academic {
 	background:url("../img/sprite.png") no-repeat -20px -1355px;
@@ -1739,7 +1740,7 @@ p.small-text.academic {
 }
 p.small-text.job {
 	background:url("../img/sprite.png") no-repeat -20px -920px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 .top-banner p.small-text.job {
 	background:url("../img/sprite.png") no-repeat -20px -1415px;
@@ -1747,26 +1748,26 @@ p.small-text.job {
 }
 p.small-text.map {
 	background:url("../img/sprite.png") no-repeat -20px -950px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.statistics {
 	background:url("../img/sprite.png") no-repeat -20px -980px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.trend {
 	background:url("../img/sprite.png") no-repeat -20px -1099px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.key {
 	background:url("../img/sprite.png") no-repeat -20px -1218px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.heading.key {
 	background:url("../img/sprite.png") no-repeat -20px -1216px;
 }
 p.small-text.event {
 	background:url("../img/sprite.png") no-repeat -20px -709px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 .top-banner p.small-text.event {
 	background:url("../img/sprite.png") no-repeat -20px -1384px;
@@ -1774,39 +1775,39 @@ p.small-text.event {
 }
 p.small-text.external {
 	background:url("../img/sprite.png") no-repeat -20px -1325px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.profile {
 	background:url("../img/sprite.png") no-repeat -20px -1474px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.twitterblack {
 	background:url("../img/sprite.png") no-repeat -20px -51px;
-	padding:0 0 0 30px;
+	padding:1px 0 0 30px;
 }
 p.small-text.story {
 	background:url("../img/sprite.png") no-repeat -20px -2248px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.policy {
 	background:url("../img/sprite.png") no-repeat -20px -2370px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.expert {
 	background:url("../img/sprite.png") no-repeat -20px -2399px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.pwcontent {
 	background:url("../img/sprite.png") no-repeat -20px -2425px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.search {
 	background:url("../img/sprite.png") no-repeat -20px -2447px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 p.small-text.attachment {
 	background:url("../img/sprite.png") no-repeat -20px -2500px;
-	padding:0 0 0 25px;
+	padding:1px 0 0 25px;
 }
 .panel.grey p.small-text {
 	text-transform:none;
