@@ -1022,7 +1022,6 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 .has-tip {
 	border-bottom:none;
 	color:inherit;
-/*	font-weight: inherit;*/
 }
 .has-tip:hover, .has-tip:focus {
 	border-bottom:none;
@@ -1038,8 +1037,19 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 .has-tip.help.right {
 	margin-left:0;
 }
+.has-tip.copyright {
+	background:url("../img/ico-copyright-off.png") no-repeat 0 0;
+	width:27px;
+	height:27px;
+	position:absolute;
+	z-index:20;
+	bottom:-14px;
+	right:-10px;
+}
+.has-tip.copyright:hover {
+	background:url("../img/ico-copyright-on.png") no-repeat 0 0;
+}
 .tooltip.tip-top {
-/*	background: rgba(0, 0, 0, 0.7) !important;*/
 	margin-top:-5px !important;
 	border-radius:5px;
 }
@@ -3791,6 +3801,13 @@ body:last-child #contentPage #sharePopup .twitter-share-button, x:-moz-any-link,
 	display:block;
 	font-weight:400;
 }
+.bordered {
+	position:relative;
+	display:inline-block;
+}
+.bordered img {
+	border:2px solid #f3eee6;
+}
 .feature img {
 	float:right;
 	margin-left:20px;
@@ -3829,15 +3846,6 @@ ul.content-type p.small-text, ul.content-type p.text {
   font-size: 14px;
   margin-bottom:0;
 }
-/*
-ul.content-type.full-page h3 {
-	font-size:20px;
-	margin-bottom: 0.5rem;
-}
-ul.content-type.full-page p.small-text, ul.content-type.full-page p.text {
-	margin-bottom: 0.5rem;
-}
-*/
 div.search {
 	border: 1px solid #d8d8d8;
 	border-radius:25px;
