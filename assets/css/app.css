@@ -1813,7 +1813,7 @@ p.small-text.expert {
 	padding:1px 0 0 25px;
 }
 p.small-text.pwcontent {
-	background:url("../img/sprite.png") no-repeat -20px -2425px;
+	background:url("../img/sprite.png") no-repeat -20px -2610px;
 	padding:1px 0 0 25px;
 }
 p.small-text.search {
@@ -2218,6 +2218,9 @@ form span.optional {
 }
 .separator-line.thin.module {
 	margin-bottom:40px;
+}
+.separator-line.thin.spaced {
+	margin-top:15px;
 }
 .popup {
 	position:absolute;
