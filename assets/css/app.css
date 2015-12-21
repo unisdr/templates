@@ -2203,6 +2203,29 @@ form span.optional {
 .table2.hfa-progress .light .progress .meter{
 	background-color:#a4b3d2 !important;
 }
+.table3 {
+	border:none;
+	width:100%;
+}
+.table3 tr:nth-of-type(2n) {
+	background-color:#fff;
+}
+.table3 td {
+	padding-left:0;
+	font-size:13px;
+	border-bottom:1px solid #d8d8d8;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	vertical-align:top;
+}
+.table3 tr:last-child td {
+	border-bottom:none;
+}
+.table3 .labels {
+	font-weight:700;
+	text-transform:uppercase;
+	width:40%;
+	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
 .small-photo {
 	float:left;
 	width:56px;
