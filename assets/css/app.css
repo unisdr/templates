@@ -192,6 +192,10 @@ h6 {
 	font-size:12px;
 	color:#3b3b3b;
 }
+hr {
+	border-color: #d1d1d1;
+	margin:70px 0 20px;
+}
 p {
 	font-size:inherit;
 }
@@ -1050,6 +1054,9 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 .has-tip.copyright:hover, .has-tip.copyright:active {
 	background:url("../img/sprite.png") no-repeat -18px -2580px;
 }
+.tooltip{
+	word-wrap: break-word;
+}
 .tooltip.tip-top {
 	margin-top:-5px !important;
 	border-radius:5px;
@@ -1469,6 +1476,10 @@ h2.low {
 h3.big {
 	font-size:24px;
 	margin-bottom:15px;
+}
+h3.small {
+	font-size:16px;
+	margin-bottom: 0.5rem;
 }
 h3.margin {
 	margin-bottom:7px;
