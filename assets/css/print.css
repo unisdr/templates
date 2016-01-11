@@ -111,15 +111,15 @@ p.small-text.network {
 p.small-text.network:before {/* background print for Firefox and IE */
 	content: url("../img/sprite.png");
 	display:inline-block;
-	margin-top:-860px;
+	margin-top:-2700px;
 	margin-left:-40px;
-	height:880px;
+	height:2720px;
 	overflow:hidden;
 	vertical-align:middle;
 }
 p.small-text.network:not(*:root):before {/* background print for Chrome and Safari */
 	margin-top:0;
-	top:-860px;
+	top:-2700px;
 	position:absolute;
 }
 p.small-text.academic {

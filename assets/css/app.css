@@ -1749,7 +1749,7 @@ p.small-text.news {
 	padding:1px 0 0 25px;
 }
 p.small-text.network {
-	background:url("../img/sprite.png") no-repeat -20px -860px;
+	background:url("../img/sprite.png") no-repeat -20px -2700px;
 	padding:1px 0 0 25px;
 }
 p.small-text.academic {
@@ -2949,6 +2949,9 @@ form.countries .button {
 }
 #PWContent .background.color03 {
 	background-color:rgba(231,73,52,1);
+}
+#PWContent .background.color04 {
+	background-color:rgba(88, 67, 88, 0.957);
 }
 #PWContent .row.full {
 	margin:0 -65px;
