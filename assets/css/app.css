@@ -1429,7 +1429,7 @@ div.switch input:checked + label:after {text-indent:-1.6rem;}
 .no-padding {padding:0;}
 .no-padding-bottom {padding-bottom:0;}
 h2.no-margin, .panel h2.no-margin, h4.no-margin, p.no-margin, p.small-text.no-margin {margin:0 !important;}
-.case-none {text-transform:none;}
+.case-none {text-transform:none !important;}
 .upper {text-transform:uppercase;}
 .case-lower {text-transform:lowercase;}
 h1.big {
@@ -2297,9 +2297,6 @@ form span.optional {
 }
 .panel.data.color3 {
 	background-color:#eefeff !important;
-}
-.panel.data.color4 {
-	background-color:#fcf6ff !important;
 }
 .panel.data.color5 {
 	background-color:#fff0fe !important;

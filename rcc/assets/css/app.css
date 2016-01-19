@@ -1,0 +1,116 @@
+@charset "utf-8";
+a {
+  color: #7a607a;
+}
+a:hover, a:focus {
+  color: #7a607a;
+  text-decoration:underline;
+}
+.button.primary {
+	background-color:#695269;
+	background: -webkit-linear-gradient(#7a607a, #695269);
+	background: -o-linear-gradient(#7a607a, #695269);
+	background: -moz-linear-gradient(#7a607a, #695269);
+	background: linear-gradient(#7a607a, #695269);
+}
+.panel.data.color4 {
+	background-color:#584358 !important;
+}
+.row.full-screen {
+	max-width: none;
+	width: 100%;
+}
+.headerContainer {
+	padding:20px 0 0 !important;
+	position:relative;
+}
+.headerContainer .large-2 {
+	position:absolute;
+	z-index:100;
+	width:220px;
+	margin-left: -20px;
+}
+.headerContainer .large-10 {
+	text-align: right;
+	padding-right:0;
+}
+.headerContainer .login {
+	display:inline-block;
+	font-size: 13px;
+	padding-bottom:15px;
+}
+.headerContainer input, .headerContainer select {
+	display:inline-block;
+	height:36px;
+	margin-top:0;
+}
+.headerContainer input {
+	width:250px;
+}
+.headerContainer select {
+	width:147px;
+	margin-right: 3px;
+}
+#PWHeader #mainMenu {
+	margin:10px 0 15px;
+	font-size: 18px;
+	font-weight: 400;
+}
+#PWHeader #mainMenu .current a {
+  color: #7a607a;
+	font-weight: 500;
+}
+#PWContent .breadcrumbs {
+	margin-left:11px;
+}
+#PWContent .breadcrumbs > *::before {
+  border-left: 5px solid #fff;
+}
+#contentPage {
+  border-bottom:none;
+}
+.button.primary:hover, .button.primary:focus {
+	background-color:#7a607a;
+	background: -webkit-linear-gradient(#8a738a, #7a607a);
+	background: -o-linear-gradient(#8a738a, #7a607a);
+	background: -moz-linear-gradient(#8a738a, #7a607a);
+	background: linear-gradient(#8a738a, #7a607a);
+}
+#PWContent > footer {
+	background-color:#E7D8C2;
+}
+footer .purple {
+	background-color:#584358;
+}
+#socialBar {
+  font-family: "FontAwesome Regular","FontAwesome";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  margin:0 auto 20px;
+}
+#socialBar a {
+  color: #f9f5f0;
+}
+#footerMenu {
+	display: inline-block;
+	text-transform: none;
+	margin:10px 0;
+}
+#footerMenu li {
+	margin-left:22px;
+}
+#footerMenu li a::before {
+	content: "|";
+  padding-right:20px;
+}
+#footerMenu li:first-child {
+	margin-left:0;
+}
+#footerMenu li:first-child a::before {
+	content: "";
+  padding-right:0;
+}
+#footerMenu li a {
+  color: #fff;
+}
