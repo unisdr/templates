@@ -1,10 +1,14 @@
 @charset "utf-8";
+/* Override HTML tags*/
 h2 {
 	color:inherit;
 	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-weight:700;
 	font-size:19px;
 	margin-bottom:5px;
+}
+.panel.grey h3 {
+  height: 30px;
 }
 a {
   color: #7a607a;
@@ -16,32 +20,10 @@ a:hover, a:focus {
 select:not(*:root) {
     padding-top: 4px;
 }
-.button.primary {
-	background-color:#695269;
-	background: -webkit-linear-gradient(#7a607a, #695269);
-	background: -o-linear-gradient(#7a607a, #695269);
-	background: -moz-linear-gradient(#7a607a, #695269);
-	background: linear-gradient(#7a607a, #695269);
-}
-.button.round, .panel .button.round {
-  background: #e7d8c2 none repeat scroll 0 0;
-  color: #3b3b3b;
-}
-.panel.data.color4 {
-	background-color:#584358 !important;
-}
+/* Override grid and main page blocks*/
 .row.full-screen {
 	max-width: none;
 	width: 100%;
-}
-.large-3 .location-data li a:not(.button).email {
-	color:#7a607a;
-}
-span.phone {
-	background:url("../img/sprite.png") no-repeat -20px -1885px;
-	padding:3px 0 0 30px;
-	font-size:13px;
-	font-weight:500;
 }
 .headerContainer {
 	padding:20px 0 0 !important;
@@ -91,13 +73,7 @@ span.phone {
 }
 #contentPage {
   border-bottom:none;
-}
-.button.primary:hover, .button.primary:focus {
-	background-color:#7a607a;
-	background: -webkit-linear-gradient(#8a738a, #7a607a);
-	background: -o-linear-gradient(#8a738a, #7a607a);
-	background: -moz-linear-gradient(#8a738a, #7a607a);
-	background: linear-gradient(#8a738a, #7a607a);
+  margin-bottom: 10px;
 }
 #PWContent > footer {
 	background-color:#E7D8C2;
@@ -121,4 +97,42 @@ footer .purple {
 }
 #footerMenu li a {
   color: #fff;
+}
+/* Override layout items*/
+.panel.data.color4 {
+	background-color:#584358 !important;
+}
+.panel.grey .module {
+	margin-bottom:20px;
+}
+.button.primary {
+	background-color:#695269;
+	background: -webkit-linear-gradient(#7a607a, #695269);
+	background: -o-linear-gradient(#7a607a, #695269);
+	background: -moz-linear-gradient(#7a607a, #695269);
+	background: linear-gradient(#7a607a, #695269);
+}
+.button.primary:hover, .button.primary:focus {
+	background-color:#7a607a;
+	background: -webkit-linear-gradient(#8a738a, #7a607a);
+	background: -o-linear-gradient(#8a738a, #7a607a);
+	background: -moz-linear-gradient(#8a738a, #7a607a);
+	background: linear-gradient(#8a738a, #7a607a);
+}
+.button.round, .panel .button.round {
+  background: #e7d8c2 none repeat scroll 0 0;
+  color: #3b3b3b;
+}
+p.small-text.service {
+	background:url("../../../assets/img/sprite.png") no-repeat -20px -1537px;
+	padding:1px 0 0 25px;
+}
+.large-3 .location-data li a:not(.button).email {
+	color:#7a607a;
+}
+span.phone {
+	background:url("../../../assets/img/sprite.png") no-repeat -20px -1885px;
+	padding:3px 0 0 30px;
+	font-size:13px;
+	font-weight:500;
 }
