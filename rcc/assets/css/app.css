@@ -124,8 +124,12 @@ footer .purple {
   color: #3b3b3b;
 }
 p.small-text.service {
-	background:url("../../../assets/img/sprite.png") no-repeat -20px -1537px;
+	background:url("../../../assets/img/sprite.png") no-repeat -20px -2749px;
 	padding:1px 0 0 25px;
+}
+.top-banner p.small-text.service {
+	background:url("../../../assets/img/sprite.png") no-repeat -20px -2799px;
+	margin-left: -25px;
 }
 .large-3 .location-data li a:not(.button).email {
 	color:#7a607a;
