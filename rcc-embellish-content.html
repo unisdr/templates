@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
     <link href="assets/shared/select2/select2.css" rel="stylesheet" />
     <link href="assets/shared/select2/select2-foundation5.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/shared/jQuery-TE_v.1.4.0/jquery-te-1.4.0.css" />
-    <link rel="stylesheet" href="assets/shared/foundation-datepicker-master/stylesheets/foundation-datepicker.css">
     <link rel="stylesheet" href="assets/css/app.css" />
     <link rel="stylesheet" href="rcc/assets/css/app.css" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -97,8 +95,8 @@
 						<div class="panel radius no-padding module">
                             <ul class="sub-menu">
                                 <li><div><a href="rcc-add-source.html">Add sources</a></div></li>
-                                <li class="current"><div><a href="rcc-describe-content.html">Describe the content</a></div></li>
-                                <li><div><a href="rcc-embellish-content.html">Embellish the content</a></div></li>
+                                <li><div><a href="rcc-describe-content.html">Describe the content</a></div></li>
+                                <li class="current"><div><a href="rcc-embellish-content.html">Embellish the content</a></div></li>
                                 <li><div><a href="rcc-consent.html">Consent</a></div></li>
                             </ul>
 	                    </div>
@@ -109,7 +107,7 @@
 <!-- RP - html steps bar usage -->
 <!-- Use 'off'class for non completed steps (grey color), use 'on' class for completed steps (green color), use 'on' and 'last' classes for the last completed step -->
                                 <style type="text/css">.steps-text span{width:75px;}</style>
-                                <div class="steps-text right"><span class="on">1</span><span class="on last">2</span><span class="off">3</span><span class="off">&bull;</span></div>
+                                <div class="steps-text right"><span class="on">1</span><span class="on">2</span><span class="on last">3</span><span class="off">&bull;</span></div>
                             </div>
                         </div>
                         <div class="row">
@@ -120,48 +118,56 @@
                                     	<div class="form-section">
                                             <div class="row">
                                                 <div class="large-12 columns">
-                                                    <h3>Basic information about this service</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="large-12 columns">
-                                                    <label>Service title<span class="optional">Required</span>
-                                                        <input type="text" class="radius" placeholder="Enter the title of the service" />
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="large-12 columns">
-<!-- RP rtl editor: added 'rtl' class to container label -->
-                                                    <label class="clearfix">Description, including benefits and target audience<span class="optional">Required</span>
-                                                    <textarea class="jqte-widget" placeholder="Summarize your offer. The fist sentences will appear in serarch results. Add additional information and main outcomes ."></textarea>                                                    
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-section">
-                                            <div class="row">
-                                                <div class="large-12 columns">
-                                                    <h3>Service classification</h3>
+                                                    <h3>Add keywords and tags to this service</h3>
+                                                    <p><span>Add the keywords to categorize your service. You have to choose at least one theme, one hazard and one region. Themes keywords wil not be shown on the RCC website. They will be used for internal search.</span></p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="large-6 columns">
-                                                    <label>Service type<span class="optional">Required</span>
-                                                        <select class="radius">
-                                                            <option value="">Select</option>
-                                                            <option value="">Flood planning</option>
-                                                            <option value="">Some other service type</option>
+                                                    <label>Themes or issues<span class="optional">Required</span>
+                                                        <select class="selectTwo" multiple data-placeholder="Type theme name or select from the list">
+                                                            <option></option>
+                                                            <option>Theme</option>
+                                                            <option>Something else</option>
+                                                            <option>Another Theme</option>
+                                                            <option>Lorem ipsum dolor</option>
+                                                            <option>Consectetur adipisci elit</option>
                                                         </select>
                                                     </label>
                                                 </div>
                                                 <div class="large-6 columns">
-                                                    <label>Topics<span class="optional">Required</span>
-                                                        <select class="selectTwo" multiple data-placeholder="Type topic name or select from the list">
+                                                    <label>Hazards<span class="optional">Required</span>
+                                                        <select class="selectTwo" multiple data-placeholder="Type hazard name or select from the list">
                                                             <option></option>
-                                                            <option>Topic</option>
+                                                            <option>Hazard</option>
                                                             <option>Something else</option>
-                                                            <option>Another Topic</option>
+                                                            <option>Another Hazard</option>
+                                                            <option>Lorem ipsum dolor</option>
+                                                            <option>Consectetur adipisci elit</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <label>Regions<span class="optional">Required</span>
+                                                        <select class="selectTwo" multiple data-placeholder="Type region name or select from the list">
+                                                            <option></option>
+                                                            <option>Region</option>
+                                                            <option>Something else</option>
+                                                            <option>Another Region</option>
+                                                            <option>Lorem ipsum dolor</option>
+                                                            <option>Consectetur adipisci elit</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <label>Countries or territories
+                                                        <select class="selectTwo" multiple data-placeholder="Type country name or select from the list">
+                                                            <option></option>
+                                                            <option>Country</option>
+                                                            <option>Something else</option>
+                                                            <option>Another territory</option>
                                                             <option>Lorem ipsum dolor</option>
                                                             <option>Consectetur adipisci elit</option>
                                                         </select>
@@ -169,105 +175,49 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-section">
+                                    	<div class="form-section">
                                             <div class="row">
                                                 <div class="large-12 columns">
-                                                    <h3>Pricing</h3>
+                                                    <h3>Add documentation and links</h3>
+                                                    <h4>Suggested attachments</h4>
+                                                    <ul>
+                                                    	<li>For offers: service website, in-depth description, brochure, pricing tables</li>
+                                                    	<li>For requests: official request, in-depth document, additional information</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns clearfix">
+                                                    <a class="add left" href="">Add a document or link</a>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="large-12 columns">
-                                                    <label>Pricing
-                                                        <input type="text" class="radius" />
-                                                    </label>
-                                                    <div class="field-extra">
-                                                        <input type="checkbox" id="fundingOpp"><label for="fundingOpp">Contains a funding opportunity</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="large-12 columns">
-                                                    <label>Brief description of the funding opportunity<span id="fundingReq" class="optional">Required</span>
-                                                        <input type="text" class="radius" />
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-section">
-                                            <div class="row">
-                                                <div class="large-12 columns">
-                                                    <h3>Expiration date</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                            	<div class="large-6 columns">
-                                                    <label>Offer expires on (midnight UTC)<span id="expirationReq" class="optional">Required</span>
-                                                        <i class="fa fa-calendar"></i>
-                                                        <input type="text" class="radius datepick" readonly="">
-                                                    </label>
-                                                    <div class="field-extra">
-                                                        <input type="checkbox" id="offerExp"><label for="offerExp">This service offering does not expire</label>
-                                                    </div>
-                                                </div>
-                                                <div class="large-6 columns">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-section">
-                                            <div class="row">
-                                                <div class="large-12 columns">
-                                                    <h3>Contact</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="large-3 columns">
-                                                    <label>Salutation<span class="optional">Required</span>
-                                                        <select class="radius">
-                                                            <option value="">Select</option>
-                                                            <option value="Mr.">Mr.</option>
-                                                            <option value="Mrs.">Mrs.</option>
-                                                            <option value="Ms.">Ms.</option>
-                                                        </select>
-                                                    </label>
-                                                </div>
-                                                <div class="large-4 columns">
-                                                    <label>First name<span class="optional">Required</span>
-                                                        <input type="text" class="radius" />
-                                                    </label>
-                                                </div>
-                                                <div class="large-4 columns">
-                                                    <label>Last name<span class="optional">Required</span>
-                                                        <input type="text" class="radius" />
-                                                    </label>
-                                                </div>
-                                                <div class="large-1 columns">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="large-6 columns">
-                                                    <label>Job title<span class="optional">Required</span>
-                                                        <input type="text" class="radius" />
-                                                    </label>
-                                                </div>
-                                                <div class="large-6 columns">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="large-6 columns">
-                                                    <label>Phone<span class="optional">Required</span>
-                                                        <input type="text" class="radius" placeholder="Example: +1 123 456 7890" />
-                                                    </label>
-                                                </div>
-                                                <div class="large-6 columns">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="large-6 columns">
-                                                    <label>Email<span class="optional">Required</span>
-                                                        <input type="text" class="radius" placeholder="Example: joe@example.com" />
-                                                    </label>
-                                                </div>
-                                                <div class="large-6 columns">
+                                                	<table class="table1">
+                                                    	<thead>
+                                                        	<tr>
+                                                                <th>Document/link name</th>
+                                                                <th width="70">Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        	<tr>
+                                                                <td><a href="">Document 1</a></td>
+                                                                <td><a data-confirm="{&quot;title&quot;:&quot;Are you sure you want to remove this item?&quot;,&quot;body&quot;:&quot;If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;,&quot;ok&quot;:&quot;YES&quot;,&quot;cancel&quot;:&quot;NO&quot;}" class="remove" href=""></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Link 1</a></td>
+                                                                <td><a data-confirm="{&quot;title&quot;:&quot;Are you sure you want to remove this item?&quot;,&quot;body&quot;:&quot;If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;,&quot;ok&quot;:&quot;YES&quot;,&quot;cancel&quot;:&quot;NO&quot;}" class="remove" href=""></a>
+</td>
+                                                            </tr>
+                                                        	<tr>
+                                                                <td><a href="">Document 2</a></td>
+                                                                <td><a data-confirm="{&quot;title&quot;:&quot;Are you sure you want to remove this item?&quot;,&quot;body&quot;:&quot;If you remove it, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;,&quot;ok&quot;:&quot;YES&quot;,&quot;cancel&quot;:&quot;NO&quot;}" class="remove" href=""></a>
+</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
@@ -317,9 +267,8 @@
 
 	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
     <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+    <script src="assets/shared/agoragames-confirm-with-reveal/confirm_with_reveal.min.js"></script>
     <script src="assets/shared/select2/select2.min.js"></script>
-	<script src="assets/shared/jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js"></script>
-    <script src="assets/shared/foundation-datepicker-master/js/foundation-datepicker.js"></script>
     <script>
 		$(document).foundation();
 		
@@ -334,20 +283,6 @@
 			});
 		});
 
-/* RP new WYSIWYG editor: replace configuration and startup functions above with the one below
-		IMPORTANT!: all instances are now started up together by referencing their class */
-		$('.jqte-widget').jqte({
-			format: false,
-			fsize: false,
-			color: false,
-			sub: false,
-			sup: false,
-			strike: false,
-			rule: false,
-			remove: false,
-			source: false
-		});
-
 		//RP: multiple select startup and configuration
 		$(document).ready(function() {
 			$(".selectTwo").select2({
@@ -355,20 +290,8 @@
 			});
 		});
 		
-		//RP: datepicker startup and configuration
-		$('.datepick').fdatepicker({
-			format: 'dd/mm/yyyy'
-		});
-		
-		//RP: form fields default view
-		$('#fundingReq').hide();
-		//RP: form fields show/hide
-		$('#fundingOpp').click(function() {
-			$('#fundingReq').toggle();
-		});
-		$('#offerExp').click(function() {
-			$('#expirationReq').toggle();
-		});
+		//RP: activate confirmation dialogs
+		$(document).confirmWithReveal();
     </script>    
 </body>
 </html>

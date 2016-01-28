@@ -4,8 +4,6 @@
     <title>Implant Landslide Prevention | RCC</title>
     <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
     <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
-    <link href="assets/shared/select2/select2.css" rel="stylesheet" />
-    <link href="assets/shared/select2/select2-foundation5.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/app.css" />
     <link rel="stylesheet" href="rcc/assets/css/app.css" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -94,10 +92,10 @@
                     <div class="large-3 columns">
 						<div class="panel radius no-padding module">
                             <ul class="sub-menu">
-                                <li class="current"><div><a href="rcc-add-source.html">Add sources</a></div></li>
+                                <li><div><a href="rcc-add-source.html">Add sources</a></div></li>
                                 <li><div><a href="rcc-describe-content.html">Describe the content</a></div></li>
                                 <li><div><a href="rcc-embellish-content.html">Embellish the content</a></div></li>
-                                <li><div><a href="rcc-consent.html">Consent</a></div></li>
+                                <li class="current"><div><a href="rcc-consent.html">Consent</a></div></li>
                             </ul>
 	                    </div>
                     </div>
@@ -107,7 +105,7 @@
 <!-- RP - html steps bar usage -->
 <!-- Use 'off'class for non completed steps (grey color), use 'on' class for completed steps (green color), use 'on' and 'last' classes for the last completed step -->
                                 <style type="text/css">.steps-text span{width:75px;}</style>
-                                <div class="steps-text right"><span class="on last">1</span><span class="off">2</span><span class="off">3</span><span class="off">&bull;</span></div>
+                                <div class="steps-text right"><span class="on">1</span><span class="on">2</span><span class="on">3</span><span class="on last">&bull;</span></div>
                             </div>
                         </div>
                         <div class="row">
@@ -118,26 +116,54 @@
                                     	<div class="form-section">
                                             <div class="row">
                                                 <div class="large-12 columns">
-                                                    <h3>Add source organization</h3>
-                                                    <p><span>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</span></p>
-                                                    <label>Service provider
-                                                        <select class="selectTwo" multiple data-placeholder="Start typing the acronym or full name to start searching">
-                                                            <option></option>
-                                                            <option>Giken</option>
-                                                            <option>Something else</option>
-                                                            <option>Another option</option>
-                                                            <option>Lorem ipsum dolor</option>
-                                                            <option>Consectetur adipisci elit</option>
-                                                        </select>
+                                                    <h3>Yes, I have consent</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns longlabel">
+                                                    <input id="check1" type="checkbox"><label for="check1">I have read and accept the consent and copyright notice</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Note to PreventionWeb editors, if any</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <label class="clearfix">
+                                                        <textarea class="radius"></textarea>
                                                     </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <h3>Would like your name displayed as the contributor/editor of this content?</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns longlabel">
+                                                    <input id="check2" type="checkbox"><label for="check2">Yes, display my name on the content as the contributor/editor</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <p>George Binder</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-section button-section">
                                             <div class="row">
                                                 <div class="large-12 columns button-bar clearfix">
-                                                    <a class="button radius primary right" href="#">Next</a>
-                                                    <a class="button radius right close" href="">Cancel</a>
+                                                    <a class="button radius" href="">Previous</a>
+                                                    <a class="button radius primary right" href="">Submit for review</a>
+                                                    <a class="button radius right" href="">Cancel</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,7 +203,6 @@
 
 	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
     <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
-    <script src="assets/shared/select2/select2.min.js"></script>
     <script>
 		$(document).foundation();
 		
@@ -189,13 +214,6 @@
 		
 			$('#menu-close').click(function() {
 				$('.top-dropdown-menu').slideToggle();
-			});
-		});
-
-		//RP: multiple select startup and configuration
-		$(document).ready(function() {
-			$(".selectTwo").select2({
-				width: "100%"
 			});
 		});
     </script>    

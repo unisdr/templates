@@ -384,15 +384,15 @@ p.small-text.attachment {
 p.small-text.attachment:before {/* background print for Firefox and IE */
 	content: url("../img/sprite.png");
 	display:inline-block;
-	margin-top:-2499px;
+	margin-top:-2849px;
 	margin-left:-40px;
-	height:2519px;
+	height:2869px;
 	overflow:hidden;
 	vertical-align:middle;
 }
 p.small-text.attachment:not(*:root):before {/* background print for Chrome and Safari */
 	margin-top:0;
-	top:-2499px;
+	top:-2849px;
 	position:absolute;
 }
 h4.geo {
