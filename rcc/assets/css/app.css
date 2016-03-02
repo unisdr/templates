@@ -149,3 +149,25 @@ span.phone {
 	font-size:13px;
 	font-weight:500;
 }
+.table2.hfa-progress thead th, .table2.hfa-progress thead td{
+	text-align:right;
+}
+.table2.hfa-progress .labels {
+	white-space:normal
+}
+.table2.hfa-progress .progress .meter{
+	color:#fff;
+	text-align:right;
+	padding-right:5px;
+	padding-top: 1px;
+	font-weight:700;
+}
+.table2.hfa-progress .progress.good .meter{
+	background-color:#669900 !important;
+}
+.table2.hfa-progress .progress.fair .meter{
+	background-color:#9D773E !important;
+}
+.table2.hfa-progress .progress.poor .meter{
+	background-color:#6E536E !important;
+}
