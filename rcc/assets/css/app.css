@@ -128,6 +128,12 @@ footer .purple {
   background: #e7d8c2 none repeat scroll 0 0;
   color: #3b3b3b;
 }
+.button.round.disabled, .panel .button.round.disabled {
+  background: #fff none repeat scroll 0 0;
+}
+.button.round.disabled > *:before {
+	background:#3b3b3b;
+}
 p.small-text.service {
 	background:url("../../../assets/img/sprite.png") no-repeat -20px -2749px;
 	padding:1px 0 0 25px;
@@ -170,4 +176,13 @@ span.phone {
 }
 .table2.hfa-progress .progress.poor .meter{
 	background-color:#6E536E !important;
+}
+h4.module-title.rmcity {
+	background-image:url("../img/ico-rmcity.png");
+	background-position:20px 15px;
+	background-repeat:no-repeat;
+	padding:15px 20px 12px 70px;
+}
+ul.content-type p.small-text.margintop {
+	margin-top:0.5rem;
 }
