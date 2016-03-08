@@ -22,6 +22,9 @@ a:hover, a:focus {
   color: #7a607a;
   text-decoration:underline;
 }
+a.more:not(.button)::after {
+  border-left: 4px solid #7a607a;
+}
 select:not(*:root) {
     padding-top: 4px;
 }
@@ -185,4 +188,79 @@ h4.module-title.rmcity {
 }
 ul.content-type p.small-text.margintop {
 	margin-top:0.5rem;
+}
+/* New patterns */
+.slides .slide-text {
+	position:absolute;
+	z-index:50;
+	bottom:30px;
+	right:0;
+	width:50%;
+	background-color:rgba(88, 67, 88, 0.8);
+	color:#fff;
+	padding:20px 20px 0;
+}
+#rcc-home-carousel .flex-control-thumbs{
+	margin:0 70px;
+	width:920px;
+	position:absolute;
+	bottom:0;
+	margin-bottom:-56px;
+	z-index:100;
+}
+#rcc-home-carousel .flex-control-thumbs li{
+	width:190px;
+	margin-right:40px;
+}
+#rcc-home-carousel .flex-control-thumbs img {
+	width: auto;
+}
+#rcc-home-carousel-nav{
+	margin:0 50px;
+}
+#rcc-home-carousel-nav .large-3 div{
+	text-align:center;
+	padding:20px;
+	background-color:#8a738a;
+	color:#fff;
+}
+#rcc-home-carousel-nav .large-3.active:before{
+	width:0; 
+	height:0; 
+	border-bottom: 8px solid #5E4A5E;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	content: "";
+	position: absolute;
+	z-index:100;
+	top:-8px;
+	left:150px;
+	margin: 0 0.66667rem;
+	display:inline-block;
+}
+.circle-container {
+	margin:auto;
+	width:170px;
+}
+.circle-icon {
+	background:url("../img/ico-circle-purple.png") no-repeat 0 0;
+	width:170px;
+	height:170px;
+	margin:0;
+	color:#fff;
+	font-size: 72px;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+.circle-icon .fa{
+	float:none;
+	margin:0;
+}
+.handshake {
+	background:url("../img/ico-handshake.png") no-repeat 0 0;
+	width:113px;
+	height:113px;
+	display:inline-block;
+	margin-top: 25px;
 }
