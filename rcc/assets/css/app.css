@@ -189,6 +189,9 @@ h4.module-title.rmcity {
 ul.content-type p.small-text.margintop {
 	margin-top:0.5rem;
 }
+* .no-margin {
+	margin:0;
+}
 /* New patterns */
 .slides .slide-text {
 	position:absolute;
