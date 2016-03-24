@@ -131,6 +131,9 @@ footer .purple {
   background: #e7d8c2 none repeat scroll 0 0;
   color: #3b3b3b;
 }
+.button.round:hover, .button.round:focus {
+	background:#F7E7D0;
+}
 .button.round.disabled, .panel .button.round.disabled {
   background: #fff none repeat scroll 0 0;
 }
@@ -193,6 +196,15 @@ ul.content-type p.small-text.margintop {
 	margin:0;
 }
 /* New patterns */
+#contentPage.no-padding-top{padding-top:0;}
+.external-header {
+	position: relative;
+    z-index: 10;
+	color:#fff;
+}
+.external-header p{
+	margin-top: 1.25rem;
+}
 .slides .slide-text {
 	position:absolute;
 	z-index:50;
@@ -226,6 +238,7 @@ ul.content-type p.small-text.margintop {
 	padding:20px;
 	background-color:#8a738a;
 	color:#fff;
+	min-height:72px;
 }
 #rcc-home-carousel-nav .large-3.active:before{
 	width:0; 
