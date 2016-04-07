@@ -12,6 +12,10 @@ h2.big {
 	font-weight:500;
 	margin-top:0;
 }
+h4.clearfix span {
+	display:inline-block;
+	margin-top:15px;
+}
 .panel.grey h3 {
   height: 30px;
 }
@@ -85,6 +89,7 @@ select:not(*:root) {
 }
 #PWContent > footer {
 	background-color:#E7D8C2;
+	text-align:center;
 }
 footer .purple {
 	background-color:#584358;
@@ -95,6 +100,7 @@ footer .purple {
   font-style: normal;
   font-weight: 400;
   margin:0 auto 20px;
+  display: inline-block;
 }
 #socialBar a {
   color: #f9f5f0;
@@ -136,6 +142,7 @@ footer .purple {
 }
 .button.round.disabled, .panel .button.round.disabled {
   background: #fff none repeat scroll 0 0;
+  opacity:1;
 }
 .button.round.disabled > *:before {
 	background:#3b3b3b;
@@ -165,7 +172,19 @@ span.phone {
 	text-align:right;
 }
 .table2.hfa-progress .labels {
-	white-space:normal
+	white-space:normal;
+	vertical-align:middle;
+}
+.table2.hfa-progress .labels span{
+	float:left;
+	width:20px;
+	height:20px;
+	border-radius:10px;
+	background-color:#aaa;
+	color:#fff;
+	margin-right:10px;
+	text-align:center;
+	padding-top:2px;
 }
 .table2.hfa-progress .progress .meter{
 	color:#fff;
