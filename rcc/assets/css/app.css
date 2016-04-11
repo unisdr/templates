@@ -175,17 +175,6 @@ span.phone {
 	white-space:normal;
 	vertical-align:middle;
 }
-.table2.hfa-progress .labels span{
-	float:left;
-	width:20px;
-	height:20px;
-	border-radius:10px;
-	background-color:#aaa;
-	color:#fff;
-	margin-right:10px;
-	text-align:center;
-	padding-top:2px;
-}
 .table2.hfa-progress .progress .meter{
 	color:#fff;
 	text-align:right;
@@ -298,4 +287,20 @@ ul.content-type p.small-text.margintop {
 	height:113px;
 	display:inline-block;
 	margin-top: 25px;
+}
+span.circle-number{
+	float:left;
+	width:20px;
+	height:20px;
+	border-radius:10px;
+	background-color:#aaa;
+	color:#fff;
+	margin-right:10px;
+	text-align:center;
+	padding-top:2px;
+	font-size: 12px;
+}
+h3 span.circle-number{
+	margin-top: -3px;
+    padding-top: 5px;
 }
