@@ -125,6 +125,8 @@ footer .purple {
 	background: -o-linear-gradient(#7a607a, #695269);
 	background: -moz-linear-gradient(#7a607a, #695269);
 	background: linear-gradient(#7a607a, #695269);
+	border: 1px solid #695269;
+	box-shadow: none;
 }
 .button.primary:hover, .button.primary:focus {
 	background-color:#7a607a;
@@ -146,6 +148,11 @@ footer .purple {
 }
 .button.round.disabled > *:before {
 	background:#3b3b3b;
+}
+.alert-box.info {
+  background-color: #E5CCFF;
+  border-color: #cfe8e8;
+  color: #3b3b3b;
 }
 p.small-text.service {
 	background:url("../../../assets/img/sprite.png") no-repeat -20px -2749px;
