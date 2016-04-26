@@ -1428,7 +1428,8 @@ div.switch input:checked + label:after {text-indent:-1.6rem;}
 .table.left-padding {padding-left:40px;}
 .no-padding {padding:0;}
 .no-padding-bottom {padding-bottom:0;}
-h2.no-margin, .panel h2.no-margin, h4.no-margin, p.no-margin, p.small-text.no-margin {margin:0 !important;}
+h2.no-margin, .panel h2.no-margin, h4.no-margin, p.no-margin, p.small-text.no-margin{margin:0 !important;}
+hr.small-margin{margin-top:10px;}
 .case-none {text-transform:none !important;}
 .upper {text-transform:uppercase;}
 .case-lower {text-transform:lowercase;}
@@ -3888,6 +3889,42 @@ ul.content-type div {
 ul.content-type p.small-text, ul.content-type p.text {
   font-size: 14px;
   margin-bottom:0;
+}
+ul.img-left {
+	list-style:none;
+	margin:0;
+	padding:0;
+	font-size:12px;
+}
+ul.img-left li {
+	overflow:hidden;
+}
+ul.img-left li img{
+	margin-top:5px;
+}
+ul.img-left li div{
+	margin-left:50px;
+}
+ul.img-left li div a, ul.img-left li div span span{
+	font-weight:500;
+}
+ul.pipe-separated {
+	margin:0;
+}
+ul.pipe-separated > li > * {
+  display: inline-block;
+}
+ul.pipe-separated > li {
+	margin-left:0;
+}
+ul.pipe-separated > *:before {
+  content: "|";
+  color:#999;
+  margin:0 10px;
+}
+ul.pipe-separated > *:first-child:before {
+  content: " ";
+  margin:0;
 }
 div.search {
 	border: 1px solid #d8d8d8;
