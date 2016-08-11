@@ -305,6 +305,348 @@ p.small-text.twitterblack:not(*:root):before {/* background print for Chrome and
 	top:-51px;
 	position:absolute;
 }
+p.small-text.hazard_icon_67 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_67:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2948px;
+	margin-left:-40px;
+	height:2968px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_67:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2948px;
+	position:absolute;
+}
+p.small-text.hazard_icon_56 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_56:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-2998px;
+	margin-left:-40px;
+	height:3198px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_56:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-2998px;
+	position:absolute;
+}
+p.small-text.hazard_icon_58 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_58:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3048px;
+	margin-left:-40px;
+	height:3068px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_58:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3048px;
+	position:absolute;
+}
+p.small-text.hazard_icon_59 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_59:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3098px;
+	margin-left:-40px;
+	height:3118px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_59:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3098px;
+	position:absolute;
+}
+p.small-text.hazard_icon_60 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_60:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3147px;
+	margin-left:-40px;
+	height:3167px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_60:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3147px;
+	position:absolute;
+}
+p.small-text.hazard_icon_61 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_61:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3198px;
+	margin-left:-40px;
+	height:3218px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_61:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3198px;
+	position:absolute;
+}
+p.small-text.hazard_icon_62 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_62:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3248px;
+	margin-left:-40px;
+	height:3268px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_62:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3248px;
+	position:absolute;
+}
+p.small-text.hazard_icon_63 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_63:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3298px;
+	margin-left:-40px;
+	height:3318px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_63:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3298px;
+	position:absolute;
+}
+p.small-text.hazard_icon_64 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_64:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3346px;
+	margin-left:-40px;
+	height:3366px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_64:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3346px;
+	position:absolute;
+}
+p.small-text.hazard_icon_65 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_65:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3398px;
+	margin-left:-40px;
+	height:3418px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_65:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3398px;
+	position:absolute;
+}
+p.small-text.hazard_icon_103 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_103:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3447px;
+	margin-left:-40px;
+	height:3467px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_103:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3447px;
+	position:absolute;
+}
+p.small-text.hazard_icon_68 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_68:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3498px;
+	margin-left:-40px;
+	height:3518px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_68:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3498px;
+	position:absolute;
+}
+p.small-text.hazard_icon_69 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_69:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3547px;
+	margin-left:-40px;
+	height:3567px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_69:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3547px;
+	position:absolute;
+}
+p.small-text.hazard_icon_70 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_70:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3598px;
+	margin-left:-40px;
+	height:3618px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_70:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3598px;
+	position:absolute;
+}
+p.small-text.hazard_icon_71 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_71:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3646px;
+	margin-left:-40px;
+	height:3666px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_71:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3646px;
+	position:absolute;
+}
+p.small-text.hazard_icon_72 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_72:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3698px;
+	margin-left:-40px;
+	height:3718px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_72:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3698px;
+	position:absolute;
+}
+p.small-text.hazard_icon_73 {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.hazard_icon_73:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3749px;
+	margin-left:-40px;
+	height:3769px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.hazard_icon_73:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3749px;
+	position:absolute;
+}
+p.small-text.theme {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.theme:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3798px;
+	margin-left:-40px;
+	height:3818px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.theme:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3798px;
+	position:absolute;
+}
+p.small-text.tagged {
+	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
+	position:relative;
+}
+p.small-text.tagged:before {/* background print for Firefox and IE */
+	content: url("../img/sprite.png");
+	display:inline-block;
+	margin-top:-3848px;
+	margin-left:-40px;
+	height:3868px;
+	overflow:hidden;
+	vertical-align:middle;
+}
+p.small-text.tagged:not(*:root):before {/* background print for Chrome and Safari */
+	margin-top:0;
+	top:-3848px;
+	position:absolute;
+}
 p.small-text.story {
 	-webkit-print-color-adjust: exact;/* background print for Chrome and Safari */
 	position:relative;

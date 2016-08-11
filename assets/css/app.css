@@ -1837,6 +1837,82 @@ p.small-text.attachment {
 	background:url("../img/sprite.png") no-repeat -20px -2849px;
 	padding:1px 0 0 25px;
 }
+p.small-text.hazard_icon_67 {
+	background:url("../img/sprite.png") no-repeat -20px -2948px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_56 {
+	background:url("../img/sprite.png") no-repeat -20px -2998px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_58 {
+	background:url("../img/sprite.png") no-repeat -20px -3048px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_59 {
+	background:url("../img/sprite.png") no-repeat -20px -3098px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_60 {
+	background:url("../img/sprite.png") no-repeat -20px -3147px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_61 {
+	background:url("../img/sprite.png") no-repeat -20px -3198px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_62 {
+	background:url("../img/sprite.png") no-repeat -20px -3248px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_63 {
+	background:url("../img/sprite.png") no-repeat -20px -3298px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_64 {
+	background:url("../img/sprite.png") no-repeat -20px -3346px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_65 {
+	background:url("../img/sprite.png") no-repeat -20px -3398px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_103 {
+	background:url("../img/sprite.png") no-repeat -20px -3447px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_68 {
+	background:url("../img/sprite.png") no-repeat -20px -3498px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_69 {
+	background:url("../img/sprite.png") no-repeat -20px -3547px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_70 {
+	background:url("../img/sprite.png") no-repeat -20px -3598px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_71 {
+	background:url("../img/sprite.png") no-repeat -20px -3646px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_72 {
+	background:url("../img/sprite.png") no-repeat -20px -3698px;
+	padding:1px 0 0 25px;
+}
+p.small-text.hazard_icon_73 {
+	background:url("../img/sprite.png") no-repeat -20px -3749px;
+	padding:1px 0 0 25px;
+}
+p.small-text.theme {
+	background:url("../img/sprite.png") no-repeat -20px -3798px;
+	padding:1px 0 0 25px;
+}
+p.small-text.tagged {
+	background:url("../img/sprite.png") no-repeat -20px -3848px;
+	padding:1px 0 0 25px;
+}
 .panel.grey p.small-text {
 	text-transform:none;
 	font-weight:500;
