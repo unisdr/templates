@@ -1,0 +1,120 @@
+/* new design patterns */
+.moduleNew{
+	border:1px solid #d4d4d4;
+	margin-bottom:10px;
+}
+.moduleNew h2{
+	font-size:140%;
+	color:#fff;
+	text-align:center;
+	padding:10px 0;
+}
+.moduleNew.blue h2{
+	background: url("../img/bkg-expert-header.png") no-repeat center 0;
+}
+.moduleNew.green h2{
+	background: url("../img/bkg-expert-header-2.png") no-repeat center 0;
+}
+.moduleNew ul{
+	font-size:120%;
+	margin-bottom:5px;
+}
+.column .moduleNew ul li{
+	padding:0 0 0 5px;
+	margin:10px;
+}
+.column .moduleNew ul.big li{
+	padding:0;
+	text-align:center;
+}
+.column .moduleNew ul.standard li:not(:first-child){
+	padding-top:10px;
+	border-top:1px solid #d4d4d4;
+}
+.column .moduleNew ul.standard li:last-child{
+	text-align:right;
+}
+.column .moduleNew ul.standard li:last-child a{
+	color:#666;
+}
+.column .moduleNew ul.standard li:last-child:nth-child(2){
+	padding-top:0;
+	border-top:none;
+}
+.column .moduleNew ul.standard li:last-child:after{
+	content:"\203A";
+	color:#e7b739;
+	font-weight:bold;
+	margin-left:2px;
+}
+.moduleNew li span{
+	color:#999;
+}
+.moduleNew ul.big li span{
+	margin:0 0 15px;
+	font-size:12px;
+}
+.moduleNew h3{
+	padding:15px;
+	margin:0;
+	text-align:center;
+	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+.moduleNew ul.big h3{
+	padding:0;
+}
+.moduleNew a{
+	color:#4a68a6;
+}
+
+
+/* modified existing styles of default.css*/
+.column195 .moduleFoot, #column160 .moduleFoot {
+	font-size: 110%;
+}
+.moduleFoot div.pipe {
+	height: 1px;
+}
+.moduleWhite {
+	background-image:none;
+	border: 1px solid #d4d4d4;
+}
+.moduleWhite .moduleHead {
+	background-image:none;
+}
+.moduleWhite .moduleHead div {
+	background-image:none;
+}
+.moduleWhite .moduleBody {
+	border-left:none;
+	border-right:none;
+}
+.moduleWhite .moduleFoot {
+	background-image:none;
+}
+.moduleWhite .cornerLeft {
+	background-image:none;
+}
+.moduleWhite .moduleFoot .linkRight {
+	background-image:none;
+}
+.footGrey .moduleFoot .linkLeft {
+	background-image:none;
+}
+
+/* modified existing styles of redesign.css*/
+.wcdrr-module {
+	text-align: center;
+}
+.wcdrr-module > .body{
+	padding:15px;
+}
+.wcdrr-module > .body a.website-link {
+	float: right;
+	margin: 10px 0 0;
+	font-weight: 500;
+	text-transform: none;
+	color: #4a68a6;
+	font-size: 13px;
+	font-weight: 500;
+}
