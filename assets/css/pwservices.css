@@ -1,0 +1,106 @@
+/*** from foundation.css ***/
+button, .button {
+	cursor: pointer;
+	margin: 0 0 1.25rem;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	line-height: normal;
+	display: inline-block;
+	transition: background-color 300ms ease-out;
+	display: inline-block;
+}
+button:hover, button:focus, .button:hover, .button:focus {
+	background-color: #2285a2; }
+button:hover, button:focus, .button:hover, .button:focus {
+	color: white; }
+button.radius, .button.radius {
+	border-radius: 3px; }
+button.expand, .button.expand {
+	padding-right: 0;
+	padding-left: 0;
+	width: 100%; }
+/***  ***/
+/*** from app.css ***/
+.button {
+	padding:10px 15px 8px 15px;
+	color: #717171;
+	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	background-color:#f6f6f6;
+	background: -webkit-linear-gradient(#fff, #f6f6f6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#fff, #f6f6f6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#fff, #f6f6f6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#fff, #f6f6f6); /* Standard syntax (must be last) */
+	border:1px solid #acb9bf;
+	box-shadow: 0 2px 1px #ececec;
+}
+.button:hover, .button:focus {
+	background-color:#f6f6f6;
+	background: -webkit-linear-gradient(#fff, #f6f6f6);
+	background: -o-linear-gradient(#fff, #f6f6f6);
+	background: -moz-linear-gradient(#fff, #f6f6f6);
+	background: linear-gradient(#fff, #f6f6f6);
+	color: #3b3b3b;
+	text-decoration:none;
+}
+.button.share {
+/*	padding-left:40px;*/
+	background-color:#f6f6f6;
+	background-image:url("../img/sprite.png");
+	background-position:-10px -282px;
+	background-repeat:no-repeat;
+	background: -webkit-linear-gradient(#fff, #f6f6f6);
+	background: -o-linear-gradient(#fff, #f6f6f6);
+	background: -moz-linear-gradient(#fff, #f6f6f6);
+	background: url("../img/sprite.png") no-repeat -10px -282px, linear-gradient(#fff, #f6f6f6);
+}
+.button.share:hover, .button.share:focus {
+	background: -webkit-linear-gradient(#455e92, #3b5384);
+	background: -o-linear-gradient(#455e92, #3b5384);
+	background: -moz-linear-gradient(#455e92, #3b5384);
+	background: url("../img/sprite.png") no-repeat -10px -282px, linear-gradient(#fff, #f6f6f6);
+}
+/***  ***/
+/*** new styles ***/
+.PWSmoduleHeader {
+	border-top: 5px solid #d40000;
+	border-right:1px solid #d4d4d4;
+	border-left:1px solid #d4d4d4;
+	padding:10px 0;
+	background-color:#f2f2f2;
+	font-size: 160%;
+	font-weight: bold;
+	text-align:center;
+	position:relative;
+}
+.PWSmoduleHeader::before {
+	content:'';
+	width:16px;
+	height:16px;
+	border-radius:50%;
+	background: #d40000;
+	position:absolute;
+	top:-10px;
+	left:calc(50% - 8px);
+	z-index:100;
+}
+.PWSmoduleHeader a{
+	color:inherit;
+}
+.PWSmoduleHeader em{
+	font-family: Georgia,"Times New Roman",Times,serif;
+}
+.PWSmoduleHeader + .moduleWhite{
+	padding-top:10px;
+	width:calc(100% - 2px);
+	margin-bottom:10px;
+}
+.PWSmoduleHeader + .moduleWhite .moduleFoot div.pipe{
+	margin:0;
+}
+
+/***  ***/

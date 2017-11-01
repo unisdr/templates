@@ -520,6 +520,53 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 	background: -moz-linear-gradient(#455e92, #3b5384);
 	background: url("../img/sprite.png") no-repeat -10px -430px, linear-gradient(#fff, #f6f6f6);
 }
+.button.PWServices {
+	background-color:#f6f6f6;
+	background: -webkit-linear-gradient(#fff, #f6f6f6);
+	background: -o-linear-gradient(#fff, #f6f6f6);
+	background: -moz-linear-gradient(#fff, #f6f6f6);
+	background: linear-gradient(#fff, #f6f6f6);
+	text-align:left;
+	font-weight:700;
+	font-size:15px;
+	line-height:12px;
+	padding-top: 6px;
+	padding-bottom: 3px;
+}
+.button.PWServices:hover, .button.PWServices:focus {
+	background: -webkit-linear-gradient(#455e92, #3b5384);
+	background: -o-linear-gradient(#455e92, #3b5384);
+	background: -moz-linear-gradient(#455e92, #3b5384);
+	background: linear-gradient(#fff, #f6f6f6);
+}
+.button.PWServices span{
+	display:block;
+	font-weight:400;
+	font-size:11px;
+}
+.button.PWServices span em{
+	font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight:700;
+}
+.button.PWsubmit {
+	background: url("../img/bkg-expert-header.png") no-repeat center 0;
+	color:#fff;
+	box-shadow: none;
+	border:none;
+}
+.button.PWcreate {
+	background: url("../img/bkg-expert-header-3.png") no-repeat center 0;
+	background-size: 100%;
+	color:#fff;
+	box-shadow: none;
+	border:none;
+}
+.button.PWdisplay {
+	background: url("../img/bkg-expert-header-2.png") no-repeat center 0;
+	color:#fff;
+	box-shadow: none;
+	border:none;
+}
 .button.save {
 	padding-left:40px;
 	background-color:#f6f6f6;
@@ -1072,14 +1119,37 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 	text-align:left;
 	border-radius:3px;
 }
+#contributeMenu.f-dropdown {
+	padding:0 10px;
+	text-align:center;
+	font-weight:500;
+	margin-top:8px;
+	padding-top: 5px;
+	max-width:252px;
+}
+#contributeMenu.f-dropdown li:hover, #contributeMenu.f-dropdown li:focus {
+	background: #fff;
+}
+#contributeMenu.f-dropdown .button {
+	margin-bottom:8px;
+}
 .f-dropdown.content {
 	padding-bottom:0;
 }
 .f-dropdown:after {
-  top: -13px;
+/*  top: -13px;*/
+	top:-16px;
+	border-width:8px;
+	left:8px;
 }
 .f-dropdown:before {
-  top: -11px;
+/*  top: -11px;*/
+	top:-15px;
+	border-width:8px;
+	left:8px;
+}
+#contributeMenu.f-dropdown:after, #contributeMenu.f-dropdown:before {
+	left:calc(50% - 8px)
 }
 .f-dropdown.drop-left:before {
   right: -11px;
@@ -2925,7 +2995,7 @@ form.countries .button {
 	font-weight:700;
 }
 #mainMenu.inline-list > li {
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
 }
 #mainMenu.inline-list > li:first-child {
   margin-left: 1.375rem;
