@@ -3098,6 +3098,14 @@ form.countries .button {
 #PWContent .background.color04 {
 	background-color:rgba(88, 67, 88, 0.957);
 }
+#PWContent .row.full-band {
+	margin-left:-45px;
+	margin-right:-45px;
+	padding:80px 0;
+}
+#PWContent .row.full-band.grey {
+	background-color:#fafafa;
+}
 #PWContent .row.full {
 	margin:0 -65px;
 }
@@ -4258,4 +4266,54 @@ div.search input[type=image] {
 }
 .close-reveal-modal:hover, .close-reveal-modal:focus {
 	text-decoration:none;
+}
+.moduleNew{
+	border:1px solid #d4d4d4;
+	margin-bottom:10px;
+	height:100%;
+	position:relative;
+	padding-bottom:50px;
+	background-color: #fff;
+}
+.moduleNew h2{
+	font-size:140%;
+	color:#fff;
+	padding:10px 20px;
+	margin-top:0;
+}
+.moduleNew.blue h2{
+	background: url("../img/bkg-expert-header.png") no-repeat center 0;
+	background-size: 100% 100%;
+}
+.moduleNew.green h2{
+	background: url("../img/bkg-expert-header-2.png") no-repeat center 0;
+	background-size: 100% 100%;
+}
+.moduleNew.red h2{
+	background: url("../img/bkg-expert-header-3.png") no-repeat center 0;
+	background-size: 100% 100%;
+}
+.moduleNew h2 a{
+	color:#fff;
+}
+.moduleNew h2 a em {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.moduleNew p{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:100%;
+	margin:0 20px 20px;
+}
+.moduleNew .more{
+	text-align:right;
+	padding:0 0 0 5px;
+	margin:10px;
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
+.moduleNew .more:after{
+	content:"\203A";
+	color:#4a68a6;
+	margin-left:10px;
 }
