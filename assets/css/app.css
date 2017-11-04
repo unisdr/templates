@@ -1490,6 +1490,29 @@ div.switch input:checked + label:after {text-indent:-1.6rem;}
 	width:100%;
 	display:none;
 }
+/* customize slick-1.8.0 */
+.slick-slide.slick-center {
+	transform: scale(1.08);
+	z-index: 20000000;
+	position: relative;
+	box-shadow: -10px 0 8px -8px #aeaeae, 10px 0 8px -8px #aeaeae;
+}
+.slick-prev, .slick-next {
+	width: 40px;
+	height: 40px;
+	z-index:1;
+}
+.slick-next {
+	right: -25px;
+}
+.slick-prev {
+	left: -25px;
+}
+.slick-prev::before, .slick-next::before {
+	color: #aeaeae;
+	opacity: 1;
+	font-size: 40px;
+}
 
 /* new generic styles */
 .module, .row .module {margin-bottom:40px;}
@@ -4316,4 +4339,7 @@ div.search input[type=image] {
 	content:"\203A";
 	color:#4a68a6;
 	margin-left:10px;
+}
+.center-slider .moduleNew{
+	margin:30px 0;
 }
