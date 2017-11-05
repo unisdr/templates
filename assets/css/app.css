@@ -15,6 +15,9 @@ body > .row, .fullScreenContainer > .row {
 .row .row {
   margin: 0 -25px;
 }
+.row .row.collapse {
+	margin: 0 -5px;
+}
 .reveal-modal .row .row:not(.module) {
   margin: 0 -0.9375rem;
   max-width: none;
@@ -64,7 +67,7 @@ form .large-3, .module .large-3 {
   width: 23%;
 }
 .large-4 {width: 33.33333%;}
-.large-4 {padding-left: 25px;}
+.large-9 .large-4 {padding-left: 25px;}
 .large-12 .panel .large-4 {padding-left: 20px;}
 .large-5 {
   padding-left: 0;
@@ -503,6 +506,14 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 	background: -moz-linear-gradient(#455e92, #3b5384);
 	background: url("../img/sprite.png") no-repeat -10px -282px, linear-gradient(#fff, #f6f6f6);
 }
+.large-4 .button.share.expand {
+	padding-left:30px;
+	background-position: 55px -282px;
+	background: -webkit-linear-gradient(#fff, #f6f6f6);
+	background: -o-linear-gradient(#fff, #f6f6f6);
+	background: -moz-linear-gradient(#fff, #f6f6f6);
+	background: url("../img/sprite.png") no-repeat 55px -282px, linear-gradient(#fff, #f6f6f6);
+}
 .button.contribute {
 	padding-left:40px;
 	background-color:#f6f6f6;
@@ -532,6 +543,7 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 	line-height:12px;
 	padding-top: 6px;
 	padding-bottom: 3px;
+	padding-left: 15px;
 }
 .button.PWServices:hover, .button.PWServices:focus {
 	background: -webkit-linear-gradient(#455e92, #3b5384);
@@ -1271,6 +1283,47 @@ div.switch.round {border-radius: 1000px;}
 div.switch.round label {border-radius: 2rem;}
 div.switch.round label:after {border-radius: 2rem;}
 
+/* added and customized missing '.stack' buttons styles from downloaded Foundation 5.2.3 */
+.button-group.stack > li {
+	float: left;
+	display: block;
+	margin: 0;
+	float: none;
+}
+.button-group.stack > li > button, .button-group.stack > li .button {
+	border-color: rgba(255, 255, 255, 0.5);
+	border-left-width: 0;
+	border-top: 1px solid #d8d8d8;
+	border-right: 1px solid #d8d8d8;
+	display: block;
+	margin: 0;
+	box-shadow:none;
+}
+.button-group.stack > li > button {
+	width: 100%;
+}
+.button-group.stack > li:first-child button, .button-group.stack > li:first-child .button {
+	border-top: 0;
+}
+.button-group.stack > li > a {
+	text-transform:uppercase;
+	text-align:left;
+	position:relative;
+	padding-left:30px;
+}
+.button-group.stack > li > a::before {
+	content:"\203A";
+	position: absolute;
+	top: 4px;
+	left: 15px;
+	font-size: 22px;
+	font-weight: 400;
+}
+.button-group.stack > li > span.button {
+	cursor:default;
+	text-align:left;
+	color: #3b3b3b;
+}
 /* customize Foundation switches to allow label text inside */	
 div.switch label:after {
 	color:#3b3b3b;
@@ -1515,7 +1568,7 @@ div.switch input:checked + label:after {text-indent:-1.6rem;}
 }
 
 /* new generic styles */
-.module, .row .module {margin-bottom:40px;}
+.module, .row .module, .row .row.collapse.module {margin-bottom:40px;}
 .block {display:block;}
 .table {display:table;}
 .table.left-padding {padding-left:40px;}
@@ -2570,10 +2623,10 @@ _:-ms-lang(x), _:-webkit-full-screen, .panel .panel.gradient.what { /* MS Edge *
 	display:inline-block;
 	margin:0 0 1rem;
 }
-.panel.square-box {
+/*.panel.square-box {
 	display:table-cell;
 	vertical-align:middle;
-}
+}*/
 .panel.square-box.top {
 	vertical-align:top;
 }
@@ -4342,4 +4395,30 @@ div.search input[type=image] {
 }
 .center-slider .moduleNew{
 	margin:30px 0;
+}
+.services-header .red {
+	background: url("../img/bkg-services-red.png") no-repeat center 0;
+	background-size: 100% 100%;
+	position:relative;
+}
+.services-header .blue {
+	background: url("../img/bkg-services-blue.png") no-repeat center 0;
+	background-size: 100% 100%;
+	position:relative;
+}
+.services-header .green {
+	background: url("../img/bkg-services-green.png") no-repeat center 0;
+	background-size: 100% 100%;
+	position:relative;
+}
+.services-header h3 {
+	color:#fff;
+	position:absolute;
+	bottom:0;
+	left: 20px;
+	font-weight:500;
+}
+.services-header h3 em{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight:700;
 }
