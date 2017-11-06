@@ -2059,6 +2059,10 @@ p.small-text.tagged {
 	background:url("../img/sprite.png") no-repeat -20px -3848px;
 	padding:1px 0 0 25px;
 }
+.small-text.tags {
+	background:url("../img/sprite.png") no-repeat -19px -588px;
+	padding:1px 0 0 20px;
+}
 .panel.grey p.small-text {
 	text-transform:none;
 	font-weight:500;
@@ -2241,6 +2245,13 @@ a.video {
 }
 a.video:hover, a.video:focus, a.video:active, a.video.selected {
 	background:url("../img/sprite.png") no-repeat -20px -199px;
+}
+a.copy {
+	background:url("../img/sprite.png") no-repeat -20px -4001px;
+	padding-left:20px;
+	text-transform:uppercase;
+	font-weight:700;
+	font-size:12px;
 }
 ul.two-columns {
 	-moz-column-count: 2;
@@ -4296,53 +4307,13 @@ div.search input[type=image] {
 	padding-left:25px;
 }
 
-
-#socialBar {
-	margin:35px 0 0;
-}
-#socialBar li:first-child{
-	margin-left:0;
-}
-#socialBar .facebook {
-	background:url("../img/sprite.png") no-repeat -20px -20px;
-	width:12px;
-	height:25px;
-}
-#socialBar .twitter {
-	background:url("../img/sprite.png") no-repeat -20px -46px;
-	width:25px;
-	height:22px;
-}
-#socialBar .goggle {
-	background:url("../img/sprite.png") no-repeat -20px -78px;
-	width:24px;
-	height:25px;
-}
-
-#footerMenu {
-	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	font-size: 12px;
-	text-transform:uppercase;
-	margin-top:50px;
-	margin-left:0;
-}
-#footerMenu li {
-	margin-left:60px;
-}
-#footerMenu li:first-child {
-	margin-left:0;
-}
-#footerMenu li a {
-	color:#717171;
-}
-
 .reveal-modal #profilePhoto {
 	margin-left:-20px;
 }
 .close-reveal-modal:hover, .close-reveal-modal:focus {
 	text-decoration:none;
 }
+
 .moduleNew{
 	border:1px solid #d4d4d4;
 	margin-bottom:10px;
@@ -4396,6 +4367,7 @@ div.search input[type=image] {
 .center-slider .moduleNew{
 	margin:30px 0;
 }
+
 .services-header .red {
 	background: url("../img/bkg-services-red.png") no-repeat center 0;
 	background-size: 100% 100%;
@@ -4421,4 +4393,78 @@ div.search input[type=image] {
 .services-header h3 em{
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight:700;
+}
+
+ul.collections {
+	list-style:none;
+	margin:0;
+	padding:0;
+	font-size:13px;
+}
+.collections li {
+	padding-bottom:30px;
+	border-bottom: 1px solid #d1d1d1;
+	margin-bottom:35px;
+}
+.collections .row.collapse {
+	margin:0;
+}
+.collections .row:nth-child(2) {
+	margin-top:10px;
+}
+.collections .published {
+	display:block;
+	background:url("../img/sprite.png") no-repeat -20px -3897px;
+	padding-left:18px;
+	font-weight:700;
+}
+.collections .not-published {
+	display:block;
+	background:url("../img/sprite.png") no-repeat -20px -3947px;
+	padding-left:18px;
+	color:#9a9a9a;
+}
+.collections .large-6 a {
+	font-size:16px;
+	font-weight:500;
+}
+
+#socialBar {
+	margin:35px 0 0;
+}
+#socialBar li:first-child{
+	margin-left:0;
+}
+#socialBar .facebook {
+	background:url("../img/sprite.png") no-repeat -20px -20px;
+	width:12px;
+	height:25px;
+}
+#socialBar .twitter {
+	background:url("../img/sprite.png") no-repeat -20px -46px;
+	width:25px;
+	height:22px;
+}
+#socialBar .goggle {
+	background:url("../img/sprite.png") no-repeat -20px -78px;
+	width:24px;
+	height:25px;
+}
+
+#footerMenu {
+	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	text-transform:uppercase;
+	margin-top:50px;
+	margin-left:0;
+}
+#footerMenu li {
+	margin-left:60px;
+}
+#footerMenu li:first-child {
+	margin-left:0;
+}
+#footerMenu li a {
+	color:#717171;
 }
