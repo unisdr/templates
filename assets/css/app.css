@@ -23,6 +23,9 @@ body > .row, .fullScreenContainer > .row {
   max-width: none;
   width: auto;
 }
+.reveal-modal .row .row.collapse {
+	margin: 0;
+}
 .panel .row, form .popup.main .row, .f-dropdown .row {
   margin: 0 -20px;
 }
@@ -77,6 +80,9 @@ form .large-3, .module .large-3 {
 .row.full .large-5 {
   width:41.6667%;
   padding-right:40px;
+}
+.row.collapse .large-5 {
+	width: 41.66667%;
 }
 .large-6 .large-5 {
   padding-left:0.9375em;
@@ -279,18 +285,29 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 }
 input[type="text"].error, input[type="password"].error, input[type="date"].error, input[type="datetime"].error, input[type="datetime-local"].error, input[type="month"].error, input[type="week"].error, input[type="email"].error, input[type="number"].error, input[type="search"].error, input[type="tel"].error, input[type="time"].error, input[type="url"].error, textarea.error, select.error {
   border:1px solid #F04124;
-  border-radius: 3px 3px 0 0;
   margin-bottom: 0;
+}
+input[type="text"].radius.error, input[type="password"].radius.error, input[type="date"].radius.error, input[type="datetime"].radius.error, input[type="datetime-local"].radius.error, input[type="month"].radius.error, input[type="week"].radius.error, input[type="email"].radius.error, input[type="number"].radius.error, input[type="search"].radius.error, input[type="tel"].radius.error, input[type="time"].radius.error, input[type="url"].radius.error, textarea.radius.error, select.radius.error {
+  border-radius: 3px 3px 0 0;
 }
 input[type="checkbox"] + label, input[type="radio"] + label {
 	vertical-align: text-bottom;
+	display:inline;
 }
-form .row .row.collapse input, .row.collapse select {
+.prefix {
+	height: 25px;
+	line-height: 25px;
+	margin: 3px 0 1rem;
+}
+span.prefix, label.prefix {
+	border-right: 1px solid #ccc;
+}
+form .row.collapse input:not(.error), form .row.collapse select:not(.error) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   border-right:none;
 }
-form .row .row.collapse .end input, form .row .row.collapse .end select {
+form .row.collapse .end input.radius, form .row.collapse .end select.radius {
   border-bottom-right-radius:3px;
   border-top-right-radius:3px;
   border-bottom-left-radius:0;
@@ -307,12 +324,14 @@ textarea {
 	min-height: 70px;
 }
 select:not(.big) {
-  border: 1px solid #cfd6d9;
   color:#3b3b3b;
   font-size:12px;
   height:25px;
   padding:4px 10px 2px 10px;
   background-color:#fff;
+}
+select:not(.big):not(.error) {
+  border: 1px solid #cfd6d9;
 }
 select:not(*:root) {padding-top:0;} /* Chrome hack */
 
@@ -336,6 +355,16 @@ span.error, small.error {
 	margin-bottom: 1rem;
 	margin-top: -1px;
 	padding:10px 0.5625rem 0.5625rem;
+}
+span.valid, small.valid {
+	font-size:12px;
+	font-style: normal;
+	font-weight:500;
+	margin-bottom: 1rem;
+	margin-top: -1px;
+	padding:0 0.5625rem;
+	display:block;
+	color:#519428;
 }
 .button-bar {
 	background-color:#f7f7f7;
@@ -385,6 +414,11 @@ span.error, small.error {
 }
 .button.upper.tiny {
 	padding-bottom: 0.45rem;
+}
+.postfix.button {
+	height: 25px;
+	line-height: 25px;
+	margin: 3px 0 1rem;
 }
 .button.primary {
 	color: #fff;
@@ -750,9 +784,11 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 	margin-bottom:10px;
 	margin-right:10px;
 }
-.button.round.tiny {
+.button.tiny {
 	padding:6px 12px;
 	font-size:0.6rem;
+}
+.button.round.tiny {
 	background:#bbb;
 }
 .button.round:hover, .button.round:focus {
@@ -1500,6 +1536,7 @@ div.switch input:checked + label:after {text-indent:-1.6rem;}
 .select2-search-choice-close {
   top: 0.30rem;
 }
+.select2-search-field {min-width:190px}
 .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover {
   background-position: 50% 50%;
 }
@@ -1574,11 +1611,12 @@ div.switch input:checked + label:after {text-indent:-1.6rem;}
 .table.left-padding {padding-left:40px;}
 .no-padding {padding:0;}
 .no-padding-bottom {padding-bottom:0;}
-h2.no-margin, .panel h2.no-margin, h4.no-margin, p.no-margin, p.small-text.no-margin{margin:0 !important;}
+h2.no-margin, .panel h2.no-margin, h3.no-margin, h4.no-margin, p.no-margin, p.small-text.no-margin{margin:0 !important;}
 hr.small-margin{margin-top:10px;}
 .case-none {text-transform:none !important;}
 .upper {text-transform:uppercase;}
 .case-lower {text-transform:lowercase;}
+.vert-top {vertical-align:top !important;}
 h1.big {
 	font-size:48px;
 	line-height: 1.2;
@@ -2772,6 +2810,9 @@ _:-ms-lang(x), _:-webkit-full-screen, .panel .panel.gradient.what { /* MS Edge *
 	border-bottom:1px solid #d8d8d8;
 	padding:1.25rem 1.25rem 0;
 	overflow:hidden;
+}
+.reveal-modal .form-section {
+	padding:1.25rem 0 0;
 }
 .form-section:last-child {
 	border-bottom:none;

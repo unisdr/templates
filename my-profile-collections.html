@@ -8,6 +8,8 @@
     <title>My profile - At least 1 collection | PreventionWeb.net</title>
     <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
     <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
+    <link href="assets/shared/select2/select2.css" rel="stylesheet" />
+    <link href="assets/shared/select2/select2-foundation5.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/app.css" />
     <script src="assets/shared/foundation/v5.2.3/js/vendor/modernizr.js"></script>
     <script type="text/javascript" src="https://fast.fonts.net/jsapi/f5a1d61e-8421-43db-82ac-6053b84c9bc4.js"></script>
@@ -141,7 +143,7 @@
 																		<div class="large-12 columns">
 																				<p><strong>Lorem ipsum dolor sit amet</strong></p>
 																				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-																				<a class="button radius expand" href="#">Create another collection</a>
+																				<a class="button radius expand" href="edit-collection.html" data-reveal-id="editCollection" data-reveal-ajax="true">Create another collection</a>
 																		</div>
 																</div>
 																<div class="row">
@@ -290,9 +292,13 @@
             </div>
         </div>
     </div>
+		
+		<div id="editCollection" class="reveal-modal medium" data-reveal></div>
+    <a class="btn-close-reveal"></a>
 
-	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
+		<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
     <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+    <script src="assets/shared/select2/select2.min.js"></script>
     <script>
 		$(document).foundation();
 		

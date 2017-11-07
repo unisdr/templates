@@ -1,0 +1,107 @@
+    <a class="close-reveal-modal">&#215;</a>
+    <div class="row">
+        <div class="large-10 large-offset-1 columns">
+            <h2>Edit collection</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-10 large-offset-1 columns">
+            <div data-alert class="alert-box alert radius">
+                <p>You have not entered one or more required information, or entered it incorrectly:</p>
+                <ul>
+                    <li>Please enter the collection name</li>
+                </ul>
+            </div>
+            <form class="whole-page">
+								<div class="form-section">
+										<div class="row">
+												<div class="large-12 columns">
+														<label class="clearfix">Name this collection<span class="right">75 characters left</span>
+																<input type="text" class="radius error" />
+														</label>
+														<small class="error">Enter name of collection</small>
+												</div>
+										</div>
+										<div class="row">
+												<div class="large-12 columns">
+														<label class="clearfix">Short description<span class="right">250 characters left</span>
+																<textarea class="radius"></textarea>
+														</label>
+												</div>
+										</div>
+										<div class="row">
+												<div class="large-12 columns">
+														<div class="panel grey module">
+																<h3 class="no-margin">Add your personal or workspace tags</h3>
+																		<label><input type="hidden" id="addTags" class="radius" multiple data-placeholder="Digit a new tag and press Enter"></label>
+																<a class="more upper">Login To VIEW YOUR PRIVATE TAGS</a>
+														</div>
+												</div>
+										</div>
+								</div>
+								<div class="form-section">
+										<div class="row">
+												<div class="large-12 columns">
+														<h3>Visibility</h3>
+												</div>
+										</div>
+										<div class="row">
+												<div class="large-6 columns">
+														<label>
+																<input type="radio" name="visibility" value="" id="radio1"><label class="vert-top" for="radio1">Private collection<span class="block">For your eyes only</span></label>
+														</label>
+												</div>
+												<div class="large-6 columns">
+														<label>
+																<input type="radio" name="visibility" value="" id="radio2"><label class="vert-top" for="radio2">Publish on PreventionWeb<span class="block">You will get a link to your collection to share with your contacts</span></label>
+														</label>
+												</div>
+										</div>
+								</div>
+								<div class="form-section module">
+										<div class="row">
+												<div class="large-12 columns">
+														<h3>Customize url (optional)</h3>
+												</div>
+										</div>
+										<div class="row collapse">
+											<div class="large-5 columns">
+												<span class="prefix radius">http://www.preventionweb.net/tags/</span>
+											</div>
+											<div class="large-5 columns end">
+													<label class="clearfix">
+													<!-- Add error or valid class depending on check result-->
+															<input type="text" class="error" placeholder="Enter your URL...">
+															<!--
+															<input type="text" class="valid" placeholder="Enter your URL...">
+															-->
+													</label>
+													<!-- Add error or valid element depending on check result-->
+													<small class="error">Sorry, this URL is not available, try a different one</small>
+													<!--
+													<small class="valid">OK, this URL is available</small>
+													-->
+											</div>
+											<div class="large-2 columns">
+                        <a href="" class="button primary postfix">Check url</a>
+											</div>
+										</div>
+								</div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <a href="" class="button radius">Save collection</a>
+                    </div>
+                </div> 
+            </form>
+        </div>
+    </div>
+    <script>
+    		//RP: add tags widget startup and configuration
+				$(document).ready(function() {
+					$("#addTags").select2({
+						tags:[],
+						width: "100%",
+						maximumInputLength: 20 //optional
+					});		
+				});
+    </script>    
