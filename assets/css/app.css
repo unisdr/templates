@@ -4469,6 +4469,27 @@ ul.collections {
 	font-size:16px;
 	font-weight:500;
 }
+#contentPage #tagContentPopup {
+	display:none;
+	position:fixed;
+	width:400px;
+	padding-right:0;
+	padding-left:0;
+	padding-bottom:1.25rem;
+}
+#contentPage #tagContentPopup .row{
+	margin: 0;
+}
+#contentPage #tagContentPopup h4 {
+	margin-top:0.2rem;
+}
+#contentPage #tagContentPopup .panel {
+	background-color: #f2f2f2;
+	border:none;
+	font-size: 14px;
+	padding: 0.8rem 20px;
+	margin:10px 0 20px;
+}
 
 #socialBar {
 	margin:35px 0 0;

@@ -8,7 +8,11 @@
     <title>Collection (Featured) | PreventionWeb.net</title>
     <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/normalize.css" />
     <link rel="stylesheet" href="assets/shared/foundation/v5.2.3/css/foundation.css" />
-    <link rel="stylesheet" href="assets/css/app.css" />
+<!-- RP Sticky popup: Select2 styles for tag module -->
+    <link href="assets/shared/select2/select2.css" rel="stylesheet" />
+    <link href="assets/shared/select2/select2-foundation5.css" rel="stylesheet" />
+<!--  -->
+		<link rel="stylesheet" href="assets/css/app.css" />
     <script src="assets/shared/foundation/v5.2.3/js/vendor/modernizr.js"></script>
     <script type="text/javascript" src="https://fast.fonts.net/jsapi/f5a1d61e-8421-43db-82ac-6053b84c9bc4.js"></script>
 </head>
@@ -117,6 +121,34 @@
             </div>
         </div>
         <div id="contentPage" class="row">
+<!-- RP Sticky popup: must stay inside div "contentPage" -->
+						<div id="tagContentPopup" class="panel radius popup">
+								<div class="row">
+										<div class="large-11 columns">
+												<h4>Add this content to your collection!</h4>
+										</div>
+										<div class="large-1 columns">
+												<a href="#" class="close-popup"></a>
+										</div>
+								</div>
+								<div class="row collapse">
+										<div class="large-12 columns">
+												<div class="panel grey">
+														<p>Enter an existing tag to add this content to one or more of your current collections. To start a new collection, enter a new tag below.</p>
+														<p>See <a href="#">My collections</a> to name and share your collection<br><a href="#">Back to search results</a> to find more content to tag</p>
+														<form>
+																<label><input type="hidden" id="addTags" class="radius" multiple data-placeholder="Digit a new tag and press Enter"></label>
+														</form>
+												</div>
+										</div>
+								</div>
+								<div class="row">
+										<div class="large-3 columns">
+												<a href="" class="button radius">&laquo; Back to search results</a>
+										</div>
+								</div>
+						</div>
+<!--  -->
             <div class="large-12 columns">
 <!-- RP Collections: heading bar -->						
                 <div class="row">
@@ -704,9 +736,12 @@
             </div>
         </div>
     </div>
-
-	<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
+		
+		<script src="assets/shared/foundation/v5.2.3/js/vendor/jquery.js"></script>
     <script src="assets/shared/foundation/v5.2.3/js/foundation.min.js"></script>
+<!-- RP Sticky popup: Select2 script for tag module -->
+    <script src="assets/shared/select2/select2.min.js"></script>
+<!--  -->
     <script>
 		$(document).foundation();
 		
@@ -718,17 +753,37 @@
 			$('#menu-close').click(function() {
 				$('.top-dropdown-menu').slideToggle();
 			});
-		});
 
-		//show/hide function for text/questions
-		$('.moreinfo').hide();
-		$('.more').click(function (ev) {
-		   var t = ev.target
-		   $('#info' + $(this).attr('target')).toggle(100, function(){
-			  console.log(ev.target)
-			  $(t).html($(this).is(':visible')? 'HIDE MORE' : 'SHOW MORE')
-		   });
-		   return false;
+			//show/hide function for text/questions
+			$('.moreinfo').hide();
+			$('.more').click(function (ev) {
+				 var t = ev.target
+				 $('#info' + $(this).attr('target')).toggle(100, function(){
+					console.log(ev.target)
+					$(t).html($(this).is(':visible')? 'HIDE MORE' : 'SHOW MORE')
+				 });
+				 return false;
+			});
+		
+			//RP Sticky popup: positioning
+			contentPagePos = $('#contentPage').offset();
+			popupTop = contentPagePos.top + 80;
+			popupLeft = contentPagePos.left + $('#contentPage').innerWidth() - $('#tagContentPopup').outerWidth();
+			$('#tagContentPopup').css({top: popupTop, left: popupLeft});
+			$('#tagContentPopup').show();
+	
+			//RP Sticky popup: close events
+			$('.close-popup').click(function () {
+				$('#tagContentPopup').hide();
+				 return false;
+			});
+			
+			//RP Sticky popup: add tags widget startup and configuration
+			$("#addTags").select2({
+				tags:[],
+				width: "100%",
+				maximumInputLength: 20 //optional
+			});		
 		});
     </script>    
 </body>
