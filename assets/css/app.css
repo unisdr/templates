@@ -4491,6 +4491,22 @@ ul.collections {
 	margin:10px 0 20px;
 }
 
+ul.rss-feeds {
+	list-style:none;
+	margin:0 0 1.25rem;;
+	padding:0;
+}
+ul.rss-feeds li{
+	padding:15px 0 13px;
+	border-bottom:1px solid #d8d8d8;
+	font-weight:500;
+}
+ul.rss-feeds li a{
+	color:inherit;
+	background:url("../img/sprite.png") no-repeat -20px -4050px;
+	padding:0 0 0 30px;
+}
+
 #socialBar {
 	margin:35px 0 0;
 }
