@@ -2101,6 +2101,18 @@ p.small-text.tagged {
 	background:url("../img/sprite.png") no-repeat -19px -588px;
 	padding:1px 0 0 20px;
 }
+.small-text.rss{
+	background:url("../img/sprite.png") no-repeat -20px -4047px;
+	padding:0 0 0 30px;
+}
+.small-text.multimedia{
+	background:url("../img/sprite.png") no-repeat -20px -4096px;
+	padding:0 0 0 30px;
+}
+.small-text.meetings{
+	background:url("../img/sprite.png") no-repeat -20px -4146px;
+	padding:0 0 0 30px;
+}
 .panel.grey p.small-text {
 	text-transform:none;
 	font-weight:500;
@@ -4491,20 +4503,25 @@ ul.collections {
 	margin:10px 0 20px;
 }
 
-ul.rss-feeds {
+ul.pw-services {
 	list-style:none;
 	margin:0 0 1.25rem;;
 	padding:0;
 }
-ul.rss-feeds li{
-	padding:15px 0 13px;
+ul.pw-services li {
+	padding:15px 0 11px;
 	border-bottom:1px solid #d8d8d8;
 	font-weight:500;
 }
-ul.rss-feeds li a{
-	color:inherit;
-	background:url("../img/sprite.png") no-repeat -20px -4050px;
-	padding:0 0 0 30px;
+ul.pw-services .small-text {
+	margin:0;
+	font-size:20px;
+	padding-left:30px;
+}
+ul.pw-services .small-text a {
+	font-weight:400;
+	margin-top: -5px;
+	display: block;
 }
 
 #socialBar {
