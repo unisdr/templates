@@ -30,12 +30,10 @@
 												</div>
 										</div>
 										<div class="row">
-												<div class="large-12 columns">
-														<div class="panel grey module">
-																<h3 class="no-margin">Add your personal or workspace tags</h3>
-																		<label><input type="hidden" id="addTags" class="radius" multiple data-placeholder="Digit a new tag and press Enter"></label>
-																<a class="more upper">Login To VIEW YOUR PRIVATE TAGS</a>
-														</div>
+												<div class="large-3 columns">
+														<label class="clearfix">Your tag
+															<input type="text" class="radius" value="pw-canterbury" disabled="disabled">
+														</label>
 												</div>
 										</div>
 								</div>
@@ -95,13 +93,3 @@
             </form>
         </div>
     </div>
-    <script>
-    		//RP: add tags widget startup and configuration
-				$(document).ready(function() {
-					$("#addTags").select2({
-						tags:[],
-						width: "100%",
-						maximumInputLength: 20 //optional
-					});		
-				});
-    </script>    

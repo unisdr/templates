@@ -1613,6 +1613,7 @@ div.switch input:checked + label:after {text-indent:-1.6rem;}
 .no-padding-bottom {padding-bottom:0;}
 h2.no-margin, .panel h2.no-margin, h3.no-margin, h4.no-margin, p.no-margin, p.small-text.no-margin{margin:0 !important;}
 hr.small-margin{margin-top:10px;}
+hr.no-border{border-color: #fff;}
 .case-none {text-transform:none !important;}
 .upper {text-transform:uppercase;}
 .case-lower {text-transform:lowercase;}
@@ -1837,6 +1838,11 @@ blockquote p {
 	font-weight:500;
 }
 
+p.section-intro {
+	border-top:1px solid #d8d8d8;
+	padding-top:20px;
+	margin-top:50px;
+}
 p.text, ul.text, ol.text, .text p, .text ul {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size:16px;
@@ -2112,6 +2118,21 @@ p.small-text.tagged {
 .small-text.meetings{
 	background:url("../img/sprite.png") no-repeat -20px -4146px;
 	padding:0 0 0 30px;
+}
+h2.learn {
+	background:url("../img/sprite.png") no-repeat -20px -4200px;
+	padding:0 0 0 120px;
+	line-height:100px;
+}
+h2.share {
+	background:url("../img/sprite.png") no-repeat -20px -4330px;
+	padding:0 0 0 120px;
+	line-height:100px;
+}
+h2.connect {
+	background:url("../img/sprite.png") no-repeat -20px -4460px;
+	padding:0 0 0 120px;
+	line-height:100px;
 }
 .panel.grey p.small-text {
 	text-transform:none;
@@ -4505,7 +4526,7 @@ ul.collections {
 
 ul.pw-services {
 	list-style:none;
-	margin:0 0 1.25rem;;
+	margin:0;
 	padding:0;
 }
 ul.pw-services li {
@@ -4513,15 +4534,28 @@ ul.pw-services li {
 	border-bottom:1px solid #d8d8d8;
 	font-weight:500;
 }
+.large-6 ul.pw-services li {
+	padding:30px 0;
+}
 ul.pw-services .small-text {
 	margin:0;
 	font-size:20px;
+}
+ul.pw-services .small-text:not(.no-icon) {
 	padding-left:30px;
 }
 ul.pw-services .small-text a {
 	font-weight:400;
+}
+.large-6 ul.pw-services .small-text a {
 	margin-top: -5px;
 	display: block;
+}
+ul.pw-services span {
+	font-size:12px;
+	color:#717171;
+	font-weight:400;
+	display:block;
 }
 
 #socialBar {
