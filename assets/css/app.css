@@ -1903,6 +1903,12 @@ p.small-text.heading {
 	display:inline-block;
 	margin:auto;
 }
+p.small-text.heading .highlight{
+	background-color:#f36649;
+	color:#fff;
+	display:inline-block;
+	padding:2px 5px 0;
+}
 .top-banner {
 	margin:-15px -10px 10px -53px;
 	padding:25px 0 25px 80px;
@@ -2120,17 +2126,17 @@ p.small-text.tagged {
 	padding:0 0 0 30px;
 }
 h2.learn {
-	background:url("../img/sprite.png") no-repeat -20px -4200px;
+	background:url("../img/ico-learn.png") no-repeat 0 0;
 	padding:0 0 0 120px;
 	line-height:100px;
 }
 h2.share {
-	background:url("../img/sprite.png") no-repeat -20px -4330px;
+	background:url("../img/ico-share.png") no-repeat 0 0;
 	padding:0 0 0 120px;
 	line-height:100px;
 }
 h2.connect {
-	background:url("../img/sprite.png") no-repeat -20px -4460px;
+	background:url("../img/ico-connect.png") no-repeat 0 0;
 	padding:0 0 0 120px;
 	line-height:100px;
 }

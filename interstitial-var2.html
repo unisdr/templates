@@ -193,6 +193,23 @@
 				slidesToShow: 1
 			});
 		});
+		/*
+		*/
+		var index=0;
+		$('.center-slider').on('init', function(slick){
+			index=$(".slick-active").attr("data-slick-index")-1;
+			$(".slick-slide h2").css({"text-align": "left"});
+			$(".slick-slide[data-slick-index="+index+"] h2").css({"text-align": "right"});
+		});
+		$('.center-slider').on('beforeChange', function(event, slick, currentSlide){
+			$(".slick-slide h2 a").css({"visibility": "hidden"});
+		});
+		$('.center-slider').on('afterChange', function(event, slick, currentSlide){
+			index=$(".slick-active").attr("data-slick-index")-1;
+			$(".slick-slide h2").css({"text-align": "left"});
+			$(".slick-slide[data-slick-index="+index+"] h2").css({"text-align": "right"});
+			$(".slick-slide h2 a").css({"visibility": "visible"});
+		});
     </script>    
 </body>
 </html>
