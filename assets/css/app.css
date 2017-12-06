@@ -936,6 +936,9 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 .button-group li:first-child .button {
 	border:1px solid #acb9bf;
 }
+.button-group.right li:first-child .button {
+	margin-left:0;
+}
 .right .button {
 	margin-left:10px;
 }
