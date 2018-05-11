@@ -51,7 +51,7 @@ body{
 .breadcrumb {
     height:39px;
     line-height:39px;
-    font-family: 'DIN Next W01';
+    font-family: 'Roboto';
     font-size: 13px;
     font-weight: 500;
 }
@@ -71,7 +71,7 @@ body{
     height:100%;
     min-height:223px;
     padding-top:35px;
-    font-family: 'DIN Next W01';
+    font-family: 'Roboto';
 }
 
 .homeTopNewsContainerCol1 {
@@ -105,7 +105,7 @@ body{
 .headerContainer {
     display:block;
     clear:both;
-    font-family: 'DIN Next W01';
+    font-family: 'Roboto';
 }
 
 .headerContainerCol1 {
@@ -137,7 +137,7 @@ body{
 
 .headerContainerNav a {
     margin-right:30px;
-    font-family: 'DIN Next W01';
+    font-family: 'Roboto';
     font-weight: 600;
     font-size: 13px;
     color:#000;
@@ -223,7 +223,7 @@ body{
     padding-top:42px;
     font-weight:600;
     font-size:14px;
-    font-family: 'DIN Next W01';
+    font-family: 'Roboto';
 }
 
 .footerContainer .sprite  {
@@ -293,7 +293,7 @@ body{
 #top-header .wrapper {
     margin: 0 auto;
     background-color: #fff;
-    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #333;
     line-height: 43px;
@@ -311,7 +311,7 @@ body{
     float: left;
     color: #FFF;
     display: inline-block;
-    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin-right: 40px;
 }
@@ -353,14 +353,14 @@ body{
 
 .top-dropdown-menu ul li a {
     color: #FFFFFF;
-    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
 
 .top-dropdown-menu a.closer {
     color: #FFFFFF;
-    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     padding: 1em;
     position: absolute;
     right: 0;
@@ -399,7 +399,7 @@ body{
 
 .redesignContent {
     font-size: 14px;
-    font-family: 'DIN Next W01', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .redesignContent li {
@@ -446,7 +446,7 @@ div.spacer50 {
 
 .contentContainer #breadcrumbs {
     text-transform:uppercase;
-    font-family: 'DIN Next W01';
+    font-family: 'Roboto';
     font-size:13px;
     padding:0;
 }
