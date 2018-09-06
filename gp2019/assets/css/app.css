@@ -261,19 +261,21 @@ textarea {
 	color: #555;
 }
 
-.breadcrumbs li::after {
+.breadcrumbs li:not(:last-child):after {
 	font-size: 1rem;
 	content: " ";
 }
 
-.breadcrumbs li:not(:last-child)::after {
-	color: #555;
-	content: "\203A";
+/* Larger and up */
+@media screen and (min-width: 74.9375em) {
+	.breadcrumbs li:not(:last-child)::after {
+		color: #555;
+		content: "\203A";
+	}
 }
 
+/*small*/
 @media screen and (max-width: 39.9375em) {
-
-	/*small*/
 	.media-object img {
 		max-width: 100%;
 	}
@@ -388,9 +390,8 @@ cite {
 	margin-left: 3rem;
 }
 
+/*small*/
 @media screen and (max-width: 39.9375em) {
-
-	/*small*/
 	.small-centered {
 		float: none !important;
 		margin-left: auto;
@@ -398,9 +399,8 @@ cite {
 	}
 }
 
+/*medium and up*/
 @media screen and (min-width: 40em) {
-
-	/*medium and up*/
 	.small-centered {
 		float: left;
 		margin-left: 0;
@@ -408,9 +408,8 @@ cite {
 	}
 }
 
+/*small*/
 @media screen and (max-width: 39.9375em) {
-
-	/*small*/
 	.small-text-center {
 		text-align: center;
 	}
@@ -1737,9 +1736,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 	background: #fff url(../img/background-pattern.jpg) 0 0 repeat-x;
 }
 
+/*small and medium*/
 @media screen and (max-width: 63.9375em) {
-
-	/*small and medium*/
 	#GP-header {
 		padding-top: 1.125rem;
 		padding-bottom: 0.75rem;
@@ -1750,9 +1748,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 	}
 }
 
+/*large and up*/
 @media screen and (min-width: 64em) {
-
-	/*large and up*/
 	#GP-header {
 		padding-top: 2.125rem;
 		padding-bottom: 1.75rem;
@@ -1760,6 +1757,17 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 	#GP-header .menu-centered>.menu {
 		display: block;
+	}
+
+	#GP-header .large-4 {
+		width: 25%;
+	}
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+	#GP-header .large-4 {
+		width: 29.5%;
 	}
 }
 
@@ -1769,7 +1777,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 	color: #999;
 	text-transform: uppercase;
 	margin-bottom: 0.55rem;
-	margin-right: -6px;/*fix for centering border below*/
+	margin-right: -6px;
+	/*fix for centering border below*/
 }
 
 #header-service-menu::after {
@@ -1817,9 +1826,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 	display: inline-block;
 }
 
+/*small and medium*/
 @media screen and (max-width: 63.9375em) {
-
-	/*small and medium*/
 	#header-hashtags.menu>li>a {
 		padding: 0 0.8rem;
 	}
@@ -1829,17 +1837,15 @@ table.programme .event-header .row:first-child a .fa-stack {
 	}
 }
 
+/*medium*/
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
-	/*medium*/
 	#header-hashtags.menu>li>a {
 		padding: 0 0.5rem;
 	}
 }
 
+/*large and up*/
 @media screen and (min-width: 64em) {
-
-	/*large and up*/
 	#header-hashtags.menu>li>a {
 		padding: 0.7rem 1.6rem;
 	}
@@ -1848,8 +1854,14 @@ table.programme .event-header .row:first-child a .fa-stack {
 #header-menu-band {
 	background-color: #fff;
 	margin-bottom: 0.5rem;
-	border-top: 5px solid #e2e2e2;
-	border-bottom: 5px solid #e2e2e2;
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+	#header-menu-band {
+		border-top: 5px solid #e2e2e2;
+		border-bottom: 5px solid #e2e2e2;
+	}
 }
 
 #header-menu-band>.row {
@@ -2007,16 +2019,18 @@ table.programme .event-header .row:first-child a .fa-stack {
 	float: none;
 }
 
-#footer-logo-container .breadcrumbs li:not(:last-child)::after {
-	margin: 0 1.3rem;
-	color: #b8b8b8;
-	font-size: 1.2rem;
-	top: 3px;
+/* Larger and up */
+@media screen and (min-width: 74.9375em) {
+	#footer-logo-container .breadcrumbs li:not(:last-child)::after {
+		margin: 0 0.6rem;
+		color: #b8b8b8;
+		font-size: 1.2rem;
+		top: 3px;
+	}
 }
 
+/*small*/
 @media screen and (max-width: 39.9375em) {
-
-	/*small*/
 	#footer-logo-container .small-centered:not(:last-child) img {
 		margin-bottom: 1rem;
 	}
@@ -2031,9 +2045,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 	padding-bottom: 0.5rem;
 }
 
+/*small*/
 @media screen and (max-width: 39.9375em) {
-
-	/*small*/
 	#footer-nav-container {
 		font-size: 0.5rem;
 	}
@@ -2044,9 +2057,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 	margin-top: 1.3rem;
 }
 
-@media screen and (min-width: 64em) {
-
-	/*large and up*/
+/*Medium and up*/
+@media screen and (min-width: 40em) {
 	#footer-nav-container .menu-centered {
 		float: right;
 	}
