@@ -2022,7 +2022,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 /* Larger and up */
 @media screen and (min-width: 74.9375em) {
 	#footer-logo-container .breadcrumbs li:not(:last-child)::after {
-		margin: 0 0.6rem;
+		margin: 0 0.8rem;
 		color: #b8b8b8;
 		font-size: 1.2rem;
 		top: 3px;
