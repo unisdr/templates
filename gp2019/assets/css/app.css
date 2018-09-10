@@ -98,7 +98,7 @@ p {
 }
 
 form p {
-	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -448,7 +448,7 @@ li .media-object {
 }
 
 .media-object-section p {
-	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	line-height: 1.375rem;
 }
 
@@ -758,7 +758,7 @@ ul.links li::after {
 }
 
 .list-module li>div h4 {
-	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 1.125rem;
 	line-height: 1.375rem;
 	margin-bottom: 0;
@@ -1010,7 +1010,7 @@ ul.links li::after {
 }
 
 .list-module #events-detail div div:last-child span {
-	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 1.375rem;
 	font-weight: 700;
 	font-style: normal;
@@ -1371,7 +1371,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 #home-top-slider .image-caption h2 {
-	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	color: #306095;
 	margin-bottom: 0;
@@ -1426,7 +1426,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 #home-top-slider .video-caption h2 {
 	border-top: 1px solid #555;
 	border-bottom: 1px solid #555;
-	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-size: 2.125rem;
 	font-weight: 700;
@@ -2039,9 +2039,9 @@ table.programme .event-header .row:first-child a .fa-stack {
 #footer-nav-container {
 	background-color: #eaf0f6;
 	border-top: 1px solid #dbdbdb;
-	font-size: 0.75rem;
+	font-size: 0.8125rem;
 	text-transform: uppercase;
-	color: #8c9094;
+	color: #333;
 	padding-bottom: 0.5rem;
 }
 
@@ -2083,7 +2083,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 #footer-service-menu li a {
 	font-weight: 500;
-	color: #306095;
+	color: #183b61;
 }
 
 #footer-service-menu li:last-child a {
