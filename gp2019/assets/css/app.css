@@ -470,15 +470,62 @@ li .media-object-section a {
 	color: #555;
 }
 
+/*Used in Home top slider only, so no parent id/class*/
+.button.clear {
+	color: #fff;
+	text-transform: uppercase;
+	background-color: transparent;
+}
+
+.button.clear:hover,
+.button.clear:focus {
+	background-color: #F17B37;
+}
+
+.button.clear,
+.button.clear.disabled,
+.button.clear[disabled],
+.button.clear:hover,
+.button.clear:hover.disabled,
+.button.clear:hover[disabled],
+.button.clear:focus,
+.button.clear:focus.disabled,
+.button.clear:focus[disabled] {
+	border-color: transparent;
+}
+
+.button.clear i {
+	margin-right: 0.5rem;
+	margin-top: -0.1rem;
+	color: #89ACD3;
+}
+
+.button.clear:hover i,
+.button.clear:focus i {
+	color: #fff;
+}
+
 /************/
 /* Flexslider: override existing styles */
 #home-top-slider .flexslider {
 	margin-bottom: 0;
 	position: relative;
+	background-color: #17639F;
+	border: none;
+	border-radius: 10px;
+}
+
+#home-top-slider .flex-video {
+	margin-bottom: 0;
+}
+
+#home-top-slider .flex-video.widescreen {
+	padding-bottom: 56.2%;
 }
 
 .flex-direction-nav a {
 	line-height: 1;
+	text-decoration: none;
 }
 
 .flexslider:hover .flex-direction-nav .flex-prev:hover::before,
@@ -1348,6 +1395,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 #home-top-slider .flexslider {
 	margin-top: 1rem;
+	overflow: hidden;
+	color: #fff;
 }
 
 #home-top-slider li>div {
@@ -1356,10 +1405,19 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 #home-top-slider li>div .columns:first-child {
 	padding-left: 0;
+	background-color: #fff;
+	padding-right: 0;
+}
+
+/*large and up*/
+@media screen and (min-width: 64em) {
+	#home-top-slider li>div .columns:first-child {
+		border-right: .9375rem solid #17639F;
+	}
 }
 
 #home-top-slider li>div .columns:last-child {
-	padding-right: 0;
+	padding-right: 1.875rem;
 }
 
 #home-top-slider .image-caption {
@@ -1423,14 +1481,31 @@ table.programme .event-header .row:first-child a .fa-stack {
 /* vertical middle:
 #home-top-slider .video-caption {position: absolute;top: 50%;transform: translate(0, -50%);}*/
 #home-top-slider .video-caption h2 {
-	border-top: 1px solid #555;
-	border-bottom: 1px solid #555;
+	border-bottom: 2px solid #fff;
 	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
-	font-size: 2.125rem;
+	font-size: 2rem;
 	font-weight: 700;
-	padding: 1.875rem 0 1.5rem;
-	margin: 3.75rem 0 1.875rem;
+	line-height: 2.375rem;
+	color: #fff;
+	padding: 0 0 2.5625rem;
+	margin: 3.75rem 0 2.5625rem;
+}
+
+#home-top-slider .video-caption a {
+	display: block;
+	overflow: hidden;
+	color: #fff;
+}
+
+#home-top-slider .video-caption a:hover .button.clear,
+#home-top-slider .video-caption a:focus .button.clear {
+	background-color: #F17B37;
+}
+
+#home-top-slider .video-caption a:hover .button.clear i,
+#home-top-slider .video-caption a:focus .button.clear i {
+	color: #fff;
 }
 
 #home-top-slider .video-caption p {
@@ -1732,7 +1807,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 #page-container {
-	background: #fff url(../img/background-pattern.jpg) 0 0 repeat-x;
+	background-color: #fff;
 }
 
 /*small and medium*/
@@ -1852,7 +1927,6 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 #header-menu-band {
 	background-color: #fff;
-	margin-bottom: 0.5rem;
 }
 
 /* Medium and up */
