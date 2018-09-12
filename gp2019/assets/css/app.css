@@ -1810,6 +1810,50 @@ table.programme .event-header .row:first-child a .fa-stack {
 	background-color: #fff;
 }
 
+/*Correct position of main content anchor when scrolling to it using the Skip to content link.
+It's a bug of Chrome and FF that do not consider that the Skip bar disappears when clicking the link.
+IE and Edge don't have this bug but, as specific browser hacks do not validate on W3C, will unfortunately scroll 60px below target*/
+main {
+	position: relative;
+}
+#mainContent {
+	position:absolute;
+	top:-60px;
+}
+/*Chrome hack to position main content, does not validate on W3C
+#mainContent:not(*:root) {
+	position:absolute;
+	top:-60px;
+}
+*/
+/*FF hack to main position content, does not validate on W3C
+@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+	#mainContent {
+		position:absolute;
+		top:-60px;
+	}
+}
+*/
+
+#skip-to-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#skip-to-content a {
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #333;
+	padding: 1rem 0;
+}
+
+#skip-to-content a i {
+	color: #17639F;
+	margin-right: 5px;
+}
+
 /*small and medium*/
 @media screen and (max-width: 63.9375em) {
 	#GP-header {
@@ -1898,6 +1942,10 @@ table.programme .event-header .row:first-child a .fa-stack {
 	font-weight: 500;
 	font-size: 1.0625rem;
 	display: inline-block;
+}
+
+#header-hashtags a i {
+	vertical-align: top;
 }
 
 /*small and medium*/

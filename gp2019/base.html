@@ -13,12 +13,13 @@
 	<link type="text/css" rel="stylesheet" href="assets/css/app.css">
 	<!-- Top band css -->
 	<link type="text/css" rel="stylesheet" href="http://www.preventionweb.net/assets/shared/topband/css/top-band.css" />
+	<script src="https://use.fontawesome.com/01acdc4b94.js"></script>
 </head>
 
 <body>
 	<!-- Page container start -->
 	<div id="page-container">
-		<div class="skip-to-content"><a class="show-on-focus" href="#mainContent">Skip to Content</a></div>
+		<div id="skip-to-content"><a href="#mainContent" class="show-on-focus"><i class="fa fa-chevron-down" aria-hidden="true"></i>Skip to Content</a></div>
 		<!-- Page header start -->
 		<header>
 			<!-- Top band start -->
@@ -68,7 +69,7 @@
 					</nav>
 					<div class="menu-centered">
 						<ul id="header-hashtags" class="menu">
-							<li><a href="#" title="" target="_blank">#2019gp</a></li>
+							<li><a href="#" title="" target="_blank"><i class="fa fa-twitter"></i> #2019gp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -100,7 +101,8 @@
 		</header>
 		<!-- Page header end -->
 		<!-- Main content start -->
-		<main id="mainContent" role="main" tabindex="0">
+		<main style="position:relative">
+			<a id="mainContent" target="-1"> </a>
 			<!-- Main content can be divided in different semantic sections -->
 			<section>
 				<div class="row">
