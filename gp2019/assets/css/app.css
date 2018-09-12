@@ -312,11 +312,11 @@ textarea {
 }
 
 .tooltip {
-	background-color: #0eaba4;
+	background-color: #17639F;
 }
 
 .tooltip.top::before {
-	border-color: #0eaba4 transparent transparent;
+	border-color: #17639F transparent transparent;
 }
 
 /* Foundation upload button: file name positioned differently in IE, find another solution
@@ -470,7 +470,7 @@ li .media-object-section a {
 	color: #555;
 }
 
-/*Used in Home top slider only, so no parent id/class*/
+/*Used in Home top slider only, use parent id/class if style differs depending on container*/
 .button.clear {
 	color: #fff;
 	text-transform: uppercase;
@@ -505,6 +505,37 @@ li .media-object-section a {
 	color: #fff;
 }
 
+/*Used in News ticker only, use parent id/class if style differs depending on container*/
+.button.primary {
+	margin: 0;
+	font-weight: 500;
+	font-size: 1.2rem;
+	border-radius: 1.6em;
+	padding: .5em .9em;
+	background-color: #17639F;
+	text-decoration: none;
+}
+
+.button.primary:focus,
+.button.primary:hover {
+	background-color: #F17B37;
+}
+
+.button.primary .fa-stack {
+	font-size: 0.7rem;
+	margin: -0.2rem 0.2rem 0 0;
+}
+
+.button.primary .fa-stack-1x {
+	color: #17639f;
+	font-weight: 700;
+}
+
+.button.primary:focus .fa-stack-1x,
+.button.primary:hover .fa-stack-1x {
+	color: #F17B37;
+}
+
 /************/
 /* Flexslider: override existing styles */
 #home-top-slider .flexslider {
@@ -523,9 +554,40 @@ li .media-object-section a {
 	padding-bottom: 56.2%;
 }
 
+#home-top-slider .flex-direction-nav {
+	position: relative;
+	top: -15.7rem;
+}
+
 .flex-direction-nav a {
 	line-height: 1;
 	text-decoration: none;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 20px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next {
+	right: -10px;
+	opacity: 1;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+	left: -10px;
+	opacity: 1;
+}
+
+.flex-direction-nav a::before {
+	color: rgba(23, 99, 159, 1);
+	font-size: 24px;
+	margin-top: 8px;
+}
+
+.flex-direction-nav a.flex-next::before {
+	margin-right: 10px;
+}
+
+.flex-direction-nav a.flex-prev::before {
+	margin-left: 10px;
 }
 
 .flexslider:hover .flex-direction-nav .flex-prev:hover::before,
@@ -649,27 +711,30 @@ ul.links li::after {
 }
 
 .list-module h2 {
-	font-size: 1.1875rem;
-	line-height: 1.1875rem;
-	font-weight: 500;
+	font-size: 1.0625rem;
+	line-height: 1.75rem;
+	font-weight: 700;
 	overflow: hidden;
 	text-transform: uppercase;
-	color: #306095;
+	color: #555;
 	margin-bottom: 0;
 }
 
 .list-module .no-link h2 {
-	border-top: 2px solid #306095;
-	padding: 0.85rem 0 0.45rem;
+	border-top: 4px solid #17639F;
+	padding: 0.85rem 0.9375rem;
+	font-size: 1.1875rem;
+	line-height: 1.1875rem;
 }
 
 .list-module>h2 a {
 	display: table;
 	width: 100%;
-	background-color: #f0f5fa;
-	color: #1d4775;
-	padding: 0.85rem 0.9375rem 0.55rem;
+	background-color: #17639F;
+	color: #fff;
+	padding: 0.35rem 0.9375rem;
 	vertical-align: middle;
+	border-radius: 3px;
 }
 
 .list-module>h2 a:focus,
@@ -682,31 +747,12 @@ ul.links li::after {
 	vertical-align: middle;
 }
 
-.list-module>h2 a>span:nth-child(2) {
-	text-align: right;
-	color: #698cb3;
-	line-height: 0.6rem;
-	padding-right: 0.3rem;
-	width: 1rem;
-	font-size: 0.6875rem;
-}
-
-.list-module>h2 a>span:last-child {
-	width: 1rem;
-	font-size: 0.6875rem;
+.list-module>h2 a>span:last-child i {
+	font-weight: 700;
 }
 
 .list-module>h2 a:focus span,
 .list-module>h2 a:hover span {
-	color: #1d4775;
-}
-
-.list-module>h2 span .fa-circle {
-	color: #fff;
-}
-
-.list-module>h2 a:focus span .fa-circle,
-.list-module>h2 a:hover span .fa-circle {
 	color: #1d4775;
 }
 
@@ -720,6 +766,7 @@ ul.links li::after {
 	float: right;
 	font-size: 1.0625rem;
 	text-transform: none;
+	padding: 0.85rem 0.9375rem;
 }
 
 .list-module .tag {
@@ -744,7 +791,7 @@ ul.links li::after {
 
 .list-module .no-link {
 	margin-bottom: 1.5625rem;
-	border-bottom: 1px solid #e2e2e2;
+	border-bottom: 1px solid #17639F;
 }
 
 .list-module .no-link h3 {
@@ -857,18 +904,8 @@ ul.links li::after {
 	width: 100%;
 }
 
-/* RP news list layout change
-.list-module .news-announcements a .media-object-section div:last-child {
-	clear:both;
-	overflow:hidden;
-	border-top:1px solid #dfdfdf;
-	margin-top:0.8rem;
-	padding-top:0.4rem;
-}
-*/
-.list-module span i {
+.list-module .float-right i {
 	margin-right: 0.5rem;
-	margin-top: -0.1rem;
 }
 
 .list-module .news-announcements span i {
@@ -946,7 +983,7 @@ ul.links li::after {
 }
 
 .list-module .events a {
-	color: #0eaba4;
+	color: #555;
 	text-decoration: none;
 	padding-bottom: 0;
 }
@@ -1429,8 +1466,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 #home-top-slider .image-caption h2 {
 	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	color: #306095;
+	color: #17639F;
 	margin-bottom: 0;
 }
 
@@ -1469,7 +1505,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 #home-top-slider .has-tip .fa-stack-2x {
-	color: #0eaba4;
+	color: #17639F;
 	font-size: 1.2em;
 }
 
@@ -1526,18 +1562,19 @@ table.programme .event-header .row:first-child a .fa-stack {
 	display: table-cell;
 	width: 6.25rem;
 	color: #b4252d;
-	font-weight: 700;
 	padding-top: 0.65rem;
 }
 
 #updates .columns:first-child>span::before {
-	content: "\f0e7";
+	content: "\f0eb";
 	font-family: FontAwesome;
+	font-weight: 200;
+	font-size: 1.4rem;
 	float: left;
 	color: #fff;
 	background: url(../img/icon-hexagon-red.svg) 0 0 no-repeat;
 	background-size: contain;
-	padding: 1rem;
+	padding: 1rem 1rem 1rem 0.9rem;
 	margin-right: 0.4rem;
 	margin-top: -0.65rem;
 }
@@ -1555,33 +1592,26 @@ table.programme .event-header .row:first-child a .fa-stack {
 #updates-scroller li {
 	font-size: 1.25rem;
 	line-height: 1.375rem;
-	padding: 0.75rem 0 0;
-	text-align: center;
-}
-
-#updates-scroller li a {
-	color: #b4252d;
-}
-
-#updates-scroller li a .fa-stack {
-	font-size: 0.7rem;
-	margin: -0.2rem 0.2rem 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 46px;
 }
 
 #updates-number {
 	font-size: 2rem;
 	line-height: 2rem;
-	color: #bfbfbf;
+	color: #89ACD3;
 	margin-top: 0.6rem;
 	display: inline-block;
 }
 
 #updates-number span:first-child {
-	color: #888;
+	color: #17639F;
 }
 
 #updates-number span:last-child {
-	color: #bfbfbf;
+	color: #89ACD3;
 }
 
 #updates-nav {
@@ -1596,6 +1626,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 #updates-nav span:first-child {
+	padding-bottom: 0.1875rem;
 	border-bottom: 1px solid #bfbfbf;
 	margin-bottom: 0.25rem;
 	line-height: 0.65rem;
@@ -1609,7 +1640,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 	font-size: 1.5rem;
 	line-height: 0.5rem;
 	cursor: pointer;
-	color: #888;
+	color: #17639F;
 }
 
 .border-countdown {
@@ -1816,10 +1847,12 @@ IE and Edge don't have this bug but, as specific browser hacks do not validate o
 main {
 	position: relative;
 }
+
 #mainContent {
-	position:absolute;
-	top:-60px;
+	position: absolute;
+	top: -60px;
 }
+
 /*Chrome hack to position main content, does not validate on W3C
 #mainContent:not(*:root) {
 	position:absolute;

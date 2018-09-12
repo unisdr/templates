@@ -22,7 +22,7 @@
 <body>
 	<!-- Page container start -->
 	<div id="page-container">
-		<div class="skip-to-content"><a class="show-on-focus" href="#mainContent">Skip to Content</a></div>
+		<div id="skip-to-content"><a href="#mainContent" class="show-on-focus"><i class="fa fa-chevron-down" aria-hidden="true"></i>Skip to Content</a></div>
 		<!-- Page header start -->
 		<header>
 			<!-- Top band start -->
@@ -104,7 +104,8 @@
 		</header>
 		<!-- Page header end -->
 		<!-- Main content start -->
-		<main id="mainContent" role="main" tabindex="0">
+		<main>
+			<a id="mainContent" target="-1"> </a>
 			<section>
 				<div id="home-top-slider" class="row expanded">
 					<div class="row">
@@ -161,7 +162,7 @@
 												<h2>slide's title even longer and longer lorem ipsum dolor sit</h2>
 											</div>
 											<span data-tooltip aria-haspopup="true" class="has-tip top show-for-large" data-disable-hover="false"
-											 tabindex="1" title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
+											 title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
 													 class="fa fa-plus fa-stack-1x"></i></span></span>
 										</div>
 									</li>
@@ -173,7 +174,7 @@
 												<h2>slide's title even longer and longer lorem ipsum dolor sit</h2>
 											</div>
 											<span data-tooltip aria-haspopup="true" class="has-tip top show-for-large" data-disable-hover="false"
-											 tabindex="1" title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
+											 title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
 													 class="fa fa-plus fa-stack-1x"></i></span></span>
 										</div>
 									</li>
@@ -185,7 +186,7 @@
 												<h2>slide's title even longer and longer lorem ipsum dolor sit</h2>
 											</div>
 											<span data-tooltip aria-haspopup="true" class="has-tip top show-for-large" data-disable-hover="false"
-											 tabindex="1" title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
+											 title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
 													 class="fa fa-plus fa-stack-1x"></i></span></span>
 										</div>
 									</li>
@@ -197,7 +198,7 @@
 												<h2>slide's title even longer and longer lorem ipsum dolor sit</h2>
 											</div>
 											<span data-tooltip aria-haspopup="true" class="has-tip top show-for-large" data-disable-hover="false"
-											 tabindex="1" title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
+											 title="Credits: Firstname Lastname"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
 													 class="fa fa-plus fa-stack-1x"></i></span></span>
 										</div>
 									</li>
@@ -224,8 +225,8 @@
 						</div>
 						<div class="small-12 medium-8 columns">
 							<ul id="updates-scroller" class="no-bullet">
-								<li>Last date for registration is 10 April 2017.&nbsp;&nbsp;&nbsp;<a href="" title=""><span class="fa-stack"><i
-											 class="fa fa-circle-thin fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-right fa-stack-1x"
+								<li>Last date for registration is 10 April 2017.&nbsp;&nbsp;&nbsp;<a href="" class="button primary" title=""><span class="fa-stack"><i
+											 class="fa fa-circle fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-right fa-stack-1x"
 											 aria-hidden="true"></i></span>Register now!</a></li>
 								<li>Curabitur porttitor.</li>
 								<li>Praesent ornare nisl lorem, ut condimentum lectus gravida ut lectus gravida placerat ultrices tortor.</li>
@@ -252,8 +253,7 @@
 
 								<!-- Announcements list module with clickable title, 'two columns by row' layout items plus single column layout for last item -->
 								<div class="list-module">
-									<h2><a href="#" title=""><span>Latest announcements</span><span>view<br>all</span><span><span class="fa-stack"><i
-													 class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
+									<h2><a href="#" title=""><span>Latest announcements</span><span><i class="fa fa-angle-right"></i></span></a></h2>
 									<ul class="no-bullet news-announcements">
 										<!-- Two columns by row layout -->
 										<li>
@@ -319,8 +319,8 @@
 										<h2 class="text-center">Events by day</h2>
 									</div>
 									<ul class="menu expanded events">
-										<li><a href="#"><span>22</span><span>mon</span><span>view</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-										<li class="current"><a href="#"><span>23</span><span>tue</span><span>view</span><i class="fa fa-chevron-right"
+										<li class="current"><a href="#"><span>22</span><span>mon</span><span>view</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+										<li><a href="#"><span>23</span><span>tue</span><span>view</span><i class="fa fa-chevron-right"
 												 aria-hidden="true"></i></a></li>
 										<li><a href="#"><span>24</span><span>wed</span><span>view</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
 										<li><a href="#"><span>25</span><span>thu</span><span>view</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
@@ -360,8 +360,7 @@
 
 								<!-- Announcements list module with clickable title, full row layout -->
 								<div class="list-module">
-									<h2><a href="#" title=""><span>Latest announcements</span><span>view<br>all</span><span><span class="fa-stack"><i
-													 class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
+									<h2><a href="#" title=""><span>Latest announcements</span><span><i class="fa fa-angle-right"></i></span></a></h2>
 									<ul class="no-bullet news-announcements">
 										<li>
 											<div class="row">
@@ -395,7 +394,7 @@
 
 								<!-- Documents list module with clickable title, full row layout -->
 								<div class="list-module">
-									<h2><a href="#" title=""><span>key documents</span><span>view<br>all</span><span><span class="fa-stack"><i
+									<h2><a href="#" title=""><span>key documents</span><span><span class="fa-stack"><i
 													 class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
 									<ul class="no-bullet files-documents">
 										<li>
@@ -445,7 +444,7 @@
 
 								<!-- News list module with clickable title, full row layout -->
 								<div class="list-module">
-									<h2><a href="#" title=""><span>gp in the news</span><span>view<br>all</span><span><span class="fa-stack"><i
+									<h2><a href="#" title=""><span>gp in the news</span><span><span class="fa-stack"><i
 													 class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
 									<ul class="no-bullet news-announcements">
 										<li>
@@ -689,7 +688,7 @@
 	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="assets/shared/foundation/v6.2.3/js/vendor/foundation.min.js"></script>
 	<!-- Top band js -->
-	<script type="text/javascript" src="http://www.preventionweb.net/assets/shared/topband/js/top-band.js"></script>
+	<script src="http://www.preventionweb.net/assets/shared/topband/js/top-band.js"></script>
 	<!-- FlexSlider js -->
 	<script defer src="assets/shared/woothemes-FlexSlider/2.6.1-0-g622f7fd/js/jquery.flexslider-min.js"></script>
 	<!-- JQuery Advanced News Ticker js -->
@@ -717,6 +716,8 @@
 				slideshow: false,
 				controlNav: false,
 				animationLoop: false,
+				prevText:'',
+				nextText:'',
 				animation: "slide"
 			});
 
