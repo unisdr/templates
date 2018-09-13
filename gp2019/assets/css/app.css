@@ -869,9 +869,16 @@ ul.links li::after {
 	font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 1.125rem;
 	line-height: 1.375rem;
-	margin-bottom: 0;
+	margin-bottom: .8rem;
 	font-weight: 500;
 }
+
+.list-module .blog li>div h4 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 0.9375rem;
+	font-weight: 400;
+}
+
 
 .list-module .news-announcements li>div .media-object-section h4 {
 	margin-bottom: 0.5rem;
@@ -885,7 +892,6 @@ ul.links li::after {
 	font-size: 0.6875rem;
 	text-transform: uppercase;
 	font-weight: 500;
-	margin-top: 0.3rem;
 }
 
 .list-module .files-documents li>div span {
@@ -936,7 +942,6 @@ ul.links li::after {
 
 .list-module .files-documents li>div .fa-stack {
 	color: #17639f;
-	margin-top: 0.2rem;
 	margin-left: 0.5rem;
 	font-size: .6rem;
 }
@@ -946,7 +951,7 @@ ul.links li::after {
 	font-size: 0.6875rem;
 	text-transform: uppercase;
 	font-weight: 500;
-	margin-top: 0.02rem;
+	margin-top: -.2rem;
 }
 
 .list-module .files-documents li>div .menu>li>a {
