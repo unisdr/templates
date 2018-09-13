@@ -740,6 +740,7 @@ ul.links li::after {
 .list-module>h2 a:focus,
 .list-module>h2 a:hover {
 	text-decoration: none;
+	background-color: #ea6827;
 }
 
 .list-module>h2 a>span {
@@ -747,10 +748,15 @@ ul.links li::after {
 	vertical-align: middle;
 }
 
+.list-module>h2 a>span:last-child {
+	text-align: right;
+}
+
 .list-module>h2 a>span:last-child i {
 	font-weight: 700;
 }
 
+/*
 .list-module>h2 a:focus span,
 .list-module>h2 a:hover span {
 	color: #1d4775;
@@ -760,7 +766,7 @@ ul.links li::after {
 .list-module>h2 a:hover span .fa-angle-right {
 	color: #fff;
 }
-
+*/
 .list-module .no-link h2 a {
 	font-weight: 700;
 	float: right;
@@ -913,9 +919,10 @@ ul.links li::after {
 }
 
 .list-module .files-documents li>div .fa-stack {
-	color: #ea6827;
+	color: #17639f;
 	margin-top: 0.2rem;
-	margin-left: 0.3rem;
+	margin-left: 0.5rem;
+	font-size: .6rem;
 }
 
 .list-module .files-documents li>div .menu {
@@ -929,6 +936,12 @@ ul.links li::after {
 .list-module .files-documents li>div .menu>li>a {
 	padding: 0.45rem 0.7rem;
 	color: #555;
+	font-weight: 700;
+}
+
+.list-module .files-documents li>div .menu>li>a:hover,
+.list-module .files-documents li>div .menu>li>a:focus {
+	color: #ea6827;
 }
 
 .list-module .files-documents li>div .menu>li:not(:first-child)::before {
@@ -938,19 +951,10 @@ ul.links li::after {
 	position: absolute;
 }
 
+/* Events list */
 .list-module .events {
 	margin-top: 0;
 	margin-bottom: 1.5625rem;
-}
-
-.list-module .events.programme {
-	border-top: 1px solid #c7d4e2;
-	border-bottom: 1px solid #c7d4e2;
-}
-
-.list-module .events li {
-	position: relative;
-	overflow: visible;
 }
 
 .list-module .events li:not(:last-child)::before {
@@ -960,41 +964,58 @@ ul.links li::after {
 	width: 1px;
 	background-color: #c7d4e2;
 	top: 0.5rem;
-	right: 0;
+	right: -1px;
+}
+
+.list-module .events li {
+	position: relative;
+	display: inline-block;
+	background-clip: content-box;
+	padding-bottom: 6%;
+	z-index: 1;
+	width: 20%;
+	overflow: visible;
+}
+
+.list-module>.events>li:not(:last-child) {
+	margin-bottom: 0;
+}
+
+.list-module .events .current {
+	background-color: #17639F;
+}
+
+.list-module .events li:hover,
+.list-module .events li:focus {
+	background-color: #ea6827;
 }
 
 .list-module .events .current::after,
-.list-module .events li:hover::after {
+.list-module .events li:hover::after,
+.list-module .events li:focus::after {
 	content: "";
-	width: 0;
-	height: 0;
-	border-left: 37px solid transparent;
-	border-right: 37px solid transparent;
-	border-top: 12px solid #ea6827;
 	position: absolute;
-	bottom: -12px;
+	top: 71px;
 	left: 0;
-}
-
-.list-module .events.programme .current::after,
-.list-module .events.programme li:hover::after {
-	border-left: 87px solid transparent;
-	border-right: 87px solid transparent;
+	background-color: inherit;
+	padding-bottom: 50%;
+	width: 57.7%;
+	z-index: 0;
+	transform-origin: 0 0;
+	transform: rotate(-30deg) skewX(30deg);
 }
 
 .list-module .events a {
 	color: #555;
 	text-decoration: none;
 	padding-bottom: 0;
-}
-
-.list-module .events .current,
-.list-module .events li:hover {
-	background: #ea6827;
+	position: relative;
+	z-index: 1;
 }
 
 .list-module .events .current a,
-.list-module .events li:hover a {
+.list-module .events li:hover a,
+.list-module .events li:focus a {
 	color: #fff;
 }
 
@@ -1008,11 +1029,6 @@ ul.links li::after {
 	font-size: 1.3125rem;
 }
 
-.list-module .events.programme span:first-child {
-	font-size: 2.5rem;
-	float: left;
-}
-
 .list-module .events span:nth-of-type(2) {
 	font-size: 0.75rem;
 }
@@ -1021,17 +1037,41 @@ ul.links li::after {
 	border-bottom: 3px solid #fff;
 }
 
-.list-module .events.programme span:nth-of-type(2) {
-	text-align: left;
-	margin-top: 0.25rem;
-	padding-left: 3.25rem;
-}
-
 .list-module .events span:nth-of-type(3) {
 	color: #fff;
 	font-size: 0.75rem;
 	font-weight: 500;
 	margin-top: 0.15rem;
+}
+
+.list-module .events i {
+	color: #fff;
+	font-size: 0.6rem;
+	font-weight: 400;
+	display: block;
+	margin: 0;
+}
+
+.list-module .events.programme {
+	border-top: 1px solid #c7d4e2;
+	border-bottom: 1px solid #c7d4e2;
+}
+
+.list-module .events.programme .current::after,
+.list-module .events.programme li:hover::after {
+	border-left: 87px solid transparent;
+	border-right: 87px solid transparent;
+}
+
+.list-module .events.programme span:first-child {
+	font-size: 2.5rem;
+	float: left;
+}
+
+.list-module .events.programme span:nth-of-type(2) {
+	text-align: left;
+	margin-top: 0.25rem;
+	padding-left: 3.25rem;
 }
 
 .list-module .events.programme span:nth-of-type(3) {
@@ -1051,25 +1091,27 @@ ul.links li::after {
 	clear: left;
 }
 
-.list-module .events i {
-	color: #fff;
-	font-size: 0.6rem;
-	font-weight: 400;
-	display: block;
-	margin: 0;
-}
+/***/
 
 .list-module #events-detail {
-	border-top: 1px solid #ea6827;
-	border-bottom: 1px solid #ea6827;
+	border-top: 1px solid #17639F;
 	text-align: center;
 	position: relative;
+	min-height: 9.0625rem;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3f7fa+0,f3f7fa+46,ffffff+100 */
+	/* Old browsers */
+	background: rgb(243, 247, 250);
+	/* FF3.6-15 */
+	background: -moz-linear-gradient(top, rgba(243, 247, 250, 1) 0%, rgba(243, 247, 250, 1) 46%, rgba(255, 255, 255, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: -webkit-linear-gradient(top, rgba(243, 247, 250, 1) 0%, rgba(243, 247, 250, 1) 46%, rgba(255, 255, 255, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: linear-gradient(to bottom, rgba(243, 247, 250, 1) 0%, rgba(243, 247, 250, 1) 46%, rgba(255, 255, 255, 1) 100%);
 }
 
 .list-module #events-detail div div:first-child {
 	font-size: 0.75rem;
 	text-transform: uppercase;
-	font-weight: 700;
 	position: absolute;
 	left: 0;
 	top: 0.5rem;
@@ -1077,8 +1119,9 @@ ul.links li::after {
 }
 
 .list-module #events-detail div div:first-child span {
-	padding: 0 0.5rem;
-	background-color: #fff;
+	padding: 0 0.8rem;
+	background-color: rgba(243, 247, 250, 1);
+	color: #17639f;
 }
 
 .list-module #events-detail div div:last-child {
@@ -1086,7 +1129,7 @@ ul.links li::after {
 	font-size: 0.9375rem;
 	font-weight: 500;
 	font-style: italic;
-	border-top: 1px solid #d7d7d7;
+	border-top: 1px solid #17639F;
 	display: inline-block;
 	padding-top: 0.4rem;
 	margin-top: 1rem;
@@ -1097,12 +1140,12 @@ ul.links li::after {
 	font-size: 1.375rem;
 	font-weight: 700;
 	font-style: normal;
-	color: #ea6827;
+	color: #17639F;
 	vertical-align: sub;
 }
 
 .list-module #events-detail div div:last-child i {
-	color: #ea6827;
+	color: #17639F;
 	font-size: 0.5rem;
 	margin: 0 0.5rem;
 	vertical-align: middle;
