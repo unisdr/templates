@@ -748,25 +748,31 @@ ul.links li::after {
 	vertical-align: middle;
 }
 
+.list-module>h2 a>span:nth-child(2) {
+	text-align: right;
+	line-height: 0.6rem;
+	padding-right: 0.3rem;
+	width: 1rem;
+	font-size: 0.6875rem;
+	visibility: hidden;
+	color: #fff;
+	/*    color: #17639F;*/
+}
+
+.list-module>h2 a:hover>span:nth-child(2),
+.list-module>h2 a:focus>span:nth-child(2) {
+	visibility: visible;
+}
+
 .list-module>h2 a>span:last-child {
 	text-align: right;
+	width: .5rem;
 }
 
 .list-module>h2 a>span:last-child i {
 	font-weight: 700;
 }
 
-/*
-.list-module>h2 a:focus span,
-.list-module>h2 a:hover span {
-	color: #1d4775;
-}
-
-.list-module>h2 a:focus span .fa-angle-right,
-.list-module>h2 a:hover span .fa-angle-right {
-	color: #fff;
-}
-*/
 .list-module .no-link h2 a {
 	font-weight: 700;
 	float: right;
@@ -852,7 +858,10 @@ ul.links li::after {
 	display: block;
 	color: #555;
 	overflow: hidden;
-	border-top: 3px solid #ea6827;
+}
+
+.list-module .news-announcements li:not(:first-child):not(.load-more) a {
+	border-top: 3px solid #f0f5fa;
 	padding-top: 0.5rem;
 }
 
@@ -861,6 +870,7 @@ ul.links li::after {
 	font-size: 1.125rem;
 	line-height: 1.375rem;
 	margin-bottom: 0;
+	font-weight: 500;
 }
 
 .list-module .news-announcements li>div .media-object-section h4 {
@@ -884,7 +894,6 @@ ul.links li::after {
 
 .list-module .news-announcements li>div span.float-left {
 	text-transform: none;
-	font-weight: 700;
 }
 
 .list-module .news-announcements li>div span.float-left:not(:first-of-type) {
@@ -893,11 +902,12 @@ ul.links li::after {
 
 .list-module .news-announcements li>div span.float-left:not(:first-of-type)::before {
 	content: "|";
-	color: #ea6827;
+	color: #17639F;
 	margin: 0 0.5rem;
 }
 
-.list-module .news-announcements a:hover span.float-right {
+.list-module .news-announcements a:hover span.float-right,
+.list-module .news-announcements a:focus span.float-right {
 	color: #ea6827;
 }
 
@@ -910,11 +920,17 @@ ul.links li::after {
 	width: 100%;
 }
 
+.list-module .float-left i,
 .list-module .float-right i {
-	margin-right: 0.5rem;
+	margin-right: 0.3rem;
 }
 
 .list-module .news-announcements span i {
+	color: #17639f;
+}
+
+.list-module .news-announcements a:hover span.float-right i,
+.list-module .news-announcements a:focus span.float-right i {
 	color: #ea6827;
 }
 
