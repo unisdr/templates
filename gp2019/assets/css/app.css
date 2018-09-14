@@ -836,6 +836,13 @@ ul.links li::after {
 	margin-bottom: 1.5625rem;
 }
 
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	.list-module .news-announcements li .small-12:not(:last-child) a {
+		margin-bottom: 1.5625rem;
+	}
+}
+
 .list-module .files-documents>li:not(:last-child) {
 	border-bottom: 1px solid #e2e2e2;
 	padding-bottom: 1.5625rem;
@@ -870,6 +877,14 @@ ul.links li::after {
 .list-module .news-announcements li:not(:first-child):not(.load-more) a {
 	border-top: 3px solid #f0f5fa;
 	padding-top: 0.5rem;
+}
+
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	.list-module .news-announcements li .small-12:not(:first-child) a {
+		border-top: 3px solid #f0f5fa;
+		padding-top: 0.5rem;
+	}
 }
 
 .list-module li>div h4 {
