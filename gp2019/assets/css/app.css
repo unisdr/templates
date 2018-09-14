@@ -236,6 +236,10 @@ textarea {
 	border-radius: 2px !important;
 }
 
+input::placeholder, textarea::placeholder {
+    color: #555;
+}
+
 .title-bar {
 	background-color: #fff;
 	color: #306095;
@@ -1838,30 +1842,32 @@ table.programme .event-header .row:first-child a .fa-stack {
 	line-height: 1.5rem;
 }
 
-#sign-up-home .input-group-label {
-	background: none;
-	color: #0eaba4;
-	padding: 0 0 0 1rem;
-	font-size: 0.8125rem;
-	border-color: #0eaba4;
-}
-
 #sign-up-home .input-group-field {
 	box-shadow: none;
-	border-left: none;
-	border-color: #0eaba4;
+	border-color: #acacac;
 	transition: none;
-	height: 2.54rem;
+	height: 2.56rem;
 	font-size: 0.8125rem;
+	border-radius: 0px !important;
 }
 
 #sign-up-home .input-group-field:focus {
-	border-color: #cacaca;
+	border-color: #545454;
 }
 
 #sign-up-home .button {
-	background-color: #0eaba4;
+	background-color: #acacac;
 	font-weight: 500;
+	border-radius: 0px !important;
+}
+
+#sign-up-home .input-group-field:focus + .input-group-button .button {
+	background-color: #545454;
+}
+
+#sign-up-home .button:focus, #sign-up-home .button:hover,
+#sign-up-home .input-group-field:focus + .input-group-button .button:hover {
+    background-color: #F17C34;
 }
 
 #photo-slider .flexslider {
