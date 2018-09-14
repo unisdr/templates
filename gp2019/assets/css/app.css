@@ -1248,12 +1248,13 @@ ul.links li::after {
 .list-module #twitter-tabs .tabs-title>a:focus,
 .list-module #twitter-tabs .tabs-title>a[aria-selected="true"] {
 	background: none;
-	color: #3b94d9;
+	color: #17639F;
+	padding-bottom: .4rem;
 	border-bottom: 6px solid #3b94d9;
 }
 
 .list-module #twitter-tabs .tabs-title>a:hover {
-	color: #3b94d9;
+	color: #17639F;
 }
 
 .list-module #twitter-tabs .fa-stack {
@@ -1694,7 +1695,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 #updates-number {
 	font-size: 2rem;
 	line-height: 2rem;
-	color: #89ACD3;
+	color: #555;
 	margin-top: 0.6rem;
 	display: inline-block;
 }
@@ -1704,7 +1705,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 #updates-number span:last-child {
-	color: #89ACD3;
+	color: #555;
 }
 
 #updates-nav {
@@ -1745,16 +1746,25 @@ table.programme .event-header .row:first-child a .fa-stack {
 	left: -4px;
 }
 
+.small-6>#days-countdown::before {
+	top: 0;
+}
+
 #days-countdown {
 	font-size: 3.625rem;
 	font-weight: 700;
 	color: #fff;
-	background: #03847F url(../img/days-countdown-bkg.png) 0 0 repeat-x;
+	background: #03847F url(../img/days-countdown-bkg.png) 0 center repeat-x;
 	text-align: center;
 	border-radius: 5px;
 	height: 83px;
 	position: relative;
 	margin: 0 4px;
+}
+
+.small-6>#days-countdown {
+	height: 55px;
+	line-height: 3.5rem;
 }
 
 #days-countdown::after {
@@ -1763,7 +1773,11 @@ table.programme .event-header .row:first-child a .fa-stack {
 	font-size: 1rem;
 	position: absolute;
 	top: 1.85rem;
-	right: -4px;
+	right: -5px;
+}
+
+.small-6>#days-countdown::after {
+	top: 0;
 }
 
 #text-countdown {
@@ -1778,15 +1792,15 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 .small-6>#text-countdown {
 	text-align: center;
-	top: -1rem;
+	top: -1.8rem;
 	clear: both;
 	position: relative;
 }
 
 #registration-banner {
-	background: url(../img/registration-banner-bkg-1.png) 0 0 repeat-x;
+	background: #03847F url(../img/registration-banner-bkg-1.png) 0 0 repeat-x;
 	float: left;
-	height: 89px;
+	height: 73px;
 	text-align: center;
 	width: 97%;
 	display: table;
@@ -1803,7 +1817,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 #registration-banner h2 {
-	font-size: 1.275rem;
+	font-size: 1.2rem;
 	line-height: normal;
 	margin: 4px 0 0;
 	text-transform: uppercase;
@@ -1814,6 +1828,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 #registration-banner span {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 0.875rem;
+	display: block;
+	margin-top: -5px;
 }
 
 #registration-banner-border {
