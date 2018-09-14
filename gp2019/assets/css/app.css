@@ -1283,7 +1283,7 @@ ul.links li::after {
 	text-transform: uppercase;
 	font-size: 1rem;
 	font-weight: 500;
-	margin-top: 0;
+	margin-top: 0.8rem;
 }
 
 .list-module>ul.links-side-nav>li {
@@ -1292,9 +1292,8 @@ ul.links li::after {
 }
 
 .list-module .links-side-nav a {
-	padding: 1rem 1rem 0.6rem;
-	background-color: #f7fcfc;
-	border-bottom: 1px solid #5c5c5c;
+	padding: 0.5rem 1rem 0.4rem;
+	border-bottom: 1px solid #f0f5fa;
 	color: #555;
 	display: block;
 	text-decoration: none;
@@ -1305,32 +1304,22 @@ ul.links li::after {
 }
 
 .list-module .links-side-nav a:hover {
-	background-color: #fff;
-}
-
-.list-module .links-side-nav a>i:first-child {
-	color: #0eaba4;
-	margin-right: 1.25rem;
-}
-
-.list-module .links-side-nav a .fa-stack {
-	float: right;
-	font-size: 0.8rem;
-}
-
-.list-module .links-side-nav a .fa-stack-2x {
+	background-color: #EA6827;
 	color: #fff;
 }
 
-.list-module .links-side-nav a .fa-stack-1x {
+.list-module .links-side-nav a>i:first-child {
+	color: #17639F;
+	margin-right: 1.25rem;
+}
+
+.list-module .links-side-nav a i:last-of-type {
+	float: right;
 	color: #555;
+	margin-top: 4px;
 }
 
-.list-module .links-side-nav a:hover .fa-stack-2x {
-	color: #0eaba4;
-}
-
-.list-module .links-side-nav a:hover .fa-stack-1x {
+.list-module .links-side-nav a:hover i {
 	color: #fff;
 }
 
