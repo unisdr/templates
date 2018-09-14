@@ -607,11 +607,11 @@ li .media-object-section a {
 }
 
 .flex-control-paging li a:hover {
-	background: rgba(14, 161, 174, 1) none repeat scroll 0 0;
+	background: #F17B37 none repeat scroll 0 0;
 }
 
 .flex-control-paging li a.flex-active {
-	background: rgba(14, 161, 174, 1) none repeat scroll 0 0;
+	background: #17639F none repeat scroll 0 0;
 }
 
 /************/
