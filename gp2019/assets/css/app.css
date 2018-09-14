@@ -1098,6 +1098,7 @@ ul.links li::after {
 .list-module .events li:not(.current) span:nth-of-type(3),
 .list-module .events li:not(.current) i {
 	visibility: hidden;
+	color: #555;
 }
 
 .list-module .events li:hover span:nth-of-type(3),
@@ -1105,6 +1106,7 @@ ul.links li::after {
 .list-module .events li:hover i,
 .list-module .events li:focus i {
 	visibility: visible;
+	color: #fff;
 }
 
 .list-module .events.programme {
