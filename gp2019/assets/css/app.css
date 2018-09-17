@@ -2221,27 +2221,29 @@ main {
 	border-bottom: 1px solid #ededed;
 	border-top: 1px solid #fff;
 	text-decoration: none;
+	position: relative;
+	padding: .9rem 1rem .7rem 2rem;
 }
 
 #left-main-menu>li a:hover {
 	color: #fff;
-	background-color: #ea6827;
+	background-color: #17639F;
 	text-decoration: none;
 }
 
 #left-main-menu>li.active>a {
-	background-color: #ea6827;
+	background-color: #17639F;
 	color: #fff;
 }
 
 #left-main-menu>li>a::before {
-	color: #ea6827;
+	color: #17639F;
 	content: "\203A";
 	font-size: 1.4rem;
 	font-weight: 400;
-	position: relative;
-	top: 2px;
-	margin-right: 0.7rem;
+	position: absolute;
+	top: .5rem;
+	left: .9rem;
 }
 
 #left-main-menu>li>a:hover::before {
@@ -2278,7 +2280,7 @@ main {
 }
 
 #left-main-menu>li a:hover i {
-	color: #ea6827;
+	color: #17639F;
 }
 
 #left-main-menu>li a:hover .fa-circle-thin::before {
@@ -2303,11 +2305,11 @@ main {
 }
 
 #left-main-menu .menu.nested>li>a:hover {
-	background-color: #ea6827;
+	background-color: #17639F;
 }
 
 #left-main-menu .menu.nested>li.active>a {
-	background-color: #ea6827;
+	background-color: #17639F;
 	color: #fff;
 	padding-top: 0.5rem;
 }
