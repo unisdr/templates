@@ -455,7 +455,7 @@ li .media-object {
 }
 
 .media-object-section {
-/*	position: relative;*/
+	position: relative;
 }
 
 .media-object.stack-for-all .media-object-section {
