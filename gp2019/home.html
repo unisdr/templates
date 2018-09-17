@@ -650,12 +650,13 @@
 							</ul>
 							<div class="tabs-content" data-tabs-content="twitter-tabs">
 								<div class="tabs-panel is-active" id="twitterpanel1">
-									<a class="twitter-timeline" href="https://twitter.com/hashtag/2019gp" data-widget-id="757935051069874176"
-									 data-chrome="nofooter noscrollbar">#2019gp</a>
+<!--									<a class="twitter-timeline" href="https://twitter.com/hashtag/2019gp" data-widget-id="757935051069874176"
+									 data-chrome="nofooter noscrollbar">#2019gp</a>-->
+									 <a class="twitter-timeline" href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">A Twitter List by TwitterDev</a>
 								</div>
 								<div class="tabs-panel" id="twitterpanel2">
-									<a class="twitter-timeline" href="https://twitter.com/hashtag/switchtosendai" data-widget-id="757962600126775296"
-									 data-chrome="nofooter noscrollbar">#switchtosendai</a>
+<!--									<a class="twitter-timeline" href="https://twitter.com/hashtag/switchtosendai" data-widget-id="757962600126775296"
+									 data-chrome="nofooter noscrollbar">#switchtosendai</a>-->
 								</div>
 							</div>
 						</div>
@@ -732,17 +733,22 @@
 	<!-- JQuery Advanced News Ticker js -->
 	<script src="assets/shared/jquery-advanced-news-ticker-master/js/jquery.newsTicker_custom.js"></script>
 	<!-- Twitter Feed js -->
-	<script>
-		! function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0],
-				p = /^http:/.test(d.location) ? 'http' : 'https';
-			if (!d.getElementById(id)) {
-				js = d.createElement(s);
-				js.id = id;
-				js.src = p + "://platform.twitter.com/widgets.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}
-		}(document, "script", "twitter-wjs");
+	<script>window.twttr = (function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0],
+		  t = window.twttr || {};
+		if (d.getElementById(id)) return t;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "https://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	  
+		t._e = [];
+		t.ready = function(f) {
+		  t._e.push(f);
+		};
+	  
+		return t;
+	  }(document, "script", "twitter-wjs"));
 	</script>
 	<script>
 		$(document).foundation();
