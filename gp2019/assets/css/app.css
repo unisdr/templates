@@ -22,7 +22,7 @@ h5 {
 }
 
 h1 {
-	font-size: 2.125rem;
+	font-size: 2rem;
 	line-height: 2.25rem;
 }
 
@@ -236,8 +236,9 @@ textarea {
 	border-radius: 2px !important;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #555;
+input::placeholder,
+textarea::placeholder {
+	color: #555;
 }
 
 .title-bar {
@@ -257,12 +258,21 @@ input::placeholder, textarea::placeholder {
 	box-shadow: 0 7px 0 #306095, 0 14px 0 #306095;
 }
 
+#top-breadcrumbs {
+	border-top: 5px solid #e2e2e2;
+	padding-top: 1.6875rem;
+}
+
+#top-breadcrumbs .row {
+	max-width: 75rem;
+}
+
 .breadcrumbs {
-	margin-bottom: 1rem;
+	margin-bottom: 0;
 }
 
 .breadcrumbs li {
-	color: #555;
+	color: #aeaeae;
 	font-size: 0.75rem;
 	text-transform: none;
 	font-weight: 500;
@@ -272,7 +282,7 @@ input::placeholder, textarea::placeholder {
 	color: #555;
 }
 
-.breadcrumbs li:not(:last-child):after {
+.breadcrumbs li::after {
 	font-size: 1rem;
 	content: " ";
 }
@@ -282,6 +292,7 @@ input::placeholder, textarea::placeholder {
 	.breadcrumbs li:not(:last-child)::after {
 		color: #555;
 		content: "\203A";
+		top: 0;
 	}
 }
 
@@ -444,7 +455,7 @@ li .media-object {
 }
 
 .media-object-section {
-	position: relative;
+/*	position: relative;*/
 }
 
 .media-object.stack-for-all .media-object-section {
@@ -1380,6 +1391,7 @@ ul.links li::after {
 	border-top: 1px solid #dfdfdf;
 	border-bottom: 1px solid #dfdfdf;
 	padding: 1rem 0;
+	margin-top: 5.5rem;
 }
 
 .load-more a,
@@ -1388,6 +1400,10 @@ ul.links li::after {
 	font-size: 1rem;
 	color: #555;
 	font-weight: 500;
+}
+
+.load-more i {
+	color: #17639F;
 }
 
 .add-list-element {
@@ -1866,13 +1882,14 @@ table.programme .event-header .row:first-child a .fa-stack {
 	border-radius: 0px !important;
 }
 
-#sign-up-home .input-group-field:focus + .input-group-button .button {
+#sign-up-home .input-group-field:focus+.input-group-button .button {
 	background-color: #545454;
 }
 
-#sign-up-home .button:focus, #sign-up-home .button:hover,
-#sign-up-home .input-group-field:focus + .input-group-button .button:hover {
-    background-color: #F17C34;
+#sign-up-home .button:focus,
+#sign-up-home .button:hover,
+#sign-up-home .input-group-field:focus+.input-group-button .button:hover {
+	background-color: #F17C34;
 }
 
 #photo-slider .flexslider {
