@@ -938,7 +938,6 @@ ul.links li::after {
 	font-weight: 400;
 }
 
-
 .list-module .news-announcements li>div .media-object-section h4 {
 	margin-bottom: 0.5rem;
 }
@@ -990,6 +989,7 @@ ul.links li::after {
 
 .news-announcements li .media-object .media-object-section:last-child {
 	width: 100%;
+	display: block;
 }
 
 .list-module .float-left i,

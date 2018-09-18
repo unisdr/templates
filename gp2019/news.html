@@ -174,7 +174,7 @@
 												<div class="media-object stack-for-small">
 													<div class="media-object-section"></div>
 													<div class="media-object-section">
-														<h4>Resiliencia, la urgencia de dejar de ser vulnerables quam phantastica venit Camoe</h4>
+														<h4>Resiliencia, la urgencia de dejar de ser vulnerables</h4>
 														<div>
 															<span class="float-left"><i class="fa fa-calendar-o" aria-hidden="true"></i>18 Mar 2016</span>
 															<span class="float-left"><i class="fa fa-rss" aria-hidden="true"></i>NEWSWEEK</span>
@@ -213,7 +213,7 @@
 														<img src="assets/img/placeholders/news-thumb_02.jpg" alt="">
 													</div>
 													<div class="media-object-section">
-														<h4>Resiliencia, la urgencia de dejar de ser vulnerables quam phantastica venit Camoe</h4>
+														<h4>Resiliencia, la urgencia de dejar de ser vulnerables quam phantastica venit</h4>
 														<div>
 															<span class="float-left"><i class="fa fa-calendar-o" aria-hidden="true"></i>18 Mar 2016</span>
 															<span class="float-left"><i class="fa fa-rss" aria-hidden="true"></i>NEWSWEEK</span>
@@ -369,14 +369,14 @@
 	<script>
 		$(document).foundation();
 		$(document).ready(function () {
-			//'Date, RSS, Read all' positioning when picture is present, only for large screens
-			if (Foundation.MediaQuery.atLeast('large')) {
-				$('.news-announcements .media-object-section:has(img)').next('.media-object-section').find('div').css({
-					'position': 'absolute',
-					'width': '100%',
-					'bottom': '0'
-				});
-			}
+				//Date, RSS and Read all positioning when picture is present, only for large screens
+				if (Foundation.MediaQuery.atLeast('large')) {
+					$('.news-announcements .media-object-section:has(img)').next('.media-object-section').find('div').css({
+						'position': 'absolute',
+						'width': '100%',
+						'bottom': '0'
+					});
+				}
 		});
 	</script>
 </body>
