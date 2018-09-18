@@ -1365,7 +1365,7 @@ ul.links li::after {
 }
 
 .list-module .announcements li:not(.load-more) {
-	border-top: 3px solid #0eaba4;
+	border-top: 3px solid #17639F;
 	padding-top: 1.25rem;
 }
 
@@ -1385,7 +1385,8 @@ ul.links li::after {
 }
 
 .list-module .announcements li i {
-	color: #ea6827;
+	color: #17639F;
+	margin-right: .3rem;
 }
 
 .list-module .announcements .media-object-section p {
