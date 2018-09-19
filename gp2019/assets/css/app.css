@@ -236,8 +236,9 @@ textarea {
 	border-radius: 2px !important;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #555;
+input::placeholder,
+textarea::placeholder {
+	color: #555;
 }
 
 .title-bar {
@@ -1763,8 +1764,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 .small-6>#days-countdown {
-	height: 55px;
-	line-height: 3.5rem;
+	height: 74px;
+	line-height: 4.55rem;
 }
 
 #days-countdown::after {
@@ -1800,7 +1801,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 #registration-banner {
 	background: #03847F url(../img/registration-banner-bkg-1.png) 0 0 repeat-x;
 	float: left;
-	height: 73px;
+	height: 89px;
 	text-align: center;
 	width: 97%;
 	display: table;
@@ -1819,17 +1820,29 @@ table.programme .event-header .row:first-child a .fa-stack {
 #registration-banner h2 {
 	font-size: 1.2rem;
 	line-height: normal;
-	margin: 4px 0 0;
+	margin: 6px 0 0;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #fff;
 }
 
+#registration-banner i {
+	float: left;
+	font-size: .8rem;
+}
+
 #registration-banner span {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 0.8rem;
+	font-size: 0.875rem;
 	display: block;
-	margin-top: -5px;
+	margin-top: -4px;
+	text-align: left;
+	padding-left: 18px;
+	line-height: 1rem;
+}
+
+#registration-banner span strong {
+	display: block;
 }
 
 #registration-banner-border {
@@ -1866,13 +1879,14 @@ table.programme .event-header .row:first-child a .fa-stack {
 	border-radius: 0px !important;
 }
 
-#sign-up-home .input-group-field:focus + .input-group-button .button {
+#sign-up-home .input-group-field:focus+.input-group-button .button {
 	background-color: #545454;
 }
 
-#sign-up-home .button:focus, #sign-up-home .button:hover,
-#sign-up-home .input-group-field:focus + .input-group-button .button:hover {
-    background-color: #F17C34;
+#sign-up-home .button:focus,
+#sign-up-home .button:hover,
+#sign-up-home .input-group-field:focus+.input-group-button .button:hover {
+	background-color: #F17C34;
 }
 
 #photo-slider .flexslider {
@@ -2191,6 +2205,7 @@ main {
 #left-main-menu>li>a::before {
 	color: #ea6827;
 	content: "\203A";
+	/*\203A: HTML entity for >*/
 	font-size: 1.4rem;
 	font-weight: 400;
 	position: relative;
