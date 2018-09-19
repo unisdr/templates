@@ -114,13 +114,13 @@ form p {
 }
 
 a {
-	color: #17639F;
+	color: #555;
+	text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-	color: #17639F;
-	text-decoration: underline;
+	color: #ea6827;
 }
 
 blockquote {
@@ -286,6 +286,12 @@ textarea::placeholder {
 
 .breadcrumbs a {
 	color: #17639F;
+	text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+	text-decoration: underline;
 }
 
 .breadcrumbs li::after {
@@ -710,14 +716,10 @@ ul.links a {
 	text-transform: uppercase;
 	color: #555;
 	font-weight: 500;
+	text-decoration: none;
 }
 
-ul.links a:focus,
-ul.links a:hover {
-	color: #ea6827;
-}
-
-ul.links li::after {
+ul.links a::after {
 	color: #17639F;
 	content: "\203A";
 	font-size: 1.4rem;
@@ -725,6 +727,15 @@ ul.links li::after {
 	position: relative;
 	top: 1px;
 	margin-left: 0.7rem;
+}
+
+ul.links a:focus,
+ul.links a:hover,
+ul.links a:focus::after,
+ul.links a:hover::after,
+ul.links a:focus i,
+ul.links a:hover i {
+	color: #ea6827;
 }
 
 /* Foundation upload button: file name positioned differently in IE, find another solution
@@ -767,6 +778,7 @@ ul.links li::after {
 	padding: 0.35rem 0.9375rem;
 	vertical-align: middle;
 	border-radius: 3px;
+	text-decoration: none;
 }
 
 .list-module>h2 a:focus,
@@ -910,6 +922,12 @@ ul.links li::after {
 	display: block;
 	color: #555;
 	overflow: hidden;
+	text-decoration: none;
+}
+
+.list-module .news-announcements li:not(.load-more) a:hover,
+.list-module .news-announcements li:not(.load-more) a:focus {
+	text-decoration: underline;
 }
 
 .list-module .news-announcements li:not(:first-child):not(.load-more) a {
@@ -953,6 +971,12 @@ ul.links li::after {
 
 .list-module li>div h4 a {
 	color: #555;
+	text-decoration: none;
+}
+
+.list-module li>div h4 a:hover,
+.list-module li>div h4 a:focus {
+	text-decoration: underline;
 }
 
 .list-module li>div span {
@@ -1033,11 +1057,13 @@ ul.links li::after {
 	padding: 0.45rem 0.7rem;
 	color: #555;
 	font-weight: 700;
+	text-decoration: none;
 }
 
 .list-module .files-documents li>div .menu>li>a:hover,
 .list-module .files-documents li>div .menu>li>a:focus {
 	color: #ea6827;
+	text-decoration: underline;
 }
 
 .list-module .files-documents li>div .menu>li:not(:first-child)::before {
@@ -1418,6 +1444,12 @@ ul.links li::after {
 	color: #555;
 	font-size: 0.8125rem;
 	font-weight: 500;
+	text-decoration: none;
+}
+
+.list-module .announcements li:not(.load-more)>div:last-child a:hover,
+.list-module .announcements li:not(.load-more)>div:last-child a:focus {
+	text-decoration: underline;
 }
 
 .list-module .announcements li>div:last-child a i {
@@ -1439,6 +1471,12 @@ ul.links li::after {
 	font-size: 1rem;
 	color: #555;
 	font-weight: 500;
+	text-decoration: none;
+}
+
+.load-more a:hover,
+.load-more a:focus {
+	text-decoration: underline;
 }
 
 .load-more i {
@@ -1681,6 +1719,12 @@ table.programme .event-header .row:first-child a .fa-stack {
 	display: block;
 	overflow: hidden;
 	color: #fff;
+	text-decoration: none;
+}
+
+#home-top-slider .video-caption a:hover,
+#home-top-slider .video-caption a:focus {
+	text-decoration: underline;
 }
 
 #home-top-slider .video-caption a:hover .button.clear,
@@ -2130,6 +2174,12 @@ main {
 
 #header-service-menu li a {
 	color: #555;
+	text-decoration: none;
+}
+
+#header-service-menu li a:hover,
+#header-service-menu li a:focus {
+	text-decoration: underline;
 }
 
 #header-hashtags li {
@@ -2151,6 +2201,12 @@ main {
 	font-weight: 500;
 	font-size: 1.0625rem;
 	display: inline-block;
+	text-decoration: none;
+}
+
+#header-hashtags a:hover,
+#header-hashtags a:focus {
+	text-decoration: underline;
 }
 
 #header-hashtags a i {
@@ -2207,6 +2263,7 @@ main {
 	color: #17639F;
 	background-color: #fff;
 	padding: 1.25rem 1rem;
+	text-decoration: none;
 }
 
 #header-main-menu li a:focus,
@@ -2416,6 +2473,12 @@ main {
 #footer-service-menu li a {
 	font-weight: 500;
 	color: #183b61;
+	text-decoration: none;
+}
+
+#footer-service-menu li a:hover,
+#footer-service-menu li a:focus {
+	text-decoration: underline;
 }
 
 #footer-service-menu li:last-child a {
