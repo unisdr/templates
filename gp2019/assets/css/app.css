@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.75rem;
+	font-size: 1.625rem;
 	line-height: 2rem;
 }
 
@@ -38,7 +38,7 @@ h2.table-title {
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.3125rem;
 	line-height: 1.75rem;
 }
 
@@ -74,8 +74,8 @@ h5 {
 	font-size: 1.125rem;
 	line-height: 1.625rem;
 	font-weight: 500;
-	border-top: 1px solid #bfbfbf;
-	border-bottom: 1px solid #bfbfbf;
+	border-top: 3px solid #bfbfbf;
+	border-bottom: 3px solid #bfbfbf;
 	padding: 2.125rem 0;
 }
 
@@ -130,7 +130,8 @@ cite::before {
 }
 
 hr {
-	border-bottom-color: #dbdbdb;
+	border-bottom-color: #bfbfbf;
+	border-bottom-width: 3px;
 }
 
 table tfoot,
@@ -438,8 +439,8 @@ cite {
 }
 
 .media-object.standalone {
-	border-top: 1px solid #bfbfbf;
-	border-bottom: 1px solid #bfbfbf;
+	border-top: 3px solid #bfbfbf;
+	border-bottom: 3px solid #bfbfbf;
 	padding: 0.875rem 0;
 	margin-bottom: 1.875rem;
 }
@@ -456,6 +457,10 @@ li .media-object {
 
 .media-object-section {
 	position: relative;
+}
+
+.media-object.standalone .media-object-section {
+	vertical-align: middle;
 }
 
 .media-object.stack-for-all .media-object-section {
@@ -477,7 +482,7 @@ li .media-object {
 .standalone .media-object-section p {
 	line-height: 1.5rem;
 	max-width: 300px;
-	color: #999;
+	color: #555;
 }
 
 .media-object.stack-for-all .media-object-section p {
@@ -692,7 +697,7 @@ ul.links.left {
 
 ul.links i {
 	margin-right: 0.5rem;
-	color: #ea6827;
+	color: #17639F;
 }
 
 ul.links a {
@@ -708,7 +713,7 @@ ul.links a:hover {
 }
 
 ul.links li::after {
-	color: #ea6827;
+	color: #17639F;
 	content: "\203A";
 	font-size: 1.4rem;
 	font-weight: 400;
@@ -829,7 +834,6 @@ ul.links li::after {
 }
 
 .list-module .no-link h3 {
-	padding-left: 0;
 	margin-bottom: 0;
 	border-bottom: none;
 }
@@ -2260,8 +2264,8 @@ main {
 	line-height: 1.375rem;
 	width: 1.375rem;
 	float: right;
-	top: 2px;
-	color: #999;
+	top: -5px;
+	color: #555;
 }
 
 #left-main-menu>li.active a .fa-stack {
