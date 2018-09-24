@@ -88,6 +88,7 @@ h5.table-title {
 	padding: 1.125rem 0;
 	margin-bottom: 0;
 	border-color: #c9d5e3;
+	font-weight: 700;
 }
 
 form h5 {
@@ -142,8 +143,9 @@ hr {
 table tfoot,
 table thead {
 	background: #fff;
-	color: #0eaba4;
+	color: #067570;
 	text-transform: uppercase;
+	font-weight: 700;
 }
 
 table tbody,
@@ -171,12 +173,12 @@ table.hover tr:nth-of-type(2n):hover {
 
 table.hover tbody tr.clickable-row:hover,
 table.hover tbody tr.clickable-row:nth-of-type(2n):hover {
-	background-color: #fbe1d4;
+	background-color: #D1E0EC;
 	cursor: pointer;
 }
 
 table.hover tbody tr.clickable-row:hover .fa {
-	color: #ea6827;
+	color: #17639F;
 }
 
 table tbody td {
@@ -671,11 +673,17 @@ blockquote>span {
 	bottom: 2em;
 	right: 2em;
 	text-decoration: none;
-	color: white;
-	background: url(../img/icon-hexagon-green.png) 0 0 no-repeat;
+	color: #fff;
+	background: url(../img/icon-hexagon-blue.png) 0 0 no-repeat;
 	font-size: 12px;
-	padding: 1em;
+	padding: 1em 1em 1em 1.1em;
 	display: none;
+}
+
+.go-top:hover,
+.go-top:focus {
+	background: url(../img/icon-hexagon-orange.png) 0 0 no-repeat;
+	color: #fff;
 }
 
 .fa-quote-left {

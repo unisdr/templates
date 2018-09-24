@@ -123,12 +123,12 @@
 				<main>
 					<a id="mainContent" target="-1"> </a>
 					<section>
-						<h1>TECHNICAL EVENTS (h1)</h1>
+						<h1>TECHNICAL EVENTS</h1>
 						<h4>SubTitle od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-							exercitation ullamco laboris nisi. (h4)</h4>
+							exercitation ullamco laboris nisi.</h4>
 
 						<!-- Table module with title -->
-						<h5 class="table-title">Monday 22 May</h5>
+						<h5 class="table-title">Monday 13 May</h5>
 						<table class="hover stack">
 							<thead>
 								<tr>
@@ -168,7 +168,7 @@
 						</table>
 
 						<!-- Table module with title -->
-						<h5 class="table-title">Tuesday 23 May</h5>
+						<h5 class="table-title">Tuesday 14 May</h5>
 						<table class="hover stack">
 							<thead>
 								<tr>
@@ -208,7 +208,7 @@
 						</table>
 
 						<!-- Table module with title -->
-						<h5 class="table-title">Wednesday 24 May</h5>
+						<h5 class="table-title">Wednesday 15 May</h5>
 						<table class="hover stack">
 							<thead>
 								<tr>
@@ -248,7 +248,7 @@
 						</table>
 
 						<!-- Table module with title -->
-						<h5 class="table-title">Thursday 25 May</h5>
+						<h5 class="table-title">Thursday 16 May</h5>
 						<table class="hover stack">
 							<thead>
 								<tr>
@@ -288,7 +288,7 @@
 						</table>
 
 						<!-- Table module with title -->
-						<h5 class="table-title">friday 26 May</h5>
+						<h5 class="table-title">Friday 17 May</h5>
 						<table class="hover stack">
 							<thead>
 								<tr>
@@ -449,8 +449,14 @@
 
 			// Position the sticky back to top button relative to container
 			var offset = $('#content-container').offset();
-			var bottomRightX = offset.left + $('#content-container').width() - 20;
+			var bottomRightX = offset.left + $('#content-container').width();
 			$('.go-top').css('left', bottomRightX);
+			$(window).resize(function () {
+				var offset = $('#content-container').offset();
+				var bottomRightX = offset.left + $('#content-container').width();
+				$('.go-top').css('left', bottomRightX);
+			});
+			
 			// Show or hide the sticky back to top button
 			$(window).scroll(function () {
 				if ($(this).scrollTop() > 200) {
