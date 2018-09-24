@@ -181,7 +181,8 @@ table.hover tbody tr.clickable-row:hover .fa {
 	color: #17639F;
 }
 
-table.events thead th:nth-of-type(1) {
+table.events thead th:nth-of-type(1),
+table.statements thead th:nth-of-type(1) {
 	width: 200px;
 }
 
@@ -193,6 +194,10 @@ table.events thead td {
 	width: 40px;
 }
 
+table.statements thead td {
+	width: 75px;
+}
+
 table tbody td {
 	vertical-align: top;
 	font-size: 1.125rem;
@@ -200,10 +205,40 @@ table tbody td {
 	border-bottom: 0.6rem solid #fff;
 }
 
+table.statements tbody tr td:nth-of-type(3),
+table.statements tbody tr td:nth-of-type(4) {
+	vertical-align: middle;
+}
+
 table p {
 	margin-bottom: 0;
 	font-size: 1rem;
 	line-height: 1.625rem;
+}
+
+table.statements p strong {
+	display: block;
+}
+
+table.statements tbody tr td:nth-of-type(3) a,
+table.statements tbody tr td:nth-of-type(4) a {
+	font-size: 0.875rem;
+	text-decoration: none;
+	display: block;
+}
+
+table.statements tbody tr td:nth-of-type(3) a i,	
+table.statements tbody tr td:nth-of-type(4) a i {
+	color: #17639F;
+	font-size: 1rem;
+	display: block;
+}
+
+table.statements tbody tr td:nth-of-type(3) a:hover i,	
+table.statements tbody tr td:nth-of-type(4) a:hover i,
+table.statements tbody tr td:nth-of-type(3) a:focus i,	
+table.statements tbody tr td:nth-of-type(4) a:focus i {
+	color: #ea6827;
 }
 
 table.programme .blank {
