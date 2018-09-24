@@ -181,6 +181,18 @@ table.hover tbody tr.clickable-row:hover .fa {
 	color: #17639F;
 }
 
+table.events thead th:nth-of-type(1) {
+	width: 200px;
+}
+
+table.events thead th:nth-of-type(2) {
+	width: 170px;
+}
+
+table.events thead td {
+	width: 40px;
+}
+
 table tbody td {
 	vertical-align: top;
 	font-size: 1.125rem;
