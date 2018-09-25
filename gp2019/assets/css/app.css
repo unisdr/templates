@@ -1648,7 +1648,7 @@ table.programme .event-header {
 }
 
 .event-header .row:first-child i {
-	color: #0eaba4;
+	color: #067570;
 }
 
 .event-header a {
@@ -1696,7 +1696,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 }
 
 .event-header .row:nth-child(3) span {
-	color: #0eaba4;
+	color: #067570;
 }
 
 .photogallery {
