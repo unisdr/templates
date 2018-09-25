@@ -10,6 +10,9 @@
 	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic"
 	 media="all" />
 	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" media="all" />
+	<!-- FlexSlider css -->
+	<link type="text/css" rel="stylesheet" href="assets/shared/woothemes-FlexSlider/2.6.1-0-g622f7fd/css/flexslider.css"
+	 media="screen" />
 	<link type="text/css" rel="stylesheet" href="assets/css/app.css">
 	<!-- Top band css -->
 	<link type="text/css" rel="stylesheet" href="//www.preventionweb.net/assets/shared/topband/css/top-band.css" />
@@ -221,8 +224,7 @@
 							<div class="small-12 medium-6 columns">
 								<!-- Documents list module with clickable title, identical to the one in a full row layout -->
 								<div class="list-module">
-									<h2><a href="#" title=""><span>Lorem ipsum dolor sit amet consectetur adipiscing elit</span><span>view<br>all</span><span><span
-												 class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
+									<h2><a href="#" title=""><span>Lorem ipsum dolor sit amet consectetur adipiscing elit</span><span>view all</span><span><i class="fa fa-angle-right"></i></span></a></h2>
 									<ul class="no-bullet files-documents">
 										<li>
 											<i class="fa fa-file-pdf-o"></i>
@@ -361,8 +363,7 @@
 
 						<!-- Documents list module with clickable title, 'two columns by row' layout -->
 						<div class="list-module">
-							<h2><a href="#" title=""><span>Documents and publications</span><span>view<br>all</span><span><span class="fa-stack"><i
-											 class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
+							<h2><a href="#" title=""><span>Documents and publications</span><span>view all</span><span><i class="fa fa-angle-right"></i></span></a></h2>
 							<ul class="no-bullet documents-publications">
 								<li>
 									<div class="row" data-equalizer data-equalize-on="medium">
@@ -548,6 +549,8 @@
 				slideshow: false,
 				itemWidth: 210,
 				itemMargin: 5,
+				prevText: '',
+				nextText: '',
 				asNavFor: '#slider'
 			});
 
@@ -556,6 +559,8 @@
 				controlNav: false,
 				animationLoop: false,
 				slideshow: false,
+				prevText: '',
+				nextText: '',
 				sync: "#carousel",
 				start: function (slider) {
 					$('body').removeClass('loading');
