@@ -1583,7 +1583,7 @@ table.programme .event-header {
 	border-top: 1px solid #c9d5e3;
 	border-bottom: 1px solid #c9d5e3;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 700;
 	padding: 1px 0;
 }
 
@@ -1616,7 +1616,7 @@ table.programme .event-header {
 }
 
 .event-header a {
-	color: #555;
+	color: #17639F;
 	text-transform: none;
 }
 
@@ -1625,7 +1625,7 @@ table.programme .event-header {
 }
 
 .event-header .row:first-child a i {
-	color: #ea6827;
+	color: #17639F;
 }
 
 .event-header .row:first-child a .fa-stack {
