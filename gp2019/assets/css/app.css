@@ -37,9 +37,13 @@ h2 {
 }
 
 h2.table-title {
+	font-size: 1.125rem;
 	line-height: 1.625rem;
-	color: #1d4775;
-	margin-bottom: 1rem;
+	font-weight: 700;
+	border-top: 1px solid #c9d5e3;
+	border-bottom: 1px solid #c9d5e3;
+	padding: 1.125rem 0.625rem;
+	margin-bottom: 0;
 }
 
 h3 {
@@ -52,10 +56,11 @@ h3.table-title {
 	line-height: 1.1875rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	color: #1d4775;
+	color: #17639F;
+	padding: 0.85rem 0.625rem 0.55rem 0;
+	border-bottom: 3px solid #17639F;
 	margin-bottom: 0;
-	background-color: #f0f5fa;
-	padding: 0.85rem 0.625rem 0.55rem;
+	margin-left: 0.625rem;
 }
 
 h4 {
@@ -88,6 +93,7 @@ h5.table-title {
 	padding: 1.125rem 0;
 	margin-bottom: 0;
 	border-color: #c9d5e3;
+	border-width: 1px;
 	font-weight: 700;
 }
 
@@ -969,15 +975,18 @@ ul.links a:hover i {
 	.list-module .documents-publications li {
 		margin-bottom: 0;
 	}
+
 	.list-module .documents-publications li .small-12 {
 		border-bottom: 1px solid #e2e2e2;
 		padding-bottom: 1.5625rem;
 		padding-top: 2rem;
 	}
+
 	.list-module .documents-publications li:last-of-type .small-12:last-of-type {
 		border-bottom: none;
 		padding-bottom: 0;
 	}
+
 	.list-module .documents-publications li .small-12:first-of-type {
 		padding-top: 0;
 	}
@@ -1270,14 +1279,14 @@ ul.links a:hover i {
 }
 
 .list-module .events.programme {
-	border-top: 1px solid #c7d4e2;
-	border-bottom: 1px solid #c7d4e2;
+	border-top: 3px solid #17639F;
+	padding-top: 1px;
 }
 
 .list-module .events.programme .current::after,
-.list-module .events.programme li:hover::after {
-	border-left: 87px solid transparent;
-	border-right: 87px solid transparent;
+.list-module .events.programme li:hover::after,
+.list-module .events.programme li:focus::after {
+	top: 74px;
 }
 
 .list-module .events.programme span:first-child {
