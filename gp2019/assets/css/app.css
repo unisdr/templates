@@ -348,8 +348,7 @@ textarea::placeholder {
 .breadcrumbs a:focus {
 	text-decoration: underline;
 }
-
-.breadcrumbs li::after {
+.breadcrumbs li:not(:last-child)::after {
 	font-size: 1rem;
 	content: " ";
 }
@@ -889,12 +888,19 @@ ul.links a:hover i {
 .list-module .tag {
 	color: #555;
 	font-weight: 500;
-	font-style: italic;
+	text-decoration: none;
 }
 
 .list-module .tag i {
-	color: #0eaba4;
+	color: #17639F;
 	margin-right: 0.5rem;
+}
+
+.list-module .tag:hover,
+.list-module .tag:focus,
+.list-module .tag:hover i,
+.list-module .tag:focus i {
+	color: #ea6827;
 }
 
 .list-module h3 {
@@ -1583,7 +1589,7 @@ ul.links a:hover i {
 }
 
 .add-list-element .fa-stack {
-	color: #ea6827;
+	color: #17639F;
 	margin-right: 0.3rem;
 	height: 1.5em;
 	line-height: 1.5em;
@@ -1595,8 +1601,16 @@ ul.links a:hover i {
 }
 
 .add-list-element a {
+	text-decoration: none;
 	color: #555;
 	font-weight: 500;
+}
+
+.add-list-element:hover .fa-stack,
+.add-list-element:focus .fa-stack,
+.add-list-element:hover a,
+.add-list-element:focus a {
+	color: #ea6827;
 }
 
 .event-header {
@@ -1661,16 +1675,24 @@ table.programme .event-header {
 }
 
 .event-header a {
-	color: #17639F;
-	text-transform: none;
+	text-decoration: none;
 }
 
 .event-header .row:first-child a {
+	color: #17639F;
+	text-transform: none;
 	margin-left: 1rem;
 }
 
 .event-header .row:first-child a i {
 	color: #17639F;
+}
+
+.event-header .row:first-child a:hover,
+.event-header .row:first-child a:focus,
+.event-header .row:first-child a:hover i,
+.event-header .row:first-child a:focus i {
+	color: #ea6827;
 }
 
 .event-header .row:first-child a .fa-stack {
