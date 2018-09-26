@@ -188,11 +188,13 @@ table.hover tbody tr.clickable-row:hover .fa {
 }
 
 table.events thead th:nth-of-type(1),
-table.statements thead th:nth-of-type(1) {
+table.statements thead th:nth-of-type(1),
+table.programme thead th:nth-of-type(1) {
 	width: 200px;
 }
 
-table.events thead th:nth-of-type(2) {
+table.events thead th:nth-of-type(2),
+table.programme thead th:nth-of-type(2) {
 	width: 170px;
 }
 
@@ -256,10 +258,6 @@ table.programme .event-detail:hover {
 	background-color: transparent;
 }
 
-table.programme .clickable-row p {
-	text-decoration: underline;
-}
-
 table .clickable-row .fa {
 	font-size: 0.7rem;
 }
@@ -282,13 +280,13 @@ table.hover.programme tr.clickable-row:hover .fa-circle {
 
 table.programme .clickable-row .fa-circle-thin,
 table.hover.programme tr.clickable-row:hover .fa-circle-thin {
-	color: #555;
+	color: #17639F;
 }
 
 table.programme .clickable-row .fa-stack-1x,
 table.hover.programme tr.clickable-row:hover .fa-stack-1x {
 	font-size: 0.9rem;
-	color: #555;
+	color: #17639F;
 }
 
 input,
@@ -348,6 +346,7 @@ textarea::placeholder {
 .breadcrumbs a:focus {
 	text-decoration: underline;
 }
+
 .breadcrumbs li:not(:last-child)::after {
 	font-size: 1rem;
 	content: " ";
@@ -1276,6 +1275,10 @@ ul.links a:hover i {
 	color: #555;
 }
 
+.list-module .events.programme li:not(.current) span:nth-of-type(3) {
+	visibility: visible;
+}
+
 .list-module .events li:hover span:nth-of-type(3),
 .list-module .events li:focus span:nth-of-type(3),
 .list-module .events li:hover i,
@@ -1292,35 +1295,50 @@ ul.links a:hover i {
 .list-module .events.programme .current::after,
 .list-module .events.programme li:hover::after,
 .list-module .events.programme li:focus::after {
-	top: 74px;
-}
-
-.list-module .events.programme span:first-child {
-	font-size: 2.5rem;
-	float: left;
-}
-
-.list-module .events.programme span:nth-of-type(2) {
-	text-align: left;
-	margin-top: 0.25rem;
-	padding-left: 3.25rem;
+	top: 66px;
 }
 
 .list-module .events.programme span:nth-of-type(3) {
 	color: inherit;
-	text-align: left;
 	text-transform: none;
 	font-size: 0.8125rem;
 	font-style: italic;
 	font-weight: 400;
-	padding-left: 3.25rem;
-	padding-bottom: 0.7rem;
-	border-bottom: 3px solid #fff;
-	margin-bottom: 0.5rem;
+	margin-top: 0;
 }
 
-.list-module .events.programme i {
-	clear: left;
+/*large and up*/
+@media screen and (min-width: 64em) {
+
+	.list-module .events.programme .current::after,
+	.list-module .events.programme li:hover::after,
+	.list-module .events.programme li:focus::after {
+		top: 74px;
+	}
+
+	.list-module .events.programme span:first-child {
+		font-size: 2.5rem;
+		float: left;
+	}
+
+	.list-module .events.programme span:nth-of-type(2) {
+		text-align: left;
+		margin-top: 0.25rem;
+		padding-left: 3.25rem;
+	}
+
+	.list-module .events.programme span:nth-of-type(3) {
+		text-align: left;
+		padding-left: 3.25rem;
+		padding-bottom: 0.7rem;
+		border-bottom: 3px solid #fff;
+		margin-bottom: 0.5rem;
+		margin-top: 0.15rem;
+	}
+
+	.list-module .events.programme i {
+		clear: left;
+	}
 }
 
 /***/
@@ -1637,7 +1655,7 @@ table.programme .event-header {
 }
 
 .event-header .row:nth-child(4) {
-	border-bottom: 1px solid #ea6827;
+	border-bottom: 2px solid #17639F;
 	text-transform: uppercase;
 	font-weight: 500;
 	padding: 1px 0;
