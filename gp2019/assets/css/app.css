@@ -354,7 +354,7 @@ textarea::placeholder {
 }
 
 /* Large and up */
-@media screen and (min-width: 74.9375em) {
+@media screen and (min-width: 64em) {
 	.breadcrumbs li:not(:last-child)::after {
 		color: #555;
 		content: "\203A";
@@ -2567,14 +2567,20 @@ main {
 	display: table-cell;
 	float: none;
 }
+#footer-logo-container .breadcrumbs li::after,
+#footer-logo-container .breadcrumbs li:not(:last-child)::after {
+	font-size: 1rem;
+	content: " ";
+}
 
-/* Large and up */
+/* Larger and up */
 @media screen and (min-width: 74.9375em) {
 	#footer-logo-container .breadcrumbs li:not(:last-child)::after {
 		margin: 0 0.8rem;
 		color: #b8b8b8;
 		font-size: 1.2rem;
 		top: 3px;
+		content: "\203A";
 	}
 }
 
