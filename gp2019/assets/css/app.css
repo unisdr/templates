@@ -36,6 +36,12 @@ h2 {
 	line-height: 2rem;
 }
 
+h2.highlight {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #333;
+	font-style: italic;
+}
+
 h2.table-title {
 	font-size: 1.125rem;
 	line-height: 1.625rem;
