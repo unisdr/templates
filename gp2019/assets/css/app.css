@@ -935,6 +935,86 @@ input[type=file].show-for-sr {
 	}
 }
 
+.alert-box {
+	border-style: solid;
+	border-width: 1px;
+	display: block;
+	font-size: 0.72222rem;
+	font-weight: normal;
+	margin-bottom: 1.11111rem;
+	padding: 0.77778rem 1.33333rem 0.77778rem 0.77778rem;
+	position: relative;
+	transition: opacity 300ms ease-out;
+	background-color: #008CBA;
+	border-color: #0078a0;
+	color: #FFFFFF;
+}
+
+.alert-box .close {
+	right: 0.22222rem;
+	background: inherit;
+	color: #333333;
+	font-size: 1.22222rem;
+	line-height: .9;
+	margin-top: -0.61111rem;
+	opacity: 0.3;
+	padding: 0 6px 4px;
+	position: absolute;
+	top: 50%;
+}
+
+.alert-box .close:hover,
+.alert-box .close:focus {
+	opacity: 0.5;
+}
+
+.alert-box.radius {
+	border-radius: 3px;
+}
+
+.alert-box.round {
+	border-radius: 1000px;
+}
+
+.alert-box.success {
+	background-color: #43AC6A;
+	border-color: #3a945b;
+	color: #FFFFFF;
+}
+
+.alert-box.alert {
+	background-color: #f04124;
+	border-color: #de2d0f;
+	color: #FFFFFF;
+}
+
+.alert-box.secondary {
+	background-color: #e7e7e7;
+	border-color: #c7c7c7;
+	color: #4f4f4f;
+}
+
+.alert-box.warning {
+	background-color: #f08a24;
+	border-color: #de770f;
+	color: #FFFFFF;
+}
+
+.alert-box.info {
+	background-color: #a0d3e8;
+	border-color: #74bfdd;
+	color: #4f4f4f;
+}
+
+.alert-box.alert-close {
+	opacity: 0;
+}
+
+.error label,
+.error label.error {
+	color: #f04124;
+}
+
 /************/
 /* Foundation: extend styles */
 cite {
@@ -1111,7 +1191,7 @@ li .media-object-section a {
 	margin: 0;
 	font-weight: 500;
 	font-size: 1.2rem;
-	border-radius: 1.6em;
+	border-radius: 1.6em !important;
 	padding: .5em .9em;
 	background-color: #17639F;
 	text-decoration: none;
@@ -2647,10 +2727,16 @@ table.programme .event-header .row:first-child a .fa-stack {
 	margin-bottom: 2rem;
 }
 
+#process-bar {
+	background-color: #e2e2e2;
+}
+
 #process-steps {
-	background-color: #ccf4f2;
-	color: #0eaba4;
+	background-color: #555;
+	color: #fff;
 	overflow: hidden;
+	display: table;
+	padding-right: 3px;
 }
 
 #process-steps>div {
@@ -2660,26 +2746,36 @@ table.programme .event-header .row:first-child a .fa-stack {
 	margin-right: 2rem;
 }
 
-#process-steps>div.current {
-	background-color: #0eaba4;
-	color: #fff;
-}
-
 #process-steps>div::after {
 	content: "";
 	width: 0;
 	height: 0;
 	border-top: 1.85rem solid transparent;
 	border-bottom: 1.85rem solid transparent;
-	border-left: 1.85rem solid #ccf4f2;
+	border-left: 1.85rem solid #555;
 	position: absolute;
 	z-index: 30;
 	right: -1.5rem;
 	top: 0;
 }
 
+#process-steps>div.current {
+	background-color: #17639F;
+	;
+}
+
+#process-steps>div.current::before {
+	content: "";
+	width: 2rem;
+	height: 4rem;
+	background-color: #17639F;
+	position: absolute;
+	left: -2rem;
+	top: 0;
+}
+
 #process-steps>div.current::after {
-	border-left: 1.85rem solid #0eaba4;
+	border-left: 1.85rem solid #17639F;
 }
 
 #process-steps>div div::after {
@@ -2695,14 +2791,8 @@ table.programme .event-header .row:first-child a .fa-stack {
 	top: -0.65rem;
 }
 
-#process-steps>div.current::before {
-	content: "";
-	width: 2rem;
-	height: 4rem;
-	background-color: #0eaba4;
-	position: absolute;
-	left: -2rem;
-	top: 0;
+#process-steps>div:last-of-type div::after {
+	background-color: #e2e2e2;
 }
 
 #process-steps h5 {
@@ -2713,7 +2803,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 	border: none;
 	margin: 0;
 	text-transform: uppercase;
-	color: #0eaba4;
+	color: #fff;
 }
 
 #process-steps .current h5 {

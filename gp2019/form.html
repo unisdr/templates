@@ -127,30 +127,35 @@
 						<h1>Registration: Global Platform 2017</h1>
 						<p>Thank you for your interest in attending the 2017 Global Platform. This conference is by invitation only.
 							Please provide us with your details so we can process your application.</p>
-						<div id="process-steps">
-							<div>
-								<div>
-									<h5>Step one</h5>
-									<span>Delegation details</span>
+						<div id="process-bar">
+							<div id="process-steps">
+								<div class="current">
+									<div>
+										<h5>Step one</h5>
+										<span>Delegation details</span>
+									</div>
 								</div>
-							</div>
-							<div class="current">
 								<div>
-									<h5>Step two</h5>
-									<span>Personal details</span>
+									<div>
+										<h5>Step two</h5>
+										<span>Personal details</span>
+									</div>
 								</div>
-							</div>
-							<div>
 								<div>
-									<h5>Step three</h5>
-									<span>Submit registration</span>
+									<div>
+										<h5>Step three</h5>
+										<span>Submit registration</span>
+									</div>
 								</div>
 							</div>
 						</div>
 						<form>
 							<div class="row">
-								<div class="small-12 medium-3 end columns">
+								<div class="small-12 end columns">
 									<h5>* Mandatory field</strong></h5>
+									<div data-alert class="alert-box alert">
+										Error: please add your 'First Name'
+									</div>
 								</div>
 							</div>
 							<div class="row">
@@ -171,7 +176,8 @@
 									</select>
 								</div>
 							</div>
-							<div class="row">
+							<!-- Add class 'error' to rows containing error fields -->
+							<div class="row error">
 								<div class="small-12 medium-3 columns">
 									<label class="text-right middle">First Name *</label>
 								</div>
@@ -954,7 +960,7 @@
 									<label class="text-right middle"></label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<input type="submit" class="button" value="Submit this application">
+									<input type="submit" class="button primary" value="Submit this application">
 								</div>
 							</div>
 						</form>
