@@ -2738,6 +2738,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 	display: table;
 	padding-right: 3px;
 }
+
 /*small*/
 @media screen and (max-width: 39.9375em) {
 	#process-steps {
