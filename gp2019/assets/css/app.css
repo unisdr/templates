@@ -983,9 +983,9 @@ input[type=file].show-for-sr {
 }
 
 .alert-box.alert {
-	background-color: #f04124;
-	border-color: #de2d0f;
-	color: #FFFFFF;
+	background-color: #FFE6E6;
+	border-color: #c32644;
+	color: #555;
 }
 
 .alert-box.secondary {
@@ -1012,7 +1012,7 @@ input[type=file].show-for-sr {
 
 .error label,
 .error label.error {
-	color: #f04124;
+	color: #c32644;
 }
 
 /************/
@@ -2738,12 +2738,27 @@ table.programme .event-header .row:first-child a .fa-stack {
 	display: table;
 	padding-right: 3px;
 }
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#process-steps {
+		background-color: transparent;
+		display: block;
+	}
+}
 
 #process-steps>div {
 	float: left;
 	padding: 1rem 1rem 0.6rem;
 	position: relative;
-	margin-right: 2rem;
+	margin-right: 1.98rem;
+}
+
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#process-steps>div {
+		float: none;
+		background-color: #555;
+	}
 }
 
 #process-steps>div::after {
@@ -2793,6 +2808,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 #process-steps>div:last-of-type div::after {
 	background-color: #e2e2e2;
+	z-index: 19;
 }
 
 #process-steps h5 {
@@ -2813,6 +2829,18 @@ table.programme .event-header .row:first-child a .fa-stack {
 #process-steps span {
 	font-size: 0.75rem;
 	display: block;
+}
+
+.alert-box.alert h3 {
+	margin-bottom: 1rem;
+}
+
+.alert-box.alert ul {
+	list-style: none;
+}
+
+.alert-box.alert ul strong {
+	color: #c32644;
 }
 
 #page-container {

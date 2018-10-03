@@ -149,21 +149,26 @@
 								</div>
 							</div>
 						</div>
-						<form>
+						<form class="module-margin-bottom">
 							<div class="row">
 								<div class="small-12 end columns">
 									<h5>* Mandatory field</strong></h5>
 									<div data-alert class="alert-box alert">
-										Error: please add your 'First Name'
+										<h3>Your information seems to be incomplete:</h3>
+										<ul>
+											<li><strong>Error!</strong> Please add your preferred 'Salutation'</li>
+											<li><strong>Error!</strong> Please add your 'First Name'</li>
+										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="row">
+							<!-- Add class 'error' to rows containing error fields -->
+							<div class="row error">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Salutation *</label>
+									<label for="gpr_salutation_id" class="medium-text-right middle">Salutation *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<select class=" gpr_salutation_id_select" name="gpr_salutation_id">
+									<select class="gpr_salutation_id_select" name="gpr_salutation_id" id="gpr_salutation_id">
 										<option value="0">Select</option>
 										<option value="1">Ms</option>
 										<option value="2">Mr</option>
@@ -179,15 +184,15 @@
 							<!-- Add class 'error' to rows containing error fields -->
 							<div class="row error">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">First Name *</label>
+									<label for="gpr_fname" class="medium-text-right middle">First Name *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<input type="text" placeholder="As on passport" class="gpr_fname_input" name="gpr_fname">
+									<input type="text" placeholder="As on passport" class="gpr_fname_input" name="gpr_fname" id="gpr_fname">
 								</div>
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Family Name *</label>
+									<label class="medium-text-right middle">Family Name *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="text" placeholder="As on passport" class="gpr_lname_input" name="gpr_lname">
@@ -195,7 +200,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Gender *</label>
+									<label class="medium-text-right middle">Gender *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<select class="gpr_gender_select" name="gpr_gender">
@@ -207,7 +212,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Nationality *</label>
+									<label class="medium-text-right middle">Nationality *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<select class="gpr_pass_country_id_select" name="gpr_pass_country_id">
@@ -416,7 +421,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Date of birth *</label>
+									<label class="medium-text-right middle">Date of birth *</label>
 								</div>
 								<div class="small-4 medium-2 columns">
 									<select name="gpr_birth_date_day">
@@ -550,7 +555,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Picture *</label>
+									<label class="medium-text-right middle">Picture *</label>
 								</div>
 								<div class="small-12 medium-6 end columns file-upload">
 									<!-- Foundation upload button: file name positioned differently in IE, find another solution
@@ -569,7 +574,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Type of Organization *</label>
+									<label class="medium-text-right middle">Type of Organization *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<select class="gpr_org_type_id_select" name="gpr_org_type_id">
@@ -587,7 +592,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Organization Name *</label>
+									<label class="medium-text-right middle">Organization Name *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="text" placeholder="Full name of organization, no acronyms" class="gpr_org_title_input" name="gpr_org_title"
@@ -599,7 +604,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Job Title *</label>
+									<label class="medium-text-right middle">Job Title *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="text" placeholder="e.g. Executive Director" class="gpr_con_title_input" name="gpr_con_title">
@@ -607,7 +612,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Work Email *</label>
+									<label class="medium-text-right middle">Work Email *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="email" placeholder="e.g. yourname@website.com" class="gpr_email_input" name="gpr_email">
@@ -615,7 +620,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Confirm Work Email *</label>
+									<label class="medium-text-right middle">Confirm Work Email *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="email" placeholder="Please make sure that the email you have entered is correct" class="js-disable-paste gpr_email_confirm_input"
@@ -624,7 +629,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Work Phone Number *</label>
+									<label class="medium-text-right middle">Work Phone Number *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_phone_input" name="gpr_phone" aria-describedby="workphoneHelpText">
@@ -633,7 +638,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Mobile Number</label>
+									<label class="medium-text-right middle">Mobile Number</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_mobile_input" name="gpr_mobile" aria-describedby="mobilephoneHelpText">
@@ -642,7 +647,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Fax</label>
+									<label class="medium-text-right middle">Fax</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_fax_input" name="gpr_fax" aria-describedby="faxHelpText">
@@ -651,7 +656,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Organization Website</label>
+									<label class="medium-text-right middle">Organization Website</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="url" placeholder="http://" class="gpr_website_input" name="gpr_website">
@@ -665,7 +670,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Country of Location *</label>
+									<label class="medium-text-right middle">Country of Location *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<select class=" gpr_org_country_id_select" name="gpr_org_country_id">
@@ -904,7 +909,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Street Address *</label>
+									<label class="medium-text-right middle">Street Address *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<textarea class="gpr_address_textarea" rows="10" cols="50" name="gpr_address"></textarea>
@@ -912,7 +917,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">City / Town / Village *</label>
+									<label class="medium-text-right middle">City / Town / Village *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="text" placeholder="e.g. Cancun" class="gpr_town_input" name="gpr_town">
@@ -920,7 +925,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">Postal Code *</label>
+									<label class="medium-text-right middle">Postal Code *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="text" placeholder="e.g. 13447" class="gpr_zip_cde_input" name="gpr_zip_cde">
@@ -934,7 +939,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle">If you need special assistance during your presence at the conference, please
+									<label class="medium-text-right middle">If you need special assistance during your presence at the conference, please
 										specify:</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
@@ -949,7 +954,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle"></label>
+									<label class="medium-text-right middle"></label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<textarea class="gpr_comments_textarea" rows="10" cols="50" name="gpr_comments"></textarea>
@@ -957,7 +962,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label class="text-right middle"></label>
+									<label class="medium-text-right middle"></label>
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="submit" class="button primary" value="Submit this application">
