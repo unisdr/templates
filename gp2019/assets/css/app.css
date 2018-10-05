@@ -2527,6 +2527,33 @@ table.programme .event-header .row:first-child a .fa-stack {
 	min-height: 46px;
 }
 
+#updates-controls {
+	text-transform: uppercase;
+	font-size: 0.6875rem;
+	font-weight: 700;
+}
+
+#updates-controls span {
+	float: right;
+	text-align: center;
+	cursor: pointer;
+}
+
+#updates-controls span:first-of-type {
+	padding-left: 1rem;
+	margin-left: 1rem;
+	border-left: 1px solid #acacac;
+}
+
+#updates-play {
+	color: #17639F;
+}
+
+#updates-controls i {
+	font-size: 2rem;
+	display: block;
+}
+/*
 #updates-number {
 	font-size: 2rem;
 	line-height: 2rem;
@@ -2571,7 +2598,7 @@ table.programme .event-header .row:first-child a .fa-stack {
 	cursor: pointer;
 	color: #17639F;
 }
-
+*/
 #days-countdown::before {
 	content: "|";
 	color: #1D4775;

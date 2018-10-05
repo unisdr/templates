@@ -234,11 +234,16 @@
 							</ul>
 						</div>
 						<div class="small-12 medium-2 medium-text-right columns">
-							<span id="updates-number"><span>1</span>/<span></span></span>
+							<div id="updates-controls">
+								<span id="updates-hide"><i class="fa fa-close"></i>hide</span>
+								<span id="updates-play"><i class="fa fa-play-circle"></i>play</span>
+								<span id="updates-pause"><i class="fa fa-pause-circle"></i>pause</span>
+							</div>
+							<!--<span id="updates-number"><span>1</span>/<span></span></span>
 							<span id="updates-nav">
 								<span id="prev-update"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
 								<span id="next-update"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
-							</span>
+							</span>-->
 						</div>
 					</div>
 					<!-- Updates scroller end -->
@@ -787,7 +792,9 @@
 				max_rows: 1,
 				prevButton: $('#prev-update'),
 				nextButton: $('#next-update'),
-				movingUp: function () {
+				stopButton:  $('#updates-pause'),
+    			startButton: $('#updates-play'),
+/*				movingUp: function () {
 					if (i == $('#updates-number span:last-child').html()) {
 						i = 1;
 					} else {
@@ -802,9 +809,14 @@
 						i--;
 					}
 					$('#updates-number span:first-child').html(i)
-				}
+				}*/
 			});
-			$('#updates-number span:last-child').html($("#updates-scroller > li").length)
+//			$('#updates-number span:last-child').html($("#updates-scroller > li").length);
+			$('#updates-play').hide();
+			$("#updates-pause, #updates-play").click(function () {
+				$('#updates-play').toggle();
+				$('#updates-pause').toggle();
+			});
 			$(window).resize(function () {
 				var visibleHeight = $('#updates-scroller li:visible').height();
 				visibleHeight = visibleHeight - 1;
