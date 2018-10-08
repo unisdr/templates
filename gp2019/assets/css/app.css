@@ -1301,6 +1301,10 @@ blockquote>span {
 	font-style: italic;
 }
 
+.no-border-bottom {
+	border-bottom: none !important;
+}
+
 .no-margin-bottom {
 	margin-bottom: 0 !important;
 }
@@ -1999,66 +2003,6 @@ ul.links a:hover i {
 	margin: 0 0 0 0.5rem;
 }
 
-.list-module #twitter-tabs {
-	background: none;
-	border: none;
-	list-style-type: none;
-	margin: 0 0 0.2rem;
-	border-bottom: 1px solid #f1f1f1;
-	position: relative;
-}
-
-.list-module #twitter-tabs>li.tabs-title {
-	margin-bottom: 0;
-	padding: 0;
-	text-align: center;
-	width: 50%;
-}
-
-.list-module #twitter-tabs .tabs-title>a {
-	display: inline-block;
-	font-size: 1rem;
-	padding: 0.9375rem 0 0;
-	color: #555;
-	font-weight: 500;
-	text-decoration: none;
-}
-
-.list-module #twitter-tabs .tabs-title>a:focus,
-.list-module #twitter-tabs .tabs-title>a[aria-selected="true"] {
-	background: none;
-	color: #17639F;
-	padding-bottom: .4rem;
-	border-bottom: 6px solid #3b94d9;
-}
-
-.list-module #twitter-tabs .tabs-title>a:hover {
-	color: #17639F;
-}
-
-.list-module #twitter-tabs .fa-stack {
-	position: absolute;
-	left: 46%;
-	top: 0.5rem;
-}
-
-.list-module #twitter-tabs .fa-stack-2x {
-	color: #3b94d9;
-}
-
-.list-module #twitter-tabs .fa-stack-1x {
-	color: #fff;
-}
-
-.tabs-content[data-tabs-content="twitter-tabs"] {
-	border: none;
-	background: none;
-}
-
-.tabs-content[data-tabs-content="twitter-tabs"] .tabs-panel {
-	padding: 0;
-}
-
 .list-module .links-side-nav {
 	text-transform: uppercase;
 	font-size: 1rem;
@@ -2101,6 +2045,19 @@ ul.links a:hover i {
 
 .list-module .links-side-nav a:hover i {
 	color: #fff;
+}
+
+/* Hashtags list */
+.list-module .hashtags {
+	text-transform: none;
+}
+
+.list-module .hashtags li {
+	text-align: center;
+}
+
+.list-module .links-side-nav a {
+	color: #17639F;
 }
 
 .list-module .announcements li:not(.load-more) {
@@ -3060,14 +3017,14 @@ main {
 	text-transform: uppercase;
 }
 
-#header-service-menu-divider {
-	border-bottom: 5px solid #17639f;
+.twitter-divider {
+	border-bottom: 4px solid #17639f;
 	color: #17639f;
 	position: relative;
 	margin: .5rem 0;
 }
 
-#header-service-menu-divider i {
+.twitter-divider i {
 	position: absolute;
 	top: -6px;
 	left: 50%;
