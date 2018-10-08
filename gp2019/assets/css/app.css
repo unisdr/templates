@@ -1674,8 +1674,25 @@ ul.links a:hover i {
 	font-weight: 500;
 }
 
-.list-module .files-documents li>div span {
+.list-module .files-documents li > div h4 {
+	margin-bottom: 0;
+}
+
+.list-module .files-documents li>div h4 a {
+	display: block;
+}
+
+.list-module .files-documents li>div h4 span {
+	display: block;
+	margin-top: -4px;
+}
+
+.list-module .files-documents li>div > span {
 	float: left;
+}
+
+.list-module .files-documents li>div > span:first-of-type {
+	text-transform: none;
 }
 
 .list-module .news-announcements li>div span.float-left {
@@ -1690,11 +1707,6 @@ ul.links a:hover i {
 	content: "|";
 	color: #17639F;
 	margin: 0 0.5rem;
-}
-
-.list-module .news-announcements a:hover span.float-right,
-.list-module .news-announcements a:focus span.float-right {
-	color: #ea6827;
 }
 
 .news-announcements li .media-object {
