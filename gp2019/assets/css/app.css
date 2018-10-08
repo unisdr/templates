@@ -3044,40 +3044,36 @@ main {
 		padding-top: 2.125rem;
 		padding-bottom: 1.75rem;
 	}
-
-	#GP-header .menu-centered>.menu {
-		display: block;
-	}
-
-	#GP-header .large-4 {
-		width: 25%;
-	}
 }
 
-/* Large only */
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {
-	#GP-header .large-4 {
-		width: 29.5%;
+/* Larger and up */
+@media screen and (min-width: 74.9375em) {
+	#GP-header .large-6 {
+		width: 42%;
 	}
 }
 
 #header-service-menu {
-	font-size: 0.6875rem;
+	font-size: 0.8125rem;
 	font-weight: 500;
-	color: #999;
+	color: #555;
 	text-transform: uppercase;
-	margin-bottom: 0.55rem;
-	margin-right: -6px;
-	/*fix for centering border below*/
 }
 
-#header-service-menu::after {
-	content: "";
-	display: block;
-	margin: 0 auto;
-	width: 88%;
-	padding-top: .3rem;
-	border-bottom: 5px solid #e2e2e2;
+#header-service-menu-divider {
+	border-bottom: 5px solid #17639f;
+	color: #17639f;
+	position: relative;
+	margin: .5rem 0;
+}
+
+#header-service-menu-divider i {
+	position: absolute;
+	top: -6px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	padding: 0 10px;
 }
 
 #header-service-menu li {
@@ -3087,8 +3083,8 @@ main {
 #header-service-menu li:not(:last-child)::after {
 	content: "|";
 	position: absolute;
-	top: 22%;
-	right: 0;
+	top: 6px;
+	right: -1px;
 }
 
 #header-service-menu li a {
@@ -3101,24 +3097,10 @@ main {
 	text-decoration: underline;
 }
 
-#header-hashtags li {
-	display: block;
-}
-
-#header-hashtags li:not(:last-child)::after {
-	content: "|";
-	color: #0eaba4;
-	position: absolute;
-	top: 0.25rem;
-	right: -0.1875rem;
-	font-size: 1.25rem;
-}
-
 #header-hashtags a {
 	color: #17639F;
-	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 1.0625rem;
+	font-size: .875rem;
 	display: inline-block;
 	text-decoration: none;
 }
@@ -3132,28 +3114,17 @@ main {
 	vertical-align: top;
 }
 
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#header-hashtags.menu li:last-of-type {
+		display: block;
+	}
+}
+
 /*small and medium*/
 @media screen and (max-width: 63.9375em) {
 	#header-hashtags.menu>li>a {
-		padding: 0 0.8rem;
-	}
-
-	#header-hashtags li:not(:last-child)::after {
-		top: -0.4rem;
-	}
-}
-
-/*medium*/
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-	#header-hashtags.menu>li>a {
-		padding: 0 0.5rem;
-	}
-}
-
-/*large and up*/
-@media screen and (min-width: 64em) {
-	#header-hashtags.menu>li>a {
-		padding: 0.7rem 1.6rem;
+		padding: 0 0.2rem;
 	}
 }
 
