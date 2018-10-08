@@ -2484,14 +2484,62 @@ table.programme .event-header .row:first-child a .fa-stack {
 	padding: 1.5rem 0.9375rem;
 }
 
+#updates.hidden .large-2:first-of-type {
+	padding-right: 0;
+}
+
+/*medium*/
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	#updates.hidden .medium-7 {
+		width: 66.66667%;
+		padding: 0;
+	}
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+	#updates.hidden .medium-2:last-of-type {
+		width: 6.83333%;
+		padding-left: 0;
+	}
+}
+
+/*large and up*/
+@media screen and (min-width: 64em) {
+	#updates.hidden .large-8 {
+		width: 76.5%;
+		padding: 0;
+	}
+}
+
 #updates .columns:first-child>span {
-	font-size: 0.9375rem;
+	font-size: 0.875rem;
 	line-height: 0.875rem;
 	text-transform: uppercase;
 	display: table-cell;
 	width: 6.25rem;
 	color: #b4252d;
 	padding-top: 0.65rem;
+}
+
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#updates .columns:first-child>span {
+		display: initial;
+	}
+}
+
+
+/* Larger and up */
+@media screen and (min-width: 74.9375em) {
+	#updates .columns:first-child>span {
+		font-size: 0.9375rem;
+	}
+}
+
+#updates.hidden .columns:first-child>span {
+	color: #555;
+	width: auto;
 }
 
 #updates .columns:first-child>span::before {
@@ -2508,14 +2556,52 @@ table.programme .event-header .row:first-child a .fa-stack {
 	margin-top: -0.65rem;
 }
 
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#updates .columns:first-child>span::before {
+		float: none;
+	}
+}
+
+#updates.hidden .columns:first-child>span::before {
+	background-image: url(../img/icon-hexagon-blue.svg);
+}
+
 #updates .columns:first-child>span span {
 	float: left;
 	width: 3rem;
 }
 
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#updates .columns:first-child>span span {
+		float: none;
+	}
+}
+
+#updates.hidden .columns:first-child>span span {
+	width: auto;
+	margin-top: 6px;
+}
+
 #updates-scroller {
 	margin-bottom: 0;
-	display: none;
+}
+
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#updates #updates-scroller {
+		margin: 10px 0;
+	}
+}
+
+#updates.hidden #updates-scroller {
+	border-top: 1px solid #acacac;
+	transform: translateY(22px);
+}
+
+#updates.hidden #updates-scroller li {
+	visibility: hidden;
 }
 
 #updates-scroller li {
@@ -2527,49 +2613,95 @@ table.programme .event-header .row:first-child a .fa-stack {
 	min-height: 46px;
 }
 
-#updates-number {
-	font-size: 2rem;
-	line-height: 2rem;
-	color: #555;
-	margin-top: 0.6rem;
-	display: inline-block;
+/*small and medium*/
+@media screen and (max-width: 63.9375em) {
+	#updates-scroller li {
+		font-size: 1rem;
+	}
+
+	#updates-scroller li .button.primary {
+		font-size: .875rem;
+	}
+
+	#updates-scroller li .button.primary .fa-stack {
+		display: none;
+	}
 }
 
-#updates-number span:first-child {
+#updates-controls {
+	text-transform: uppercase;
+	font-size: 0.6875rem;
+	font-weight: 700;
+}
+
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#updates-controls {
+		transform: translateX(-37%);
+	}
+}
+
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#updates.hidden #updates-controls {
+		transform: translateX(-45%);
+	}
+}
+
+#updates #updates-controls span {
+	float: right;
+	text-align: center;
+	cursor: pointer;
+}
+
+#updates:not(.hidden) #updates-controls span {
+	width: 34px;
+}
+
+#updates.hidden #updates-controls span {
+	display: none !important;
+}
+
+#updates #updates-controls #updates-show {
+	display: none;
+}
+
+#updates.hidden #updates-controls #updates-show {
+	display: block !important;
+	margin-top: 14px;
+}
+
+#updates.hidden #updates-controls #updates-show i {
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+#updates-hide {
+	padding-left: 1rem;
+	margin-left: 1rem;
+	border-left: 1px solid #acacac;
+}
+
+#updates-play {
+	display: none;
 	color: #17639F;
 }
 
-#updates-number span:last-child {
-	color: #555;
+#updates-controls span:hover,
+#updates-controls span:focus,
+#updates-play:hover,
+#updates-play:focus {
+	color: #F17B37;
 }
 
-#updates-nav {
-	float: right;
-	color: #bfbfbf;
-	margin-left: 1rem;
-	margin-top: 0.6rem;
-}
-
-#updates-nav span {
+#updates-controls i {
+	font-size: 1.8rem;
 	display: block;
 }
 
-#updates-nav span:first-child {
-	padding-bottom: 0.1875rem;
-	border-bottom: 1px solid #bfbfbf;
-	margin-bottom: 0.25rem;
-	line-height: 0.65rem;
-}
-
-#updates-nav span:last-child {
-	line-height: 0.5rem;
-}
-
-#updates-nav i {
-	font-size: 1.5rem;
-	line-height: 0.5rem;
-	cursor: pointer;
-	color: #17639F;
+#updates.hidden #updates-controls i {
+	font-size: 1rem;
+	display: inline;
 }
 
 #days-countdown::before {

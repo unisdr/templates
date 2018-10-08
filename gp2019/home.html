@@ -223,10 +223,10 @@
 
 					<!-- Updates scroller start -->
 					<div id="updates">
-						<div class="small-12 medium-2 columns">
+						<div class="small-12 medium-3 large-2 small-text-center columns">
 							<span><span>Quick update</span></span>
 						</div>
-						<div class="small-12 medium-8 columns">
+						<div class="small-12 medium-7 large-8 columns">
 							<ul id="updates-scroller" class="no-bullet">
 								<li>Last date for registration is 10 April 2017.&nbsp;&nbsp;&nbsp;<a href="" class="button primary" title=""><span class="fa-stack"><i
 											 class="fa fa-circle fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-right fa-stack-1x"
@@ -237,11 +237,12 @@
 							</ul>
 						</div>
 						<div class="small-12 medium-2 medium-text-right columns">
-							<span id="updates-number"><span>1</span>/<span></span></span>
-							<span id="updates-nav">
-								<span id="prev-update"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
-								<span id="next-update"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
-							</span>
+							<div id="updates-controls">
+								<span id="updates-show">show<i class="fa fa-expand"></i></span>
+								<span id="updates-hide"><i class="fa fa-times-circle"></i>hide</span>
+								<span id="updates-play"><i class="fa fa-play-circle"></i>play</span>
+								<span id="updates-pause"><i class="fa fa-pause-circle"></i>pause</span>
+							</div>
 						</div>
 					</div>
 					<!-- Updates scroller end -->
@@ -785,29 +786,26 @@
 
 			// JQuery Advanced News Ticker activation
 			var i = 1;
-			$('#updates-scroller').show();
-			$('#updates-scroller').newsTicker({
+			var nt = $('#updates-scroller').newsTicker({
 				max_rows: 1,
 				prevButton: $('#prev-update'),
 				nextButton: $('#next-update'),
-				movingUp: function () {
-					if (i == $('#updates-number span:last-child').html()) {
-						i = 1;
-					} else {
-						i++;
-					}
-					$('#updates-number span:first-child').html(i)
-				},
-				movingDown: function () {
-					if (i == 1) {
-						i = $('#updates-number span:last-child').html();
-					} else {
-						i--;
-					}
-					$('#updates-number span:first-child').html(i)
-				}
+				stopButton:  $('#updates-pause'),
+    			startButton: $('#updates-play'),
 			});
-			$('#updates-number span:last-child').html($("#updates-scroller > li").length)
+			$("#updates-pause, #updates-play").click(function () {
+				$('#updates-play').toggle();
+				$('#updates-pause').toggle();
+			});
+			$('#updates-hide').click(function () {
+				$('#updates').toggleClass('hidden');
+				$('#updates-play').show();
+				$('#updates-pause').hide();
+				nt.newsTicker('stop');
+			});
+			$('#updates-show').click(function () {
+				$('#updates').toggleClass('hidden');
+			});
 			$(window).resize(function () {
 				var visibleHeight = $('#updates-scroller li:visible').height();
 				visibleHeight = visibleHeight - 1;
@@ -815,6 +813,7 @@
 					'height': visibleHeight
 				}, 100);
 			});
+			/***/
 
 			// Events by day
 			// init
