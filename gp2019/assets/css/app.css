@@ -305,9 +305,44 @@ textarea {
 	border-radius: 2px !important;
 }
 
+::-moz-placeholder {
+	opacity: 1;
+}
+
 input::placeholder,
 textarea::placeholder {
+	color: #bbb;
+	font-size: .9rem;
+	font-style: italic;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+	color: #bbb;
+	font-size: .9rem;
+	font-style: italic;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #bbb;
+	font-size: .9rem;
+	font-style: italic;
+}
+
+select:required:invalid {
+	color: #bbb;
+	font-size: .9rem;
+	font-style: italic;
+}
+
+select option[value=""][disabled] {
+	display: none;
+}
+
+select option {
 	color: #555;
+	font-style: normal;
 }
 
 .title-bar {
@@ -1648,12 +1683,6 @@ ul.links a:hover i {
 	font-weight: 500;
 }
 
-.list-module .blog li>div h4 {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 0.9375rem;
-	font-weight: 400;
-}
-
 .list-module .news-announcements li>div .media-object-section h4 {
 	margin-bottom: 0.5rem;
 }
@@ -1674,7 +1703,7 @@ ul.links a:hover i {
 	font-weight: 500;
 }
 
-.list-module .files-documents li > div h4 {
+.list-module .files-documents li>div h4 {
 	margin-bottom: 0;
 }
 
@@ -1687,11 +1716,11 @@ ul.links a:hover i {
 	margin-top: -4px;
 }
 
-.list-module .files-documents li>div > span {
+.list-module .files-documents li>div>span {
 	float: left;
 }
 
-.list-module .files-documents li>div > span:first-of-type {
+.list-module .files-documents li>div>span:first-of-type {
 	text-transform: none;
 }
 

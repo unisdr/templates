@@ -13,6 +13,29 @@
 	<link type="text/css" rel="stylesheet" href="assets/css/app.css">
 	<!-- Top band css -->
 	<link type="text/css" rel="stylesheet" href="//www.preventionweb.net/assets/shared/topband/css/top-band.css" />
+	<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" />
+	<style>
+		.select2-container--default .select2-selection--single .select2-selection__placeholder {
+			color: #bbb;
+			font-size: .9rem;
+			font-style: italic;
+			line-height: 2.4375rem;
+		}
+		.select2-container--default .select2-selection--single .select2-selection__rendered {
+			color: #555;
+			line-height: 2.4375rem;
+		}
+		.select2-container--default .select2-selection--single {
+			border: 1px solid #cacaca;
+			border-radius: 2px;
+		}
+		.select2-container .select2-selection--single {
+			height: 2.4375rem;
+		}
+		.select2-container--default .select2-selection--single .select2-selection__arrow {
+			height: 2.4375rem;
+		}
+	</style>
 	<script src="https://use.fontawesome.com/01acdc4b94.js"></script>
 </head>
 
@@ -171,8 +194,8 @@
 									<label for="gpr_salutation_id" class="medium-text-right middle">Salutation *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<select class="gpr_salutation_id_select" name="gpr_salutation_id" id="gpr_salutation_id">
-										<option value="0">Select</option>
+									<select class="gpr_salutation_id_select" name="gpr_salutation_id" id="gpr_salutation_id" required>
+										<option value="" disabled selected>Select</option>
 										<option value="1">Ms</option>
 										<option value="2">Mr</option>
 										<option value="3">Dr</option>
@@ -219,7 +242,7 @@
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<select class="gpr_pass_country_id_select" name="gpr_pass_country_id" id="gpr_pass_country_id">
-										<option value="0">Select</option>
+										<option label="placeholder"></option>
 										<option value="1">Afghanistan</option>
 										<option value="2">Albania</option>
 										<option value="3">Algeria</option>
@@ -601,8 +624,8 @@
 									<label for="gpr_org_title" class="medium-text-right middle">Organization Name *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<input type="text" placeholder="Full name of organization, no acronyms" class="gpr_org_title_input" name="gpr_org_title" id="gpr_org_title"
-									 aria-describedby="organizationHelpText">
+									<input type="text" placeholder="Full name of organization, no acronyms" class="gpr_org_title_input" name="gpr_org_title"
+									 id="gpr_org_title" aria-describedby="organizationHelpText">
 									<div class="help-text" id="organizationHelpText">Please enter the full name of the organization where you work
 										and avoid using acronyms.<br>If you work for a government, please provide the exact department and not, for
 										example, 'Government of Mexico'.</div>
@@ -630,7 +653,7 @@
 								</div>
 								<div class="small-12 medium-6 end columns">
 									<input type="email" placeholder="Please make sure that the email you have entered is correct" class="js-disable-paste gpr_email_confirm_input"
-									name="gpr_email_confirm" id="gpr_email_confirm">
+									 name="gpr_email_confirm" id="gpr_email_confirm">
 								</div>
 							</div>
 							<div class="row">
@@ -638,7 +661,8 @@
 									<label for="gpr_phone" class="medium-text-right middle">Work Phone Number *</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_phone_input" name="gpr_phone" id="gpr_phone" aria-describedby="workphoneHelpText">
+									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_phone_input" name="gpr_phone" id="gpr_phone"
+									 aria-describedby="workphoneHelpText">
 									<div class="help-text" id="workphoneHelpText">Please include country code</div>
 								</div>
 							</div>
@@ -647,7 +671,8 @@
 									<label for="gpr_mobile" class="medium-text-right middle">Mobile Number</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_mobile_input" name="gpr_mobile" id="gpr_mobile" aria-describedby="mobilephoneHelpText">
+									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_mobile_input" name="gpr_mobile" id="gpr_mobile"
+									 aria-describedby="mobilephoneHelpText">
 									<div class="help-text" id="mobilephoneHelpText">Please include country code</div>
 								</div>
 							</div>
@@ -656,7 +681,8 @@
 									<label for="gpr_fax" class="medium-text-right middle">Fax</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_fax_input" name="gpr_fax" id="gpr_fax" aria-describedby="faxHelpText">
+									<input type="tel" placeholder="e.g. +52 1234 5678" class="gpr_fax_input" name="gpr_fax" id="gpr_fax"
+									 aria-describedby="faxHelpText">
 									<div class="help-text" id="faxHelpText">Please include country code</div>
 								</div>
 							</div>
@@ -945,12 +971,14 @@
 							</div>
 							<div class="row">
 								<div class="small-12 medium-3 columns">
-									<label for="gpr_disability_requirements" class="medium-text-right middle">If you need special assistance during your presence at the conference,
+									<label for="gpr_disability_requirements" class="medium-text-right middle">If you need special assistance
+										during your presence at the conference,
 										please
 										specify:</label>
 								</div>
 								<div class="small-12 medium-6 end columns">
-									<textarea class="gpr_disability_requirements_textarea" rows="10" cols="50" name="gpr_disability_requirements" id="gpr_disability_requirements"></textarea>
+									<textarea class="gpr_disability_requirements_textarea" rows="10" cols="50" name="gpr_disability_requirements"
+									 id="gpr_disability_requirements"></textarea>
 								</div>
 							</div>
 							<div class="row">
@@ -1084,8 +1112,14 @@
 	<script src="assets/shared/foundation/v6.2.3/js/vendor/foundation.min.js"></script>
 	<!-- Top band js -->
 	<script src="//www.preventionweb.net/assets/shared/topband/js/top-band.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	<script>
 		$(document).foundation();
+		$(document).ready(function () {
+			$('#gpr_pass_country_id').select2({
+				placeholder: "Select"
+			});
+		});
 	</script>
 </body>
 
