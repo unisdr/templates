@@ -3065,6 +3065,11 @@ main {
 	margin: .5rem 0;
 }
 
+.twitter-divider.thin {
+	border-width: 1px;
+	margin-top: 0;
+}
+
 .twitter-divider i {
 	position: absolute;
 	top: -6px;
