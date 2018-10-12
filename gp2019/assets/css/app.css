@@ -1336,6 +1336,10 @@ blockquote>span {
 	font-style: italic;
 }
 
+.word-break {
+	word-break: break-all;
+}
+
 .no-border-bottom {
 	border-bottom: none !important;
 }
@@ -2972,6 +2976,60 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 .alert-box.alert ul strong {
 	color: #c32644;
+}
+
+table.tracking {
+	font-weight: 500;
+}
+
+table tbody tr:nth-child(2n) {
+	background-color: #f7f7f7;
+}
+
+table.tracking tr td:first-of-type {
+	background-color: #555;
+	color: #fff;
+	white-space: nowrap;
+	padding-right: 2.5rem;
+	padding-bottom: .5rem;
+}
+
+table.tracking tr td:last-of-type {
+	width: 100%;
+	position: relative;
+	padding-bottom: .5rem;
+}
+
+table.tracking tr td span:last-of-type {
+	margin-left: 3rem;
+}
+
+table.tracking td .fa-stack {
+	margin-right: .5rem;
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+table.tracking td .fa-stack-1x {
+	color: #fff;
+}
+
+table.tracking td .fa-circle.blue {
+	color: #1097E4;
+}
+
+table.tracking td .fa-circle.orange {
+	color: #F87E08;
+}
+
+table.tracking td .fa-circle.green {
+	color: #378925;
+}
+
+table.tracking td .fa-circle.red {
+	color: #F80808;
 }
 
 #page-container {
