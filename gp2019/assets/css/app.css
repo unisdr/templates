@@ -1430,15 +1430,6 @@ ul.links a:hover i {
 	color: #ea6827;
 }
 
-/* Foundation upload button: file name positioned differently in IE, find another solution
-.file-upload{
-	position:relative;
-}
-.file-upload .button{
-	z-index: 10;
-	position: relative;
-}
-*/
 .list-module {
 	margin-bottom: 2.5rem;
 	position: relative;
@@ -3030,6 +3021,67 @@ table.tracking td .fa-circle.green {
 
 table.tracking td .fa-circle.red {
 	color: #F80808;
+}
+
+.help-text.alternative {
+	font-style: normal;
+	color: #555;
+	margin-top: 1rem;
+	overflow: hidden;
+}
+
+.help-text.alternative .float-right {
+	width: 95%;
+}
+
+.photo-placeholder {
+	height: 180px;
+	background-color: #EDEDED;
+	border: 1px solid #D0D0D0;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.photo-placeholder i {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 4rem;
+	color: #AAAAAA;
+}
+
+.passport-photo {
+	display: inline-block;
+	text-align: left;
+}
+
+.passport-photo img {
+	border: 2px solid;
+	border-radius: 5px;
+	margin-top: .5rem;
+	display: block;
+}
+
+.passport-photo.ok img {
+	border-color: #378925;
+}
+
+.passport-photo.ko img {
+	border-color: #FF0000;
+}
+
+.credits {
+	font-size: 0.625rem;
+}
+
+.passport-photo.ok i {
+	margin-top: 4px;
+	color: #378925;
+}
+
+.passport-photo.ko i {
+	margin-top: 4px;
+	color: #FF0000;
 }
 
 #page-container {
