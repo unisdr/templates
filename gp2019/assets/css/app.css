@@ -1275,6 +1275,17 @@ li .media-object-section a {
 	top: -15.7rem;
 }
 
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#home-top-slider .flex-direction-nav {
+		top: auto;
+		bottom: 2rem;
+	}
+}
+
+
+
+
 .flex-direction-nav a {
 	line-height: 1;
 	text-decoration: none;
@@ -2473,6 +2484,15 @@ table.programme .event-header .row:first-child a .fa-stack {
 #home-top-slider .video-caption a:hover .button.clear i,
 #home-top-slider .video-caption a:focus .button.clear i {
 	color: #fff;
+}
+
+/*small*/
+@media screen and (max-width: 39.9375em) {
+	#home-top-slider .video-caption a h2 {
+		margin: .5rem 0 3rem;
+		padding: 0;
+		border: none;
+	}
 }
 
 #home-top-slider .video-caption p {
