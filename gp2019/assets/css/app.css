@@ -345,6 +345,16 @@ select option {
 	font-style: normal;
 }
 
+[type="checkbox"] + label, [type="radio"] + label {
+	max-width: 85%;
+	vertical-align: top;
+	margin-right: 0;
+}
+
+fieldset {
+	margin-bottom: 1.5rem;
+}
+
 .title-bar {
 	background-color: #fff;
 	color: #306095;
