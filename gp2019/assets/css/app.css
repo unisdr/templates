@@ -2259,10 +2259,7 @@ table.programme .event-header {
 }
 
 .event-header .row:nth-child(4) {
-	border-bottom: 2px solid #17639F;
-	text-transform: uppercase;
-	font-weight: 500;
-	padding: 1px 0;
+	border-bottom: 1px solid #c9d5e3;
 }
 
 .event-header .columns {
@@ -2279,6 +2276,7 @@ table.programme .event-header {
 .event-header .row:first-child .columns:first-child,
 .event-header .row:nth-child(3) .columns {
 	padding-left: 0.875rem;
+	padding-right: 0.875rem;
 }
 
 /*large and up*/
@@ -2350,6 +2348,36 @@ table.programme .event-header .row:first-child a .fa-stack {
 
 .event-header .row:nth-child(3) span {
 	color: #067570;
+}
+
+.add-document {
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.add-document .fa-stack {
+    color: #17639F;
+    margin-right: 0.3rem;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-top: -0.1rem;
+}
+
+.add-document .fa-stack-2x {
+	font-size: 1.5em;
+}
+
+.add-document a {
+	text-decoration: none;
+	color: #555;
+	font-weight: 500;
+}
+
+.add-document:hover .fa-stack,
+.add-document:focus .fa-stack,
+.add-document:hover a,
+.add-document:focus a {
+	color: #ea6827;
 }
 
 .photogallery {
