@@ -1,0 +1,138 @@
+// CSS font size reset
+/* base start */
+.show-large {
+  display: none;
+
+  @include devicebreak(medium) {
+    display: block;
+  }
+}
+
+.show-small {
+  display: block;
+
+  @include devicebreak(medium) {
+    display: none;
+  }
+}
+
+/* animation start */
+*[data-viewport="true"] {
+  @extend %left-to-right;
+
+  &.inviewport {
+    @extend %inviewport_left_right;
+  }
+}
+
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.delay-4 {
+  transition-delay: 0.4s;
+}
+
+.delay-5 {
+  transition-delay: 0.5s;
+}
+
+.scale-up {
+  @extend %scale-up;
+
+  &.inviewport {
+    @include transform(scale(1));
+  }
+}
+
+.opacity-only {
+  @extend %opacity-only;
+
+  &.inviewport {
+    @extend %inviewport_opacity_only;
+  }
+}
+
+.expand-to-size {
+  max-width: calc(100% - 1rem);
+
+  @include devicebreak(medium) {
+    max-width: calc(100% - 3rem);
+  }
+}
+
+[dir="rtl"] {
+  *[data-viewport="true"] {
+    @include transform(translateX(100px));
+
+    &.inviewport {
+      @extend %inviewport_left_right;
+    }
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// color map solid
+$colors-solid: (
+  "yellow": $mg-color-yellow,
+  "red": $mg-color-red-900,
+  "green": $mg-color-green,
+  "blue": $mg-color-azure,
+);
+
+@each $name, $color in $colors-solid {
+  .#{$name} {
+    // statscard
+    .stats-card {
+      &:hover {
+        background-color: #{$color};
+      }
+    }
+
+    // progress-bar
+    .progress-bar {
+      background: #{$color};
+    }
+
+    // .blockquote
+    .blockquote {
+      background-color: #{$color};
+    }
+  }
+}
+
+// Show for screen readers only
+.mg-u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// Comma between child elements
+// https://gitlab.com/undrr/web-backlog/-/issues/864
+.mg-u-comma-between {
+  > *::after {
+    content: ", ";
+  }
+  > *:last-child::after {
+    content: "";
+  }
+}
+
+/* base end */

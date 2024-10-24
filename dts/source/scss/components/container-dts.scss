@@ -1,0 +1,19 @@
+.mg-container {
+  padding: 0 $dts-spacing-16;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include devicebreak(medium) {
+    padding: 0 $dts-spacing-24;
+  }
+
+  @include devicebreak(large) {
+    padding: 0 $dts-spacing-32;
+    max-width: $mg-breakpoint-desktop;
+  }
+
+  @include devicebreak(xlarge) {
+    max-width: $mg-breakpoint-desktop-wide;
+  }
+
+}

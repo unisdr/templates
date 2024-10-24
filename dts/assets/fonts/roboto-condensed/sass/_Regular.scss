@@ -1,0 +1,11 @@
+/* BEGIN Regular */
+@font-face {
+  font-family: "Roboto Condensed";
+
+  @include fontdef($font-path, $font-version, "Regular");
+
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+/* END Regular */
