@@ -13,11 +13,91 @@
 <body>
   <div class="dts-page-container">
 
-    include includes/_header.html
+    //
+      include includes/_header.html
 
     <main class="dts-main-container">
       <section>
         <div class="mg-container">
+          <br>
+          <hr>
+          <h3>2 columns form on 768px up, 1 column form on mobile</h3>
+          <div class="mg-grid mg-grid__col-2">
+            <div class="dts-form-field">
+              <label>
+                <span>Date picker field</span>
+                <input type="date">
+              </label>
+            </div>
+            <div class="dts-form-field">
+              <label>
+                <span>Time picker field</span>
+                <input type="time">
+              </label>
+            </div>
+            <div class="dts-form-field">
+              <label>
+                <span>Search field with autocomplete</span>
+                <input type="search" list="browsers" placeholder="search browser name">
+                <datalist id="browsers">
+                  <option value="Internet Explorer">
+                  <option value="Firefox">
+                  <option value="Google Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+              </label>
+            </div>
+            <div class="dts-form-field">
+              <label>
+                <span>Number field (stepper)</span>
+                <input type="number">
+              </label>
+            </div>
+          </div>
+          <br>
+          <hr>
+          <h3>3 columns form on 768px up, 1 column form on mobile</h3>
+          <div class="mg-grid mg-grid__col-3">
+            <div class="dts-form-field">
+              <label>
+                <span>select (single selection - with tooltip)</span>
+                <select>
+                  <option value="volvo" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+              </label>
+            </div>
+            <div class="dts-form-field">
+              <label>
+                <span>select (single selection - grouped options)</span>
+                <select>
+                  <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                  </optgroup>
+                  <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </optgroup>
+                </select>
+              </label>
+            </div>
+            <div class="dts-form-field">
+              <label>
+                <span>select (multiple selection)</span>
+                <select multiple>
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="opel">Opel</option>
+                  <option value="audi">Audi</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <br><hr><br>
           <div class="dts-form-field">
             //
               Add aria-invalid="true" attribute to label tag when the field has ERRORS

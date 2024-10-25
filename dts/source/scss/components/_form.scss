@@ -1,0 +1,40 @@
+.dts-form-field {
+  display: grid;
+  gap: $dts-spacing-8;
+
+  label {
+    display: grid;
+    gap: $dts-spacing-8;
+  }
+
+  // This applies to check/radio only
+  // label {
+  //   display: flex;
+  //   gap: $dts-spacing-8;
+  //   align-items: center;
+  //   cursor: pointer;
+
+  //   &[aria-invalid="true"] input {
+  //     background-color: rgba(255, 77, 79, 0.12);
+  //   }
+  // }
+
+  &:has([disabled]) {
+    color: $dts-coal-500;
+    cursor: not-allowed;
+  }
+
+  &__error-msg {
+    color: $mg-color-red-900;
+  }
+}
+
+select[multiple] {
+  height: 1.5em;
+  vertical-align: top;
+}
+
+select[multiple]:focus,
+select[multiple]:active {
+  height: auto;
+}

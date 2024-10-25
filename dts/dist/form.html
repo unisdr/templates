@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,82 +9,92 @@
 <link rel="stylesheet" href="assets/css/style-dts.css">
 </head>
 <body>
-<div class="dts-page-container"><header>
-  <div class="mg-undrr-header">
-    <div class="mg-undrr-header__decoration">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="mg-undrr-header__toolbar">
-      <div class="mg-container">
-        <div class="mg-undrr-header__toolbar-container">
-          <a href="//www.undrr.org" rel="me" title="UNDRR Homepage">
-            <img src="assets/images/UNDRR-Logo-horizontal.svg" alt="UNDRR logo" height="32" />
-          </a>
-          <form action="" method="post">
-            <select id="edit-lang-dropdown-select" name="" aria-label="Select your language">
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-            </select>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mg-container">
-    <div class="dts-header">
-      <div class='dts-header__logo'>
-        <img src="assets/images/dldt-logo-mark.svg" alt="DLDT logo mark" />
-        <div class='dts-header__logo-text'>Disaster Losses<br />and Damage Tracking</div>
-      </div>
-      <div class="dts-header__main-menu">
-        <nav class="mg-mega-wrapper dts-mega-wrapper" aria-label="Main Navigation">
-          <div class="mg-mega-topbar">
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/information_outline.svg#information"></use>
-              </svg>
-              Data
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/eye-show-password.svg#eye-show"></use>
-              </svg>
-              Analysis
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/help-outline.svg#help-outline"></use>
-              </svg>
-              About
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/settings.svg#settings"></use>
-              </svg>
-              Settings
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/user-profile.svg#user"></use>
-              </svg>
-              Log in
-            </button>
-            <button class="mg-mega-topbar__item" aria-label="{title}">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/user-profile.svg#user"></use>
-              </svg>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header><main class="dts-main-container">
+<div class="dts-page-container">
+<!--
+include includes/_header.html
+
+--><main class="dts-main-container">
 <section>
 <div class="mg-container">
+<br>
+<hr>
+<h3>2 columns form on 768px up, 1 column form on mobile</h3>
+<div class="mg-grid mg-grid__col-2">
+<div class="dts-form-field">
+<label>
+<span>Date picker field</span>
+<input type="date">
+</label>
+</div>
+<div class="dts-form-field">
+<label>
+<span>Time picker field</span>
+<input type="time">
+</label>
+</div>
+<div class="dts-form-field">
+<label>
+<span>Search field with autocomplete</span>
+<input type="search" list="browsers" placeholder="search browser name">
+<datalist id="browsers">
+<option value="Internet Explorer">
+<option value="Firefox">
+<option value="Google Chrome">
+<option value="Opera">
+<option value="Safari">
+</datalist>
+</label>
+</div>
+<div class="dts-form-field">
+<label>
+<span>Number field (stepper)</span>
+<input type="number">
+</label>
+</div>
+</div>
+<br>
+<hr>
+<h3>3 columns form on 768px up, 1 column form on mobile</h3>
+<div class="mg-grid mg-grid__col-3">
+<div class="dts-form-field">
+<label>
+<span>select (single selection - with tooltip)</span>
+<select>
+<option value="volvo" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Volvo</option>
+<option value="saab">Saab</option>
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+</select>
+</label>
+</div>
+<div class="dts-form-field">
+<label>
+<span>select (single selection - grouped options)</span>
+<select>
+<optgroup label="Swedish Cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+</optgroup>
+<optgroup label="German Cars">
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+</optgroup>
+</select>
+</label>
+</div>
+<div class="dts-form-field">
+<label>
+<span>select (multiple selection)</span>
+<select multiple>
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="opel">Opel</option>
+<option value="audi">Audi</option>
+</select>
+</label>
+</div>
+</div>
+<br><hr><br>
 <div class="dts-form-field">
 <!--Add aria-invalid="true" attribute to label tag when the field has ERRORS
 --><label aria-invalid="true">
