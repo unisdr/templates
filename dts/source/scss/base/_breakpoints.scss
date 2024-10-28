@@ -1,8 +1,8 @@
 @mixin devicebreak($point) {
   @if $point ==xsmall {
 
-    /* small design - up to 479px */
-    @media (width < $mg-breakpoint-mobile) {
+    /* small design - up to 767px */
+    @media (width < $mg-breakpoint-tablet) {
       @content;
     }
   }

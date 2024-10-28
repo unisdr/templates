@@ -18,24 +18,53 @@ include includes/_header.html
 <div class="mg-container">
 <br>
 <hr>
-<h3>2 columns form on 768px up, 1 column form on mobile</h3>
-<div class="mg-grid mg-grid__col-2">
-<div class="dts-form-field">
+<h3>2 columns form on 768px up, 1 column form on 767px down</h3>
+<form class="dts-form">
+<!--Form fields line - 2 columns
+--><div class="mg-grid mg-grid__col-2">
+<div class="dts-form-component">
 <label>
 <span>Date picker field</span>
 <input type="date">
 </label>
 </div>
-<div class="dts-form-field">
+<div class="dts-form-component">
 <label>
 <span>Time picker field</span>
 <input type="time">
 </label>
 </div>
-<div class="dts-form-field">
+<div class="dts-form-component">
 <label>
-<span>Search field with autocomplete</span>
-<input type="search" list="browsers" placeholder="search browser name">
+<span>File upload field</span>
+<input type="file">
+</label>
+</div>
+</div>
+</form>
+</div>
+</section>
+<section>
+<div class="mg-container">
+<br>
+<hr>
+<h3>3 columns form on 768px up, 1 column form on 767px down</h3>
+<form class="dts-form">
+<!--Form fields line - 3 columns
+--><div class="mg-grid mg-grid__col-3">
+<!--Form field
+--><div class="dts-form-component">
+<label>
+<span>Text field (single line)</span>
+<input type="text" placeholder="enter text">
+</label>
+</div>
+<div class="dts-form-component">
+<!--Add aria-invalid="true" attribute to label tag when the field has ERRORS
+--><label aria-invalid="true">
+<span>Text field - search with autocomplete</span>
+<!--Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
+--><input type="search" list="browsers" placeholder="search browser name" aria-describedBy="validationMsgId">
 <datalist id="browsers">
 <option value="Internet Explorer">
 <option value="Firefox">
@@ -44,19 +73,37 @@ include includes/_header.html
 <option value="Safari">
 </datalist>
 </label>
+<span class="dts-form-component__validation-msg" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</span>
 </div>
-<div class="dts-form-field">
+<div class="dts-form-component">
 <label>
 <span>Number field (stepper)</span>
-<input type="number">
+<input type="number" step="10" min="10" max="100" placeholder="enter number">
 </label>
 </div>
 </div>
+<!--Form fields line - 3 columns
+--><div class="mg-grid mg-grid__col-3">
+<!--Form field - span 2 columns
+--><div class="dts-form-component mg-grid__col--span-2">
+<label>
+<span>Text area (rows number, text maxlength)</span>
+<textarea rows="5" maxlength="500" placeholder="enter text"></textarea>
+</label>
+</div>
+</div>
+</form>
+</div>
+</section>
+<section>
+<div class="mg-container">
 <br>
 <hr>
-<h3>3 columns form on 768px up, 1 column form on mobile</h3>
-<div class="mg-grid mg-grid__col-3">
-<div class="dts-form-field">
+<h3>4 columns form on 1164px up, 2 columns form on 768px up, 1 column form on 767px down</h3>
+<form class="dts-form">
+<!--Form fields line - 4 columns
+--><div class="mg-grid mg-grid__col-4">
+<div class="dts-form-component">
 <label>
 <span>select (single selection - with tooltip)</span>
 <select>
@@ -64,10 +111,11 @@ include includes/_header.html
 <option value="saab">Saab</option>
 <option value="mercedes">Mercedes</option>
 <option value="audi">Audi</option>
+<option value="volkswagen">Volkswagen</option>
 </select>
 </label>
 </div>
-<div class="dts-form-field">
+<div class="dts-form-component">
 <label>
 <span>select (single selection - grouped options)</span>
 <select>
@@ -78,11 +126,12 @@ include includes/_header.html
 <optgroup label="German Cars">
 <option value="mercedes">Mercedes</option>
 <option value="audi">Audi</option>
+<option value="volkswagen">Volkswagen</option>
 </optgroup>
 </select>
 </label>
 </div>
-<div class="dts-form-field">
+<div class="dts-form-component">
 <label>
 <span>select (multiple selection)</span>
 <select multiple>
@@ -90,27 +139,90 @@ include includes/_header.html
 <option value="saab">Saab</option>
 <option value="opel">Opel</option>
 <option value="audi">Audi</option>
+<option value="volkswagen">Volkswagen</option>
 </select>
 </label>
 </div>
+<div class="dts-form-component">
+<label aria-invalid="true">
+<!--In checkboxes this span tag is empty, but it must exist in order to keep the right alignment with other fields
+--><span></span>
+<!--Add disabled attribute to the input tag to make it DISABLED
+--><div class="dts-form-component__field--horizontal">
+<input type="checkbox" name="" aria-describedBy="validationMsgId" />
+<span>Checkbox label lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 </div>
-<br><hr><br>
-<div class="dts-form-field">
-<!--Add aria-invalid="true" attribute to label tag when the field has ERRORS
---><label aria-invalid="true">
-<!--
-Add disabled attribute to the input tag to make it DISABLED
-Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
---><input type="checkbox" name="" aria-describedBy="inputErrorId" />
-<span>Checkbox label</span>
 </label>
-<span class="dts-form-field__error-msg" id="inputErrorId" aria-live="assertive">
-<Error>message goes here</Error></span>
+<span class="dts-form-component__validation-msg" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</span>
 </div>
+</div>
+</form>
 </div>
 </section>
 <section>
-<div class="mg-container">page component 2 here</div>
+<div class="mg-container">
+<br>
+<hr>
+<h3>6 variable width columns form on 1164px up, 3 variable width columns form on 768px up, 1 column form on 767px down</h3>
+<form class="dts-form">
+<div class="mg-grid mg-grid__col-auto">
+<div class="dts-form-component">
+<label>
+<span>Asset</span>
+<select>
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+<option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
+</select>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Damage</span>
+<select>
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+<option value="volkswagen">Volkswagen</option>
+</select>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Count</span>
+<input type="number" step="10" min="10" max="100" placeholder="enter number">
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Unit type</span>
+<select>
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+<option value="volkswagen">Volkswagen</option>
+</select>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Unit cost</span>
+<input type="text" placeholder="enter text">
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Total cost</span>
+<input type="text" placeholder="enter text">
+</label>
+</div>
+</div>
+</form>
+</div>
 </section>
 </main><footer>
   <div class="mg-undrr-footer">

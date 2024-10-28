@@ -1,40 +1,105 @@
-.dts-form-field {
+.dts-form-component {
   display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
   gap: $dts-spacing-8;
+  margin-bottom: $dts-spacing-16;
+
+  @include devicebreak(small) {
+    margin-bottom: $dts-spacing-12;
+  }
 
   label {
     display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
     gap: $dts-spacing-8;
+    align-items: start;
+
+    &:has(input[type="checkbox"]) {
+      cursor: pointer;
+    }
+
+    &[aria-invalid="true"] input {
+      background-color: rgba(255, 77, 79, 0.12);
+      // border: 1px solid $mg-color-red-900;
+    }
+
+    >span {
+      height: 100%;
+      display: flex;
+      align-items: end;
+    }
   }
 
-  // This applies to check/radio only
-  // label {
-  //   display: flex;
-  //   gap: $dts-spacing-8;
-  //   align-items: center;
-  //   cursor: pointer;
-
-  //   &[aria-invalid="true"] input {
-  //     background-color: rgba(255, 77, 79, 0.12);
-  //   }
-  // }
+  &__field--horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: $dts-spacing-8;
+  }
 
   &:has([disabled]) {
     color: $dts-coal-500;
     cursor: not-allowed;
   }
 
-  &__error-msg {
+  &__validation-msg {
+    @extend .dts-body-text-small;
     color: $mg-color-red-900;
+
+    &[aria-live="assertive"] {
+      @include devicebreak(small) {
+        margin-bottom: $dts-spacing-12;
+      }
+    }
   }
-}
 
-select[multiple] {
-  height: 1.5em;
-  vertical-align: top;
-}
+  input,
+  textarea,
+  select {
+    border: 1px solid $dts-coal-300;
+    border-radius: 6px;
+    padding: $dts-spacing-4 $dts-spacing-8;
+    @extend .dts-body-text-small;
+  }
 
-select[multiple]:focus,
-select[multiple]:active {
-  height: auto;
+  select {
+    appearance: none;
+    background: url('../icons/chevron-down.svg') no-repeat;
+    background-size: 10px;
+    background-position: top 48% right $dts-spacing-8;
+    padding: 5px $dts-spacing-8 3px;
+    width: 100%;
+  }
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+    width: $dts-spacing-24;
+    height: $dts-spacing-24;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+
+    &:hover:not([disabled]),
+    &:focus-visible {
+      box-shadow: 0px 1px 8px 0px rgba(0, 79, 145, 0.41);
+      outline: none;
+    }
+
+    &:checked {
+      background: $dts-undrr-blue-brand url('../icons/tick-white.svg') 3px 3px no-repeat;
+    }
+
+    &[disabled] {
+      border-color: $dts-cerulean-300;
+      cursor: not-allowed;
+
+      &:checked {
+        background-color: $dts-cerulean-300;
+      }
+    }
+  }
 }
