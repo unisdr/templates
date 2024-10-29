@@ -1044,13 +1044,39 @@ mark {
   -ms-grid-row-span: 3;
   grid-row: span 3;
   gap: 0.8rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
   /* medium design - 768px up */
 }
 @media (width >= 768px) {
   .dts-form-component {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
   }
+}
+.dts-form-component__field--horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.8rem;
+}
+.dts-form-component__hint {
+  margin-top: -0.4rem;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-form-component__hint {
+    margin-bottom: 0.8rem;
+  }
+}
+.dts-form-component__hint--error {
+  color: #c10920;
+}
+.dts-form-component abbr {
+  text-decoration: none;
+  margin-right: 0.4rem;
 }
 .dts-form-component label {
   display: -ms-grid;
@@ -1064,11 +1090,11 @@ mark {
       -ms-flex-align: start;
           align-items: start;
 }
-.dts-form-component label:has(input[type=checkbox]) {
+.dts-form-component label:has(input[type=checkbox]), .dts-form-component label:has(input[type=radio]) {
   cursor: pointer;
 }
-.dts-form-component label[aria-invalid=true] input {
-  background-color: rgba(255, 77, 79, 0.12);
+.dts-form-component label[aria-invalid=true] input, .dts-form-component label[aria-invalid=true] textarea, .dts-form-component label[aria-invalid=true] select {
+  border: 1px solid #c10920;
 }
 .dts-form-component label > span {
   height: 100%;
@@ -1079,37 +1105,76 @@ mark {
       -ms-flex-align: end;
           align-items: end;
 }
-.dts-form-component__field--horizontal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 0.8rem;
-}
-.dts-form-component:has([disabled]) {
+.dts-form-component label:has([disabled]) {
   color: #4A4A4A;
   cursor: not-allowed;
-}
-.dts-form-component__validation-msg {
-  color: #c10920;
-}
-.dts-form-component__validation-msg[aria-live=assertive] {
-  /* medium design - 768px up */
-}
-@media (width >= 768px) {
-  .dts-form-component__validation-msg[aria-live=assertive] {
-    margin-bottom: 1.2rem;
-  }
 }
 .dts-form-component input,
 .dts-form-component textarea,
 .dts-form-component select {
+  background-color: #fff;
   border: 1px solid #CCCCCC;
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
+}
+.dts-form-component input:hover:not(:disabled):not([readonly]),
+.dts-form-component textarea:hover:not(:disabled):not([readonly]),
+.dts-form-component select:hover:not(:disabled):not([readonly]) {
+  border-color: #004f91;
+  outline: none;
+}
+.dts-form-component input:focus-visible,
+.dts-form-component textarea:focus-visible,
+.dts-form-component select:focus-visible {
+  outline: none;
+}
+.dts-form-component input:focus-visible:not(:-moz-read-only), .dts-form-component textarea:focus-visible:not(:-moz-read-only), .dts-form-component select:focus-visible:not(:-moz-read-only) {
+  border-color: #004f91;
+}
+.dts-form-component input:focus-visible:not(:read-only),
+.dts-form-component textarea:focus-visible:not(:read-only),
+.dts-form-component select:focus-visible:not(:read-only) {
+  border-color: #004f91;
+}
+.dts-form-component input:-moz-read-only:not([type=file]):not([type=checkbox]):not([type=radio]):not(select), .dts-form-component textarea:-moz-read-only:not([type=file]):not([type=checkbox]):not([type=radio]):not(select), .dts-form-component select:-moz-read-only:not([type=file]):not([type=checkbox]):not([type=radio]):not(select) {
+  cursor: not-allowed;
+}
+.dts-form-component input:disabled, .dts-form-component input:read-only:not([type=file]):not([type=checkbox]):not([type=radio]):not(select),
+.dts-form-component textarea:disabled,
+.dts-form-component textarea:read-only:not([type=file]):not([type=checkbox]):not([type=radio]):not(select),
+.dts-form-component select:disabled,
+.dts-form-component select:read-only:not([type=file]):not([type=checkbox]):not([type=radio]):not(select) {
+  cursor: not-allowed;
+}
+.dts-form-component input:disabled,
+.dts-form-component textarea:disabled,
+.dts-form-component select:disabled {
+  background-color: #F2F2F2;
+}
+.dts-form-component input[type=file],
+.dts-form-component textarea[type=file],
+.dts-form-component select[type=file] {
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.dts-form-component input[type=file]::-webkit-file-upload-button,
+.dts-form-component textarea[type=file]::-webkit-file-upload-button,
+.dts-form-component select[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+}
+.dts-form-component input[type=file]:hover:not(:disabled)::-webkit-file-upload-button, .dts-form-component input[type=file]:focus-visible::-webkit-file-upload-button,
+.dts-form-component textarea[type=file]:hover:not(:disabled)::-webkit-file-upload-button,
+.dts-form-component textarea[type=file]:focus-visible::-webkit-file-upload-button,
+.dts-form-component select[type=file]:hover:not(:disabled)::-webkit-file-upload-button,
+.dts-form-component select[type=file]:focus-visible::-webkit-file-upload-button {
+  border-color: #004f91;
+  outline: none;
 }
 .dts-form-component select {
   -webkit-appearance: none;
@@ -1121,11 +1186,21 @@ mark {
   padding: 5px 0.8rem 3px;
   width: 100%;
 }
+.dts-form-component fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.dts-form-component fieldset[aria-invalid=true] input[aria-describedBy]:not(:disabled) {
+  border: 1px solid #c10920;
+}
+.dts-form-component fieldset .dts-form-component__hint {
+  margin-top: 0.8rem;
+}
 .dts-form-component input[type=checkbox] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-  border-radius: 0;
   cursor: pointer;
   width: 2.4rem;
   height: 2.4rem;
@@ -1134,7 +1209,7 @@ mark {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.dts-form-component input[type=checkbox]:hover:not([disabled]), .dts-form-component input[type=checkbox]:focus-visible {
+.dts-form-component input[type=checkbox]:hover:not(:disabled), .dts-form-component input[type=checkbox]:focus-visible {
   -webkit-box-shadow: 0px 1px 8px 0px rgba(0, 79, 145, 0.41);
           box-shadow: 0px 1px 8px 0px rgba(0, 79, 145, 0.41);
   outline: none;
@@ -1142,21 +1217,62 @@ mark {
 .dts-form-component input[type=checkbox]:checked {
   background: #004f91 url("../icons/tick-white.svg") 3px 3px no-repeat;
 }
-.dts-form-component input[type=checkbox][disabled] {
-  border-color: #6093BD;
+.dts-form-component input[type=checkbox]:disabled {
   cursor: not-allowed;
 }
-.dts-form-component input[type=checkbox][disabled]:checked {
-  background-color: #6093BD;
+.dts-form-component input[type=checkbox]:disabled + span {
+  cursor: not-allowed;
+}
+.dts-form-component input[type=radio] {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: #fff;
+  margin: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+.dts-form-component input[type=radio]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-box-shadow: inset 1em 1em #004f91;
+          box-shadow: inset 1em 1em #004f91;
+}
+.dts-form-component input[type=radio]:hover:not(:disabled), .dts-form-component input[type=radio]:focus-visible {
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0, 79, 145, 0.41);
+          box-shadow: 0px 1px 8px 0px rgba(0, 79, 145, 0.41);
+  outline: none;
+}
+.dts-form-component input[type=radio]:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.dts-form-component input[type=radio]:disabled {
+  background-color: #F2F2F2;
+  cursor: not-allowed;
+}
+.dts-form-component input[type=radio]:disabled + span {
+  cursor: not-allowed;
 }
 
 /* Our custom css grid based on : https://stable.visual-framework.dev/components/vf-grid/ */
 .mg-grid {
   display: -ms-grid;
   display: grid;
-  -webkit-column-gap: 2.4rem;
-     -moz-column-gap: 2.4rem;
-          column-gap: 2.4rem;
+  -webkit-column-gap: 1.6rem;
+     -moz-column-gap: 1.6rem;
+          column-gap: 1.6rem;
   /* medium design - 768px up */
 }
 @media (width >= 768px) {
@@ -2101,18 +2217,22 @@ mark {
   font-weight: 700;
 }
 
-.dts-body-text-small, .dts-form-component__validation-msg, .dts-form-component input,
+.dts-body-text-small, .dts-form-component__hint, .dts-form-component input,
 .dts-form-component textarea,
-.dts-form-component select {
+.dts-form-component select, .dts-form-component input[type=file]::-webkit-file-upload-button,
+.dts-form-component textarea[type=file]::-webkit-file-upload-button,
+.dts-form-component select[type=file]::-webkit-file-upload-button {
   font-size: 1.4rem;
   line-height: 1.43;
   font-weight: 400;
   /* large design - 1164px up */
 }
 @media (width >= 1164px) {
-  .dts-body-text-small, .dts-form-component__validation-msg, .dts-form-component input,
+  .dts-body-text-small, .dts-form-component__hint, .dts-form-component input,
   .dts-form-component textarea,
-  .dts-form-component select {
+  .dts-form-component select, .dts-form-component input[type=file]::-webkit-file-upload-button,
+  .dts-form-component textarea[type=file]::-webkit-file-upload-button,
+  .dts-form-component select[type=file]::-webkit-file-upload-button {
     line-height: 1.57;
   }
 }
@@ -2156,11 +2276,15 @@ mark {
   font-size: 1.8rem;
   line-height: 1.33;
 }
-[dir=rtl] .dts-body-text-small, [dir=rtl] .dts-form-component__validation-msg, [dir=rtl] .dts-form-component input, .dts-form-component [dir=rtl] input,
+[dir=rtl] .dts-body-text-small, [dir=rtl] .dts-form-component__hint, [dir=rtl] .dts-form-component input, .dts-form-component [dir=rtl] input,
 [dir=rtl] .dts-form-component textarea,
 .dts-form-component [dir=rtl] textarea,
 [dir=rtl] .dts-form-component select,
-.dts-form-component [dir=rtl] select {
+.dts-form-component [dir=rtl] select, [dir=rtl] .dts-form-component input[type=file]::-webkit-file-upload-button, .dts-form-component [dir=rtl] input[type=file]::-webkit-file-upload-button,
+[dir=rtl] .dts-form-component textarea[type=file]::-webkit-file-upload-button,
+.dts-form-component [dir=rtl] textarea[type=file]::-webkit-file-upload-button,
+[dir=rtl] .dts-form-component select[type=file]::-webkit-file-upload-button,
+.dts-form-component [dir=rtl] select[type=file]::-webkit-file-upload-button {
   font-size: 1.6rem;
   line-height: 1.375;
 }

@@ -3,10 +3,34 @@
   grid-template-rows: subgrid;
   grid-row: span 3;
   gap: $dts-spacing-8;
-  margin-bottom: $dts-spacing-16;
+  margin-bottom: $dts-spacing-20;
 
   @include devicebreak(small) {
-    margin-bottom: $dts-spacing-12;
+    margin-bottom: $dts-spacing-16;
+  }
+
+  &__field--horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: $dts-spacing-8;
+  }
+
+  &__hint {
+    @extend .dts-body-text-small;
+    margin-top: -$dts-spacing-4;
+
+    @include devicebreak(small) {
+      margin-bottom: $dts-spacing-8;
+    }
+
+    &--error {
+      color: $mg-color-red-900;
+    }
+  }
+
+  abbr {
+    text-decoration: none;
+    margin-right: $dts-spacing-4;
   }
 
   label {
@@ -16,13 +40,16 @@
     gap: $dts-spacing-8;
     align-items: start;
 
-    &:has(input[type="checkbox"]) {
+    &:has(input[type="checkbox"]),
+    &:has(input[type="radio"]) {
       cursor: pointer;
     }
 
-    &[aria-invalid="true"] input {
-      background-color: rgba(255, 77, 79, 0.12);
-      // border: 1px solid $mg-color-red-900;
+    &[aria-invalid="true"] input,
+    &[aria-invalid="true"] textarea,
+    &[aria-invalid="true"] select {
+      // background-color: rgba(255, 77, 79, 0.12);
+      border: 1px solid $mg-color-red-900;
     }
 
     >span {
@@ -30,37 +57,67 @@
       display: flex;
       align-items: end;
     }
-  }
 
-  &__field--horizontal {
-    display: flex;
-    flex-direction: row;
-    gap: $dts-spacing-8;
-  }
-
-  &:has([disabled]) {
-    color: $dts-coal-500;
-    cursor: not-allowed;
-  }
-
-  &__validation-msg {
-    @extend .dts-body-text-small;
-    color: $mg-color-red-900;
-
-    &[aria-live="assertive"] {
-      @include devicebreak(small) {
-        margin-bottom: $dts-spacing-12;
-      }
+    &:has([disabled]) {
+      color: $dts-coal-500;
+      cursor: not-allowed;
     }
   }
 
   input,
   textarea,
   select {
+    background-color: $mg-color-white;
     border: 1px solid $dts-coal-300;
     border-radius: 6px;
     padding: $dts-spacing-4 $dts-spacing-8;
     @extend .dts-body-text-small;
+
+    &:hover:not(:disabled):not([readonly]) {
+      border-color: $dts-undrr-blue-brand;
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+
+      &:not(:read-only) {
+        border-color: $dts-undrr-blue-brand;
+      }
+    }
+
+    &:disabled,
+    &:read-only:not([type="file"]):not([type="checkbox"]):not([type="radio"]):not(select) {
+      cursor: not-allowed;
+    }
+
+    &:disabled {
+      background-color: $dts-coal-100;
+    }
+
+    &[type="file"] {
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+
+      &::-webkit-file-upload-button {
+        cursor: pointer;
+        background-color: $mg-color-white;
+        border: 1px solid $dts-coal-300;
+        border-radius: 6px;
+        padding: $dts-spacing-4 $dts-spacing-8;
+        @extend .dts-body-text-small;
+      }
+
+      &:hover:not(:disabled),
+      &:focus-visible {
+        &::-webkit-file-upload-button {
+          border-color: $dts-undrr-blue-brand;
+          outline: none;
+        }
+      }
+    }
   }
 
   select {
@@ -72,10 +129,23 @@
     width: 100%;
   }
 
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    &[aria-invalid="true"] input[aria-describedBy]:not(:disabled) {
+      border: 1px solid $mg-color-red-900;
+    }
+
+    .dts-form-component__hint {
+      margin-top: $dts-spacing-8;
+    }
+  }
+
   input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
-    border-radius: 0;
     cursor: pointer;
     width: $dts-spacing-24;
     height: $dts-spacing-24;
@@ -83,7 +153,7 @@
     padding: 0;
     flex-shrink: 0;
 
-    &:hover:not([disabled]),
+    &:hover:not(:disabled),
     &:focus-visible {
       box-shadow: 0px 1px 8px 0px rgba(0, 79, 145, 0.41);
       outline: none;
@@ -93,12 +163,53 @@
       background: $dts-undrr-blue-brand url('../icons/tick-white.svg') 3px 3px no-repeat;
     }
 
-    &[disabled] {
-      border-color: $dts-cerulean-300;
+    &:disabled {
       cursor: not-allowed;
 
-      &:checked {
-        background-color: $dts-cerulean-300;
+      +span {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    flex-shrink: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $mg-color-white;
+    margin: 0;
+    width: $dts-spacing-24;
+    height: $dts-spacing-24;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      transform: scale(0);
+      box-shadow: inset 1em 1em $dts-undrr-blue-brand;
+    }
+
+    &:hover:not(:disabled),
+    &:focus-visible {
+      box-shadow: 0px 1px 8px 0px rgba(0, 79, 145, 0.41);
+      outline: none;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+
+    &:disabled {
+      background-color: $dts-coal-100;
+      cursor: not-allowed;
+
+      +span {
+        cursor: not-allowed;
       }
     }
   }

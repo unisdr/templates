@@ -2,7 +2,7 @@
 
 .mg-grid {
   display: grid;
-  column-gap: $dts-spacing-24;
+  column-gap: $dts-spacing-16;
 
   @include devicebreak(small) {
     grid-auto-flow: column;
