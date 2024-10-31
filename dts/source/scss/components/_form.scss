@@ -1,3 +1,15 @@
+.dts-form {
+  &__actions {
+    display: grid;
+    gap: $dts-spacing-16;
+
+    @include devicebreak(small) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
 .dts-form-component {
   display: grid;
   grid-template-rows: subgrid;
@@ -13,6 +25,17 @@
     display: flex;
     flex-direction: row;
     gap: $dts-spacing-8;
+  }
+
+  &__pwd {
+    position: relative;
+
+    &-toggle {
+      position: absolute;
+      bottom: $dts-spacing-2;
+      right: 6px;
+      padding: 0
+    }
   }
 
   &__hint {

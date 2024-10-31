@@ -64,9 +64,13 @@
                   </div>
                 </label>
                 <div class="dts-form-component__hint">
-                  <span class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</span>
+                  <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
                 </div>
               </div>
+            </div>
+            <div class="dts-form__actions">
+              <button type="button" class="mg-button mg-button-outline">Discard</button>
+              <button type="submit" class="mg-button mg-button-primary">Save</button>
             </div>
           </form>
         </div>
@@ -97,8 +101,8 @@
                 //
                   Add error message and/or description text, error message BEFORE description text
                 <div class="dts-form-component__hint">
-                  <span class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</span>
-                  <span id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</span>
+                  <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
+                  <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
                 </div>
               </div>
               <div class="dts-form-component">
@@ -110,17 +114,22 @@
                 </label>
               </div>
               <div class="dts-form-component">
-                <label>
-                  <span>Text field - password (read-only)</span>
+                <label class="dts-form-component__pwd">
+                  <span>Text field - password</span>
                   //
-                    Add readonly attribute to the input tag to make it READ-ONLY
                     Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
-                  <input type="password" placeholder="enter password" value="ssgdfgsf" readonly aria-describedBy="descriptionTextId">
+                    id attribute is needed for visibility toggling Js function
+                  <input type="password" id="passwordField" placeholder="enter password" aria-describedBy="descriptionTextId">
+                  <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility" onclick="togglePwd()">
+                    //
+                      id attribute is needed for visibility toggling Js function
+                    <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+                  </button>
                 </label>
                 //
                   Add error message and/or description text
                 <div class="dts-form-component__hint">
-                  <span id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</span>
+                  <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
                 </div>
               </div>
             </div>
@@ -130,7 +139,7 @@
               <div class="dts-form-component">
                 <label>
                   <span>Text field - search with autocomplete</span>
-                  <input type="search" list="browsers" placeholder="search browser name">
+                  <input type="search" list="browsers" placeholder="search browser name" value="Firefox">
                   <datalist id="browsers">
                     <option value="Internet Explorer">
                     <option value="Firefox">
@@ -154,8 +163,10 @@
                 Form field - span 2 columns
               <div class="dts-form-component mg-grid__col--span-2">
                 <label>
-                  <span>Text area field (rows number, text maxlength)</span>
-                  <textarea rows="5" maxlength="500" placeholder="enter text"></textarea>
+                  <span>Text area field (read-only)</span>
+                  //
+                    Add readonly attribute to the input tag to make it READ-ONLY
+                  <textarea rows="5" maxlength="500" placeholder="enter text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
                 </label>
               </div>
             </div>
@@ -211,8 +222,8 @@
                     </div>
                   </div>
                   <div class="dts-form-component__hint">
-                    <span class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</span>
-                    <span id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</span>
+                    <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
+                    <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
                   </div>
                 </fieldset>
               </div>
@@ -407,6 +418,9 @@
     include includes/_footer.html
 
   </div>
-</body>
+
+  include includes/_scripts.html
+
+  </body>
 
 </html>

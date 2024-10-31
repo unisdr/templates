@@ -1,0 +1,14 @@
+<script>
+  function togglePwd() {
+    var pwdField = document.getElementById("passwordField");
+    var pwdToggle = document.getElementById("passwordToggleImg");
+
+    if (pwdField.type === "password") {
+      pwdField.type="text";
+      pwdToggle.src="assets/icons/eye-hide-password.svg";
+    } else {
+      pwdField.type="password";
+      pwdToggle.src="assets/icons/eye-show-password.svg";
+    }
+  }
+</script>

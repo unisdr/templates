@@ -984,6 +984,23 @@ nav ul {
   text-decoration: underline;
 }
 
+.dts-form__actions {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.6rem;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-form__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .dts-form-component {
   display: -ms-grid;
   display: grid;
@@ -1009,6 +1026,15 @@ nav ul {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.8rem;
+}
+.dts-form-component__pwd {
+  position: relative;
+}
+.dts-form-component__pwd-toggle {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 6px;
+  padding: 0;
 }
 .dts-form-component__hint {
   margin-top: -0.4rem;
