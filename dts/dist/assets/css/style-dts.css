@@ -1214,6 +1214,10 @@ nav ul {
   cursor: not-allowed;
 }
 
+[dir=rtl] select {
+  background-position: top 48% left 0.8rem;
+}
+
 /* Our custom css grid based on : https://stable.visual-framework.dev/components/vf-grid/ */
 .mg-grid {
   display: -ms-grid;

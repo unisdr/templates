@@ -214,3 +214,9 @@
     }
   }
 }
+
+[dir="rtl"] {
+  select {
+    background-position: top 48% left $dts-spacing-8;
+  }
+}
