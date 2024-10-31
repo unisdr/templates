@@ -658,6 +658,16 @@ nav ul {
           flex: 1;
 }
 
+::-ms-backdrop {
+  background-image: linear-gradient(45deg, black);
+  opacity: 0.75;
+}
+
+::backdrop {
+  background-image: linear-gradient(45deg, black);
+  opacity: 0.75;
+}
+
 .mg-button {
   background: transparent;
   display: -webkit-box;
@@ -804,6 +814,19 @@ nav ul {
   .mg-container {
     max-width: 1440px;
   }
+}
+
+.dts-dialog {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.dts-dialog--modal {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  max-height: none;
+  background: gray;
 }
 
 .mg-undrr-footer {

@@ -529,6 +529,7 @@ id attribute is needed for visibility toggling Js function
   <!--  -->
 
 </footer></div><script>
+  // Password visibility toggling
   function togglePwd() {
     var pwdField = document.getElementById("passwordField");
     var pwdToggle = document.getElementById("passwordToggleImg");
@@ -541,5 +542,19 @@ id attribute is needed for visibility toggling Js function
       pwdToggle.src="assets/icons/eye-show-password.svg";
     }
   }
+
+  // Modal dialog opening/closing
+  const dialog = document.querySelector("dialog");
+  const dialogShowButton = document.querySelector("dialog + button");
+  const dialogCloseButton = document.querySelector("dialog button");
+
+  dialogShowButton.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  dialogCloseButton.addEventListener("click", () => {
+    dialog.close();
+  });
+
 </script></body>
 </html>
