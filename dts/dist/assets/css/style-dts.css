@@ -586,8 +586,8 @@ summary {
 
 .mg-u-sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 1px !important;
+  height: 1px !important;
   padding: 0;
   margin: -1px;
   overflow: hidden;
@@ -612,6 +612,10 @@ body {
   padding: 0 !important;
   font-family: "Roboto", "Noto Sans SC", "Noto Sans Arabic", sans-serif;
   color: #181823;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
 }
 
 a {
@@ -820,13 +824,88 @@ nav ul {
   margin: 0;
   padding: 0;
   border: none;
-}
-.dts-dialog--modal {
   width: 100vw;
   max-width: none;
   height: 100vh;
   max-height: none;
-  background: gray;
+  background-color: #fff;
+}
+.dts-dialog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: 3.2rem 1.6rem;
+  overflow: auto;
+}
+.dts-dialog__logo {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.dts-dialog__form {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-dialog__form {
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+  }
+}
+.dts-dialog__form-intro {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+.dts-dialog__form-intro [class*=heading] {
+  margin-bottom: 0.8rem;
+}
+.dts-dialog__form-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 2rem;
 }
 
 .mg-undrr-footer {
@@ -1053,6 +1132,9 @@ nav ul {
 .dts-form-component__pwd {
   position: relative;
 }
+.dts-form-component__pwd input {
+  width: 100%;
+}
 .dts-form-component__pwd-toggle {
   position: absolute;
   bottom: 0.2rem;
@@ -1070,6 +1152,10 @@ nav ul {
 }
 .dts-form-component__hint--error {
   color: #c10920;
+}
+.dts-form-component__hint ul {
+  margin: 0;
+  padding-left: 2.4rem;
 }
 .dts-form-component abbr {
   text-decoration: none;

@@ -114,17 +114,16 @@
                 </label>
               </div>
               <div class="dts-form-component">
-                <label class="dts-form-component__pwd">
+                <label>
                   <span>Text field - password</span>
-                  //
-                    Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
-                    id attribute is needed for visibility toggling Js function
-                  <input type="password" id="passwordField" placeholder="enter password" aria-describedBy="descriptionTextId">
-                  <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility" onclick="togglePwd()">
+                  <div class="dts-form-component__pwd">
                     //
-                      id attribute is needed for visibility toggling Js function
-                    <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
-                  </button>
+                      Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
+                    <input type="password" placeholder="enter password" aria-describedBy="descriptionTextId">
+                    <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+                      <img src="assets/icons/eye-show-password.svg" alt="">
+                    </button>
+                  </div>
                 </label>
                 //
                   Add error message and/or description text

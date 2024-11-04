@@ -99,16 +99,15 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </label>
 </div>
 <div class="dts-form-component">
-<label class="dts-form-component__pwd">
+<label>
 <span>Text field - password</span>
-<!--
-Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
-id attribute is needed for visibility toggling Js function
---><input type="password" id="passwordField" placeholder="enter password" aria-describedBy="descriptionTextId">
-<button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility" onclick="togglePwd()">
-<!--id attribute is needed for visibility toggling Js function
---><img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+<div class="dts-form-component__pwd">
+<!--Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
+--><input type="password" placeholder="enter password" aria-describedBy="descriptionTextId">
+<button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+<img src="assets/icons/eye-show-password.svg" alt="">
 </button>
+</div>
 </label>
 <!--Add error message and/or description text
 --><div class="dts-form-component__hint">
@@ -528,33 +527,15 @@ id attribute is needed for visibility toggling Js function
   </div>
   <!--  -->
 
-</footer></div><script>
-  // Password visibility toggling
-  function togglePwd() {
-    var pwdField = document.getElementById("passwordField");
-    var pwdToggle = document.getElementById("passwordToggleImg");
-
-    if (pwdField.type === "password") {
-      pwdField.type="text";
-      pwdToggle.src="assets/icons/eye-hide-password.svg";
-    } else {
-      pwdField.type="password";
-      pwdToggle.src="assets/icons/eye-show-password.svg";
+</footer></div><script src="assets/js/scripts-dts.js"></script>
+<script>
+  // Modal steps navigation - just for static view
+    function navigateSteps(current, next) {
+      currentId = ("#modalForm" + current);
+      currentStep = document.querySelector(currentId);
+      nextStep = document.querySelector("#modalForm" + next);
+      nextStep.showModal();
+      currentStep.close();
     }
-  }
-
-  // Modal dialog opening/closing
-  const dialog = document.querySelector("dialog");
-  const dialogShowButton = document.querySelector("dialog + button");
-  const dialogCloseButton = document.querySelector("dialog button");
-
-  dialogShowButton.addEventListener("click", () => {
-    dialog.showModal();
-  });
-
-  dialogCloseButton.addEventListener("click", () => {
-    dialog.close();
-  });
-
 </script></body>
 </html>

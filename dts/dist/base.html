@@ -231,6 +231,15 @@
   </div>
   <!--  -->
 
-</footer></div>
-</body>
+</footer></div><script src="assets/js/scripts-dts.js"></script>
+<script>
+  // Modal steps navigation - just for static view
+    function navigateSteps(current, next) {
+      currentId = ("#modalForm" + current);
+      currentStep = document.querySelector(currentId);
+      nextStep = document.querySelector("#modalForm" + next);
+      nextStep.showModal();
+      currentStep.close();
+    }
+</script></body>
 </html>

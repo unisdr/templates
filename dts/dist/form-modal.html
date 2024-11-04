@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,41 +13,117 @@
 <main class="dts-main-container">
 <section>
 <div class="mg-container">
-<dialog class="dts-dialog dts-dialog--modal">
-<button autofocus>Close</button>
-<p>This modal dialog has a groovy backdrop!</p>
+<!--id attribute is needed for visibility toggling Js function
+--><dialog id="modalForm00" class="dts-dialog">
+<div class="dts-dialog__content">
+<div class="dts-dialog__header">
+<!--
+id attribute is needed for visibility toggling Js function
+<button id="modalFormClose" autofocus>Close</button>
+--></div>
+<form class="dts-dialog__form">
+<div class="dts-dialog__form-intro">
+<div class="dts-dialog__logo">
+<img src="assets/images/undrr-logo-square-blue.svg" alt="UNDRR logo" />
+</div>
+<h2 class="dts-heading-1">Welcome to the Disaster tracking system.</h2>
+<p>Track disaster impacts, including damages, losses, and human effects, to support better recovery and resilience.</p>
+</div>
+<div class="dts-dialog__form-actions">
+<button type="button" class="mg-button mg-button-primary" onclick="navigateSteps('00', '01')">Set up account</button>
+<button type="button" class="mg-button mg-button-outline">Set up using SSO</button>
+</div>
+</form>
+</div>
 </dialog>
-<button>Show the dialog</button>
+<!--id attribute is needed for visibility toggling Js function
+--><dialog id="modalForm01" class="dts-dialog">
+<div class="dts-dialog__content">
+<div class="dts-dialog__header">
+<button type="button" class="mg-button mg-button-ghost" onclick="navigateSteps('01', '00')">back</button>
+</div>
+<form class="dts-dialog__form">
+<div class="dts-dialog__form-intro">
+<h2 class="dts-heading-1">Set up account</h2>
+<div>Create your account by filling in the required details.</div>
+</div>
+<div class="dts-dialog__form-body">
+<p>*Required information</p>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Email address*</span>
+<input type="email" placeholder="Email address*" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">First name*</span>
+<input type="text" placeholder="First name*" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Last name</span>
+<input type="text" placeholder="Last name">
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Enter password</span>
+<div class="dts-form-component__pwd">
+<input type="password" placeholder="Enter password" aria-describedBy="passwordDescription" required>
+<button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+<img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+</button>
+</div>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Confirm password</span>
+<div class="dts-form-component__pwd">
+<input type="password" placeholder="Confirm password" aria-describedBy="passwordDescription" required>
+<button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+<img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+</button>
+</div>
+</label>
+<div class="dts-form-component__hint">
+<ul id="passwordDescription">
+<li>At least 12 characters long</li>
+<li>Must include two of the following:
+<ul>
+<li>Uppercase letters</li>
+<li>Lowercase letters</li>
+<li>Numbers</li>
+<li>Special characters</li>
+</ul>
+</li>
+<li>Cannot be the same as the username</li>
+<li>Should not be a simple or commonly used password</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dts-dialog__form-actions">
+<button type="button" class="mg-button mg-button-primary">Set up account</button>
+<button type="button" class="mg-button mg-button-outline">Set up using SSO</button>
+</div>
+</form>
+</div>
+</dialog>
 </div>
 </section>
 </main>
-</div><script>
-  // Password visibility toggling
-  function togglePwd() {
-    var pwdField = document.getElementById("passwordField");
-    var pwdToggle = document.getElementById("passwordToggleImg");
-
-    if (pwdField.type === "password") {
-      pwdField.type="text";
-      pwdToggle.src="assets/icons/eye-hide-password.svg";
-    } else {
-      pwdField.type="password";
-      pwdToggle.src="assets/icons/eye-show-password.svg";
+</div><script src="assets/js/scripts-dts.js"></script>
+<script>
+  // Modal steps navigation - just for static view
+    function navigateSteps(current, next) {
+      currentId = ("#modalForm" + current);
+      currentStep = document.querySelector(currentId);
+      nextStep = document.querySelector("#modalForm" + next);
+      nextStep.showModal();
+      currentStep.close();
     }
-  }
-
-  // Modal dialog opening/closing
-  const dialog = document.querySelector("dialog");
-  const dialogShowButton = document.querySelector("dialog + button");
-  const dialogCloseButton = document.querySelector("dialog button");
-
-  dialogShowButton.addEventListener("click", () => {
-    dialog.showModal();
-  });
-
-  dialogCloseButton.addEventListener("click", () => {
-    dialog.close();
-  });
-
 </script></body>
 </html>

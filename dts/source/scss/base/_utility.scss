@@ -115,8 +115,8 @@ $colors-solid: (
 // Show for screen readers only
 .mg-u-sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 1px !important;
+  height: 1px !important;
   padding: 0;
   margin: -1px;
   overflow: hidden;
