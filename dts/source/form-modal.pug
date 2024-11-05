@@ -20,7 +20,7 @@
 
           //
             id attribute is needed for visibility toggling Js function
-          <dialog id="modalForm00" class="dts-dialog">
+          <dialog id="modalForm00" class="dts-dialog dts-dialog--no-form">
             <div class="dts-dialog__content">
               <div class="dts-dialog__header">
                 //
@@ -48,7 +48,7 @@
           <dialog id="modalForm01" class="dts-dialog">
             <div class="dts-dialog__content">
               <div class="dts-dialog__header">
-                <button type="button" class="mg-button mg-button-ghost" onclick="navigateSteps('01', '00')">back</button>
+                <button type="button" class="mg-button mg-button--small mg-button-system" onclick="navigateSteps('01', '00')">back</button>
               </div>
               <form class="dts-dialog__form">
                 <div class="dts-dialog__form-intro">
@@ -60,26 +60,26 @@
                   <div class="dts-form-component">
                     <label>
                       <span class="mg-u-sr-only">Email address*</span>
-                      <input type="email" placeholder="Email address*" required>
+                      <input type="email" name="email" autocomplete="on" placeholder="Email address*" required>
                     </label>
                   </div>
                   <div class="dts-form-component">
                     <label>
                       <span class="mg-u-sr-only">First name*</span>
-                      <input type="text" placeholder="First name*" required>
+                      <input type="text" name="firstname" placeholder="First name*" required>
                     </label>
                   </div>
                   <div class="dts-form-component">
                     <label>
                       <span class="mg-u-sr-only">Last name</span>
-                      <input type="text" placeholder="Last name">
+                      <input type="text" name="secondname" placeholder="Last name">
                     </label>
                   </div>
                   <div class="dts-form-component">
                     <label>
                       <span class="mg-u-sr-only">Enter password</span>
                       <div class="dts-form-component__pwd">
-                        <input type="password" placeholder="Enter password" aria-describedBy="passwordDescription" required>
+                        <input type="password" name="password" placeholder="Enter password*" aria-describedBy="passwordDescription" required>
                         <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
                           <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
                         </button>
@@ -90,7 +90,7 @@
                     <label>
                       <span class="mg-u-sr-only">Confirm password</span>
                       <div class="dts-form-component__pwd">
-                        <input type="password" placeholder="Confirm password" aria-describedBy="passwordDescription" required>
+                        <input type="password" name="confirmPassword" placeholder="Confirm password*" aria-describedBy="passwordDescription" required>
                         <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
                           <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
                         </button>
@@ -114,8 +114,7 @@
                   </div>
                 </div>
                 <div class="dts-dialog__form-actions">
-                  <button type="button" class="mg-button mg-button-primary">Set up account</button>
-                  <button type="button" class="mg-button mg-button-outline">Set up using SSO</button>
+                  <button type="submit" class="mg-button mg-button-primary" disabled>Set up account</button>
                 </div>
               </form>
             </div>

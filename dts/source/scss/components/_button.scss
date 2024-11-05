@@ -20,9 +20,20 @@
   &:focus-visible {
     outline: 0;
   }
+
+  svg {
+    height: $dts-spacing-16;
+    width: $dts-spacing-16;
+
+    * {
+      transform: scale(0.9) translate(-3px, -3px);
+    }
+  }
 }
 
-.mg-button.mg-button-arrow {}
+.mg-button.mg-button--small {
+  padding: $dts-spacing-8 $dts-spacing-16;
+}
 
 .mg-button.mg-button-arrow {
   &::after {
@@ -93,7 +104,7 @@
   }
 }
 
-.mg-button.disabled {
+.mg-button:disabled {
   background-color: $mg-color-neutral-400;
   color: $dts-coal-300;
   pointer-events: none;
@@ -126,13 +137,37 @@
     box-shadow: 0 0 0 2px #91CAFF66;
   }
 
-  &.disabled {
+  &:disabled {
     color: $dts-coal-300;
     border-color: $dts-coal-300;
   }
 }
 
-.mg-button.mg-button-arrow.disabled {
+.mg-button.mg-button-system {
+  background-color: $mg-color-white;
+  color: $dts-grey-500;
+  border-color: $dts-grey-200;
+
+  &:hover {
+    border-color: $mg-color-button-background--hover;
+    color: $mg-color-button-background--hover;
+
+    svg {
+      color: $mg-color-button-background--hover;
+    }
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $mg-color-button-background--hover;
+  }
+
+  &:disabled {
+    color: $dts-coal-300;
+    border-color: $dts-coal-300;
+  }
+}
+
+.mg-button.mg-button-arrow:disabled {
   &::after {
     background: url(#{$img-path-Iconfourback}/tick-grey.svg) no-repeat left center;
   }

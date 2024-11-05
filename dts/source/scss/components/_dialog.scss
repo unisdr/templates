@@ -8,6 +8,10 @@
   max-height: none;
   background-color: $mg-color-white;
 
+  &__header {
+    margin-bottom: $dts-spacing-16;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -37,10 +41,8 @@
   }
 
   &__form-intro {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     margin-bottom: $dts-spacing-20;
 
     [class*="heading"] {
@@ -48,10 +50,21 @@
     }
   }
 
+  &__form-body {
+    flex-grow: 1;
+  }
+
   &__form-actions {
     display: flex;
     flex-direction: column;
     gap: $dts-spacing-8;
     margin-top: $dts-spacing-20;
+  }
+
+  &--no-form {
+    .dts-dialog__form-intro {
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
   }
 }

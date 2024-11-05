@@ -704,6 +704,18 @@ nav ul {
 .mg-button:focus-visible {
   outline: 0;
 }
+.mg-button svg {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.mg-button svg * {
+  -webkit-transform: scale(0.9) translate(-3px, -3px);
+          transform: scale(0.9) translate(-3px, -3px);
+}
+
+.mg-button.mg-button--small {
+  padding: 0.8rem 1.6rem;
+}
 
 .mg-button.mg-button-arrow::after {
   -webkit-transition: 0.2s ease;
@@ -760,7 +772,7 @@ nav ul {
   background: url(~/stories/assets/icons/tick-white.svg) no-repeat left center;
 }
 
-.mg-button.disabled {
+.mg-button:disabled {
   background-color: #808080;
   color: #CCCCCC;
   pointer-events: none;
@@ -786,12 +798,33 @@ nav ul {
   -webkit-box-shadow: 0 0 0 2px rgba(145, 202, 255, 0.4);
           box-shadow: 0 0 0 2px rgba(145, 202, 255, 0.4);
 }
-.mg-button.mg-button-outline.disabled {
+.mg-button.mg-button-outline:disabled {
   color: #CCCCCC;
   border-color: #CCCCCC;
 }
 
-.mg-button.mg-button-arrow.disabled::after {
+.mg-button.mg-button-system {
+  background-color: #fff;
+  color: #333333;
+  border-color: #BEBEBE;
+}
+.mg-button.mg-button-system:hover {
+  border-color: #4096FF;
+  color: #4096FF;
+}
+.mg-button.mg-button-system:hover svg {
+  color: #4096FF;
+}
+.mg-button.mg-button-system:focus-visible {
+  -webkit-box-shadow: 0 0 0 2px #4096FF;
+          box-shadow: 0 0 0 2px #4096FF;
+}
+.mg-button.mg-button-system:disabled {
+  color: #CCCCCC;
+  border-color: #CCCCCC;
+}
+
+.mg-button.mg-button-arrow:disabled::after {
   background: url(~/stories/assets/icons/tick-grey.svg) no-repeat left center;
 }
 
@@ -829,6 +862,9 @@ nav ul {
   height: 100vh;
   max-height: none;
   background-color: #fff;
+}
+.dts-dialog__header {
+  margin-bottom: 1.6rem;
 }
 .dts-dialog__content {
   display: -webkit-box;
@@ -878,9 +914,6 @@ nav ul {
   }
 }
 .dts-dialog__form-intro {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,13 +921,15 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   margin-bottom: 2rem;
 }
 .dts-dialog__form-intro [class*=heading] {
   margin-bottom: 0.8rem;
+}
+.dts-dialog__form-body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .dts-dialog__form-actions {
   display: -webkit-box;
@@ -906,6 +941,14 @@ nav ul {
           flex-direction: column;
   gap: 0.8rem;
   margin-top: 2rem;
+}
+.dts-dialog--no-form .dts-dialog__form-intro {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .mg-undrr-footer {
@@ -1140,6 +1183,9 @@ nav ul {
   bottom: 0.2rem;
   right: 6px;
   padding: 0;
+}
+.dts-form-component__pwd-toggle:focus-visible {
+  outline: revert;
 }
 .dts-form-component__hint {
   margin-top: -0.4rem;
