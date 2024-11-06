@@ -1,4 +1,13 @@
 .dts-form {
+  &--horizontal {
+    display: flex;
+    gap: $dts-spacing-8;
+
+    input {
+      width: 100%;
+    }
+  }
+
   &__actions {
     display: grid;
     gap: $dts-spacing-16;

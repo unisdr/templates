@@ -9,6 +9,8 @@
   background-color: $mg-color-white;
 
   &__header {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: $dts-spacing-16;
   }
 
@@ -38,6 +40,12 @@
     @include devicebreak(small) {
       flex-grow: unset;
     }
+
+    &--otp {
+      .dts-form-component input {
+        font-size: 5.2rem;
+      }
+    }
   }
 
   &__form-intro {
@@ -54,6 +62,12 @@
     flex-grow: 1;
   }
 
+  &__form-additional {
+    display: grid;
+    justify-items: center;
+    gap: $dts-spacing-8;
+  }
+
   &__form-actions {
     display: flex;
     flex-direction: column;
@@ -65,6 +79,23 @@
     .dts-dialog__form-intro {
       flex-grow: 1;
       justify-content: flex-end;
+    }
+  }
+
+  &--centered {
+    text-align: center;
+
+    .dts-dialog__form {
+      gap: $dts-spacing-24;
+    }
+
+    .dts-dialog__form-body {
+      flex-grow: unset;
+    }
+
+    .dts-dialog__form-intro,
+    .dts-dialog__form-actions {
+      margin-top: auto;
     }
   }
 }

@@ -19,7 +19,7 @@
         <div class="mg-container">
 
           //
-            id attribute is needed for visibility toggling Js function
+            id attribute is needed for screen visibility toggling Js function
           <dialog id="modalForm00" class="dts-dialog dts-dialog--no-form">
             <div class="dts-dialog__content">
               <div class="dts-dialog__header">
@@ -44,13 +44,15 @@
           </dialog>
 
           //
-            id attribute is needed for visibility toggling Js function
+            id attribute is needed for screen visibility toggling Js function
           <dialog id="modalForm01" class="dts-dialog">
             <div class="dts-dialog__content">
               <div class="dts-dialog__header">
                 <button type="button" class="mg-button mg-button--small mg-button-system" onclick="navigateSteps('01', '00')">back</button>
               </div>
-              <form class="dts-dialog__form">
+              //
+                onsubmit function needed just for static navigation among screens
+              <form name="step01" onsubmit="navigateSteps('01', '02')" class="dts-dialog__form">
                 <div class="dts-dialog__form-intro">
                   <h2 class="dts-heading-1">Set up account</h2>
                   <div>Create your account by filling in the required details.</div>
@@ -79,7 +81,7 @@
                     <label>
                       <span class="mg-u-sr-only">Enter password</span>
                       <div class="dts-form-component__pwd">
-                        <input type="password" name="password" placeholder="Enter password*" aria-describedBy="passwordDescription" required>
+                        <input type="password" name="password" minlength="12" placeholder="Enter password*" aria-describedBy="passwordDescription" required>
                         <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
                           <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
                         </button>
@@ -90,7 +92,7 @@
                     <label>
                       <span class="mg-u-sr-only">Confirm password</span>
                       <div class="dts-form-component__pwd">
-                        <input type="password" name="confirmPassword" placeholder="Confirm password*" aria-describedBy="passwordDescription" required>
+                        <input type="password" name="confirmPassword" minlength="12" placeholder="Confirm password*" aria-describedBy="passwordDescription" required>
                         <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
                           <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
                         </button>
@@ -120,6 +122,66 @@
             </div>
           </dialog>
 
+          //
+            id attribute is needed for screen visibility toggling Js function
+          <dialog id="modalForm02" class="dts-dialog dts-dialog--centered">
+            <div class="dts-dialog__content">
+              <div class="dts-dialog__header">
+                <button type="button" class="mg-button mg-button--small mg-button-system" onclick="navigateSteps('02', '01')">back</button>
+              </div>
+              <form name="step02" class="dts-dialog__form dts-dialog__form--otp">
+                <div class="dts-dialog__form-intro">
+                  <h2 class="dts-heading-1">Enter code we sent to you at</h2>
+                  <div>name@organisation.org</div>
+                </div>
+                <div class="dts-dialog__form-body dts-form--horizontal">
+                  <div class="dts-form-component">
+                    <label>
+                      <span class="mg-u-sr-only">OTP code first digit</span>
+                      <input type="number" name="otp01" required>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <span class="mg-u-sr-only">OTP code second digit</span>
+                      <input type="number" name="otp02" required>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <span class="mg-u-sr-only">OTP code third digit</span>
+                      <input type="number" name="otp03" required>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <span class="mg-u-sr-only">OTP code fourth digit</span>
+                      <input type="number" name="otp04" required>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <span class="mg-u-sr-only">OTP code fifth digit</span>
+                      <input type="number" name="otp05" required>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <span class="mg-u-sr-only">OTP code sixth digit</span>
+                      <input type="number" name="otp06" required>
+                    </label>
+                  </div>
+                </div>
+                <div class="dts-dialog__form-additional">
+                  <div>Code expires in 30:00</div>
+                  <button type="button" class="mg-button mg-button--small mg-button-ghost">Send again</button>
+                </div>
+                <div class="dts-dialog__form-actions">
+                  <button type="submit" class="mg-button mg-button-primary" disabled>Complete account setup</button>
+                </div>
+              </form>
+            </div>
+          </dialog>
         </div>
       </section>
     </main>

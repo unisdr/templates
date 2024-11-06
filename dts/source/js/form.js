@@ -20,25 +20,47 @@ if (pwdFields.length) {
 }
 
 // Submit button enabling only when required fields are filled
-const requiredFields = document.querySelectorAll("input[required]");
-const submitButton = document.querySelector("button[type='submit']");
+const forms = document.querySelectorAll("form");
+if (forms.length) {
+    for (let k = 0; k < forms.length; k++) {
+        const requiredFields = [];
+        const submitButton = [];
+        requiredFields[k] = forms[k].querySelectorAll("input[required]");
+        submitButton[k] = forms[k].querySelector("button[type='submit']");
 
-if (requiredFields.length) {
-    var requiredFilled;
+        if (requiredFields[k].length) {
+            var requiredFilled;
 
-    for (let i = 0; i < requiredFields.length; i++) {
-        requiredFields[i].addEventListener("input", () => {
-            requiredFilled = true;
-            for (let j = 0; j < requiredFields.length; j++) {
-                if (!requiredFields[j].validity.valid) {
-                    requiredFilled = false;
-                }
+            for (let i = 0; i < requiredFields[k].length; i++) {
+                requiredFields[k][i].addEventListener("input", () => {
+                    requiredFilled = true;
+                    for (let j = 0; j < requiredFields[k].length; j++) {
+                        if (!requiredFields[k][j].validity.valid) {
+                            requiredFilled = false;
+                        }
+                    }
+                    if (requiredFilled) {
+                        submitButton[k].disabled = false;
+                    } else {
+                        submitButton[k].disabled = true;
+                    }
+                });
             }
-            if (requiredFilled) {
-                submitButton.disabled = false;
-            } else {
-                submitButton.disabled = true;
-            }
+        }
+    }
+}
+
+// OTP form digit length management
+const otpForm = document.querySelector(".dts-dialog__form--otp");
+
+if (otpForm) {
+    const digitInputs = otpForm.querySelectorAll("input[type='number']");
+    for (let i = 0; i < digitInputs.length; i++) {
+        digitInputs[i].addEventListener("keydown", function (e) {
+            digitInputs[i].select();
+            if (this.value.length == 1) {
+                return false;
+            };
         });
     }
 }

@@ -864,6 +864,12 @@ nav ul {
   background-color: #fff;
 }
 .dts-dialog__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 1.6rem;
 }
 .dts-dialog__content {
@@ -913,6 +919,9 @@ nav ul {
             flex-grow: unset;
   }
 }
+.dts-dialog__form--otp .dts-form-component input {
+  font-size: 5.2rem;
+}
 .dts-dialog__form-intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -930,6 +939,12 @@ nav ul {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+.dts-dialog__form-additional {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 0.8rem;
 }
 .dts-dialog__form-actions {
   display: -webkit-box;
@@ -949,6 +964,21 @@ nav ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+.dts-dialog--centered {
+  text-align: center;
+}
+.dts-dialog--centered .dts-dialog__form {
+  gap: 2.4rem;
+}
+.dts-dialog--centered .dts-dialog__form-body {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+}
+.dts-dialog--centered .dts-dialog__form-intro,
+.dts-dialog--centered .dts-dialog__form-actions {
+  margin-top: auto;
 }
 
 .mg-undrr-footer {
@@ -1129,6 +1159,15 @@ nav ul {
   text-decoration: underline;
 }
 
+.dts-form--horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+}
+.dts-form--horizontal input {
+  width: 100%;
+}
 .dts-form__actions {
   display: -ms-grid;
   display: grid;
