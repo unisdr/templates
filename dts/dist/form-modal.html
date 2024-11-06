@@ -170,20 +170,30 @@ id attribute is needed for visibility toggling Js function
 </div>
 </form>
 </div>
+<div id="OTPsnackbar" class="dts-alert dts-snackbar">Please verify your account. A one time password has been sent to your email.</div>
 </dialog>
 </div>
 </section>
 </main>
-</div><script src="assets/js/scripts-dts.js"></script>
-<script>
+</div><script>
   // Modal steps navigation - just for static view
-    function navigateSteps(current, next) {
-      event.preventDefault();
-      currentId = ("#modalForm" + current);
-      currentStep = document.querySelector(currentId);
-      nextStep = document.querySelector("#modalForm" + next);
-      nextStep.showModal();
-      currentStep.close();
-    }
-</script></body>
+  function navigateSteps(current, next) {
+    event.preventDefault();
+    currentId = ("#modalForm" + current);
+    currentStep = document.querySelector(currentId);
+    nextStep = document.querySelector("#modalForm" + next);
+    nextStep.showModal();
+    currentStep.close();
+  }
+
+  // To be moved to snackbar.js
+  function openSnackbar() {
+    var x = document.getElementById("OTPsnackbar");
+    x.classList.add("show");
+    setTimeout(function () {
+      // x.classList.remove("show");
+    }, 15000);
+  }
+</script>
+<script src="assets/js/scripts-dts.js"></script></body>
 </html>
