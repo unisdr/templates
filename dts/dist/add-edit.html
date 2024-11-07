@@ -87,10 +87,39 @@
   <div class="mg-container">
     <h1 class="dts-heading-1">Page title</h1>
   </div>
-</header><section>
-<div class="mg-container">
-<page>content here</page></div>
-</section>
+</header><div class="mg-container">
+<form class="dts-form">
+<div class="dts-form__header">
+<a href="#" class="mg-button mg-button--small mg-button-system">Back</a>
+</div>
+<div class="dts-form__body">
+<div class="mg-grid mg-grid__col-3">
+<div class="dts-form-component">
+<label>
+<span><abbr title="mandatory">*</abbr>First name</span>
+<input type="text" placeholder="Enter first name" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Last name</span>
+<input type="text" placeholder="Enter last name">
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span><abbr title="mandatory">*</abbr>Email</span>
+<input type="email" placeholder="Enter Email" required>
+</label>
+</div>
+</div>
+</div>
+<div class="dts-form__actions">
+<a href="#" class="mg-button mg-button-outline">Discard</a>
+<button type="button" class="mg-button mg-button-primary">Save</button>
+</div>
+</form>
+</div>
 </main><footer>
   <!-- DTS instance footer -->
   <div class="dts-footer">

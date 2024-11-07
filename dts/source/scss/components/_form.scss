@@ -12,7 +12,6 @@
     display: grid;
     max-width: 480px;
     margin: auto;
-    padding-top: $dts-spacing-16;
   }
 
   &--spaced {
@@ -24,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: $dts-spacing-16;
+    margin: $dts-spacing-32 0;
 
     >span {
       flex-grow: 1;

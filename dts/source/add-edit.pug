@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+
+    include includes/_header.html
+
+    <main class="dts-main-container">
+ 
+      include includes/_page-title.html
+      
+      <div class="mg-container">
+        <form class="dts-form">
+          <div class="dts-form__header">
+            <a href="#" class="mg-button mg-button--small mg-button-system">Back</a>
+          </div>
+          <div class="dts-form__body">
+            <div class="mg-grid mg-grid__col-3">
+              <div class="dts-form-component">
+                <label>
+                  <span><abbr title="mandatory">*</abbr>First name</span>
+                  <input type="text" placeholder="Enter first name" required>
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <span>Last name</span>
+                  <input type="text" placeholder="Enter last name">
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <span><abbr title="mandatory">*</abbr>Email</span>
+                  <input type="email" placeholder="Enter Email" required>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="dts-form__actions">
+            <a href="#" class="mg-button mg-button-outline">Discard</a>
+            <button type="button" class="mg-button mg-button-primary">Save</button>
+          </div>
+        </form>
+      </div>
+
+    </main>
+
+    include includes/_footer.html
+
+  </div>
+
+  include includes/_scripts.html
+
+</body>
+
+</html>
