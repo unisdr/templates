@@ -77,7 +77,7 @@ if (otpForm) {
 /***/ (function() {
 
 // Modal dialog opening/closing
-const dialog = document.querySelector("#modalForm02");
+const dialog = document.querySelector("#modalForm00");
 const dialogCloseButton = document.querySelector("#modalFormClose");
 
 if (dialog) {
@@ -90,13 +90,7 @@ if (dialogCloseButton) {
     });
 }
 
-openSnackbar();
-
-
-/***/ }),
-/* 3 */
-/***/ (function() {
-
+// openSnackbar();
 
 
 /***/ })
@@ -177,10 +171,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _modal_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modal_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _snackbar_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _snackbar_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_snackbar_js__WEBPACK_IMPORTED_MODULE_2__);
 
-
+// TBD
 
 
 }();

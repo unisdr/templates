@@ -17,3 +17,9 @@
   }
 
 }
+
+.dts-content-container {
+  display: grid;
+  justify-items: center;
+  gap: $dts-spacing-8;
+}

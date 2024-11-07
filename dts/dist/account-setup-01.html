@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<title>DTS</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+<body>
+<div class="dts-page-container">
+<main class="dts-main-container">
+<div class="mg-container">
+<form class="dts-form dts-form--vertical">
+<div class="dts-form__header">
+<span>Disaster tracking system</span>
+</div>
+<div class="dts-form__intro">
+<h2 class="dts-heading-1">Welcome to the Disaster tracking system.</h2>
+<p>Track disaster impacts, including damages, losses, and human effects, to support better recovery and resilience.</p>
+</div>
+<div class="dts-form__actions">
+<a href="account-setup-02.html" class="mg-button mg-button-primary">Set up account</a>
+<button type="button" class="mg-button mg-button-outline">Set up using SSO</button>
+</div>
+</form>
+</div>
+</main>
+</div><script>
+  // Account setup modal steps navigation - just for static view
+  function navigateSteps(current, next) {
+    event.preventDefault();
+    currentId = ("#modalForm" + current);
+    currentStep = document.querySelector(currentId);
+    nextStep = document.querySelector("#modalForm" + next);
+    nextStep.showModal();
+    currentStep.close();
+  }
+
+  // Snack bar display - just for static view
+  function openSnackbar(alertType) {
+    var x = document.getElementById("OTPsnackbar");
+    if (x) {
+      x.querySelector('img').src = ("assets/icons/" + alertType + ".svg");
+      x.classList.add("dts-alert--" + alertType);
+      x.classList.add("show");
+      setTimeout(function () {
+        x.classList.remove("show");
+      }, 15000);
+      setTimeout(function () {
+        x.classList.remove("dts-alert--" + alertType);
+      }, 15500);
+    }
+  }
+</script>
+<script src="assets/js/scripts-dts.js"></script></body>
+</html>

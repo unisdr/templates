@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+
+    <main class="dts-main-container">
+
+      <div class="mg-container">
+        <form onsubmit="window.location.href = 'account-setup-04.html'; return false;" class="dts-form dts-form--vertical">
+          <div class="dts-form__header">
+            <a href="account-setup-02.html" class="mg-button mg-button--small mg-button-system">Back</a>
+            <span>Disaster tracking system</span>
+          </div>
+          <div class="dts-form__intro">
+            <h2 class="dts-heading-1">Enter code we sent to you at</h2>
+            <p>name@organisation.org</p>
+          </div>
+          <div class="dts-form__body">
+            <div class="dts-form-component">
+              <label>
+                <span class="mg-u-sr-only">OTP code</span>
+                <input type="text" minlength="6" maxlength="6" name="" placeholder="Enter OTP code*" autofocus required>
+              </label>
+            </div>
+            <div class="dts-content-container">
+              <div>Code expires in 30:00</div>
+              <button type="button" class="mg-button mg-button--small mg-button-ghost">Send again</button>
+            </div>
+          </div>
+          <div class="dts-form__actions">
+            <button type="submit" class="mg-button mg-button-primary" disabled>Complete account setup</button>
+            <button type="button" onclick="openSnackbar('info');">display info snackbar</button>
+            <button type="button" onclick="openSnackbar('warning');">display warning snackbar</button>
+            <button type="button" onclick="openSnackbar('error');">display error snackbar</button>
+          </div>
+        </form>
+
+        <div id="OTPsnackbar" class="dts-snackbar dts-alert">
+          <div class="dts-alert__icon">
+            <img src="assets/icons/information_outline.svg" id="passwordToggleImg" alt="">
+          </div>
+          <span>Please verify your account. A one time password has been sent to your email.</span>
+        </div>
+        
+      </div>
+
+    </main>
+
+  </div>
+
+  include includes/_scripts.html
+
+</body>
+
+</html>

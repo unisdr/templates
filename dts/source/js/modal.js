@@ -1,5 +1,5 @@
 // Modal dialog opening/closing
-const dialog = document.querySelector("#modalForm02");
+const dialog = document.querySelector("#modalForm00");
 const dialogCloseButton = document.querySelector("#modalFormClose");
 
 if (dialog) {
@@ -12,4 +12,4 @@ if (dialogCloseButton) {
     });
 }
 
-openSnackbar();
+// openSnackbar();

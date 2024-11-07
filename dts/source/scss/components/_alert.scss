@@ -1,0 +1,44 @@
+.dts-alert {
+  display: flex;
+  gap: $dts-spacing-8;
+  border-radius: $mg-radius-button;
+  padding: 1.6rem;
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $dts-spacing-40;
+    height: $dts-spacing-40;
+    border-radius: $mg-radius-button;
+  }
+
+  >span {
+    flex-grow: 1;
+  }
+
+  &--info {
+    background-color: $dts-cerulean-100;
+
+    .dts-alert__icon {
+      background-color: $dts-cerulean-200;
+    }
+  }
+
+  &--warning {
+    background-color: $dts-tango-100;
+
+    .dts-alert__icon {
+      background-color: $dts-tango-200;
+    }
+  }
+
+  &--error {
+    background-color: $dts-violet-100;
+
+    .dts-alert__icon {
+      background-color: $dts-violet-200;
+    }
+  }
+}

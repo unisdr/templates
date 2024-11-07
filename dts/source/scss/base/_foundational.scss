@@ -11,8 +11,12 @@ body {
   color: $dts-neutral;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+}
+
+p {
+  margin: 0 0 $dts-spacing-16;
 }
 
 a {

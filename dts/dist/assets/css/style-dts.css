@@ -614,8 +614,12 @@ body {
   color: #181823;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+}
+
+p {
+  margin: 0 0 1.6rem;
 }
 
 a {
@@ -670,6 +674,54 @@ nav ul {
 ::backdrop {
   background-image: linear-gradient(45deg, black);
   opacity: 0.75;
+}
+
+.dts-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+}
+.dts-alert__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+}
+.dts-alert > span {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.dts-alert--info {
+  background-color: #DDE8F0;
+}
+.dts-alert--info .dts-alert__icon {
+  background-color: #9ABBD6;
+}
+.dts-alert--warning {
+  background-color: #FBF2EB;
+}
+.dts-alert--warning .dts-alert__icon {
+  background-color: #F5DDCC;
+}
+.dts-alert--error {
+  background-color: #F5ECF3;
+}
+.dts-alert--error .dts-alert__icon {
+  background-color: #E5CEE1;
 }
 
 .mg-button {
@@ -851,6 +903,13 @@ nav ul {
   .mg-container {
     max-width: 1440px;
   }
+}
+
+.dts-content-container {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 0.8rem;
 }
 
 .dts-dialog {
@@ -1168,20 +1227,82 @@ nav ul {
 .dts-form--horizontal input {
   width: 100%;
 }
+.dts-form--vertical {
+  display: -ms-grid;
+  display: grid;
+  max-width: 480px;
+  margin: auto;
+  padding-top: 1.6rem;
+}
+.dts-form--spaced {
+  gap: 4rem;
+  text-align: center;
+}
+.dts-form__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.6rem;
+}
+.dts-form__header > span {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: end;
+}
+.dts-form__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+.dts-form__intro [class*=heading] {
+  margin-bottom: 0.8rem;
+}
+.dts-form__logo {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .dts-form__actions {
   display: -ms-grid;
   display: grid;
   gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+.dts-form:not(.dts-form--vertical) .dts-form__actions {
   /* medium design - 768px up */
 }
 @media (width >= 768px) {
-  .dts-form__actions {
+  .dts-form:not(.dts-form--vertical) .dts-form__actions {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -2258,70 +2379,24 @@ nav ul {
   display: none;
 }
 
-/* The snackbar - position it at the bottom and in the middle of the screen */
 .dts-snackbar {
-  visibility: hidden;
   position: fixed;
   z-index: 1;
-  bottom: 30px;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 100%;
-  max-width: 90vw;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
+  width: 90%;
+  max-width: 480px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, bottom 0.5s;
+  transition: opacity 0.5s, bottom 0.5s;
 }
 .dts-snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  opacity: 1;
+  bottom: 100px;
 }
 
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
-}
-@keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
-}
-@keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
-}
 /*
  * Headings
  */

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+  
+    <main class="dts-main-container">
+  
+      <div class="mg-container">
+        <form onsubmit="window.location.href = 'account-setup-03.html'; return false;" class="dts-form dts-form--vertical">
+          <div class="dts-form__header">
+            <a href="account-setup-01.html" class="mg-button mg-button--small mg-button-system">Back</a>
+            <span>Disaster tracking system</span>
+          </div>
+          <div class="dts-form__intro">
+            <h2 class="dts-heading-1">Set up account</h2>
+            <p>Create your account by filling in the required details.</p>
+          </div>
+          <div class="dts-form__body">
+            <p>*Required information</p>
+            <div class="dts-form-component">
+              <label>
+                <span class="mg-u-sr-only">Email address*</span>
+                <input type="email" name="email" autocomplete="on" placeholder="Email address*" autofocus required>
+              </label>
+            </div>
+            <div class="dts-form-component">
+              <label>
+                <span class="mg-u-sr-only">First name*</span>
+                <input type="text" name="firstname" placeholder="First name*" required>
+              </label>
+            </div>
+            <div class="dts-form-component">
+              <label>
+                <span class="mg-u-sr-only">Last name</span>
+                <input type="text" name="secondname" placeholder="Last name">
+              </label>
+            </div>
+            <div class="dts-form-component">
+              <label>
+                <span class="mg-u-sr-only">Enter password</span>
+                <div class="dts-form-component__pwd">
+                  <input type="password" name="password" minlength="12" placeholder="Enter password*" aria-describedBy="passwordDescription" required>
+                  <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+                    <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+                  </button>
+                </div>
+              </label>
+            </div>
+            <div class="dts-form-component">
+              <label>
+                <span class="mg-u-sr-only">Confirm password</span>
+                <div class="dts-form-component__pwd">
+                  <input type="password" name="confirmPassword" minlength="12" placeholder="Confirm password*" aria-describedBy="passwordDescription" required>
+                  <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+                    <img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+                  </button>
+                </div>
+              </label>
+              <div class="dts-form-component__hint">
+                <ul id="passwordDescription">
+                  <li>At least 12 characters long</li>
+                  <li>Must include two of the following:
+                    <ul>
+                      <li>Uppercase letters</li>
+                      <li>Lowercase letters</li>
+                      <li>Numbers</li>
+                      <li>Special characters</li>
+                    </ul>
+                  </li>
+                  <li>Cannot be the same as the username</li>
+                  <li>Should not be a simple or commonly used password</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dts-form__actions">
+            <button type="submit" class="mg-button mg-button-primary" disabled>Set up account</button>
+          </div>
+        </form>
+      </div>
+
+    </main>
+
+  </div>
+
+
+  include includes/_scripts.html
+
+</body>
+
+</html>

@@ -10,8 +10,10 @@
 @import "./base/foundational";
 
 // Component imports: design pattern components
+@import "./components/alert";
 @import "./components/button";
 @import "./components/container";
+// TBD
 @import "./components/dialog";
 @import "./components/footer";
 @import "./components/form";

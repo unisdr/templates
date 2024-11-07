@@ -127,7 +127,7 @@ id attribute is needed for visibility toggling Js function
 <div class="dts-form-component">
 <label>
 <span class="mg-u-sr-only">OTP code first digit</span>
-<input type="number" name="otp01" required>
+<input type="number" name="otp01" autofocus required>
 </label>
 </div>
 <div class="dts-form-component">
@@ -176,7 +176,7 @@ id attribute is needed for visibility toggling Js function
 </section>
 </main>
 </div><script>
-  // Modal steps navigation - just for static view
+  // Account setup modal steps navigation - just for static view
   function navigateSteps(current, next) {
     event.preventDefault();
     currentId = ("#modalForm" + current);
@@ -186,13 +186,20 @@ id attribute is needed for visibility toggling Js function
     currentStep.close();
   }
 
-  // To be moved to snackbar.js
-  function openSnackbar() {
+  // Snack bar display - just for static view
+  function openSnackbar(alertType) {
     var x = document.getElementById("OTPsnackbar");
-    x.classList.add("show");
-    setTimeout(function () {
-      // x.classList.remove("show");
-    }, 15000);
+    if (x) {
+      x.querySelector('img').src = ("assets/icons/" + alertType + ".svg");
+      x.classList.add("dts-alert--" + alertType);
+      x.classList.add("show");
+      setTimeout(function () {
+        x.classList.remove("show");
+      }, 15000);
+      setTimeout(function () {
+        x.classList.remove("dts-alert--" + alertType);
+      }, 15500);
+    }
   }
 </script>
 <script src="assets/js/scripts-dts.js"></script></body>
