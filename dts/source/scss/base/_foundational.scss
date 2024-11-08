@@ -11,7 +11,12 @@ body {
   color: $dts-neutral;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
 }
 
@@ -25,11 +30,16 @@ a {
 }
 
 a:hover {
-  font-weight: 700;
+  text-decoration: underline;
+  // font-weight: 700;
 }
 
 button {
+  display: flex;
   font-family: $mg-font-family;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
 
 mark {

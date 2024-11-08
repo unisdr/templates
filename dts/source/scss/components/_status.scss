@@ -1,0 +1,26 @@
+.dts-status {
+  display: inline-block;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+
+  &--draft {
+    background-color: $dts-vis-vis;
+  }
+
+  &--wait-info {
+    background-color: $dts-gimblet;
+  }
+
+  &--wait-valid {
+    background-color: $dts-turbo;
+  }
+
+  &--published {
+    background-color: $dts-teal-700;
+  }
+
+  &--undrr {
+    background-color: $dts-cerulean-200;
+  }
+}

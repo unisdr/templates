@@ -614,7 +614,12 @@ body {
   color: #181823;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
 }
 
@@ -628,11 +633,17 @@ a {
 }
 
 a:hover {
-  font-weight: 700;
+  text-decoration: underline;
 }
 
 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: "Roboto", "Noto Sans SC", "Noto Sans Arabic", sans-serif;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
 
 mark {
@@ -753,6 +764,9 @@ nav ul {
     display: inline-flex;
   }
 }
+.mg-button:hover {
+  text-decoration: none;
+}
 .mg-button:focus-visible {
   outline: 0;
 }
@@ -767,6 +781,10 @@ nav ul {
 
 .mg-button.mg-button--small {
   padding: 0.8rem 1.6rem;
+}
+.mg-button.mg-button--small svg * {
+  -webkit-transform: scale(0.55) translate(4px, 0px);
+          transform: scale(0.55) translate(4px, 0px);
 }
 
 .mg-button.mg-button-arrow::after {
@@ -905,13 +923,6 @@ nav ul {
   }
 }
 
-.dts-content-container {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  gap: 0.8rem;
-}
-
 .dts-dialog {
   margin: 0;
   padding: 0;
@@ -1038,6 +1049,39 @@ nav ul {
 .dts-dialog--centered .dts-dialog__form-intro,
 .dts-dialog--centered .dts-dialog__form-actions {
   margin-top: auto;
+}
+
+.dts-element-summary {
+  margin: 3.2rem 0;
+}
+.dts-element-summary__title {
+  display: -ms-grid;
+  display: grid;
+  gap: 2.4rem;
+}
+.dts-element-summary__title span:last-of-type {
+  margin-bottom: 0 !important;
+}
+.dts-element-summary__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+}
+.dts-element-summary__metadata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .mg-undrr-footer {
@@ -1281,23 +1325,34 @@ nav ul {
       -ms-flex-align: center;
           align-items: center;
 }
+.dts-form__additional-content {
+  display: -ms-grid;
+  display: grid;
+}
+.dts-form__additional-content--centered {
+  justify-items: center;
+  gap: 0.8rem;
+}
 .dts-form__actions {
   display: -ms-grid;
   display: grid;
   gap: 1.6rem;
-  margin-top: 1.6rem;
+  margin: 1.6rem 0;
 }
+
+.dts-form__actions,
 .dts-form:not(.dts-form--vertical) .dts-form__actions {
   /* medium design - 768px up */
 }
 @media (width >= 768px) {
+  .dts-form__actions,
   .dts-form:not(.dts-form--vertical) .dts-form__actions {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -2378,6 +2433,31 @@ nav ul {
   display: none;
 }
 
+.dts-metadata {
+  margin: 1.2rem 0 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.8rem;
+}
+.dts-metadata--highlight {
+  background-color: #DDE8F0;
+  padding: 1.6rem;
+}
+.dts-metadata__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+}
+.dts-metadata dd {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+}
+
 .dts-page-title {
   background-color: #F3EBEC;
   padding: 3.2rem 0;
@@ -2404,6 +2484,98 @@ nav ul {
   bottom: 100px;
 }
 
+.dts-status {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+.dts-status--draft {
+  background-color: #F4E496;
+}
+.dts-status--wait-info {
+  background-color: #BCAE67;
+}
+.dts-status--wait-valid {
+  background-color: #FEC124;
+}
+.dts-status--published {
+  background-color: #026666;
+}
+.dts-status--undrr {
+  background-color: #9ABBD6;
+}
+
+.dts-tooltip {
+  position: relative;
+  display: inline-block;
+  /* The arrow that connects the tooltip to the container */
+  /* This allows users to move their cursor from the button to the tooltip */
+  /* Tooltip styles */
+  /* Hides the tooltip */
+}
+.dts-tooltip::before {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 0.5em solid transparent;
+  border-bottom-color: #000000;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.dts-tooltip::after {
+  position: absolute;
+  right: -20%;
+  top: 100%;
+  left: -20%;
+  display: block;
+  height: 1em;
+}
+.dts-tooltip.tooltip-visible::before, .dts-tooltip.tooltip-visible::after {
+  content: "";
+  opacity: 1;
+}
+.dts-tooltip.top::before, .dts-tooltip.top::after, .dts-tooltip.top [role=tooltip] {
+  top: unset;
+  bottom: 100%;
+}
+.dts-tooltip.top::before {
+  border-top-color: #000000;
+  border-bottom-color: transparent;
+}
+.dts-tooltip.top [role=tooltip] {
+  bottom: calc(100% + 1em);
+}
+.dts-tooltip [role=tooltip] {
+  position: absolute;
+  top: calc(100% + 1em);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  padding: 0.8rem;
+  border-radius: 0.25em;
+  color: #fff;
+  line-height: 1 !important;
+  background: #000000;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  max-width: 10em;
+  -webkit-box-shadow: 0 1px 2px hsl(0, 0%, 0%);
+          box-shadow: 0 1px 2px hsl(0, 0%, 0%);
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.dts-tooltip .tooltip-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 /*
  * Headings
  */
@@ -2422,7 +2594,7 @@ nav ul {
   }
 }
 
-.dts-heading-2 {
+.dts-heading-2, .dts-element-summary__title {
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 700;
@@ -2430,14 +2602,14 @@ nav ul {
   /* large design - 1164px up */
 }
 @media (width >= 1164px) {
-  .dts-heading-2 {
+  .dts-heading-2, .dts-element-summary__title {
     font-size: 2.1rem;
     line-height: 1.14;
     margin-bottom: 3.2rem;
   }
 }
 
-.dts-heading-3 {
+.dts-heading-3, .dts-element-summary__title span:last-of-type {
   font-size: 1.8rem;
   line-height: 1.33;
   font-weight: 500;
@@ -2445,7 +2617,7 @@ nav ul {
   /* large design - 1164px up */
 }
 @media (width >= 1164px) {
-  .dts-heading-3 {
+  .dts-heading-3, .dts-element-summary__title span:last-of-type {
     font-size: 2rem;
     line-height: 1.5;
     margin-bottom: 2.4rem;
@@ -2484,11 +2656,11 @@ nav ul {
   font-size: 3.8rem;
   line-height: 1.47;
 }
-[dir=rtl] .dts-heading-2 {
+[dir=rtl] .dts-heading-2, [dir=rtl] .dts-element-summary__title {
   font-size: 2.6rem;
   line-height: 1.54;
 }
-[dir=rtl] .dts-heading-3 {
+[dir=rtl] .dts-heading-3, [dir=rtl] .dts-element-summary__title span:last-of-type, .dts-element-summary__title [dir=rtl] span:last-of-type {
   font-size: 2.5rem;
   line-height: 1.52;
 }
@@ -2529,7 +2701,7 @@ nav ul {
   }
 }
 
-.dts-body-label {
+.dts-body-label, .dts-metadata dt {
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 700;
@@ -2539,7 +2711,7 @@ nav ul {
 .dts-form-component textarea,
 .dts-form-component select, .dts-form-component input[type=file]::-webkit-file-upload-button,
 .dts-form-component textarea[type=file]::-webkit-file-upload-button,
-.dts-form-component select[type=file]::-webkit-file-upload-button {
+.dts-form-component select[type=file]::-webkit-file-upload-button, .dts-tooltip [role=tooltip] {
   font-size: 1.4rem;
   line-height: 1.43;
   font-weight: 400;
@@ -2550,7 +2722,7 @@ nav ul {
   .dts-form-component textarea,
   .dts-form-component select, .dts-form-component input[type=file]::-webkit-file-upload-button,
   .dts-form-component textarea[type=file]::-webkit-file-upload-button,
-  .dts-form-component select[type=file]::-webkit-file-upload-button {
+  .dts-form-component select[type=file]::-webkit-file-upload-button, .dts-tooltip [role=tooltip] {
     line-height: 1.57;
   }
 }
@@ -2602,7 +2774,7 @@ nav ul {
 [dir=rtl] .dts-form-component textarea[type=file]::-webkit-file-upload-button,
 .dts-form-component [dir=rtl] textarea[type=file]::-webkit-file-upload-button,
 [dir=rtl] .dts-form-component select[type=file]::-webkit-file-upload-button,
-.dts-form-component [dir=rtl] select[type=file]::-webkit-file-upload-button {
+.dts-form-component [dir=rtl] select[type=file]::-webkit-file-upload-button, [dir=rtl] .dts-tooltip [role=tooltip], .dts-tooltip [dir=rtl] [role=tooltip] {
   font-size: 1.6rem;
   line-height: 1.375;
 }

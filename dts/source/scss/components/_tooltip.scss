@@ -1,0 +1,74 @@
+.dts-tooltip {
+  position: relative;
+  display: inline-block;
+
+  /* The arrow that connects the tooltip to the container */
+  &::before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: .5em solid transparent;
+    border-bottom-color: $dts-black;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* This allows users to move their cursor from the button to the tooltip */
+  &::after {
+    position: absolute;
+    right: -20%;
+    top: 100%;
+    left: -20%;
+    display: block;
+    height: 1em;
+  }
+
+  &.tooltip-visible::before,
+  &.tooltip-visible::after {
+    content: '';
+    opacity: 1;
+  }
+
+  &.top::before,
+  &.top::after,
+  &.top [role="tooltip"] {
+    top: unset;
+    bottom: 100%;
+  }
+
+  &.top::before {
+    border-top-color: $dts-black;
+    border-bottom-color: transparent;
+  }
+
+  &.top [role="tooltip"] {
+    bottom: calc(100% + 1em);
+  }
+
+  /* Tooltip styles */
+  [role="tooltip"] {
+    position: absolute;
+    top: calc(100% + 1em);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: $dts-spacing-8;
+    border-radius: .25em;
+    color: $mg-color-white;
+    @extend .dts-body-text-small;
+    line-height: 1 !important;
+    background: $dts-black;
+    min-width: max-content;
+    max-width: 10em;
+    box-shadow: 0 1px 2px hsl(0, 0%, 0%);
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  /* Hides the tooltip */
+  .tooltip-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

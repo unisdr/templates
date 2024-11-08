@@ -24,53 +24,55 @@
           <hr>
           <h3>2 columns form on 768px up, 1 column form on 767px down</h3>
           <form class="dts-form">
-            //
-              Form fields line - 2 columns
-            <div class="mg-grid mg-grid__col-2">
-              <div class="dts-form-component">
-                <label>
-                  <span>Date picker field</span>
-                  <input type="date">
-                </label>
+            <div class="dts-form__body">
+              //
+                Form fields line - 2 columns
+              <div class="mg-grid mg-grid__col-2">
+                <div class="dts-form-component">
+                  <label>
+                    <span>Date picker field</span>
+                    <input type="date">
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Time picker field</span>
+                    <input type="time">
+                  </label>
+                </div>
               </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Time picker field</span>
-                  <input type="time">
-                </label>
-              </div>
-            </div>
-            //
-              Form fields line - 2 columns
-            <div class="mg-grid mg-grid__col-2">
-              <div class="dts-form-component">
-                <label>
-                  <span>File upload field</span>
-                  <input type="file">
-                </label>
-              </div>
-              <div class="dts-form-component">
-                //
-                  Add aria-invalid="true" attribute to label tag when the field has ERRORS
-                <label aria-invalid="true">
+              //
+                Form fields line - 2 columns
+              <div class="mg-grid mg-grid__col-2">
+                <div class="dts-form-component">
+                  <label>
+                    <span>File upload field</span>
+                    <input type="file">
+                  </label>
+                </div>
+                <div class="dts-form-component">
                   //
-                    In checkboxes this span tag is empty, but it must exist in order to keep the right alignment with other fields
-                  <span></span>
-                  <div class="dts-form-component__field--horizontal">
+                    Add aria-invalid="true" attribute to label tag when the field has ERRORS
+                  <label aria-invalid="true">
                     //
-                      Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
-                    <input type="checkbox" name="" aria-describedBy="validationMsgId" />
-                    <span>Checkbox field  (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                      In checkboxes this span tag is empty, but it must exist in order to keep the right alignment with other fields
+                    <span></span>
+                    <div class="dts-form-component__field--horizontal">
+                      //
+                        Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
+                      <input type="checkbox" name="" aria-describedBy="validationMsgId" />
+                      <span>Checkbox field  (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                    </div>
+                  </label>
+                  <div class="dts-form-component__hint">
+                    <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
                   </div>
-                </label>
-                <div class="dts-form-component__hint">
-                  <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
                 </div>
               </div>
             </div>
             <div class="dts-form__actions">
-              <button type="button" class="mg-button mg-button-outline">Discard</button>
               <button type="submit" class="mg-button mg-button-primary">Save</button>
+              <button type="button" class="mg-button mg-button-outline">Discard</button>
             </div>
           </form>
         </div>
@@ -82,196 +84,198 @@
           <hr>
           <h3>3 columns form on 768px up, 1 column form on 767px down</h3>
           <form class="dts-form">
-            //
-              Form fields line - 3 columns
-            <div class="mg-grid mg-grid__col-3">
+            <div class="dts-form__body">
               //
-                Form field
-              <div class="dts-form-component">
+                Form fields line - 3 columns
+              <div class="mg-grid mg-grid__col-3">
                 //
-                  Add aria-invalid="true" attribute to label tag when the field has ERRORS
-                <label aria-invalid="true">
-                  <span><abbr title="mandatory">*</abbr>Text field (single line)</span>
+                  Form field
+                <div class="dts-form-component">
                   //
-                    Add required attribute to the input tag when the field is MANDATORY
-                    Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
-                    Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag when the field has ERRORS and DESCRIPTION
-                  <input type="text" placeholder="enter text" aria-describedBy="validationMsgId descriptionTextId">
-                </label>
-                //
-                  Add error message and/or description text, error message BEFORE description text
-                <div class="dts-form-component__hint">
-                  <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
-                  <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
-                </div>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Text field - email (disabled)</span>
-                  //
-                    Add disabled attribute to the input tag to make it DISABLED
-                  <input type="email" placeholder="enter email" disabled>
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Text field - password</span>
-                  <div class="dts-form-component__pwd">
+                    Add aria-invalid="true" attribute to label tag when the field has ERRORS
+                  <label aria-invalid="true">
+                    <span><abbr title="mandatory">*</abbr>Text field (single line)</span>
                     //
-                      Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
-                    <input type="password" placeholder="enter password" aria-describedBy="descriptionTextId">
-                    <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
-                      <img src="assets/icons/eye-show-password.svg" alt="">
-                    </button>
-                  </div>
-                </label>
-                //
-                  Add error message and/or description text
-                <div class="dts-form-component__hint">
-                  <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
-                </div>
-              </div>
-            </div>
-            //
-              Form fields line - 3 columns
-            <div class="mg-grid mg-grid__col-3">
-              <div class="dts-form-component">
-                <label>
-                  <span>Text field - search with autocomplete</span>
-                  <input type="search" list="browsers" placeholder="search browser name" value="Firefox">
-                  <datalist id="browsers">
-                    <option value="Internet Explorer">
-                    <option value="Firefox">
-                    <option value="Google Chrome">
-                    <option value="Opera">
-                    <option value="Safari">
-                  </datalist>
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Number field (stepper)</span>
-                  <input type="number" step="10" min="10" max="100" placeholder="enter number">
-                </label>
-              </div>
-            </div>
-            //
-              Form fields line - 3 columns
-            <div class="mg-grid mg-grid__col-3">
-              //
-                Form field - span 2 columns
-              <div class="dts-form-component mg-grid__col--span-2">
-                <label>
-                  <span>Text area field (read-only)</span>
+                      Add required attribute to the input tag when the field is MANDATORY
+                      Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
+                      Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag when the field has ERRORS and DESCRIPTION
+                    <input type="text" placeholder="enter text" aria-describedBy="validationMsgId descriptionTextId">
+                  </label>
                   //
-                    Add readonly attribute to the input tag to make it READ-ONLY
-                  <textarea rows="5" maxlength="500" placeholder="enter text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
-                </label>
-              </div>
-            </div>
-            //
-              Form fields line - 2 columns
-            <div class="mg-grid mg-grid__col-2">
-              <div class="dts-form-component">
-                //
-                  Add aria-invalid="true" attribute to fieldset tag when the field has ERRORS
-                <fieldset aria-invalid="true">
-                  <legend><abbr title="mandatory">*</abbr>Checkbox fieldset</legend>
-                  <div class="mg-grid mg-grid__col-2">
-                    <div>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          //
-                            Add aria-describedBy="inputErrorId" attribute to ALL input tags of the fieldset when the fieldset has ERRORS
-                          <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
-                          <span>Checkbox field (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-                      </label>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" disabled />
-                          <span>Checkbox field (single)</span>
-                        </div>
-                      </label>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
-                          <span>Checkbox field (single)</span>
-                        </div>
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
-                          <span>Checkbox field (single)</span>
-                        </div>
-                      </label>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
-                          <span>Checkbox field (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
+                    Add error message and/or description text, error message BEFORE description text
                   <div class="dts-form-component__hint">
                     <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
                     <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
                   </div>
-                </fieldset>
-              </div>
-              <div class="dts-form-component">
-                <fieldset>
-                  <legend>Radiobutton fieldset</legend>
-                  <div class="mg-grid mg-grid__col-2">
-                    <div>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="radio" name="radiobuttonFieldsetName" disabled />
-                          <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-                      </label>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="radio" name="radiobuttonFieldsetName" />
-                          <span>Radiobutton label</span>
-                        </div>
-                      </label>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="radio" name="radiobuttonFieldsetName" />
-                          <span>Radiobutton label</span>
-                        </div>
-                      </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Text field - email (disabled)</span>
+                    //
+                      Add disabled attribute to the input tag to make it DISABLED
+                    <input type="email" placeholder="enter email" disabled>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Text field - password</span>
+                    <div class="dts-form-component__pwd">
+                      //
+                        Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
+                      <input type="password" placeholder="enter password" aria-describedBy="descriptionTextId">
+                      <button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+                        <img src="assets/icons/eye-show-password.svg" alt="">
+                      </button>
                     </div>
-                    <div>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="radio" name="radiobuttonFieldsetName" />
-                          <span>Radiobutton label</span>
-                        </div>
-                      </label>
-                      <label>
-                        <span></span>
-                        <div class="dts-form-component__field--horizontal">
-                          <input type="radio" name="radiobuttonFieldsetName" />
-                          <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-                      </label>
-                    </div>
+                  </label>
+                  //
+                    Add error message and/or description text
+                  <div class="dts-form-component__hint">
+                    <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
                   </div>
-                </fieldset>
-              </div>              
+                </div>
+              </div>
+              //
+                Form fields line - 3 columns
+              <div class="mg-grid mg-grid__col-3">
+                <div class="dts-form-component">
+                  <label>
+                    <span>Text field - search with autocomplete</span>
+                    <input type="search" list="browsers" placeholder="search browser name" value="Firefox">
+                    <datalist id="browsers">
+                      <option value="Internet Explorer">
+                      <option value="Firefox">
+                      <option value="Google Chrome">
+                      <option value="Opera">
+                      <option value="Safari">
+                    </datalist>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Number field (stepper)</span>
+                    <input type="number" step="10" min="10" max="100" placeholder="enter number">
+                  </label>
+                </div>
+              </div>
+              //
+                Form fields line - 3 columns
+              <div class="mg-grid mg-grid__col-3">
+                //
+                  Form field - span 2 columns
+                <div class="dts-form-component mg-grid__col--span-2">
+                  <label>
+                    <span>Text area field (read-only)</span>
+                    //
+                      Add readonly attribute to the input tag to make it READ-ONLY
+                    <textarea rows="5" maxlength="500" placeholder="enter text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                  </label>
+                </div>
+              </div>
+              //
+                Form fields line - 2 columns
+              <div class="mg-grid mg-grid__col-2">
+                <div class="dts-form-component">
+                  //
+                    Add aria-invalid="true" attribute to fieldset tag when the field has ERRORS
+                  <fieldset aria-invalid="true">
+                    <legend><abbr title="mandatory">*</abbr>Checkbox fieldset</legend>
+                    <div class="mg-grid mg-grid__col-2">
+                      <div>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            //
+                              Add aria-describedBy="inputErrorId" attribute to ALL input tags of the fieldset when the fieldset has ERRORS
+                            <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
+                            <span>Checkbox field (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                          </div>
+                        </label>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" disabled />
+                            <span>Checkbox field (single)</span>
+                          </div>
+                        </label>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
+                            <span>Checkbox field (single)</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
+                            <span>Checkbox field (single)</span>
+                          </div>
+                        </label>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
+                            <span>Checkbox field (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="dts-form-component__hint">
+                      <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
+                      <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="dts-form-component">
+                  <fieldset>
+                    <legend>Radiobutton fieldset</legend>
+                    <div class="mg-grid mg-grid__col-2">
+                      <div>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="radio" name="radiobuttonFieldsetName" disabled />
+                            <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                          </div>
+                        </label>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="radio" name="radiobuttonFieldsetName" />
+                            <span>Radiobutton label</span>
+                          </div>
+                        </label>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="radio" name="radiobuttonFieldsetName" />
+                            <span>Radiobutton label</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="radio" name="radiobuttonFieldsetName" />
+                            <span>Radiobutton label</span>
+                          </div>
+                        </label>
+                        <label>
+                          <span></span>
+                          <div class="dts-form-component__field--horizontal">
+                            <input type="radio" name="radiobuttonFieldsetName" />
+                            <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>              
+              </div>
             </div>
           </form>
         </div>
@@ -283,63 +287,65 @@
           <hr>
           <h3>4 columns form on 1164px up, 2 columns form on 768px up, 1 column form on 767px down</h3>
           <form class="dts-form">
-            //
-              Form fields line - 4 columns
-            <div class="mg-grid mg-grid__col-4">
-              <div class="dts-form-component">
-                <label>
-                  <span>Select field (single selection)</span>
-                  <select>
-                    <option value="">Choose an option</option>
-                    <option value="volvo">&#x26AB; Volvo</option>
-                    <option value="saab">&#x26AA; Saab</option>
-                    <option value="mercedes">&#x1F534; Mercedes</option>
-                    <option value="audi">&#x1F535; Audi</option>
-                    <option value="volkswagen">Volkswagen</option>
-                  </select>
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Select field (single selection - with tooltip)</span>
-                  <select>
-                    <option value="">Choose an option</option>
-                    <option value="volvo" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Volvo</option>
-                    <option value="saab" title="tooltip two">Saab</option>
-                    <option value="mercedes" title="tooltip three">Mercedes</option>
-                    <option value="audi" title="tooltip four">Audi</option>
-                    <option value="volkswagen"  title="tooltip five">Volkswagen</option>
-                  </select>
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Select field (single selection - grouped options)</span>
-                  <select>
-                    <option value="">Choose an option</option>
-                    <optgroup label="Swedish Cars">
+            <div class="dts-form__body">
+              //
+                Form fields line - 4 columns
+              <div class="mg-grid mg-grid__col-4">
+                <div class="dts-form-component">
+                  <label>
+                    <span>Select field (single selection)</span>
+                    <select>
+                      <option value="">Choose an option</option>
+                      <option value="volvo">&#x26AB; Volvo</option>
+                      <option value="saab">&#x26AA; Saab</option>
+                      <option value="mercedes">&#x1F534; Mercedes</option>
+                      <option value="audi">&#x1F535; Audi</option>
+                      <option value="volkswagen">Volkswagen</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Select field (single selection - with tooltip)</span>
+                    <select>
+                      <option value="">Choose an option</option>
+                      <option value="volvo" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Volvo</option>
+                      <option value="saab" title="tooltip two">Saab</option>
+                      <option value="mercedes" title="tooltip three">Mercedes</option>
+                      <option value="audi" title="tooltip four">Audi</option>
+                      <option value="volkswagen"  title="tooltip five">Volkswagen</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Select field (single selection - grouped options)</span>
+                    <select>
+                      <option value="">Choose an option</option>
+                      <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                      </optgroup>
+                      <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Select field (multiple selection)</span>
+                    <select multiple size="3">
                       <option value="volvo">Volvo</option>
                       <option value="saab">Saab</option>
-                    </optgroup>
-                    <optgroup label="German Cars">
-                      <option value="mercedes">Mercedes</option>
+                      <option value="opel">Opel</option>
                       <option value="audi">Audi</option>
                       <option value="volkswagen">Volkswagen</option>
-                    </optgroup>
-                  </select>
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Select field (multiple selection)</span>
-                  <select multiple size="3">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                    <option value="volkswagen">Volkswagen</option>
-                  </select>
-                </label>
+                    </select>
+                  </label>
+                </div>
               </div>
             </div>
           </form>
@@ -352,62 +358,65 @@
           <hr>
           <h3>6 variable width columns form on 1164px up, 3 variable width columns form on 768px up, 1 column form on 767px down</h3>
           <form class="dts-form">
-            <div class="mg-grid mg-grid__col-auto">
-              <div class="dts-form-component">
-                <label>
-                  <span>Asset</span>
-                  <select>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
-                  </select>
-                </label>
+            <div class="dts-form__body">
+              //
+                Form fields line - 6 columns, variable width
+              <div class="mg-grid mg-grid__col-auto">
+                <div class="dts-form-component">
+                  <label>
+                    <span>Asset</span>
+                    <select>
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                      <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Damage</span>
+                    <select>
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                      <option value="volkswagen">Volkswagen</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Count</span>
+                    <input type="number" step="10" min="10" max="100" placeholder="enter number">
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Unit type</span>
+                    <select>
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                      <option value="volkswagen">Volkswagen</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Unit cost</span>
+                    <input type="text" placeholder="enter text">
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Total cost</span>
+                    <input type="text" placeholder="enter text">
+                  </label>
+                </div>
               </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Damage</span>
-                  <select>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="volkswagen">Volkswagen</option>
-                  </select>
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Count</span>
-                  <input type="number" step="10" min="10" max="100" placeholder="enter number">
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Unit type</span>
-                  <select>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="volkswagen">Volkswagen</option>
-                  </select>
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Unit cost</span>
-                  <input type="text" placeholder="enter text">
-                </label>
-              </div>
-              <div class="dts-form-component">
-                <label>
-                  <span>Total cost</span>
-                  <input type="text" placeholder="enter text">
-                </label>
-              </div>
-            </div>
           </form>
         </div>
       </section>

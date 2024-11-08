@@ -17,6 +17,10 @@
     display: inline-flex;
   }
 
+  &:hover {
+    text-decoration: none;
+  }
+
   &:focus-visible {
     outline: 0;
   }
@@ -33,6 +37,13 @@
 
 .mg-button.mg-button--small {
   padding: $dts-spacing-8 $dts-spacing-16;
+
+  svg {
+
+    * {
+      transform: scale(0.55) translate(4px, 0px);
+    }
+  }
 }
 
 .mg-button.mg-button-arrow {
