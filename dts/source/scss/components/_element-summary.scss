@@ -19,9 +19,13 @@
   }
 
   &__metadata {
-    display: flex;
+    display: grid;
     gap: $dts-spacing-24;
-    justify-content: space-between;
-    align-items: flex-start;
+
+    @include devicebreak(small) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
 }
