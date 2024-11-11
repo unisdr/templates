@@ -39,15 +39,19 @@
           </div>
           <div class="dts-form__actions">
             <button type="submit" class="mg-button mg-button-primary" disabled>Complete account setup</button>
-            <button type="button" onclick="openSnackbar('info');">display info snackbar</button>
-            <button type="button" onclick="openSnackbar('warning');">display warning snackbar</button>
-            <button type="button" onclick="openSnackbar('error');">display error snackbar</button>
           </div>
         </form>
+        <div style="display: flex; justify-content:center; gap: 8px;">
+          <button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('info');">display info snackbar</button>
+          <button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('warning');">display warning snackbar</button>
+          <button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('error');">display error snackbar</button>
+        </div>
 
         <div id="OTPsnackbar" class="dts-snackbar dts-alert">
           <div class="dts-alert__icon">
-            <img src="assets/icons/information_outline.svg" id="passwordToggleImg" alt="">
+            <svg aria-hidden="true" focusable="false" role="img">
+              <use href="assets/icons/info.svg#info"></use>
+            </svg>
           </div>
           <span>Please verify your account. A one time password has been sent to your email.</span>
         </div>

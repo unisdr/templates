@@ -124,7 +124,7 @@
 </div>
 </dl>
 </div>
-<div class="dts-form__actions">
+<div class="dts-form__actions dts-form__actions--standalone">
 <button type="button" class="mg-button mg-button--small mg-button-system">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/delete.svg#delete"></use>
@@ -361,15 +361,16 @@ Form header with back button has to be displayed only when Adding element, NOT w
     currentStep.close();
   }
 
-  // Snack bar display - just for static view
+  // Snack bar display
   function openSnackbar(alertType) {
     var x = document.getElementById("OTPsnackbar");
     if (x) {
-      x.querySelector('img').src = ("assets/icons/" + alertType + ".svg");
+
+      x.querySelector("use").setAttribute("href", "assets/icons/" + alertType + ".svg#" + alertType);
       x.classList.add("dts-alert--" + alertType);
       x.classList.add("show");
       setTimeout(function () {
-        x.classList.remove("show");
+         x.classList.remove("show");
       }, 15000);
       setTimeout(function () {
         x.classList.remove("dts-alert--" + alertType);

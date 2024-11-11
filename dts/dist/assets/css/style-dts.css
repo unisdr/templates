@@ -711,6 +711,10 @@ nav ul {
   height: 4rem;
   border-radius: 0.8rem;
 }
+.dts-alert__icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
 .dts-alert > span {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -720,19 +724,22 @@ nav ul {
   background-color: #DDE8F0;
 }
 .dts-alert--info .dts-alert__icon {
+  color: #DDE8F0;
   background-color: #9ABBD6;
 }
 .dts-alert--warning {
-  background-color: #FBF2EB;
+  background-color: #F8F6DC;
 }
 .dts-alert--warning .dts-alert__icon {
-  background-color: #F5DDCC;
+  color: #F8F6DC;
+  background-color: #D1CEAD;
 }
 .dts-alert--error {
   background-color: #F5ECF3;
 }
 .dts-alert--error .dts-alert__icon {
-  background-color: #E5CEE1;
+  color: #F5ECF3;
+  background-color: #D6B3D0;
 }
 
 .mg-button {
@@ -1347,13 +1354,13 @@ nav ul {
   margin: 1.6rem 0;
 }
 
-.dts-form__actions,
-.dts-form:not(.dts-form--vertical) .dts-form__actions {
+.dts-form:not(.dts-form--vertical) .dts-form__actions,
+.dts-form__actions--standalone {
   /* medium design - 768px up */
 }
 @media (width >= 768px) {
-  .dts-form__actions,
-  .dts-form:not(.dts-form--vertical) .dts-form__actions {
+  .dts-form:not(.dts-form--vertical) .dts-form__actions,
+  .dts-form__actions--standalone {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

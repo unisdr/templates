@@ -65,8 +65,8 @@
   }
 }
 
-.dts-form__actions,
-.dts-form:not(.dts-form--vertical) .dts-form__actions {
+.dts-form:not(.dts-form--vertical) .dts-form__actions,
+.dts-form__actions--standalone {
   @include devicebreak(small) {
     display: flex;
     justify-content: flex-start;
