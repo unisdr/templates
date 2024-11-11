@@ -636,6 +636,11 @@ a:hover {
   text-decoration: underline;
 }
 
+svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -644,6 +649,7 @@ button {
   background-color: transparent;
   padding: 0;
   border: none;
+  cursor: pointer;
 }
 
 mark {
@@ -678,13 +684,11 @@ nav ul {
 }
 
 ::-ms-backdrop {
-  background-image: linear-gradient(45deg, black);
-  opacity: 0.75;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 ::backdrop {
-  background-image: linear-gradient(45deg, black);
-  opacity: 0.75;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .dts-alert {
@@ -711,10 +715,6 @@ nav ul {
   height: 4rem;
   border-radius: 0.8rem;
 }
-.dts-alert__icon svg {
-  width: 2.4rem;
-  height: 2.4rem;
-}
 .dts-alert > span {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -740,6 +740,43 @@ nav ul {
 .dts-alert--error .dts-alert__icon {
   color: #F5ECF3;
   background-color: #D6B3D0;
+}
+
+.dts-attachments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.6rem;
+}
+.dts-attachments__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.dts-attachments__item svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.dts-attachments__item svg * {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+.dts-attachments__summary {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.4rem;
+}
+.dts-attachments__metadata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
 }
 
 .mg-button {
@@ -935,18 +972,32 @@ nav ul {
   padding: 0;
   border: none;
   width: 100vw;
-  max-width: none;
+  max-width: 520px;
   height: 100vh;
   max-height: none;
   background-color: #fff;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-dialog {
+    width: 75vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
 }
 .dts-dialog__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 1.6rem;
 }
 .dts-dialog__content {
@@ -962,6 +1013,23 @@ nav ul {
   margin: auto;
   padding: 3.2rem 1.6rem;
   overflow: auto;
+}
+.dts-dialog .dts-form {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dts-dialog .dts-form__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .dts-dialog__logo {
   width: 4.8rem;
@@ -1096,6 +1164,10 @@ nav ul {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+}
+
+.dts-dialog .dts-element-summary__title {
+  margin-bottom: 0;
 }
 
 .mg-undrr-footer {
@@ -1351,6 +1423,24 @@ nav ul {
   display: -ms-grid;
   display: grid;
   gap: 1.6rem;
+  margin: 1.6rem 0;
+}
+
+.dts-dialog .dts-form--vertical .dts-form__actions {
+  margin: 3.2rem 0 0;
+}
+
+.dts-form .dts-form__body .dts-form__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   margin: 1.6rem 0;
 }
 
@@ -2227,10 +2317,6 @@ nav ul {
   color: #004f91;
   background: transparent;
   border-color: #004f91;
-}
-.dts-mega-wrapper .mg-mega-topbar__item svg {
-  width: 2.4rem;
-  height: 2.4rem;
 }
 
 .dts-mega-wrapper .mg-mega-content {

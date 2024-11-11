@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,80 +9,11 @@
 <link rel="stylesheet" href="assets/css/style-dts.css">
 </head>
 <body>
-<div class="dts-page-container"><header>
-  <div class="mg-undrr-header">
-    <div class="mg-undrr-header__decoration">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="mg-undrr-header__toolbar">
-      <div class="mg-container">
-        <div class="mg-undrr-header__toolbar-container">
-          <a href="//www.undrr.org" rel="me" title="UNDRR Homepage">
-            <img src="assets/images/UNDRR-Logo-horizontal.svg" alt="UNDRR logo" height="32" />
-          </a>
-          <form action="" method="post">
-            <select id="edit-lang-dropdown-select" name="" aria-label="Select your language">
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-            </select>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mg-container">
-    <div class="dts-header">
-      <div class='dts-header__logo'>
-        <img src="assets/images/dldt-logo-mark.svg" alt="DLDT logo mark" />
-        <div class='dts-header__logo-text' dir="auto">Disaster Losses<br />and Damage Tracking</div>
-      </div>
-      <div class="dts-header__main-menu">
-        <nav class="mg-mega-wrapper dts-mega-wrapper" aria-label="Main Navigation">
-          <div class="mg-mega-topbar">
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/information_outline.svg#information"></use>
-              </svg>
-              Data
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/eye-show-password.svg#eye-show"></use>
-              </svg>
-              Analysis
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/help-outline.svg#help-outline"></use>
-              </svg>
-              About
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/settings.svg#settings"></use>
-              </svg>
-              Settings
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/user-profile.svg#user"></use>
-              </svg>
-              Log in
-            </button>
-            <button class="mg-mega-topbar__item" aria-label="{title}">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/user-profile.svg#user"></use>
-              </svg>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header><main class="dts-main-container"><header class="dts-page-title">
+<div class="dts-page-container">
+<!--
+include includes/_header.html
+
+--><main class="dts-main-container"><header class="dts-page-title">
   <div class="mg-container">
     <h1 class="dts-heading-1">Page title</h1>
   </div>
@@ -92,7 +22,8 @@
 --><div class="dts-element-summary">
 <h2 class="dts-element-summary__title"><span>Juneau Inundación Costera January 12 21</span><span>Juneau Coastal Flood Crisis</span></h2>
 <div class="dts-element-summary__status">
-<!-- RP: to be moved to tables
+<!--
+RP: to be moved to tables
 <div class="dts-tooltip" data-tooltip-position="top">
   <button type="button" aria-describedby="draftDescription" data-tooltip-trigger>
     <span class="dts-status dts-status--draft" aria-hidden="true"></span>
@@ -125,7 +56,7 @@
 </dl>
 </div>
 <div class="dts-form__actions dts-form__actions--standalone">
-<button type="button" class="mg-button mg-button--small mg-button-system">
+<button type="button" class="mg-button mg-button--small mg-button-system" onclick="document.querySelector('dialog').showModal()">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/delete.svg#delete"></use>
 </svg>
@@ -139,63 +70,63 @@ Form header with back button has to be displayed only when Adding element, NOT w
 <div class="dts-form__header">
   <a href="#" class="mg-button mg-button--small mg-button-system">Back</a>
 </div>
---><div class="dts-form__body">
-<div class="mg-grid mg-grid__col-3">
-<div class="dts-form-component">
-<label>
-<span><abbr title="mandatory">*</abbr>First name</span>
-<input type="text" placeholder="Enter first name" required>
-</label>
+<div class="dts-form__body">
+  <div class="mg-grid mg-grid__col-3">
+    <div class="dts-form-component">
+      <label>
+        <span><abbr title="mandatory">*</abbr>First name</span>
+        <input type="text" placeholder="Enter first name" required>
+      </label>
+    </div>
+    <div class="dts-form-component">
+      <label>
+        <span>Last name</span>
+        <input type="text" placeholder="Enter last name">
+      </label>
+    </div>
+    <div class="dts-form-component">
+      <label>
+        <span><abbr title="mandatory">*</abbr>Email</span>
+        <input type="email" placeholder="Enter Email" required>
+      </label>
+    </div>
+  </div>
+  <div class="mg-grid mg-grid__col-3">
+    <div class="dts-form-component mg-grid__col--span-2">
+      <label>
+        <span><abbr title="mandatory">*</abbr>Organisation</span>
+        <input type="text" placeholder="Enter organisation" required>
+      </label>
+    </div>
+    <div class="dts-form-component">
+      <label>
+        <span>Location access</span>
+        <input type="search" list="locations" placeholder="All locations">
+        <datalist id="locations">
+          <option value="location 1">
+          <option value="location 2">
+          <option value="location 3">
+          <option value="location 4">
+          <option value="location 5">
+        </datalist>
+      </label>
+    </div>
+  </div>
+  <div class="mg-grid mg-grid__col-3">
+    <div class="dts-form-component">
+      <label>
+        <span><abbr title="mandatory">*</abbr>Role</span>
+        <select required>
+          <option value="">select role</option>
+          <option value="viewer">Data viewer</option>
+          <option value="collector">Data collector</option>
+          <option value="validator">Data validator</option>
+          <option value="Admin">Admin</option>
+        </select>
+      </label>
+  </div>
 </div>
-<div class="dts-form-component">
-<label>
-<span>Last name</span>
-<input type="text" placeholder="Enter last name">
-</label>
-</div>
-<div class="dts-form-component">
-<label>
-<span><abbr title="mandatory">*</abbr>Email</span>
-<input type="email" placeholder="Enter Email" required>
-</label>
-</div>
-</div>
-<div class="mg-grid mg-grid__col-3">
-<div class="dts-form-component mg-grid__col--span-2">
-<label>
-<span><abbr title="mandatory">*</abbr>Organisation</span>
-<input type="text" placeholder="Enter organisation" required>
-</label>
-</div>
-<div class="dts-form-component">
-<label>
-<span>Location access</span>
-<input type="search" list="locations" placeholder="All locations">
-<datalist id="locations">
-<option value="location 1">
-<option value="location 2">
-<option value="location 3">
-<option value="location 4">
-<option value="location 5">
-</datalist>
-</label>
-</div>
-</div>
-<div class="mg-grid mg-grid__col-3">
-<div class="dts-form-component">
-<label>
-<span><abbr title="mandatory">*</abbr>Role</span>
-<select required>
-<option value="">select role</option>
-<option value="viewer">Data viewer</option>
-<option value="collector">Data collector</option>
-<option value="validator">Data validator</option>
-<option value="Admin">Admin</option>
-</select>
-</label>
-</div>
-</div>
-<div class="mg-grid mg-grid__col-3">
+--><div class="mg-grid mg-grid__col-3">
 <div class="dts-form__additional-content mg-grid__col--span-2">
 <div class="dts-heading-5">You have selected [Role]</div>
 <div>A [Role] is able to... Details here... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
@@ -206,6 +137,144 @@ Form header with back button has to be displayed only when Adding element, NOT w
 <a href="#" class="mg-button mg-button-outline">Discard</a>
 </div>
 </form>
+<dialog class="dts-dialog">
+<div class="dts-dialog__content">
+<div class="dts-dialog__header">
+<button type="button" autofocus onclick="this.closest('dialog').close()" aria-label="Close dialog">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/close.svg#close"></use>
+</svg>
+</button>
+</div>
+<form onsubmit="event.preventDefault();document.querySelector('#modal02').showModal()" class="dts-form dts-form--vertical">
+<div class="dts-form__intro">
+<h2 class="dts-heading-2">Modal title</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+</div>
+<div class="dts-form__body">
+<div class="dts-form-component">
+<label>
+<span>Type of document</span>
+<select>
+<option value="">Choose an option</option>
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+<option value="volkswagen">Volkswagen</option>
+</select>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Upload file to attach</span>
+<input type="file">
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span>Add link</span>
+<input type="url">
+</label>
+</div>
+<div class="dts-form__actions">
+<button type="button" class="mg-button mg-button--small mg-button-system">Attach</button>
+</div>
+<div class="dts-form__additional-content">
+<div class="dts-heading-3">Attached files</div>
+<ul class="dts-attachments">
+<li class="dts-attachments__item">
+<div class="dts-attachments__summary">
+<strong>Name of file (File Type, Size)</strong>
+<div class="dts-attachments__metadata">
+<span>Situation report</span>
+<span><strong>Added:</strong> 09-20-2024</span>
+</div>
+</div>
+<div>
+<button type="button">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/delete.svg#delete"></use>
+</svg>
+</button>
+</div>
+</li>
+<li class="dts-attachments__item">
+<div class="dts-attachments__summary">
+<strong>Name of file (File Type, Size)</strong>
+<div class="dts-attachments__metadata">
+<span>Situation report</span>
+<span><strong>Added:</strong> 09-20-2024</span>
+</div>
+</div>
+<div>
+<button type="button">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/delete.svg#delete"></use>
+</svg>
+</button>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="dts-form__actions">
+<button type="submit" class="mg-button mg-button-primary">Done</button>
+<button type="button" class="mg-button mg-button-outline">Cancel</button>
+</div>
+</form>
+</div>
+</dialog>
+<dialog id="modal02" class="dts-dialog">
+<div class="dts-dialog__content">
+<div class="dts-dialog__header">
+<button type="button" autofocus onclick="this.closest('dialog').close()" aria-label="Close dialog">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/close.svg#close"></use>
+</svg>
+</button>
+</div>
+<div class="dts-form">
+<div class="dts-form__intro">
+<h2 class="dts-heading-2">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/tick.svg#tick"></use>
+</svg>
+<span>Done</span>
+</h2>
+<p>Your action was completed successfully.</p>
+</div>
+<div class="dts-form__body">
+<div class="dts-element-summary">
+<h2 class="dts-element-summary__title"><span>Record ID #######</span></h2>
+<div class="dts-element-summary__metadata">
+<dl class="dts-metadata">
+<div class="dts-metadata__item">
+<dt>Status:</dt>
+<dd>
+<div class="dts-element-summary__status">
+<span class="dts-status dts-status--draft" aria-hidden="true"></span>
+<span id="draftDescription">Sent for validation</span>
+</div>
+</dd>
+</div>
+<div class="dts-metadata__item">
+<dt>Recipient:</dt>
+<dd>Firstname Lastname (email here)</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+<div class="dts-form__actions">
+<button type="button" class="mg-button mg-button-primary">Primary action</button>
+<button type="button" class="mg-button mg-button-outline">Secondary action</button>
+<button type="button" class="mg-button mg-button-outline">Secondary action</button>
+<button type="button" class="mg-button mg-button-outline">Secondary action</button>
+</div>
+</div>
+</div>
+</dialog>
 </div>
 </main><footer>
   <!-- DTS instance footer -->

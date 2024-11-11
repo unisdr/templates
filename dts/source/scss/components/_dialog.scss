@@ -3,14 +3,23 @@
   padding: 0;
   border: none;
   width: 100vw;
-  max-width: none;
+  max-width: 520px;
   height: 100vh;
   max-height: none;
   background-color: $mg-color-white;
 
+  @include devicebreak(small) {
+    width: 75vw;
+    height: fit-content;
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
   &__header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: $dts-spacing-16;
   }
 
@@ -24,6 +33,20 @@
     overflow: auto;
   }
 
+  .dts-form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    // @include devicebreak(small) {
+    //   flex-grow: unset;
+    // }
+
+    &__body {
+      flex-grow: 1;
+    }
+  }
+
   &__logo {
     width: $dts-spacing-48;
     height: $dts-spacing-48;
@@ -32,6 +55,8 @@
     align-items: center;
   }
 
+  // Block to be removed - BEGIN
+  // Login/Registration flow in a modal
   &__form {
     flex-grow: 1;
     display: flex;
@@ -98,4 +123,6 @@
       margin-top: auto;
     }
   }
+
+  // Block to be removed - END
 }
