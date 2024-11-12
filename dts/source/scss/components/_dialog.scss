@@ -126,3 +126,13 @@
 
   // Block to be removed - END
 }
+
+[dir="rtl"] {
+  .dts-dialog {
+    @include devicebreak(small) {
+      left: auto;
+      right: 50%;
+      transform: translateX(50%) translateY(-50%);
+    }
+  }
+}

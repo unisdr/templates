@@ -67,11 +67,6 @@
 
 .dts-dialog .dts-form--vertical .dts-form__actions {
   margin: $dts-spacing-32 0 0;
-
-  // @include devicebreak(small) {
-  //   display: grid;
-  //   gap: $dts-spacing-16;
-  // }
 }
 
 .dts-form .dts-form__body .dts-form__actions {

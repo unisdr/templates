@@ -1126,6 +1126,18 @@ nav ul {
   margin-top: auto;
 }
 
+[dir=rtl] .dts-dialog {
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  [dir=rtl] .dts-dialog {
+    left: auto;
+    right: 50%;
+    -webkit-transform: translateX(50%) translateY(-50%);
+            transform: translateX(50%) translateY(-50%);
+  }
+}
+
 .dts-element-summary {
   margin: 3.2rem 0;
 }
