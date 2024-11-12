@@ -45,3 +45,12 @@
     }
   }
 }
+
+.dts-form .dts-alert {
+  margin-bottom: $dts-spacing-24;
+  border-radius: 0;
+
+  &__icon {
+    border-radius: 0;
+  }
+}

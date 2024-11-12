@@ -742,6 +742,14 @@ nav ul {
   background-color: #D6B3D0;
 }
 
+.dts-form .dts-alert {
+  margin-bottom: 2.4rem;
+  border-radius: 0;
+}
+.dts-form .dts-alert__icon {
+  border-radius: 0;
+}
+
 .dts-attachments {
   list-style: none;
   margin: 0;
@@ -1180,6 +1188,24 @@ nav ul {
 
 .dts-dialog .dts-element-summary__title {
   margin-bottom: 0;
+}
+
+.dts-event-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.6rem;
+}
+.dts-event-list [class*=heading] {
+  margin-bottom: 0;
+}
+.dts-event-list__metadata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
 }
 
 .mg-undrr-footer {
@@ -2587,6 +2613,7 @@ nav ul {
           transform: translateX(-50%);
   width: 90%;
   max-width: 480px;
+  border-radius: 0.8rem;
   opacity: 0;
   -webkit-transition: opacity 0.5s, bottom 0.5s;
   transition: opacity 0.5s, bottom 0.5s;

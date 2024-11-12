@@ -6,6 +6,7 @@
    transform: translateX(-50%);
    width: 90%;
    max-width: 480px;
+   border-radius: $mg-radius-button;
    opacity: 0;
    transition: opacity .5s, bottom .5s;
 

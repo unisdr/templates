@@ -103,13 +103,13 @@
     if (x) {
 
       x.querySelector("use").setAttribute("href", "assets/icons/" + alertType + ".svg#" + alertType);
-      x.classList.add("dts-alert--" + alertType);
       x.classList.add("show");
+      x.querySelector('.dts-alert').classList.add("dts-alert--" + alertType);
       setTimeout(function () {
          x.classList.remove("show");
       }, 15000);
       setTimeout(function () {
-        x.classList.remove("dts-alert--" + alertType);
+        x.querySelector('.dts-alert').classList.remove("dts-alert--" + alertType);
       }, 15500);
     }
   }

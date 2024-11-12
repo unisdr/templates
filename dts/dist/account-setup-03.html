@@ -43,13 +43,15 @@
 <button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('warning');">display warning snackbar</button>
 <button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('error');">display error snackbar</button>
 </div>
-<div id="OTPsnackbar" class="dts-snackbar dts-alert">
+<div id="OTPsnackbar" class="dts-snackbar">
+<div class="dts-alert">
 <div class="dts-alert__icon">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/info.svg#info"></use>
 </svg>
 </div>
 <span>Please verify your account. A one time password has been sent to your email.</span>
+</div>
 </div>
 </div>
 </main>
@@ -70,13 +72,13 @@
     if (x) {
 
       x.querySelector("use").setAttribute("href", "assets/icons/" + alertType + ".svg#" + alertType);
-      x.classList.add("dts-alert--" + alertType);
       x.classList.add("show");
+      x.querySelector('.dts-alert').classList.add("dts-alert--" + alertType);
       setTimeout(function () {
          x.classList.remove("show");
       }, 15000);
       setTimeout(function () {
-        x.classList.remove("dts-alert--" + alertType);
+        x.querySelector('.dts-alert').classList.remove("dts-alert--" + alertType);
       }, 15500);
     }
   }

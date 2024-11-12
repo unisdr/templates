@@ -13,10 +13,11 @@
 <body>
   <div class="dts-page-container">
 
-    //
-      include includes/_header.html
+    include includes/_header.html
 
     <main class="dts-main-container">
+
+      include includes/_page-title.html
 
       <section>
         <div class="mg-container">
@@ -24,6 +25,20 @@
           <hr>
           <h3>2 columns form on 768px up, 1 column form on 767px down</h3>
           <form class="dts-form">
+            <div class="dts-alert dts-alert--error">
+              <div class="dts-alert__icon">
+                <svg aria-hidden="true" focusable="false" role="img">
+                  <use href="assets/icons/error.svg#error"></use>
+                </svg>
+              </div>
+              <div>
+                <p>Your action was not successful. Please fill in all the required fields on the page.</p>
+                <ul>
+                  <li>First name</li>
+                  <li>Email</li>
+                </ul>
+              </div>
+            </div>
             <div class="dts-form__body">
               //
                 Form fields line - 2 columns
@@ -68,6 +83,34 @@
                     <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="dts-alert dts-alert--warning">
+              <div class="dts-alert__icon">
+                <svg aria-hidden="true" focusable="false" role="img">
+                  <use href="assets/icons/warning.svg#warning"></use>
+                </svg>
+              </div>
+              <div>
+                <p>Just in case, are you sure this event hasn’t already been created? Here are some other events for this hazard and date in [instance name]. You can add records for the below without duplicating an event.</p>
+                <ul class="dts-event-list">
+                  <li>
+                    <div class="dts-heading-4">Toronto storm surge, Dec 22 '23</div>
+                    <div class="dts-event-list__metadata">
+                      <span>FL-2023-10-02-DL00</span>
+                      <span><strong>11</strong> of 30 fields filled</span>
+                      <a href="">Data about event</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dts-heading-4">New York Hurricane, Dec 21 '23</div>
+                    <div class="dts-event-list__metadata">
+                      <span>FL-2023-10-02-DL00</span>
+                      <span><strong>19</strong> of 30 fields filled</span>
+                      <a href="">Data about event</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="dts-form__actions">

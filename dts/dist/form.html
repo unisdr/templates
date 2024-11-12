@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,17 +10,103 @@
 <link rel="stylesheet" href="assets/css/style-dts.css">
 </head>
 <body>
-<div class="dts-page-container">
-<!--
-include includes/_header.html
-
---><main class="dts-main-container">
-<section>
+<div class="dts-page-container"><header>
+  <div class="mg-undrr-header">
+    <div class="mg-undrr-header__decoration">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mg-undrr-header__toolbar">
+      <div class="mg-container">
+        <div class="mg-undrr-header__toolbar-container">
+          <a href="//www.undrr.org" rel="me" title="UNDRR Homepage">
+            <img src="assets/images/UNDRR-Logo-horizontal.svg" alt="UNDRR logo" height="32" />
+          </a>
+          <form action="" method="post">
+            <select id="edit-lang-dropdown-select" name="" aria-label="Select your language">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mg-container">
+    <div class="dts-header">
+      <div class='dts-header__logo'>
+        <img src="assets/images/dldt-logo-mark.svg" alt="DLDT logo mark" />
+        <div class='dts-header__logo-text' dir="auto">Disaster Losses<br />and Damage Tracking</div>
+      </div>
+      <div class="dts-header__main-menu">
+        <nav class="mg-mega-wrapper dts-mega-wrapper" aria-label="Main Navigation">
+          <div class="mg-mega-topbar">
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/information_outline.svg#information"></use>
+              </svg>
+              Data
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+              </svg>
+              Analysis
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/help-outline.svg#help-outline"></use>
+              </svg>
+              About
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/settings.svg#settings"></use>
+              </svg>
+              Settings
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/user-profile.svg#user"></use>
+              </svg>
+              Log in
+            </button>
+            <button class="mg-mega-topbar__item" aria-label="{title}">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/user-profile.svg#user"></use>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><main class="dts-main-container"><header class="dts-page-title">
+  <div class="mg-container">
+    <h1 class="dts-heading-1">Page title</h1>
+  </div>
+</header><section>
 <div class="mg-container">
 <br>
 <hr>
 <h3>2 columns form on 768px up, 1 column form on 767px down</h3>
 <form class="dts-form">
+<div class="dts-alert dts-alert--error">
+<div class="dts-alert__icon">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/error.svg#error"></use>
+</svg>
+</div>
+<div>
+<p>Your action was not successful. Please fill in all the required fields on the page.</p>
+<ul>
+<li>First name</li>
+<li>Email</li>
+</ul>
+</div>
+</div>
 <div class="dts-form__body">
 <!--Form fields line - 2 columns
 --><div class="mg-grid mg-grid__col-2">
@@ -59,6 +146,34 @@ include includes/_header.html
 <div class="dts-form-component__hint--error" id="validationMsgId" aria-live="assertive">Error message goes hereError message goes hereError message goes hereError message goes hereError message goes here</div>
 </div>
 </div>
+</div>
+</div>
+<div class="dts-alert dts-alert--warning">
+<div class="dts-alert__icon">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/warning.svg#warning"></use>
+</svg>
+</div>
+<div>
+<p>Just in case, are you sure this event hasn’t already been created? Here are some other events for this hazard and date in [instance name]. You can add records for the below without duplicating an event.</p>
+<ul class="dts-event-list">
+<li>
+<div class="dts-heading-4">Toronto storm surge, Dec 22 '23</div>
+<div class="dts-event-list__metadata">
+<span>FL-2023-10-02-DL00</span>
+<span><strong>11</strong> of 30 fields filled</span>
+<a href="">Data about event</a>
+</div>
+</li>
+<li>
+<div class="dts-heading-4">New York Hurricane, Dec 21 '23</div>
+<div class="dts-event-list__metadata">
+<span>FL-2023-10-02-DL00</span>
+<span><strong>19</strong> of 30 fields filled</span>
+<a href="">Data about event</a>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="dts-form__actions">
@@ -558,13 +673,13 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
     if (x) {
 
       x.querySelector("use").setAttribute("href", "assets/icons/" + alertType + ".svg#" + alertType);
-      x.classList.add("dts-alert--" + alertType);
       x.classList.add("show");
+      x.querySelector('.dts-alert').classList.add("dts-alert--" + alertType);
       setTimeout(function () {
          x.classList.remove("show");
       }, 15000);
       setTimeout(function () {
-        x.classList.remove("dts-alert--" + alertType);
+        x.querySelector('.dts-alert').classList.remove("dts-alert--" + alertType);
       }, 15500);
     }
   }
