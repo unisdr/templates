@@ -65,6 +65,22 @@
   }
 }
 
+.dts-dialog .dts-form--vertical .dts-form__actions {
+  margin: $dts-spacing-32 0 0;
+
+  // @include devicebreak(small) {
+  //   display: grid;
+  //   gap: $dts-spacing-16;
+  // }
+}
+
+.dts-form .dts-form__body .dts-form__actions {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin: $dts-spacing-16 0;
+}
+
 .dts-form:not(.dts-form--vertical) .dts-form__actions,
 .dts-form__actions--standalone {
   @include devicebreak(small) {
