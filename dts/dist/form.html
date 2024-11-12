@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,80 +9,11 @@
 <link rel="stylesheet" href="assets/css/style-dts.css">
 </head>
 <body>
-<div class="dts-page-container"><header>
-  <div class="mg-undrr-header">
-    <div class="mg-undrr-header__decoration">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="mg-undrr-header__toolbar">
-      <div class="mg-container">
-        <div class="mg-undrr-header__toolbar-container">
-          <a href="//www.undrr.org" rel="me" title="UNDRR Homepage">
-            <img src="assets/images/UNDRR-Logo-horizontal.svg" alt="UNDRR logo" height="32" />
-          </a>
-          <form action="" method="post">
-            <select id="edit-lang-dropdown-select" name="" aria-label="Select your language">
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-            </select>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mg-container">
-    <div class="dts-header">
-      <div class='dts-header__logo'>
-        <img src="assets/images/dldt-logo-mark.svg" alt="DLDT logo mark" />
-        <div class='dts-header__logo-text' dir="auto">Disaster Losses<br />and Damage Tracking</div>
-      </div>
-      <div class="dts-header__main-menu">
-        <nav class="mg-mega-wrapper dts-mega-wrapper" aria-label="Main Navigation">
-          <div class="mg-mega-topbar">
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/information_outline.svg#information"></use>
-              </svg>
-              Data
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/eye-show-password.svg#eye-show"></use>
-              </svg>
-              Analysis
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/help-outline.svg#help-outline"></use>
-              </svg>
-              About
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/settings.svg#settings"></use>
-              </svg>
-              Settings
-            </button>
-            <button class="mg-mega-topbar__item">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/user-profile.svg#user"></use>
-              </svg>
-              Log in
-            </button>
-            <button class="mg-mega-topbar__item" aria-label="{title}">
-              <svg aria-hidden="true" focusable="false" role="img">
-                <use href="assets/icons/user-profile.svg#user"></use>
-              </svg>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header><main class="dts-main-container"><header class="dts-page-title">
+<div class="dts-page-container">
+<!--
+include includes/_header.html
+
+--><main class="dts-main-container"><header class="dts-page-title">
   <div class="mg-container">
     <h1 class="dts-heading-1">Page title</h1>
   </div>
@@ -112,13 +42,27 @@
 --><div class="mg-grid mg-grid__col-2">
 <div class="dts-form-component">
 <label>
-<span>Date picker field</span>
+<div class="dts-form-component__label">
+<!--Info tooltip block BEGIN
+--><span id="fieldId">Date picker field</span>
+<div class="dts-tooltip" data-tooltip-position="top">
+<button type="button" aria-labelledby="fieldId" aria-describedby="tooltipDescription" data-tooltip-trigger>
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/information_outline.svg#information"></use>
+</svg>
+</button>
+<p id="tooltipDescription" role="tooltip" class="tooltip-hidden">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+</div>
+<!--Info tooltip block END
+--></div>
 <input type="date">
 </label>
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Time picker field</span>
+</div>
 <input type="time">
 </label>
 </div>
@@ -127,15 +71,17 @@
 --><div class="mg-grid mg-grid__col-2">
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>File upload field (accepted types, multiple selection)</span>
+</div>
 <input type="file" accept=".pdf" multiple>
 </label>
 </div>
 <div class="dts-form-component">
 <!--Add aria-invalid="true" attribute to label tag when the field has ERRORS
 --><label aria-invalid="true">
-<!--In checkboxes this span tag is empty, but it must exist in order to keep the right alignment with other fields
---><span></span>
+<!--For checkboxes and radiobuttons the "dts-form-component__label" tag must exist (even if empty) in order to keep the right alignment with other fields
+--><div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <!--Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
 --><input type="checkbox" name="" aria-describedBy="validationMsgId" />
@@ -196,7 +142,9 @@
 --><div class="dts-form-component">
 <!--Add aria-invalid="true" attribute to label tag when the field has ERRORS
 --><label aria-invalid="true">
+<div class="dts-form-component__label">
 <span><abbr title="mandatory">*</abbr>Text field (single line)</span>
+</div>
 <!--
 Add required attribute to the input tag when the field is MANDATORY
 Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
@@ -211,14 +159,18 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Email field - (disabled)</span>
+</div>
 <!--Add disabled attribute to the input tag to make it DISABLED
 --><input type="email" placeholder="enter email" disabled>
 </label>
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Password field</span>
+</div>
 <div class="dts-form-component__pwd">
 <!--Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
 --><input type="password" placeholder="enter password" aria-describedBy="descriptionTextId">
@@ -237,7 +189,9 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 --><div class="mg-grid mg-grid__col-3">
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Search field - with autocomplete</span>
+</div>
 <input type="search" list="browsers" placeholder="search browser name" value="Firefox">
 <datalist id="browsers">
 <option value="Internet Explorer">
@@ -250,13 +204,17 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Url field</span>
+</div>
 <input type="url" pattern="https://.*" placeholder="enter url">
 </label>
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Number field (stepper)</span>
+</div>
 <input type="number" step="10" min="10" max="100" placeholder="enter number">
 </label>
 </div>
@@ -266,7 +224,9 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <!--Form field - span 2 columns
 --><div class="dts-form-component mg-grid__col--span-2">
 <label>
+<div class="dts-form-component__label">
 <span>Text area field (read-only)</span>
+</div>
 <!--Add readonly attribute to the input tag to make it READ-ONLY
 --><textarea rows="5" maxlength="500" placeholder="enter text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
 </label>
@@ -281,7 +241,7 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <div class="mg-grid mg-grid__col-2">
 <div>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <!--Add aria-describedBy="inputErrorId" attribute to ALL input tags of the fieldset when the fieldset has ERRORS
 --><input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
@@ -289,14 +249,14 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 </label>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" disabled />
 <span>Checkbox field (single)</span>
 </div>
 </label>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
 <span>Checkbox field (single)</span>
@@ -305,14 +265,14 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
 <span>Checkbox field (single)</span>
 </div>
 </label>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
 <span>Checkbox field (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
@@ -332,21 +292,21 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <div class="mg-grid mg-grid__col-2">
 <div>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="radio" name="radiobuttonFieldsetName" disabled />
 <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 </div>
 </label>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="radio" name="radiobuttonFieldsetName" />
 <span>Radiobutton label</span>
 </div>
 </label>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="radio" name="radiobuttonFieldsetName" />
 <span>Radiobutton label</span>
@@ -355,14 +315,14 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="radio" name="radiobuttonFieldsetName" />
 <span>Radiobutton label</span>
 </div>
 </label>
 <label>
-<span></span>
+<div class="dts-form-component__label"></div>
 <div class="dts-form-component__field--horizontal">
 <input type="radio" name="radiobuttonFieldsetName" />
 <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
@@ -388,7 +348,9 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 --><div class="mg-grid mg-grid__col-4">
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Select field (single selection)</span>
+</div>
 <select>
 <option value="">Choose an option</option>
 <option value="volvo">&#x26AB; Volvo</option>
@@ -401,7 +363,9 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Select field (single selection - with tooltip)</span>
+</div>
 <select>
 <option value="">Choose an option</option>
 <option value="volvo" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Volvo</option>
@@ -414,7 +378,9 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Select field (single selection - grouped options)</span>
+</div>
 <select>
 <option value="">Choose an option</option>
 <optgroup label="Swedish Cars">
@@ -431,7 +397,9 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Select field (multiple selection)</span>
+</div>
 <select multiple size="3">
 <option value="volvo">Volvo</option>
 <option value="saab">Saab</option>
@@ -453,11 +421,19 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <h3>6 variable width columns form on 1164px up, 3 variable width columns form on 768px up, 1 column form on 767px down</h3>
 <form class="dts-form">
 <div class="dts-form__body">
+<!--Form section (bkg grey)
+--><div class="dts-form__section">
+<div class="dts-form__intro">
+<h3 class="dts-heading-3">Damages</h3>
+<p>Here’s an explanation of what a damage is. To permanently update baseline costs, go here. Links to <a href="">help</a> and <a href="">resources</a>.</p>
+</div>
 <!--Form fields line - 6 columns, variable width
 --><div class="mg-grid mg-grid__col-auto">
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Asset</span>
+</div>
 <select>
 <option value="volvo">Volvo</option>
 <option value="saab">Saab</option>
@@ -469,7 +445,9 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Damage</span>
+</div>
 <select>
 <option value="volvo">Volvo</option>
 <option value="saab">Saab</option>
@@ -481,13 +459,17 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Count</span>
+</div>
 <input type="number" step="10" min="10" max="100" placeholder="enter number">
 </label>
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Unit type</span>
+</div>
 <select>
 <option value="volvo">Volvo</option>
 <option value="saab">Saab</option>
@@ -499,16 +481,22 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Unit cost</span>
+</div>
 <input type="text" placeholder="enter text">
 </label>
 </div>
 <div class="dts-form-component">
 <label>
+<div class="dts-form-component__label">
 <span>Total cost</span>
+</div>
 <input type="text" placeholder="enter text">
 </label>
 </div>
+</div>
+</div>             
 </div>
 </form>
 </div>

@@ -13,7 +13,8 @@
 <body>
   <div class="dts-page-container">
 
-    include includes/_header.html
+    //
+      include includes/_header.html
 
     <main class="dts-main-container">
 
@@ -45,13 +46,29 @@
               <div class="mg-grid mg-grid__col-2">
                 <div class="dts-form-component">
                   <label>
-                    <span>Date picker field</span>
+                    <div class="dts-form-component__label">
+                      //
+                        Info tooltip block BEGIN
+                      <span id="fieldId">Date picker field</span>
+                      <div class="dts-tooltip" data-tooltip-position="top">
+                        <button type="button" aria-labelledby="fieldId" aria-describedby="tooltipDescription" data-tooltip-trigger>
+                          <svg aria-hidden="true" focusable="false" role="img">
+                            <use href="assets/icons/information_outline.svg#information"></use>
+                          </svg>
+                        </button>
+                        <p id="tooltipDescription" role="tooltip" class="tooltip-hidden">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                      </div>
+                      //
+                        Info tooltip block END
+                    </div>
                     <input type="date">
                   </label>
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Time picker field</span>
+                    <div class="dts-form-component__label">
+                      <span>Time picker field</span>
+                    </div>
                     <input type="time">
                   </label>
                 </div>
@@ -61,7 +78,9 @@
               <div class="mg-grid mg-grid__col-2">
                 <div class="dts-form-component">
                   <label>
-                    <span>File upload field (accepted types, multiple selection)</span>
+                    <div class="dts-form-component__label">
+                      <span>File upload field (accepted types, multiple selection)</span>
+                    </div>
                     <input type="file" accept=".pdf" multiple>
                   </label>
                 </div>
@@ -70,8 +89,8 @@
                     Add aria-invalid="true" attribute to label tag when the field has ERRORS
                   <label aria-invalid="true">
                     //
-                      In checkboxes this span tag is empty, but it must exist in order to keep the right alignment with other fields
-                    <span></span>
+                      For checkboxes and radiobuttons the "dts-form-component__label" tag must exist (even if empty) in order to keep the right alignment with other fields
+                    <div class="dts-form-component__label"></div>
                     <div class="dts-form-component__field--horizontal">
                       //
                         Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
@@ -137,7 +156,9 @@
                   //
                     Add aria-invalid="true" attribute to label tag when the field has ERRORS
                   <label aria-invalid="true">
-                    <span><abbr title="mandatory">*</abbr>Text field (single line)</span>
+                    <div class="dts-form-component__label">
+                      <span><abbr title="mandatory">*</abbr>Text field (single line)</span>
+                    </div>
                     //
                       Add required attribute to the input tag when the field is MANDATORY
                       Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
@@ -153,7 +174,9 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Email field - (disabled)</span>
+                    <div class="dts-form-component__label">
+                      <span>Email field - (disabled)</span>
+                    </div>
                     //
                       Add disabled attribute to the input tag to make it DISABLED
                     <input type="email" placeholder="enter email" disabled>
@@ -161,7 +184,9 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Password field</span>
+                    <div class="dts-form-component__label">
+                      <span>Password field</span>
+                    </div>
                     <div class="dts-form-component__pwd">
                       //
                         Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
@@ -183,7 +208,9 @@
               <div class="mg-grid mg-grid__col-3">
                 <div class="dts-form-component">
                   <label>
-                    <span>Search field - with autocomplete</span>
+                    <div class="dts-form-component__label">
+                      <span>Search field - with autocomplete</span>
+                    </div>
                     <input type="search" list="browsers" placeholder="search browser name" value="Firefox">
                     <datalist id="browsers">
                       <option value="Internet Explorer">
@@ -196,13 +223,17 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Url field</span>
+                    <div class="dts-form-component__label">
+                      <span>Url field</span>
+                    </div>
                     <input type="url" pattern="https://.*" placeholder="enter url">
                   </label>
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Number field (stepper)</span>
+                    <div class="dts-form-component__label">
+                      <span>Number field (stepper)</span>
+                    </div>
                     <input type="number" step="10" min="10" max="100" placeholder="enter number">
                   </label>
                 </div>
@@ -214,7 +245,9 @@
                   Form field - span 2 columns
                 <div class="dts-form-component mg-grid__col--span-2">
                   <label>
-                    <span>Text area field (read-only)</span>
+                    <div class="dts-form-component__label">
+                      <span>Text area field (read-only)</span>
+                    </div>
                     //
                       Add readonly attribute to the input tag to make it READ-ONLY
                     <textarea rows="5" maxlength="500" placeholder="enter text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
@@ -232,7 +265,7 @@
                     <div class="mg-grid mg-grid__col-2">
                       <div>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             //
                               Add aria-describedBy="inputErrorId" attribute to ALL input tags of the fieldset when the fieldset has ERRORS
@@ -241,14 +274,14 @@
                           </div>
                         </label>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" disabled />
                             <span>Checkbox field (single)</span>
                           </div>
                         </label>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
                             <span>Checkbox field (single)</span>
@@ -257,14 +290,14 @@
                       </div>
                       <div>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
                             <span>Checkbox field (single)</span>
                           </div>
                         </label>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="checkbox" name="" aria-describedBy="inputErrorId descriptionTextId" />
                             <span>Checkbox field (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
@@ -284,21 +317,21 @@
                     <div class="mg-grid mg-grid__col-2">
                       <div>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="radio" name="radiobuttonFieldsetName" disabled />
                             <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
                           </div>
                         </label>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="radio" name="radiobuttonFieldsetName" />
                             <span>Radiobutton label</span>
                           </div>
                         </label>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="radio" name="radiobuttonFieldsetName" />
                             <span>Radiobutton label</span>
@@ -307,14 +340,14 @@
                       </div>
                       <div>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="radio" name="radiobuttonFieldsetName" />
                             <span>Radiobutton label</span>
                           </div>
                         </label>
                         <label>
-                          <span></span>
+                          <div class="dts-form-component__label"></div>
                           <div class="dts-form-component__field--horizontal">
                             <input type="radio" name="radiobuttonFieldsetName" />
                             <span>Radiobutton label - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
@@ -342,7 +375,9 @@
               <div class="mg-grid mg-grid__col-4">
                 <div class="dts-form-component">
                   <label>
-                    <span>Select field (single selection)</span>
+                    <div class="dts-form-component__label">
+                      <span>Select field (single selection)</span>
+                    </div>
                     <select>
                       <option value="">Choose an option</option>
                       <option value="volvo">&#x26AB; Volvo</option>
@@ -355,7 +390,9 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Select field (single selection - with tooltip)</span>
+                    <div class="dts-form-component__label">
+                      <span>Select field (single selection - with tooltip)</span>
+                    </div>
                     <select>
                       <option value="">Choose an option</option>
                       <option value="volvo" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Volvo</option>
@@ -368,7 +405,9 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Select field (single selection - grouped options)</span>
+                    <div class="dts-form-component__label">
+                      <span>Select field (single selection - grouped options)</span>
+                    </div>
                     <select>
                       <option value="">Choose an option</option>
                       <optgroup label="Swedish Cars">
@@ -385,7 +424,9 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Select field (multiple selection)</span>
+                    <div class="dts-form-component__label">
+                      <span>Select field (multiple selection)</span>
+                    </div>
                     <select multiple size="3">
                       <option value="volvo">Volvo</option>
                       <option value="saab">Saab</option>
@@ -409,63 +450,84 @@
           <form class="dts-form">
             <div class="dts-form__body">
               //
-                Form fields line - 6 columns, variable width
-              <div class="mg-grid mg-grid__col-auto">
-                <div class="dts-form-component">
-                  <label>
-                    <span>Asset</span>
-                    <select>
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="audi">Audi</option>
-                      <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
-                    </select>
-                  </label>
+                Form section (bkg grey)
+              <div class="dts-form__section">
+                <div class="dts-form__intro">
+                  <h3 class="dts-heading-3">Damages</h3>
+                  <p>Here’s an explanation of what a damage is. To permanently update baseline costs, go here. Links to <a href="">help</a> and <a href="">resources</a>.</p>
                 </div>
-                <div class="dts-form-component">
-                  <label>
-                    <span>Damage</span>
-                    <select>
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="audi">Audi</option>
-                      <option value="volkswagen">Volkswagen</option>
-                    </select>
-                  </label>
+                //
+                  Form fields line - 6 columns, variable width
+                <div class="mg-grid mg-grid__col-auto">
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Asset</span>
+                      </div>
+                      <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Damage</span>
+                      </div>
+                      <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Count</span>
+                      </div>
+                      <input type="number" step="10" min="10" max="100" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit type</span>
+                      </div>
+                      <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit cost</span>
+                      </div>
+                      <input type="text" placeholder="enter text">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total cost</span>
+                      </div>
+                      <input type="text" placeholder="enter text">
+                    </label>
+                  </div>
                 </div>
-                <div class="dts-form-component">
-                  <label>
-                    <span>Count</span>
-                    <input type="number" step="10" min="10" max="100" placeholder="enter number">
-                  </label>
-                </div>
-                <div class="dts-form-component">
-                  <label>
-                    <span>Unit type</span>
-                    <select>
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="audi">Audi</option>
-                      <option value="volkswagen">Volkswagen</option>
-                    </select>
-                  </label>
-                </div>
-                <div class="dts-form-component">
-                  <label>
-                    <span>Unit cost</span>
-                    <input type="text" placeholder="enter text">
-                  </label>
-                </div>
-                <div class="dts-form-component">
-                  <label>
-                    <span>Total cost</span>
-                    <input type="text" placeholder="enter text">
-                  </label>
-                </div>
-              </div>
+              </div>             
+            </div>
           </form>
         </div>
       </section>

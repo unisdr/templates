@@ -218,7 +218,8 @@ class Tooltip {
 
     // If the tooltip overlaps on both sides, throw an error
     if (bounds.right > windowWidth && bounds.left < 0) {
-      throw new Error('Tooltip width too wide for the window')
+      console.log(this.tooltip.width);
+      // throw new Error('Tooltip width too wide for the window')
     }
 
     // Check if the right side of the tooltip is beyond the right side of the viewport
@@ -272,9 +273,9 @@ class Tooltip {
 
   // Reset the changes made by the bounding box functions
   resetBoundingBox() {
-    if (tooltip.style.left || tooltip.style.transform) {
-      tooltip.style.left = null
-      tooltip.style.transform = null
+    if (this.tooltip.style.left || this.tooltip.style.transform) {
+        this.tooltip.style.left = null;
+        this.tooltip.style.transform = null;
     }
 
     this.initialiseClassList()

@@ -1457,6 +1457,10 @@ nav ul {
   justify-items: center;
   gap: 0.8rem;
 }
+.dts-form__section {
+  background-color: #F2F2F2;
+  padding: 2.4rem;
+}
 .dts-form__actions {
   display: -ms-grid;
   display: grid;
@@ -1559,6 +1563,24 @@ nav ul {
   margin: 0;
   padding-left: 2.4rem;
 }
+.dts-form-component__label {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 0.8rem;
+}
+.dts-form-component__label svg {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.dts-form-component__label svg * {
+  -webkit-transform: scale(0.75) translate(-2px, -3px);
+          transform: scale(0.75) translate(-2px, -3px);
+}
 .dts-form-component abbr {
   text-decoration: none;
   margin-right: 0.4rem;
@@ -1578,21 +1600,12 @@ nav ul {
 .dts-form-component label:has(input[type=checkbox]), .dts-form-component label:has(input[type=radio]) {
   cursor: pointer;
 }
-.dts-form-component label[aria-invalid=true] input, .dts-form-component label[aria-invalid=true] textarea, .dts-form-component label[aria-invalid=true] select {
-  border: 1px solid #c10920;
-}
-.dts-form-component label > span {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-}
 .dts-form-component label:has([disabled]) {
   color: #4A4A4A;
   cursor: not-allowed;
+}
+.dts-form-component label[aria-invalid=true] input, .dts-form-component label[aria-invalid=true] textarea, .dts-form-component label[aria-invalid=true] select {
+  border: 1px solid #c10920;
 }
 .dts-form-component input,
 .dts-form-component textarea,
@@ -1665,7 +1678,7 @@ nav ul {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: url("../icons/chevron-down.svg") no-repeat;
+  background: #fff url("../icons/chevron-down.svg") no-repeat;
   background-size: 10px;
   background-position: top 48% right 0.8rem;
   padding: 5px 0.8rem 3px;
@@ -2697,10 +2710,11 @@ nav ul {
   position: absolute;
   top: 100%;
   left: 50%;
+  z-index: 100;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border: 0.5em solid transparent;
-  border-bottom-color: #000000;
+  border-bottom-color: #fff;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -2722,7 +2736,7 @@ nav ul {
   bottom: 100%;
 }
 .dts-tooltip.top::before {
-  border-top-color: #000000;
+  border-top-color: #fff;
   border-bottom-color: transparent;
 }
 .dts-tooltip.top [role=tooltip] {
@@ -2731,28 +2745,56 @@ nav ul {
 .dts-tooltip [role=tooltip] {
   position: absolute;
   top: calc(100% + 1em);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 25%;
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
   margin: 0;
   padding: 0.8rem;
   border-radius: 0.25em;
-  color: #fff;
-  line-height: 1 !important;
-  background: #000000;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
-  max-width: 10em;
-  -webkit-box-shadow: 0 1px 2px hsl(0, 0%, 0%);
-          box-shadow: 0 1px 2px hsl(0, 0%, 0%);
+  background: #fff;
+  -webkit-box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1307);
+          box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1307);
   opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  /* large design - 1164px up */
+}
+@media (width >= 1164px) {
+  .dts-tooltip [role=tooltip] {
+    min-width: 360px;
+  }
+}
+.dts-tooltip--status::before {
+  border-bottom-color: #000000;
+}
+.dts-tooltip--status.top::before {
+  border-top-color: #000000;
+}
+.dts-tooltip--status [role=tooltip] {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  line-height: 1 !important;
+  color: #fff;
+  background: #000000;
+  -webkit-box-shadow: 0 1px 2px hsl(0, 0%, 0%);
+          box-shadow: 0 1px 2px hsl(0, 0%, 0%);
 }
 .dts-tooltip .tooltip-hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.dts-form-component__label .dts-tooltip {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 /*
