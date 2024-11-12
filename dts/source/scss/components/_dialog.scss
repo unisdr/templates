@@ -3,9 +3,10 @@
   padding: 0;
   border: none;
   width: 100vw;
-  max-width: 520px;
+  max-width: 480px;
   height: 100vh;
   max-height: none;
+  padding: $dts-spacing-32 $dts-spacing-16;
   background-color: $mg-color-white;
 
   @include devicebreak(small) {
@@ -15,6 +16,7 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    padding: $dts-spacing-32 $dts-spacing-24;
   }
 
   &__header {
@@ -27,9 +29,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-width: 480px;
     margin: auto;
-    padding: $dts-spacing-32 $dts-spacing-16;
     overflow: auto;
   }
 

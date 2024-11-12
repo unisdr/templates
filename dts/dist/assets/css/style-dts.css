@@ -972,9 +972,10 @@ nav ul {
   padding: 0;
   border: none;
   width: 100vw;
-  max-width: 520px;
+  max-width: 480px;
   height: 100vh;
   max-height: none;
+  padding: 3.2rem 1.6rem;
   background-color: #fff;
   /* medium design - 768px up */
 }
@@ -989,6 +990,7 @@ nav ul {
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
+    padding: 3.2rem 2.4rem;
   }
 }
 .dts-dialog__header {
@@ -1009,9 +1011,7 @@ nav ul {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  max-width: 480px;
   margin: auto;
-  padding: 3.2rem 1.6rem;
   overflow: auto;
 }
 .dts-dialog .dts-form {

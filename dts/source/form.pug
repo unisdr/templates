@@ -46,8 +46,8 @@
               <div class="mg-grid mg-grid__col-2">
                 <div class="dts-form-component">
                   <label>
-                    <span>File upload field</span>
-                    <input type="file">
+                    <span>File upload field (accepted types, multiple selection)</span>
+                    <input type="file" accept=".pdf" multiple>
                   </label>
                 </div>
                 <div class="dts-form-component">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Text field - email (disabled)</span>
+                    <span>Email field - (disabled)</span>
                     //
                       Add disabled attribute to the input tag to make it DISABLED
                     <input type="email" placeholder="enter email" disabled>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Text field - password</span>
+                    <span>Password field</span>
                     <div class="dts-form-component__pwd">
                       //
                         Add aria-describedBy="descriptionTextId" attribute to the input tag when the field has a DESCRIPTION
@@ -140,7 +140,7 @@
               <div class="mg-grid mg-grid__col-3">
                 <div class="dts-form-component">
                   <label>
-                    <span>Text field - search with autocomplete</span>
+                    <span>Search field - with autocomplete</span>
                     <input type="search" list="browsers" placeholder="search browser name" value="Firefox">
                     <datalist id="browsers">
                       <option value="Internet Explorer">
@@ -149,6 +149,12 @@
                       <option value="Opera">
                       <option value="Safari">
                     </datalist>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <span>Url field</span>
+                    <input type="url" pattern="https://.*" placeholder="enter url">
                   </label>
                 </div>
                 <div class="dts-form-component">
