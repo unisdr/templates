@@ -2648,6 +2648,16 @@ nav ul {
 .dts-sub-navigation .mg-container {
   border-bottom: 1px solid #E3E3E3;
 }
+.dts-sub-navigation__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.8rem;
+  overflow: auto;
+}
 .dts-sub-navigation ul {
   list-style: none;
   margin: 0;
@@ -2656,7 +2666,6 @@ nav ul {
   display: -ms-flexbox;
   display: flex;
   gap: 0.8rem;
-  overflow: auto;
 }
 .dts-sub-navigation ul a {
   display: inline-block;

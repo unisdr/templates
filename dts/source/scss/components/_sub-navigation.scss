@@ -3,13 +3,19 @@
     border-bottom: 1px solid $dts-coal-200;
   }
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: $dts-spacing-8;
+    overflow: auto;
+  }
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: $dts-spacing-8;
-    overflow: auto;
 
     a {
       display: inline-block;
