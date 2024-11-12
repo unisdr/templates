@@ -1,0 +1,38 @@
+.dts-sub-navigation {
+  .mg-container {
+    border-bottom: 1px solid $dts-coal-200;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: $dts-spacing-8;
+    overflow: auto;
+
+    a {
+      display: inline-block;
+      padding: $dts-spacing-24 $dts-spacing-8 $dts-spacing-16;
+      font-size: 1.7rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      color: $dts-black;
+      border-bottom: 2px solid transparent;
+
+      &:hover,
+      &:focus-visible {
+        border-color: $dts-undrr-blue-brand;
+        outline: none;
+      }
+    }
+
+    .dts-sub-navigation__item--current {
+      a {
+        border-color: $dts-undrr-blue-brand;
+      }
+    }
+  }
+
+}
