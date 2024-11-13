@@ -2,6 +2,7 @@
   padding: 0 $dts-spacing-16;
   margin: 0 auto;
   max-width: 100%;
+  overflow-x: hidden;
 
   @include devicebreak(medium) {
     padding: 0 $dts-spacing-24;

@@ -229,8 +229,18 @@
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
-<span>Type of document</span>
+<!--Info tooltip block BEGIN
+--><span id="fieldId">Type of document</span>
+<div class="dts-tooltip" data-tooltip-position="top">
+<button type="button" aria-labelledby="fieldId" aria-describedby="tooltipDescription" data-tooltip-trigger>
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/information_outline.svg#information"></use>
+</svg>
+</button>
+<p id="tooltipDescription" role="tooltip" class="tooltip-hidden">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 </div>
+<!--Info tooltip block END
+--></div>
 <select>
 <option value="">Choose an option</option>
 <option value="volvo">Volvo</option>

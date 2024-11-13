@@ -178,6 +178,7 @@ class Tooltip {
   hideTooltip() {
     this.container.classList.remove('tooltip-visible')
     this.tooltip.classList.add('tooltip-hidden')
+    this.tooltip.style.width = "max-content";
   }
 
   // Get the desired default position for the tooltip (defaults to 'bottom')
@@ -214,21 +215,27 @@ class Tooltip {
   }
 
   checkHorizontalBounding(bounds) {
-    let windowWidth = window.innerWidth
+    // let windowWidth = window.innerWidth
+    let windowWidth = window.screen.width;
+    let dialog = this.tooltip.closest(".dts-dialog__content");
+
+    if (dialog) {
+        bounds = dialog.getBoundingClientRect();
+        windowWidth = dialogBounds.width;
+        console.log(windowWidth);
+    }
 
     // If the tooltip overlaps on both sides, throw an error
     if (bounds.right > windowWidth && bounds.left < 0) {
-      console.log(this.tooltip.width);
+      this.tooltip.style.width = "90vw";
+      bounds = this.tooltip.getBoundingClientRect();
+      this.moveTooltipLeft(bounds, windowWidth);
       // throw new Error('Tooltip width too wide for the window')
-    }
-
-    // Check if the right side of the tooltip is beyond the right side of the viewport
-    if (bounds.right > windowWidth) {
+    } else if (bounds.right > windowWidth) { // Check if the right side of the tooltip is beyond the right side of the viewport
+      this.tooltip.style.width = "90vw";
+      bounds = this.tooltip.getBoundingClientRect();
       this.moveTooltipLeft(bounds, windowWidth)
-    }
-
-    // Check if the left side of the tooltip is beyond the left side of the viewport
-    if (bounds.left < 0 ) {
+    } else if (bounds.left < 0 ) { // Check if the left side of the tooltip is beyond the left side of the viewport
       this.moveTooltipRight(bounds)
     }
   }
@@ -267,8 +274,9 @@ class Tooltip {
   }
 
   moveTooltipLeft(bounds, windowWidth) {
-    let translateAmount = (windowWidth - Math.round(bounds.right) - (Math.round(bounds.width) / 1.6))
-    this.tooltip.style.transform = `translateX(${translateAmount}px)`
+    // let translateAmount = (windowWidth - Math.round(bounds.right) - (Math.round(bounds.width) / 1.6))
+    let translateAmount = Math.round(bounds.left);
+    this.tooltip.style.transform = `translateX(calc(-${translateAmount}px - 27rem + 5vw))`
   }
 
   // Reset the changes made by the bounding box functions

@@ -30,7 +30,8 @@
     flex-direction: column;
     height: 100%;
     margin: auto;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .dts-form {
