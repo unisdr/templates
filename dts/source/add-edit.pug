@@ -16,24 +16,16 @@
     include includes/_header.html
 
     <main class="dts-main-container">
- 
+
       include includes/_page-title.html
-      
+
       <div class="mg-container">
-        
+
         //
           Element summary has to be displayed only when Editing element, NOT when Adding element
         <div class="dts-element-summary">
           <h2 class="dts-element-summary__title"><span>Juneau Inundación Costera January 12 21</span><span>Juneau Coastal Flood Crisis</span></h2>
           <div class="dts-element-summary__status">
-            //
-              RP: tooltip to be moved to tables
-              <div class="dts-tooltip" data-tooltip-position="top">
-                <button type="button" aria-describedby="draftDescription" data-tooltip-trigger>
-                  <span class="dts-status dts-status--draft" aria-hidden="true"></span>
-                </button>
-                <p role="tooltip" class="tooltip-hidden">Draft</p>
-              </div>
             <span class="dts-status dts-status--draft" aria-hidden="true"></span>
             <span id="draftDescription">Draft</span>
           </div>
@@ -72,26 +64,32 @@
         <form class="dts-form">
           //
             Form header with back button has to be displayed only when Adding element, NOT when Editing element
-            <div class="dts-form__header">
-              <a href="#" class="mg-button mg-button--small mg-button-system">Back</a>
-            </div>
+          <div class="dts-form__header">
+            <a href="#" class="mg-button mg-button--small mg-button-system">Back</a>
+          </div>
           <div class="dts-form__body">
             <div class="mg-grid mg-grid__col-3">
               <div class="dts-form-component">
                 <label>
-                  <span><abbr title="mandatory">*</abbr>First name</span>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>First name</span>
+                  </div>
                   <input type="text" placeholder="Enter first name" required>
                 </label>
               </div>
               <div class="dts-form-component">
                 <label>
-                  <span>Last name</span>
+                  <div class="dts-form-component__label">
+                    <span>Last name</span>
+                  </div>
                   <input type="text" placeholder="Enter last name">
                 </label>
               </div>
               <div class="dts-form-component">
                 <label>
-                  <span><abbr title="mandatory">*</abbr>Email</span>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Email</span>
+                  </div>
                   <input type="email" placeholder="Enter Email" required>
                 </label>
               </div>
@@ -99,13 +97,17 @@
             <div class="mg-grid mg-grid__col-3">
               <div class="dts-form-component mg-grid__col--span-2">
                 <label>
-                  <span><abbr title="mandatory">*</abbr>Organisation</span>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Organisation</span>
+                  </div>
                   <input type="text" placeholder="Enter organisation" required>
                 </label>
               </div>
               <div class="dts-form-component">
                 <label>
-                  <span>Location access</span>
+                  <div class="dts-form-component__label">
+                    <span>Location access</span>
+                  </div>
                   <input type="search" list="locations" placeholder="All locations">
                   <datalist id="locations">
                     <option value="location 1">
@@ -120,7 +122,9 @@
             <div class="mg-grid mg-grid__col-3">
               <div class="dts-form-component">
                 <label>
-                  <span><abbr title="mandatory">*</abbr>Role</span>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Role</span>
+                  </div>
                   <select required>
                     <option value="">select role</option>
                     <option value="viewer">Data viewer</option>
@@ -129,17 +133,18 @@
                     <option value="Admin">Admin</option>
                   </select>
                 </label>
+              </div>
             </div>
-          </div>
-          <div class="mg-grid mg-grid__col-3">
-            <div class="dts-form__additional-content mg-grid__col--span-2">
-              <div class="dts-heading-5">You have selected [Role]</div>
-              <div>A [Role] is able to... Details here... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+            <div class="mg-grid mg-grid__col-3">
+              <div class="dts-form__additional-content mg-grid__col--span-2">
+                <div class="dts-heading-5">You have selected [Role]</div>
+                <div>A [Role] is able to... Details here... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+              </div>
             </div>
-          </div>
-          <div class="dts-form__actions">
-            <button type="button" class="mg-button mg-button-primary">Save</button>
-            <a href="#" class="mg-button mg-button-outline">Discard</a>
+            <div class="dts-form__actions">
+              <button type="button" class="mg-button mg-button-primary">Save</button>
+              <a href="#" class="mg-button mg-button-outline">Discard</a>
+            </div>
           </div>
         </form>
 
@@ -160,7 +165,9 @@
               <div class="dts-form__body">
                 <div class="dts-form-component">
                   <label>
-                    <span>Type of document</span>
+                    <div class="dts-form-component__label">
+                      <span>Type of document</span>
+                    </div>
                     <select>
                       <option value="">Choose an option</option>
                       <option value="volvo">Volvo</option>
@@ -173,13 +180,17 @@
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Upload file to attach</span>
+                    <div class="dts-form-component__label">
+                      <span>Upload file to attach</span>
+                    </div>
                     <input type="file">
                   </label>
                 </div>
                 <div class="dts-form-component">
                   <label>
-                    <span>Add link</span>
+                    <div class="dts-form-component__label">
+                      <span>Add link</span>
+                    </div>
                     <input type="url">
                   </label>
                 </div>

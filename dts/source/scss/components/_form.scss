@@ -58,6 +58,11 @@
     }
   }
 
+  &__section {
+    background-color: $dts-coal-100;
+    padding: $dts-spacing-24;
+  }
+
   &__actions {
     display: grid;
     gap: $dts-spacing-16;
@@ -100,6 +105,15 @@
     display: flex;
     flex-direction: row;
     gap: $dts-spacing-8;
+
+    svg {
+      height: $dts-spacing-16;
+      width: $dts-spacing-16;
+
+      * {
+        transform: scale(0.75) translate(-2px, -3px);
+      }
+    }
   }
 
   &__pwd {
@@ -139,6 +153,22 @@
     }
   }
 
+  &__label {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    gap: $dts-spacing-8;
+
+    svg {
+      height: $dts-spacing-16;
+      width: $dts-spacing-16;
+
+      * {
+        transform: scale(0.75) translate(-2px, -3px);
+      }
+    }
+  }
+
   abbr {
     text-decoration: none;
     margin-right: $dts-spacing-4;
@@ -156,22 +186,15 @@
       cursor: pointer;
     }
 
-    &[aria-invalid="true"] input,
-    &[aria-invalid="true"] textarea,
-    &[aria-invalid="true"] select {
-      // background-color: rgba(255, 77, 79, 0.12);
-      border: 1px solid $mg-color-red-900;
-    }
-
-    >span {
-      height: 100%;
-      display: flex;
-      align-items: end;
-    }
-
     &:has([disabled]) {
       color: $dts-coal-500;
       cursor: not-allowed;
+    }
+
+    &[aria-invalid="true"] input,
+    &[aria-invalid="true"] textarea,
+    &[aria-invalid="true"] select {
+      border: 1px solid $mg-color-red-900;
     }
   }
 
@@ -233,7 +256,7 @@
 
   select {
     appearance: none;
-    background: url('../icons/chevron-down.svg') no-repeat;
+    background: $mg-color-white url('../icons/chevron-down.svg') no-repeat;
     background-size: 10px;
     background-position: top 48% right $dts-spacing-8;
     padding: 5px $dts-spacing-8 3px;

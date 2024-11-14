@@ -1,5 +1,4 @@
 import "./form.js";
-// TBD
-import "./modal.js";
 
-import "./tooltips.js";
+// import "./modal.js";
+// import "./tooltips.js";
