@@ -105,6 +105,15 @@
     display: flex;
     flex-direction: row;
     gap: $dts-spacing-8;
+
+    svg {
+      height: $dts-spacing-16;
+      width: $dts-spacing-16;
+
+      * {
+        transform: scale(0.75) translate(-2px, -3px);
+      }
+    }
   }
 
   &__pwd {

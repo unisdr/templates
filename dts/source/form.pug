@@ -8,9 +8,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="assets/css/style-dts.css">
+  //
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
 </head>
 
 <body>
+  
   <div class="dts-page-container">
 
     //
@@ -48,15 +52,25 @@
                   <label>
                     <div class="dts-form-component__label">
                       //
+                        <div class="dts-tooltip" data-tooltip-position="top">
+                          <button type="button" aria-labelledby="fieldId1" aria-describedby="tooltipDescription1" data-tooltip-trigger>
+                            <svg aria-hidden="true" focusable="false" role="img">
+                              <use href="assets/icons/information_outline.svg#information"></use>
+                            </svg>
+                          </button>
+                          <p id="tooltipDescription1" role="tooltip" class="tooltip-hidden">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                      //
                         Info tooltip block BEGIN
-                      <span id="fieldId">Date picker field</span>
-                      <div class="dts-tooltip" data-tooltip-position="top">
-                        <button type="button" aria-labelledby="fieldId" aria-describedby="tooltipDescription" data-tooltip-trigger>
-                          <svg aria-hidden="true" focusable="false" role="img">
-                            <use href="assets/icons/information_outline.svg#information"></use>
-                          </svg>
-                        </button>
-                        <p id="tooltipDescription" role="tooltip" class="tooltip-hidden">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                      <span id="fieldId1">Date picker field</span>
+                      <button type="button" class="dts-tooltip__button" aria-labelledby="fieldId1" aria-describedby="tooltip1">
+                        <svg aria-hidden="true" focusable="false" role="img">
+                          <use href="assets/icons/information_outline.svg#information"></use>
+                        </svg>
+                      </button>
+                      <div id="tooltip1" role="tooltip">
+                        <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                        <div class="dts-tooltip__arrow"></div>
                       </div>
                       //
                         Info tooltip block END
@@ -95,7 +109,20 @@
                       //
                         Add aria-describedBy="inputErrorId" attribute to the input tag when the field has ERRORS
                       <input type="checkbox" name="" aria-describedBy="validationMsgId" />
-                      <span>Checkbox field  (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                      <span id="fieldId2">Checkbox field (single) - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                      //
+                        Info tooltip block BEGIN
+                      <button type="button" class="dts-tooltip__button" aria-labelledby="fieldId2" aria-describedby="tooltip1">
+                        <svg aria-hidden="true" focusable="false" role="img">
+                          <use href="assets/icons/information_outline.svg#information"></use>
+                        </svg>
+                      </button>
+                      <div id="tooltip1" role="tooltip">
+                        <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                        <div class="dts-tooltip__arrow"></div>
+                      </div>
+                      //
+                        Info tooltip block END
                     </div>
                   </label>
                   <div class="dts-form-component__hint">

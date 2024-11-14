@@ -229,18 +229,8 @@
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
-<!--Info tooltip block BEGIN
---><span id="fieldId">Type of document</span>
-<div class="dts-tooltip" data-tooltip-position="top">
-<button type="button" aria-labelledby="fieldId" aria-describedby="tooltipDescription" data-tooltip-trigger>
-<svg aria-hidden="true" focusable="false" role="img">
-<use href="assets/icons/information_outline.svg#information"></use>
-</svg>
-</button>
-<p id="tooltipDescription" role="tooltip" class="tooltip-hidden">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+<span>Type of document</span>
 </div>
-<!--Info tooltip block END
---></div>
 <select>
 <option value="">Choose an option</option>
 <option value="volvo">Volvo</option>
@@ -536,6 +526,79 @@
       }, 15500);
     }
   }
+</script>
+<script type="module">
+  // Tooltip
+  import {
+    computePosition,
+    flip,
+    shift,
+    offset,
+    arrow,
+  } from "https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12/+esm";
+
+  const buttons = document.querySelectorAll('.dts-tooltip__button');
+
+  buttons.forEach((button) => {
+
+    let tooltip = button.nextElementSibling;
+    let arrowElement = button.nextElementSibling.querySelector(".dts-tooltip__arrow");
+
+    function update() {
+      computePosition(button, tooltip, {
+        placement: "top",
+        middleware: [
+          offset(6),
+          flip(),
+          shift({ padding: 5 }),
+          arrow({ element: arrowElement }),
+        ],
+      }).then(({ x, y, placement, middlewareData }) => {
+        Object.assign(tooltip.style, {
+          left: `${x}px`,
+          top: `${y}px`,
+        });
+
+        // Accessing the data
+        const { x: arrowX, y: arrowY } = middlewareData.arrow;
+
+        const staticSide = {
+          top: "bottom",
+          right: "left",
+          bottom: "top",
+          left: "right",
+        }[placement.split("-")[0]];
+
+        Object.assign(arrowElement.style, {
+          left: arrowX != null ? `${arrowX}px` : "",
+          top: arrowY != null ? `${arrowY}px` : "",
+          right: "",
+          bottom: "",
+          [staticSide]: "-4px",
+        });
+      });
+    }
+
+    function showTooltip() {
+      tooltip.style.display = "block";
+      update();
+    }
+
+    function hideTooltip() {
+      tooltip.style.display = "";
+    }
+
+    [
+      ["pointerenter", showTooltip],
+      ["pointerleave", hideTooltip],
+      ["focus", showTooltip],
+      ["blur", hideTooltip],
+    ].forEach(([event, listener]) => {
+      button.addEventListener(event, listener);
+    });
+
+  });
+
 </script>
 <script src="assets/js/scripts-dts.js"></script></body>
 </html>
