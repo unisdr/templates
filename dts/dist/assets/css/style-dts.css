@@ -1491,13 +1491,18 @@ header .mg-container {
           flex-direction: row-reverse;
   margin: 1.6rem 0;
 }
+.dts-form .dts-form__body .dts-form__actions--centered {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
-.dts-form:not(.dts-form--vertical) .dts-form__actions,
+.dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered),
 .dts-form__actions--standalone {
   /* medium design - 768px up */
 }
 @media (width >= 768px) {
-  .dts-form:not(.dts-form--vertical) .dts-form__actions,
+  .dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered),
   .dts-form__actions--standalone {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2046,6 +2051,24 @@ header .mg-container {
   .dts-header__main-menu {
     display: block;
   }
+}
+
+.dts-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.4rem;
+}
+.dts-link svg {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.dts-link svg * {
+  -webkit-transform: scale(0.65) translate(-3px, -3px);
+          transform: scale(0.65) translate(-3px, -3px);
 }
 
 .mg-mega-wrapper {
@@ -2621,6 +2644,29 @@ header .mg-container {
   display: -ms-flexbox;
   display: flex;
   gap: 1.6rem;
+}
+
+.dts-page-intro {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2.4rem;
+  margin-bottom: 4.8rem;
+}
+.dts-page-intro__links {
+  display: -ms-grid;
+  display: grid;
+  gap: 2.4rem;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-page-intro__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .dts-page-title {

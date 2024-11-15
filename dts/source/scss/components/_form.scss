@@ -79,9 +79,13 @@
   justify-content: flex-start;
   flex-direction: row-reverse;
   margin: $dts-spacing-16 0;
+
+  &--centered {
+    justify-content: center;
+  }
 }
 
-.dts-form:not(.dts-form--vertical) .dts-form__actions,
+.dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered),
 .dts-form__actions--standalone {
   @include devicebreak(small) {
     display: flex;
