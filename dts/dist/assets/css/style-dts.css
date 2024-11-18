@@ -1466,6 +1466,21 @@ header .mg-container {
 .dts-form__section {
   background-color: #F2F2F2;
   padding: 2.4rem;
+  margin: 0 0 2.4rem;
+  border: none;
+}
+.dts-form__section-remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 1.6rem;
+}
+.dts-form__section .dts-form__body {
+  border-bottom: 1px dotted #979797;
+  margin-bottom: 1.6rem;
 }
 .dts-form__actions {
   display: -ms-grid;
@@ -1592,6 +1607,9 @@ header .mg-container {
           align-items: end;
   gap: 0.8rem;
 }
+.dts-form-component__label strong {
+  display: block;
+}
 .dts-form-component__label svg {
   height: 1.6rem;
   width: 1.6rem;
@@ -1693,6 +1711,23 @@ header .mg-container {
   border-color: #004f91;
   outline: none;
 }
+.dts-form-component input::-webkit-input-placeholder, .dts-form-component textarea::-webkit-input-placeholder, .dts-form-component select::-webkit-input-placeholder {
+  color: #979797;
+}
+.dts-form-component input::-moz-placeholder, .dts-form-component textarea::-moz-placeholder, .dts-form-component select::-moz-placeholder {
+  color: #979797;
+}
+.dts-form-component input:-ms-input-placeholder, .dts-form-component textarea:-ms-input-placeholder, .dts-form-component select:-ms-input-placeholder {
+  color: #979797;
+}
+.dts-form-component input::-ms-input-placeholder, .dts-form-component textarea::-ms-input-placeholder, .dts-form-component select::-ms-input-placeholder {
+  color: #979797;
+}
+.dts-form-component input::placeholder,
+.dts-form-component textarea::placeholder,
+.dts-form-component select::placeholder {
+  color: #979797;
+}
 .dts-form-component select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1700,7 +1735,7 @@ header .mg-container {
   background: #fff url("../icons/chevron-down.svg") no-repeat;
   background-size: 10px;
   background-position: top 48% right 0.8rem;
-  padding: 5px 0.8rem 3px;
+  padding: 5px 2.4rem 3px 0.8rem;
   width: 100%;
 }
 .dts-form-component fieldset {
@@ -1866,6 +1901,7 @@ header .mg-container {
     -ms-grid-columns: (minmax(min-content, auto))[6];
     grid-template-columns: repeat(6, minmax(-webkit-min-content, auto));
     grid-template-columns: repeat(6, minmax(min-content, auto));
+        grid-template-areas: "a b c d e f";
   }
 }
 [class*=__col--span] {
@@ -1873,6 +1909,37 @@ header .mg-container {
   grid-column-end: span 1;
 }
 
+[class*=__col--offset] {
+  -ms-grid-column: auto;
+      grid-column-start: auto;
+}
+
+.mg-grid__col--group {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+/* small design - up to 767px */
+@media (width < 768px) {
+  .mg-grid__col--group-1 {
+    -ms-grid-row: 7;
+        grid-row-start: 7;
+    -ms-grid-row-span: 3;
+    grid-row-end: 10;
+  }
+  .mg-grid__col--group-2 {
+    -ms-grid-row: 13;
+        grid-row-start: 13;
+    -ms-grid-row-span: 3;
+    grid-row-end: 16;
+  }
+  .mg-grid__col--group-3 {
+    -ms-grid-row: 19;
+        grid-row-start: 19;
+    -ms-grid-row-span: 3;
+    grid-row-end: 22;
+  }
+}
 /* medium design - 768px up */
 @media (width >= 768px) {
   .mg-grid__col--span-2 {
@@ -1920,6 +1987,33 @@ header .mg-container {
   }
   .mg-grid__row--span-all {
     grid-row: 1/-1;
+  }
+}
+/* medium design - 1024px up */
+@media (width >= 1024px) {
+  .mg-grid__col--offset-1 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  .mg-grid__col--offset-2 {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+  .mg-grid__col--offset-3 {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+  }
+  .mg-grid__col--offset-4 {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+  }
+  .mg-grid__col--offset-5 {
+    -ms-grid-column: 5;
+        grid-column-start: 5;
+  }
+  .mg-grid__col--offset-6 {
+    -ms-grid-column: 6;
+        grid-column-start: 6;
   }
 }
 .mg-undrr-header__decoration {
