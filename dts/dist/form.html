@@ -12,20 +12,104 @@
 <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
 --></head>
 <body>
-<div class="dts-page-container">
-<!--
-include includes/_header.html
-
---><main class="dts-main-container"><header class="dts-page-title">
+<div class="dts-page-container"><header>
+  <div class="mg-undrr-header">
+    <div class="mg-undrr-header__decoration">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mg-undrr-header__toolbar">
+      <div class="mg-container">
+        <div class="mg-undrr-header__toolbar-container">
+          <a href="//www.undrr.org" rel="me" title="UNDRR Homepage">
+            <img src="assets/images/UNDRR-Logo-horizontal.svg" alt="UNDRR logo" height="32" />
+          </a>
+          <form action="" method="post">
+            <select id="edit-lang-dropdown-select" name="" aria-label="Select your language">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mg-container">
+    <div class="dts-header">
+      <div class='dts-header__logo'>
+        <img src="assets/images/dldt-logo-mark.svg" alt="DLDT logo mark" />
+        <div class='dts-header__logo-text' dir="auto">Disaster Losses<br />and Damage Tracking</div>
+      </div>
+      <div class="dts-header__main-menu">
+        <nav class="mg-mega-wrapper dts-mega-wrapper" aria-label="Main Navigation">
+          <div class="mg-mega-topbar">
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/information_outline.svg#information"></use>
+              </svg>
+              Data
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+              </svg>
+              Analysis
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/help-outline.svg#help-outline"></use>
+              </svg>
+              About
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/settings.svg#settings"></use>
+              </svg>
+              Settings
+            </button>
+            <button class="mg-mega-topbar__item">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/user-profile.svg#user"></use>
+              </svg>
+              Log in
+            </button>
+            <button class="mg-mega-topbar__item" aria-label="{title}">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/user-profile.svg#user"></use>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><main class="dts-main-container"><header class="dts-page-title">
   <div class="mg-container">
     <h1 class="dts-heading-1">Page title</h1>
   </div>
 </header><section>
-<div class="mg-container">
-<br>
-<hr>
-<h3>2 columns form on 768px up, 1 column form on 767px down</h3>
-<form class="dts-form">
+<div class="mg-container"><div class="dts-page-intro">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <div class="dts-page-intro__links">
+    <a href="#" class="dts-link">Help
+      <svg aria-hidden="true" focusable="false" role="img">
+        <use href="assets/icons/external-link-open-new.svg#external"></use>
+      </svg>
+    </a>
+    <a href="#" class="dts-link">How To
+      <svg aria-hidden="true" focusable="false" role="img">
+        <use href="assets/icons/external-link-open-new.svg#external"></use>
+      </svg>
+    </a>
+    <a href="#" class="mg-button mg-button-secondary">Suggested alternative action</a>
+  </div>
+</div><form class="dts-form">
+<div class="dts-form__intro">
+<h2 class="dts-heading-2">2 columns form on 768px up, 1 column form on 767px down</h2>
+</div>
+<div class="dts-form__body">
 <div class="dts-alert dts-alert--error">
 <div class="dts-alert__icon">
 <svg aria-hidden="true" focusable="false" role="img">
@@ -40,22 +124,11 @@ include includes/_header.html
 </ul>
 </div>
 </div>
-<div class="dts-form__body">
-<!--Form fields line - 2 columns
+<!--Form fields grid
 --><div class="mg-grid mg-grid__col-2">
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
-<!--
-<div class="dts-tooltip" data-tooltip-position="top">
-  <button type="button" aria-labelledby="fieldId1" aria-describedby="tooltipDescription1" data-tooltip-trigger>
-    <svg aria-hidden="true" focusable="false" role="img">
-      <use href="assets/icons/information_outline.svg#information"></use>
-    </svg>
-  </button>
-  <p id="tooltipDescription1" role="tooltip" class="tooltip-hidden">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-</div>
--->
 <!--Info tooltip block BEGIN
 --><span id="fieldId1">Date picker field</span>
 <button type="button" class="dts-tooltip__button" aria-labelledby="fieldId1" aria-describedby="tooltip1">
@@ -80,9 +153,6 @@ include includes/_header.html
 <input type="time">
 </label>
 </div>
-</div>
-<!--Form fields line - 2 columns
---><div class="mg-grid mg-grid__col-2">
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
@@ -118,7 +188,6 @@ include includes/_header.html
 </div>
 </div>
 </div>
-</div>
 <div class="dts-alert dts-alert--warning">
 <div class="dts-alert__icon">
 <svg aria-hidden="true" focusable="false" role="img">
@@ -147,21 +216,18 @@ include includes/_header.html
 </ul>
 </div>
 </div>
-<div class="dts-form__actions">
-<button type="submit" class="mg-button mg-button-primary">Save</button>
-<button type="button" class="mg-button mg-button-outline">Discard</button>
 </div>
 </form>
 </div>
 </section>
 <section>
 <div class="mg-container">
-<br>
-<hr>
-<h3>3 columns form on 768px up, 1 column form on 767px down</h3>
 <form class="dts-form">
+<div class="dts-form__intro">
+<h2 class="dts-heading-2">3 columns form on 768px up, 1 column form on 767px down</h2>
+</div>
 <div class="dts-form__body">
-<!--Form fields line - 3 columns
+<!--Form fields grid - 3 columns
 --><div class="mg-grid mg-grid__col-3">
 <!--Form field
 --><div class="dts-form-component">
@@ -209,9 +275,6 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <div id="descriptionTextId">Description text goes here Description text goes here Description text goes here Description text goes here Description text goes here</div>
 </div>
 </div>
-</div>
-<!--Form fields line - 3 columns
---><div class="mg-grid mg-grid__col-3">
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
@@ -243,9 +306,6 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <input type="number" step="10" min="10" max="100" placeholder="enter number">
 </label>
 </div>
-</div>
-<!--Form fields line - 3 columns
---><div class="mg-grid mg-grid__col-3">
 <!--Form field - span 2 columns
 --><div class="dts-form-component mg-grid__col--span-2">
 <label>
@@ -257,7 +317,7 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </label>
 </div>
 </div>
-<!--Form fields line - 2 columns
+<!--Form fields grid - 2 columns
 --><div class="mg-grid mg-grid__col-2">
 <div class="dts-form-component">
 <!--Add aria-invalid="true" attribute to fieldset tag when the field has ERRORS
@@ -364,12 +424,12 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </section>
 <section>
 <div class="mg-container">
-<br>
-<hr>
-<h3>4 columns form on 1164px up, 2 columns form on 768px up, 1 column form on 767px down</h3>
 <form class="dts-form">
+<div class="dts-form__intro">
+<h2 class="dts-heading-2">4 columns form on 1164px up, 2 columns form on 768px up, 1 column form on 767px down</h2>
+</div>
 <div class="dts-form__body">
-<!--Form fields line - 4 columns
+<!--Form fields grid - 4 columns
 --><div class="mg-grid mg-grid__col-4">
 <div class="dts-form-component">
 <label>
@@ -441,18 +501,12 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 </section>
 <section>
 <div class="mg-container">
-<br>
-<hr>
-<h3>6 variable width columns form on 1164px up, 3 variable width columns form on 768px up, 1 column form on 767px down</h3>
 <form class="dts-form">
-<div class="dts-form__body">
-<!--Form section (bkg grey)
---><div class="dts-form__section">
 <div class="dts-form__intro">
-<h3 class="dts-heading-3">Damages</h3>
-<p>Here’s an explanation of what a damage is. To permanently update baseline costs, go here. Links to <a href="">help</a> and <a href="">resources</a>.</p>
+<h2 class="dts-heading-2">6 variable width columns form on 1164px up, 3 variable width columns form on 768px up, 1 column form on 767px down</h2>
 </div>
-<!--Form fields line - 6 columns, variable width
+<div class="dts-form__body">
+<!--Form fields grid - 6 columns, variable width
 --><div class="mg-grid mg-grid__col-auto">
 <div class="dts-form-component">
 <label>
@@ -509,7 +563,7 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <div class="dts-form-component__label">
 <span>Unit cost</span>
 </div>
-<input type="text" placeholder="enter text">
+<input type="number" placeholder="enter number">
 </label>
 </div>
 <div class="dts-form-component">
@@ -517,11 +571,14 @@ Add aria-describedBy="inputErrorId descriptionTextId" attribute to the input tag
 <div class="dts-form-component__label">
 <span>Total cost</span>
 </div>
-<input type="text" placeholder="enter text">
+<input type="number" placeholder="enter number">
 </label>
 </div>
 </div>
-</div>             
+<div class="dts-form__actions">
+<button type="submit" class="mg-button mg-button-primary">Save</button>
+<button type="button" class="mg-button mg-button-outline">Discard</button>
+</div>
 </div>
 </form>
 </div>

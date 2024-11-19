@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+
+    include includes/_header.html
+
+    <main class="dts-main-container">
+
+      include includes/_page-title.html
+      include includes/_sub-navigation.html
+
+      <div class="mg-container">
+        
+        include includes/_page-intro.html
+
+        <form class="dts-form">
+
+          <div class="dts-form__body">
+            <div class="mg-grid mg-grid__col-3">
+              <div class="dts-form-component mg-grid__col--span-2">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Event</span>
+                  </div>
+                  <input type="search" aria-describedBy="descriptionTextId" placeholder="Search for an existing event" required>
+                </label>
+                <div class="dts-form-component__hint">
+                  <div id="descriptionTextId">If the right event hasn’t been created yet, you can create it here in this form by entering the details below.</div>
+                </div>
+              </div>
+              //
+                Form field - start on new row
+              <div class="dts-form-component mg-grid__col--offset-1">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Location</span>
+                  </div>
+                  <input type="text" placeholder="Input type to be defined" required>
+                </label>
+              </div>
+              <div class="dts-form-component mg-grid__col--span-2">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Hazard</span>
+                  </div>
+                  <input type="search" placeholder="Select Hazard" required>
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Start date</span>
+                  </div>
+                  <input type="date" required>
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>End date</span>
+                  </div>
+                  <input type="date" required>
+                </label>
+              </div>
+              //
+                Form field - start on new row
+              <div class="dts-form-component mg-grid__col--offset-1">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Start time</span>
+                  </div>
+                  <input type="time" required>
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>End time</span>
+                  </div>
+                  <input type="time" required>
+                </label>
+              </div>
+            </div>
+            <div class="dts-form__actions dts-form__actions--centered">
+              <button type="button" class="mg-button mg-button-primary">More event details</button>
+            </div>
+          </div>
+          <div class="dts-form__intro">
+            <h2 class="dts-heading-2">Effects</h2>
+            <p>What to do and what not to do.</p>
+          </div>
+          <div class="dts-form__body">
+            <div class="mg-grid mg-grid__col-3">
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Sector</span>
+                  </div>
+                  <select required>
+                    <option value="">Select a sector</option>
+                    <option value="">Human direct effects</option>
+                    <option value="">Housing</option>
+                    <option value="">Education</option>
+                    <option value="">Agriculture / Fisheries</option>
+                  </select>
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Sub sector</span>
+                  </div>
+                  <select required>
+                    <option value="">Select a sub sector</option>
+                    <option value="">Lorem ipsum dolor</option>
+                    <option value="">Lorem ipsum</option>
+                    <option value="">Lorem ipsum</option>
+                    <option value="">Lorem ipsum</option>
+                  </select>
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span><abbr title="mandatory">*</abbr>Sub sub sector</span>
+                  </div>
+                  <select required>
+                    <option value="">Select a sub sub sector</option>
+                    <option value="">Lorem ipsum dolor</option>
+                    <option value="">Lorem ipsum</option>
+                    <option value="">Lorem ipsum</option>
+                    <option value="">Lorem ipsum</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            //
+              Form section (bkg grey)
+            <fieldset class="dts-form__section">
+              <div class="dts-form__intro">
+                <legend class="dts-heading-3">Human direct effects</legend>
+                <p>Here’s an explanation of what human direct effects are. Links to <a href="">help</a> and <a href="">resources</a>.</p>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - BEGIN
+              <div class="dts-form__body">
+                <div class="dts-form__section-remove">
+                  <button type="button" aria-label="Remove effect">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/close.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <h4 class="dts-heading-4">Deaths</h4>
+                <div class="mg-grid mg-grid__col-4">
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span><strong>Deaths</strong>Total</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add mg-grid__col--group class to first grouping element
+                  <div class="dts-form-component mg-grid__col--group">
+                    <label>
+                      <div class="dts-form-component__label">
+                        //
+                          Add id attribute on strong tag to be referenced by subsequent field rows
+                        <span><strong id="group1Label">By Sex</strong>Female</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add mg-grid__col--group class to first grouping element
+                  <div class="dts-form-component mg-grid__col--group">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span><strong id="group2Label">By Age</strong>Children (0-14)</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add mg-grid__col--group class to first grouping element
+                  <div class="dts-form-component mg-grid__col--group">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span><strong id="group3Label">Other disagregation</strong>With disabilities</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add class mg-grid__col--offset-2 to offset grid element to column 2 of the grid
+                    Add class mg-grid__col--group-1 to keep grid element grouped with previous row related element on smaller views - SPECIFIC for Human direct effects
+                  <div class="dts-form-component mg-grid__col--offset-2 mg-grid__col--group-1">
+                    <label>
+                      <div class="dts-form-component__label">
+                        //
+                          Add id attribute on span tag to be concatenated with grouping label
+                        <span id="field1Label">Male</span>
+                      </div>
+                      //
+                        Add aria-labelledby attribute on input tag to concatenate the grouping label that is displayed on the first field row with the current field label
+                      <input type="number" placeholder="enter number" aria-labelledby="group1Label field1Label">
+                    </label>
+                  </div>
+                  //
+                    Add class mg-grid__col--group-2 to keep grid element grouped with previous row related element on smaller views - SPECIFIC for Human direct effects
+                  <div class="dts-form-component mg-grid__col--group-2">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span id="field2Label">Adult (15-54)</span>
+                      </div>
+                      <input type="number" placeholder="enter number" aria-labelledby="group2Label field2Label">
+                    </label>
+                  </div>
+                  //
+                    Add class mg-grid__col--group-3 to keep grid element grouped with previous row related element on smaller views - SPECIFIC for Human direct effects
+                  <div class="dts-form-component mg-grid__col--group-3">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span id="field3Label">Below Poverty Line</span>
+                      </div>
+                      <input type="number" placeholder="enter number" aria-labelledby="group3Label field3Label">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - END
+              <div class="mg-grid mg-grid__col-4">
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span><abbr title="mandatory">*</abbr>Type of effect</span>
+                    </div>
+                    <select required>
+                      <option value="">Select type</option>
+                      <option value="">Deaths</option>
+                      <option value="">Injuries</option>
+                      <option value="">Lorem ipsum</option>
+                      <option value="">Lorem ipsum</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span><abbr title="mandatory">*</abbr>Effect subcategory</span>
+                    </div>
+                    <select required>
+                      <option value="">Select type</option>
+                      <option value="">Deaths</option>
+                      <option value="">Injuries</option>
+                      <option value="">Lorem ipsum</option>
+                      <option value="">Lorem ipsum</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="mg-button mg-button--small mg-button-system">Add effect</button>
+            </fieldset>
+
+            //
+              Form section (bkg grey)
+            <fieldset class="dts-form__section">
+              <div class="dts-form__intro">
+                <legend class="dts-heading-3">Damages</legend>
+                <p>Here’s an explanation of what a damage is. To permanently update baseline costs, go here. Links to <a href="">help</a> and <a href="">resources</a>.</p>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - BEGIN
+              <div class="dts-form__body">
+                <div class="dts-form__section-remove">
+                  <button type="button" aria-label="Remove effect">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/close.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="mg-grid mg-grid__col-auto">
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Asset</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Damage</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Count</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit type</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add class mg-grid__col--offset-5 to offset grid element to column 5 of the grid
+                  <div class="dts-form-component mg-grid__col--offset-5">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit replacement cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total replacement cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add class mg-grid__col--offset-5 to offset grid element to column 5 of the grid
+                  <div class="dts-form-component mg-grid__col--offset-5">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit recovery cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total recovery cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - END
+              //
+                Section to be displayed after clicking on Add button - BEGIN
+              <div class="dts-form__body">
+                <div class="dts-form__section-remove">
+                  <button type="button" aria-label="Remove effect">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/close.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="mg-grid mg-grid__col-auto">
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Asset</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Damage</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Count</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit type</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add class mg-grid__col--offset-5 to offset grid element to column 5 of the grid
+                  <div class="dts-form-component mg-grid__col--offset-5">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit replacement cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total replacement cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  //
+                    Add class mg-grid__col--offset-5 to offset grid element to column 5 of the grid
+                  <div class="dts-form-component mg-grid__col--offset-5">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Unit recovery cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total recovery cost</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - END
+              <button type="submit" class="mg-button mg-button--small mg-button-system">Add damages</button>
+            </fieldset>
+
+            //
+              Form section (bkg grey)
+            <fieldset class="dts-form__section">
+              <div class="dts-form__intro">
+                <legend class="dts-heading-3">Losses</legend>
+                <p>Here’s an explanation of what a loss is. To permanently update baseline costs, go here. Links to <a href="">help</a> and <a href="">resources</a>.</p>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - BEGIN
+              <div class="dts-form__body">
+                <div class="dts-form__section-remove">
+                  <button type="button" aria-label="Remove effect">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/close.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="mg-grid mg-grid__col-auto">
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Loss type</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total loss</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - END
+              //
+                Section to be displayed after clicking on Add button - BEGIN
+              <div class="dts-form__body">
+                <div class="dts-form__section-remove">
+                  <button type="button" aria-label="Remove effect">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/close.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="mg-grid mg-grid__col-auto">
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Loss type</span>
+                      </div>
+                      <select>
+                        <option value="">Select an option</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Lorem ipsum dolor sit amet consectetur adipiscing elitconsectetur adipiscing elit</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="dts-form-component">
+                    <label>
+                      <div class="dts-form-component__label">
+                        <span>Total loss</span>
+                      </div>
+                      <input type="number" placeholder="enter number">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              //
+                Section to be displayed after clicking on Add button - END
+              <button type="submit" class="mg-button mg-button--small mg-button-system">Add losses</button>
+            </fieldset>
+
+            //
+              Form section (bkg grey)
+            <fieldset class="dts-form__section">
+              <div class="dts-form__intro">
+                <legend class="dts-heading-3">Disruptions</legend>
+                <p>Here’s an explanation of what a disruption is. To permanently update baseline costs, go here. Links to <a href="">help</a> and <a href="">resources</a>.</p>
+              </div>
+              <button type="submit" class="mg-button mg-button--small mg-button-system">Add Disruptions</button>
+            </fieldset>
+
+            <div class="dts-form__actions">
+              <button type="submit" class="mg-button mg-button-primary">Save</button>
+              <button type="button" class="mg-button mg-button-outline">Discard</button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+    </main>
+
+    include includes/_footer.html
+
+  </div>
+
+  include includes/_scripts.html
+
+</body>
+
+</html>

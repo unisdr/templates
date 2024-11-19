@@ -1,0 +1,15 @@
+.dts-page-intro {
+  display: grid;
+  margin-top: $dts-spacing-24;
+  margin-bottom: $dts-spacing-48;
+
+  &__links {
+    display: grid;
+    gap: $dts-spacing-24;
+
+    @include devicebreak(small) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

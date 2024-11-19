@@ -61,6 +61,19 @@
   &__section {
     background-color: $dts-coal-100;
     padding: $dts-spacing-24;
+    margin: 0 0 $dts-spacing-24;
+    border: none;
+
+    &-remove {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: $dts-spacing-16;
+    }
+
+    .dts-form__body {
+      border-bottom: 1px dotted $dts-coal-400;
+      margin-bottom: $dts-spacing-16;
+    }
   }
 
   &__actions {
@@ -79,9 +92,13 @@
   justify-content: flex-start;
   flex-direction: row-reverse;
   margin: $dts-spacing-16 0;
+
+  &--centered {
+    justify-content: center;
+  }
 }
 
-.dts-form:not(.dts-form--vertical) .dts-form__actions,
+.dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered),
 .dts-form__actions--standalone {
   @include devicebreak(small) {
     display: flex;
@@ -158,6 +175,10 @@
     display: flex;
     align-items: end;
     gap: $dts-spacing-8;
+
+    strong {
+      display: block;
+    }
 
     svg {
       height: $dts-spacing-16;
@@ -252,6 +273,10 @@
         }
       }
     }
+
+    &::placeholder {
+      color: $dts-coal-400;
+    }
   }
 
   select {
@@ -259,7 +284,7 @@
     background: $mg-color-white url('../icons/chevron-down.svg') no-repeat;
     background-size: 10px;
     background-position: top 48% right $dts-spacing-8;
-    padding: 5px $dts-spacing-8 3px;
+    padding: 5px $dts-spacing-24 3px $dts-spacing-8;
     width: 100%;
   }
 
@@ -352,5 +377,6 @@
 [dir="rtl"] {
   select {
     background-position: top 48% left $dts-spacing-8;
+    padding: 5px $dts-spacing-8 3px $dts-spacing-24;
   }
 }

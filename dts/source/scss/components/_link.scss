@@ -1,0 +1,14 @@
+.dts-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $dts-spacing-4;
+
+  svg {
+    height: $dts-spacing-12;
+    width: $dts-spacing-12;
+
+    * {
+      transform: scale(0.65) translate(-3px, -3px);
+    }
+  }
+}
