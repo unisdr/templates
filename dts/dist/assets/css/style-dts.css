@@ -1478,6 +1478,13 @@ header .mg-container {
           justify-content: flex-end;
   margin-bottom: 1.6rem;
 }
+.dts-form__section-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+}
 .dts-form__section .dts-form__body {
   border-bottom: 1px dotted #979797;
   margin-bottom: 1.6rem;

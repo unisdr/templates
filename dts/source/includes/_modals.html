@@ -29,6 +29,27 @@
           </label>
         </div>
         <div class="dts-form-component">
+          <fieldset>
+            <legend class="mg-u-sr-only">Attachment type</legend>
+            <div class="mg-grid mg-grid__col-auto">
+              <label>
+                <div class="dts-form-component__label"></div>
+                <div class="dts-form-component__field--horizontal">
+                  <input type="radio" name="radiobuttonFieldsetName" aria-controls="fileAttachment" aria-expanded="true" checked />
+                  <span>File</span>
+                </div>
+              </label>
+              <label>
+                <div class="dts-form-component__label"></div>
+                <div class="dts-form-component__field--horizontal">
+                  <input type="radio" name="radiobuttonFieldsetName" aria-controls="linkAttachment" aria-expanded="false" />
+                  <span>Link</span>
+                </div>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div id="fileAttachment" class="dts-form-component">
           <label>
             <div class="dts-form-component__label">
               <span>Upload file to attach</span>
@@ -36,7 +57,7 @@
             <input type="file">
           </label>
         </div>
-        <div class="dts-form-component">
+        <div id="linkAttachment" class="dts-form-component" style="display: none;">
           <label>
             <div class="dts-form-component__label">
               <span>Add link</span>

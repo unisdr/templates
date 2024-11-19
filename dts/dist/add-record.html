@@ -333,6 +333,14 @@ Add class mg-grid__col--group-1 to keep grid element grouped with previous row r
 </label>
 </div>
 </div>
+<div class="dts-form__section-actions">
+<button type="button" class="mg-button mg-button--small mg-button-system" onclick="document.querySelector('#modal01').showModal()">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/paperclip.svg#attachment"></use>
+</svg>
+<span>Media</span>
+</button>
+</div>
 </div>
 <!--Section to be displayed after clicking on Add button - END
 --><div class="mg-grid mg-grid__col-4">
@@ -365,7 +373,7 @@ Add class mg-grid__col--group-1 to keep grid element grouped with previous row r
 </label>
 </div>
 </div>
-<button type="submit" class="mg-button mg-button--small mg-button-system" onclick="document.querySelector('#modal01').showModal()">Add effect</button>
+<button type="button" class="mg-button mg-button--small mg-button-system">Add effect</button>
 </fieldset>
 <!--Form section (bkg grey)
 --><fieldset class="dts-form__section">
@@ -734,6 +742,27 @@ Add class mg-grid__col--group-1 to keep grid element grouped with previous row r
           </label>
         </div>
         <div class="dts-form-component">
+          <fieldset>
+            <legend class="mg-u-sr-only">Attachment type</legend>
+            <div class="mg-grid mg-grid__col-auto">
+              <label>
+                <div class="dts-form-component__label"></div>
+                <div class="dts-form-component__field--horizontal">
+                  <input type="radio" name="radiobuttonFieldsetName" aria-controls="fileAttachment" aria-expanded="true" checked />
+                  <span>File</span>
+                </div>
+              </label>
+              <label>
+                <div class="dts-form-component__label"></div>
+                <div class="dts-form-component__field--horizontal">
+                  <input type="radio" name="radiobuttonFieldsetName" aria-controls="linkAttachment" aria-expanded="false" />
+                  <span>Link</span>
+                </div>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div id="fileAttachment" class="dts-form-component">
           <label>
             <div class="dts-form-component__label">
               <span>Upload file to attach</span>
@@ -741,7 +770,7 @@ Add class mg-grid__col--group-1 to keep grid element grouped with previous row r
             <input type="file">
           </label>
         </div>
-        <div class="dts-form-component">
+        <div id="linkAttachment" class="dts-form-component" style="display: none;">
           <label>
             <div class="dts-form-component__label">
               <span>Add link</span>

@@ -50,6 +50,22 @@ if (forms.length) {
     }
 }
 
+
+// Radiobutton controlled field visibility
+const visibilityTriggers = document.querySelectorAll("input[aria-controls]");
+if (visibilityTriggers.length) {
+    for (let i = 0; i < visibilityTriggers.length; i++) {
+        visibilityTriggers[i].addEventListener("click", () => {
+            var ariaExpanded = visibilityTriggers[i].getAttribute('aria-expanded');
+            var ariaControls = visibilityTriggers[i].getAttribute('aria-controls');
+            var controlledItem = document.getElementById(ariaControls);
+            if (ariaExpanded == "false") {
+                controlledItem.style.display = "block";
+            }
+        });
+    }
+}
+
 // OTP form single digit length management - NOT USED
 // const otpForm = document.querySelector(".dts-dialog__form--otp");
 
