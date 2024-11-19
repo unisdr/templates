@@ -1,0 +1,145 @@
+<dialog id="modal01" class="dts-dialog">
+  <div class="dts-dialog__content">
+    <div class="dts-dialog__header">
+      <button type="button" autofocus onclick="this.closest('dialog').close()" aria-label="Close dialog">
+        <svg aria-hidden="true" focusable="false" role="img">
+          <use href="assets/icons/close.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <form onsubmit="event.preventDefault();document.querySelector('#modal02').showModal()" class="dts-form dts-form--vertical">
+      <div class="dts-form__intro">
+        <h2 class="dts-heading-2">Modal title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </div>
+      <div class="dts-form__body">
+        <div class="dts-form-component">
+          <label>
+            <div class="dts-form-component__label">
+              <span>Type of document</span>
+            </div>
+            <select>
+              <option value="">Choose an option</option>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+              <option value="volkswagen">Volkswagen</option>
+            </select>
+          </label>
+        </div>
+        <div class="dts-form-component">
+          <label>
+            <div class="dts-form-component__label">
+              <span>Upload file to attach</span>
+            </div>
+            <input type="file">
+          </label>
+        </div>
+        <div class="dts-form-component">
+          <label>
+            <div class="dts-form-component__label">
+              <span>Add link</span>
+            </div>
+            <input type="url">
+          </label>
+        </div>
+        <div class="dts-form__actions">
+          <button type="button" class="mg-button mg-button--small mg-button-system">Attach</button>
+        </div>
+        <div class="dts-form__additional-content">
+          <div class="dts-heading-3">Attached files</div>
+          <ul class="dts-attachments">
+            <li class="dts-attachments__item">
+              <div class="dts-attachments__summary">
+                <strong>Name of file (File Type, Size)</strong>
+                <div class="dts-attachments__metadata">
+                  <span>Situation report</span>
+                  <span><strong>Added:</strong> 09-20-2024</span>
+                </div>
+              </div>
+              <div>
+                <button type="button">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/delete.svg#delete"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="dts-attachments__item">
+              <div class="dts-attachments__summary">
+                <strong>Name of file (File Type, Size)</strong>
+                <div class="dts-attachments__metadata">
+                  <span>Situation report</span>
+                  <span><strong>Added:</strong> 09-20-2024</span>
+                </div>
+              </div>
+              <div>
+                <button type="button">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/delete.svg#delete"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dts-form__actions">
+        <button type="submit" class="mg-button mg-button-primary">Done</button>
+        <button type="button" class="mg-button mg-button-outline">Cancel</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<dialog id="modal02" class="dts-dialog">
+  <div class="dts-dialog__content">
+    <div class="dts-dialog__header">
+      <button type="button" autofocus onclick="this.closest('dialog').close()" aria-label="Close dialog">
+        <svg aria-hidden="true" focusable="false" role="img">
+          <use href="assets/icons/close.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="dts-form dts-form--vertical">
+      <div class="dts-form__intro">
+        <h2 class="dts-heading-2">
+          <svg aria-hidden="true" focusable="false" role="img">
+            <use href="assets/icons/tick.svg#tick"></use>
+          </svg>
+          <span>Done</span>
+        </h2>
+        <p>Your action was completed successfully.</p>
+      </div>
+      <div class="dts-form__body">
+        <div class="dts-element-summary">
+          <h2 class="dts-element-summary__title"><span>Record ID #######</span></h2>
+          <div class="dts-element-summary__metadata">
+            <dl class="dts-metadata">
+              <div class="dts-metadata__item">
+                <dt>Status:</dt>
+                <dd>
+                  <div class="dts-element-summary__status">
+                    <span class="dts-status dts-status--draft" aria-hidden="true"></span>
+                    <span id="draftDescription">Sent for validation</span>
+                  </div>
+                </dd>
+              </div>
+              <div class="dts-metadata__item">
+                <dt>Recipient:</dt>
+                <dd>Firstname Lastname (email here)</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="dts-form__actions">
+        <button type="button" class="mg-button mg-button-primary">Primary action</button>
+        <button type="button" class="mg-button mg-button-outline">Secondary action</button>
+        <button type="button" class="mg-button mg-button-outline">Secondary action</button>
+        <button type="button" class="mg-button mg-button-outline">Secondary action</button>
+      </div>
+    </div>
+  </div>
+</dialog>

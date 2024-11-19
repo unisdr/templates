@@ -50,17 +50,17 @@ if (forms.length) {
     }
 }
 
-// OTP form digit length management
-const otpForm = document.querySelector(".dts-dialog__form--otp");
+// OTP form single digit length management - NOT USED
+// const otpForm = document.querySelector(".dts-dialog__form--otp");
 
-if (otpForm) {
-    const digitInputs = otpForm.querySelectorAll("input[type='number']");
-    for (let i = 0; i < digitInputs.length; i++) {
-        digitInputs[i].addEventListener("keydown", function (e) {
-            digitInputs[i].select();
-            if (this.value.length == 1) {
-                return false;
-            };
-        });
-    }
-}
+// if (otpForm) {
+//     const digitInputs = otpForm.querySelectorAll("input[type='number']");
+//     for (let i = 0; i < digitInputs.length; i++) {
+//         digitInputs[i].addEventListener("keydown", function (e) {
+//             digitInputs[i].select();
+//             if (this.value.length == 1) {
+//                 return false;
+//             };
+//         });
+//     }
+// }

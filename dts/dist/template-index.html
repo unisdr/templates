@@ -1,35 +1,111 @@
 <!DOCTYPE html>
 <head>
-<meta charset="utf-8" />
-<title>DTS - templates list</title>
+<title>DTS - HTML/CSS/Js deliverables</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/css/style-dts.css">
 </head>
 <body>
-<img src="assets/images/dldt-logo-mark.svg" style="width: 100px;display:block;margin:auto;">
-<h1 style="font-size: 3rem; text-align: center;">HTML/CSS templates</h1>
-<ul style="font-size: 1.5rem; display: grid; gap: 1rem">
-<li><a href="base.html">Base template</a> (header, main, page title, footer)</li>
-<li><a href="form.html">Form template</a> - (columns layout, elements styling) <span style="color: red;"> - elements styling WIP</span></li>
-<li><a href="account-setup-01.html">Account Setup (Admin/User) flow</a> - (columns layout, elements styling, field management scripts)</li>
-<li><a href="add-edit-filter.html">Add/Edit element (Asset/User/Event/Import...) or Filter (baseline data, effects, assets, users, records, analytics) template</a> - (columns layout, elements styling) <span style="color: red;"> - WIP</span></li>
-<li><a href="add-record.html">Add Record template</a> - (columns layout, form sections, elements styling) <span style="color: red;"> - WIP</span></li>
-<!-- <li><a href="form-modal.html">Admin Account Setup modal flow</a> - (columns layout, elements styling, screen/field management scripts) <span style="color: red;">Aborted</span></li>-->
-</ul>
+<div class="mg-container">
+<div style="display: flex; gap: 2.4rem; align-items: center">
+<img src="assets/images/dldt-logo-mark.svg" style="width: 100px;">
+<h1>HTML/CSS/Js deliverables</h1>
+</div>
 <hr>
-<h3>Release notes</h3>
-<ul style="font-size: 1.125rem; display: grid; gap: 1rem; list-style:none;padding:0">
-<li>November 19, 2024 - Added Add Record template; Simplified form grid structure on all form templates (no grid lines, just spans and offsets)</li>
-<li>November 14, 2024 - Added Info tooltip to form labels on Form template (used https://floating-ui.com/ library)</li>
-<li>November 12, 2024 - Updated form label HTML code on all templates containing forms</li>
-<li>November 12, 2024 - Added Sub navigation component to Base template; Updated snackbar HTML code on Account Setup step 3; Added Alert box and Info box on Form template</li>
-<li>November 12, 2024 - Added alert icons with related styles; Added Modal dialogs to Add/Edit element template (click Delete button and then Done button to see two examples); Added input type url to Form template</li>
-<li>November 8, 2024 - Added Page title component to Base template; Added Add/Edit element template; Added Status component; Added Tooltip component (to be used on other templates); Updated CSS classes on Account Setup flow pages; Updated Form template</li>
-<li>November 7, 2024 - Changed Account setup flow from modal to page; Changed OTP data entry from separate fields to unique field; Added snackbar component</li>
-<li>November 6, 2024 - Updated screen/field management scripts; Added minlength attribute to pwd fields; Styled Admin Account setup OTP entry screen; Added single digit Js control on OTP fields</li>
-<li>November 5, 2024 - Updated pwd visibility toggle management script; Styled Admin Account data entry screen + system button variant; Added required fields button enabling script</li>
-<li>November 4, 2024 - Updated pwd visibility toggle management on all Form templates; Added Js scripts include at bottom of pages; Styled Admin Account setup screen flow - WIP</li>
-<li>October 31, 2024 - Added Form modal template - NOT COMPLETED</li>
-<li>October 31, 2024 - Added password visibility toggling feature to Form template</li>
-<li>October 30, 2024 - Added Instance footer to Base template</li>
+<div style="padding-top: 2.4rem">
+<h2 style="margin-bottom: 0;"><a href="base.html">Base template</a></h2>
+<p>Page template that can be used as base for any page.<br>It includes header (global and instance), page title, sub navigation, content, footer (global and instance).</p>
+</div>
+<div style="padding-top: 2.4rem">
+<h2 style="margin-bottom: 0;"><a href="form.html">Form template</a></h2>
+<p>Page template that can be used as a generic reference for form pages.<br>It includes intro section with help links, all required column based layouts, all form field types (with error messages and description), label tooltips, error banner, warning banner, action buttons.<br><span style="color: red;"> WIP - field types to be confirmed</span></p>
+</div>
+<div style="padding-top: 2.4rem">
+<h2 style="margin-bottom: 0;"><a href="account-setup-01.html">Account Setup screen flow</a></h2>
+<p>Templates that can be used for Registration/Login flow, both for Admin and User.<br>It includes different steps with all layouts/elements needed and basic required validation.</p>
+</div>
+<div style="padding-top: 2.4rem">
+<h2 style="margin-bottom: 0;"><a href="add-edit-filter.html">Add/Edit element or Filter</a></h2>
+<p>Page template that can be used as reference for Add/Edit form pages (Asset, User, Event, Import, etc) or Filter sections (baseline data, effects, assets, users, records, analytics, etc).<br>It includes both the Edit section (top part) and the Add/Filter section (bottom part).</p>
+</div>
+<div style="padding-top: 2.4rem">
+<h2 style="margin-bottom: 0;"><a href="add-edit-filter.html">Add Record</a></h2>
+<p>Page template that can be used as reference for complex form pages such as Add Record.<br>It includes form sections/subsections and media/confirmation modals (click Media button and then on the modal click Done button to see both examples).<br><span style="color: red;"> WIP - layout/elements to be confirmed</span></p>
+</div>
+<div style="padding-top: 2.4rem">
+<h2 style="margin-bottom: 0;">Js scripts</h2>
+<p>Client side Js scripts that handle simple user interactions.</p>
+<ul>
+<li>Password visibility toggle (source/js/form.js)</li>
+<li>Submit enabling on required filled (source/js/form.js)</li>
+<li>Snackbar show/hide (source/includes/_scripts.html)</li>
 </ul>
+</div>
+<div style="padding-top: 2.4rem">
+<h2 style="margin-bottom: 0;">Third party libraries</h2>
+<p>Client side Js libraries that handle non-HTML5 UI patterns.</p>
+<ul>
+<li><a href="https://floating-ui.com/" target="_blank">Tooltips (Floating UI)</a> (source/includes/_scripts.html)</li>
+</ul>
+</div>
+<hr>
+<h2 style="text-align: center;">Release notes</h2>
+<dl style="display: grid; gap: 1rem; list-style:none;padding:0">
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 19, 2024:</dt>
+<dd style="margin-left: .8rem;">added Add Record template; simplified form grid structure on all form templates (no grid lines, just spans and offsets); moved Modal dialogs to Add Record template; reviewed documentation page</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 14, 2024:</dt>
+<dd style="margin-left: .8rem;">added Info tooltip to form labels on Form template</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 12, 2024:</dt>
+<dd style="margin-left: .8rem;">updated form label HTML code on all templates containing forms</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 12, 2024:</dt>
+<dd style="margin-left: .8rem;">added Sub navigation component to Base template; updated snackbar HTML code on Account Setup step 3; added Alert box and Info box on Form template</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 12, 2024:</dt>
+<dd style="margin-left: .8rem;">added alert icons with related styles; added Modal dialogs to Add/Edit element template (click Delete button and then Done button to see two examples); added input type url to Form template</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 8, 2024:</dt>
+<dd style="margin-left: .8rem;">added Page title component to Base template; added Add/Edit element template; added Status component; added Tooltip component (to be used on other templates); updated CSS classes on Account Setup flow pages; updated Form template</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 7, 2024:</dt>
+<dd style="margin-left: .8rem;">changed Account setup flow from modal to page; changed OTP data entry from separate fields to unique field; added snackbar component</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 6, 2024:</dt>
+<dd style="margin-left: .8rem;">updated screen/field management scripts; added minlength attribute to pwd fields; styled Admin Account setup OTP entry screen; added single digit Js control on OTP fields</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 5, 2024:</dt>
+<dd style="margin-left: .8rem;">updated pwd visibility toggle management script; styled Admin Account data entry screen + system button variant; added required fields button enabling script</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">November 4, 2024:</dt>
+<dd style="margin-left: .8rem;">updated pwd visibility toggle management on all Form templates; added Js scripts include at bottom of pages; styled Admin Account setup screen flow</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">October 31, 2024:</dt>
+<dd style="margin-left: .8rem;">added Form modal template</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">October 31, 2024:</dt>
+<dd style="margin-left: .8rem;">added password visibility toggling feature to Form template</dd>
+</div>
+<div style="display: flex;">
+<dt style="font-weight: bold; white-space: nowrap;">October 30, 2024:</dt>
+<dd style="margin-left: .8rem;">Added Instance footer to Base template</dd>
+</div>
+</dl>
+</div>
 </body>
 </html>

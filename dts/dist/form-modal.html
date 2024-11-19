@@ -176,16 +176,6 @@ id attribute is needed for visibility toggling Js function
 </section>
 </main>
 </div><script>
-  // Account setup modal steps navigation - just for static view
-  function navigateSteps(current, next) {
-    event.preventDefault();
-    currentId = ("#modalForm" + current);
-    currentStep = document.querySelector(currentId);
-    nextStep = document.querySelector("#modalForm" + next);
-    nextStep.showModal();
-    currentStep.close();
-  }
-
   // Snack bar display
   function openSnackbar(alertType) {
     var x = document.getElementById("OTPsnackbar");
