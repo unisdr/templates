@@ -59,14 +59,27 @@ if (forms.length) {
 
 // Radiobutton controlled field visibility
 const visibilityTriggers = document.querySelectorAll("input[aria-controls]");
+const ariaControls = ["", ""];
+const controlledItems = ["", ""];
+
 if (visibilityTriggers.length) {
     for (let i = 0; i < visibilityTriggers.length; i++) {
+        ariaControls[i] = visibilityTriggers[i].getAttribute("aria-controls");
+        controlledItems[i] = document.getElementById(ariaControls[i]);
+
         visibilityTriggers[i].addEventListener("click", () => {
             var ariaExpanded = visibilityTriggers[i].getAttribute('aria-expanded');
-            var ariaControls = visibilityTriggers[i].getAttribute('aria-controls');
-            var controlledItem = document.getElementById(ariaControls);
+
             if (ariaExpanded == "false") {
-                controlledItem.style.display = "block";
+                controlledItems[i].style.display = "block";
+                visibilityTriggers[i].setAttribute("aria-expanded", "true");
+                if (i==0) {
+                    controlledItems[i+1].style.display = "none";
+                    visibilityTriggers[i+1].setAttribute("aria-expanded", "false");
+                } else {
+                    controlledItems[i-1].style.display = "none";
+                    visibilityTriggers[i-1].setAttribute("aria-expanded", "false");
+                }
             }
         });
     }

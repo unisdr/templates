@@ -159,6 +159,10 @@
   color: $dts-grey-500;
   border-color: $dts-grey-200;
 
+  &--transparent {
+    background-color: transparent;
+  }
+
   &:hover {
     border-color: $mg-color-button-background--hover;
     color: $mg-color-button-background--hover;
