@@ -23,6 +23,10 @@
   &__summary {
     display: grid;
     gap: $dts-spacing-4;
+
+    >strong {
+      overflow-wrap: anywhere;
+    }
   }
 
   &__metadata {

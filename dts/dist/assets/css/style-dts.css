@@ -786,6 +786,9 @@ nav ul {
   display: grid;
   gap: 0.4rem;
 }
+.dts-attachments__summary > strong {
+  overflow-wrap: anywhere;
+}
 .dts-attachments__metadata {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -812,7 +815,7 @@ nav ul {
   color: #fff;
   cursor: pointer;
   padding: 1.2rem 1.6rem;
-  border: 1px solid #fff;
+  border: 1px solid transparent;
   /* medium design - 1024px up */
 }
 @media (width >= 1024px) {
@@ -833,8 +836,8 @@ nav ul {
   width: 1.6rem;
 }
 .mg-button svg * {
-  -webkit-transform: scale(0.9) translate(-3px, -3px);
-          transform: scale(0.9) translate(-3px, -3px);
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 .mg-button.mg-button--small {
@@ -877,7 +880,6 @@ nav ul {
 }
 
 .mg-button.mg-button-ghost {
-  background-color: #fff;
   color: #6093BD;
 }
 .mg-button.mg-button-ghost.mg-button-arrow::after {
