@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+
+    include includes/_header.html
+
+    <main class="dts-main-container">
+ 
+      include includes/_page-title.html
+      include includes/_sub-navigation.html
+
+      <section>
+        <div class="mg-container">
+
+          <form class="dts-form">
+            <div class="dts-form__body">
+              <div class="mg-grid mg-grid__col-3">
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span>Sector</span>
+                    </div>
+                    <select>
+                      <option value="">Select Sector</option>
+                      <option value="value">Sector 1</option>
+                      <option value="value">Sector 2</option>
+                      <option value="value">Sector 3</option>
+                      <option value="value">Sector 4</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span>Disaster event</span>
+                    </div>
+                    <input type="search" list="events" placeholder="All events">
+                    <datalist id="events">
+                      <option value="Event 1">
+                      <option value="Event 2">
+                      <option value="Event 3">
+                      <option value="Event 4">
+                      <option value="Event 5">
+                    </datalist>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span>Date range</span>
+                    </div>
+                    <input type="date">
+                  </label>
+                </div>
+              </div>
+              <div class="dts-form__actions">
+                <button type="button" class="mg-button mg-button--small mg-button-primary">Apply filters</button>
+                <button type="button" class="mg-button mg-button--small mg-button-outline">Clear</button>
+              </div>
+              <div class="dts-form__actions">
+                <button type="button" class="mg-button mg-button--small mg-button-ghost">Advanced search</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </section>
+    </main>
+
+    include includes/_footer.html
+
+  </div>
+
+  include includes/_scripts.html
+
+</body>
+
+</html>

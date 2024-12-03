@@ -2827,7 +2827,6 @@ header .mg-container {
 .dts-page-intro {
   display: -ms-grid;
   display: grid;
-  margin-top: 2.4rem;
   margin-bottom: 4.8rem;
 }
 .dts-page-intro__links {
@@ -2896,6 +2895,9 @@ header .mg-container {
   background-color: #9ABBD6;
 }
 
+.dts-sub-navigation {
+  margin-bottom: 2.4rem;
+}
 .dts-sub-navigation .mg-container {
   border-bottom: 1px solid #E3E3E3;
 }
