@@ -544,6 +544,10 @@ summary {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .yellow .stats-card:hover {
   background-color: #ff0;
 }
@@ -796,7 +800,7 @@ nav ul {
   gap: 0.8rem;
 }
 
-.mg-button {
+.mg-button, .dts-tablist__button {
   background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -819,36 +823,36 @@ nav ul {
   /* medium design - 1024px up */
 }
 @media (width >= 1024px) {
-  .mg-button {
+  .mg-button, .dts-tablist__button {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
 }
-.mg-button:hover {
+.mg-button:hover, .dts-tablist__button:hover {
   text-decoration: none;
 }
-.mg-button:focus-visible {
+.mg-button:focus-visible, .dts-tablist__button:focus-visible {
   outline: 0;
 }
-.mg-button svg {
+.mg-button svg, .dts-tablist__button svg {
   height: 1.6rem;
   width: 1.6rem;
 }
-.mg-button svg * {
+.mg-button svg *, .dts-tablist__button svg * {
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
 }
 
-.mg-button.mg-button--small {
+.mg-button.mg-button--small, .mg-button--small.dts-tablist__button {
   padding: 0.8rem 1.6rem;
 }
-.mg-button.mg-button--small svg * {
+.mg-button.mg-button--small svg *, .mg-button--small.dts-tablist__button svg * {
   -webkit-transform: scale(0.55) translate(4px, 0px);
           transform: scale(0.55) translate(4px, 0px);
 }
 
-.mg-button.mg-button-arrow::after {
+.mg-button.mg-button-arrow::after, .mg-button-arrow.dts-tablist__button::after {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   background: url(~/stories/assets/icons/tick-white.svg) no-repeat left center;
@@ -857,107 +861,107 @@ nav ul {
   width: 1.6rem;
 }
 
-.mg-button.mg-button-primary {
+.mg-button.mg-button-primary, .mg-button-primary.dts-tablist__button {
   background-color: #004f91;
 }
-.mg-button.mg-button-primary:hover {
+.mg-button.mg-button-primary:hover, .mg-button-primary.dts-tablist__button:hover {
   background-color: #4096FF;
 }
-.mg-button.mg-button-primary:focus-visible {
+.mg-button.mg-button-primary:focus-visible, .mg-button-primary.dts-tablist__button:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #4096FF;
           box-shadow: 0 0 0 2px #4096FF;
 }
 
-.mg-button.mg-button-secondary {
+.mg-button.mg-button-secondary, .mg-button-secondary.dts-tablist__button {
   background-color: #00AFAE;
 }
-.mg-button.mg-button-secondary:hover {
+.mg-button.mg-button-secondary:hover, .mg-button-secondary.dts-tablist__button:hover {
   background-color: #78BCBC;
 }
-.mg-button.mg-button-secondary:focus-visible {
+.mg-button.mg-button-secondary:focus-visible, .mg-button-secondary.dts-tablist__button:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #78BCBC;
           box-shadow: 0 0 0 2px #78BCBC;
 }
 
-.mg-button.mg-button-ghost {
+.mg-button.mg-button-ghost, .mg-button-ghost.dts-tablist__button {
   color: #6093BD;
 }
-.mg-button.mg-button-ghost.mg-button-arrow::after {
+.mg-button.mg-button-ghost.mg-button-arrow::after, .mg-button-ghost.mg-button-arrow.dts-tablist__button::after {
   background: url(~/stories/assets/icons/tick-ghost-blue.svg) no-repeat left center;
 }
-.mg-button.mg-button-ghost:hover {
+.mg-button.mg-button-ghost:hover, .mg-button-ghost.dts-tablist__button:hover {
   background-color: #6093BD;
   color: #fff;
 }
-.mg-button.mg-button-ghost.mg-button-arrow:hover::after {
+.mg-button.mg-button-ghost.mg-button-arrow:hover::after, .mg-button-ghost.mg-button-arrow.dts-tablist__button:hover::after {
   background: url(~/stories/assets/icons/tick-white.svg) no-repeat left center;
 }
-.mg-button.mg-button-ghost:focus-visible {
+.mg-button.mg-button-ghost:focus-visible, .mg-button-ghost.dts-tablist__button:focus-visible {
   background-color: #6093BD;
   color: #fff;
   -webkit-box-shadow: 0 0 0 2px #DDE8F0;
           box-shadow: 0 0 0 2px #DDE8F0;
 }
-.mg-button.mg-button-ghost.mg-button-arrow:focus-visible::after {
+.mg-button.mg-button-ghost.mg-button-arrow:focus-visible::after, .mg-button-ghost.mg-button-arrow.dts-tablist__button:focus-visible::after {
   background: url(~/stories/assets/icons/tick-white.svg) no-repeat left center;
 }
 
-.mg-button:disabled {
+.mg-button:disabled, .dts-tablist__button:disabled {
   background-color: #808080;
   color: #CCCCCC;
   pointer-events: none;
 }
 
-.mg-button.mg-button-outline {
+.mg-button.mg-button-outline, .mg-button-outline.dts-tablist__button {
   background-color: #fff;
   border-color: #004f91;
   color: #004f91;
 }
-.mg-button.mg-button-outline.mg-button-arrow::after {
+.mg-button.mg-button-outline.mg-button-arrow::after, .mg-button-outline.mg-button-arrow.dts-tablist__button::after {
   background: url(~/stories/assets/icons/tick-blue.svg) no-repeat left center;
 }
-.mg-button.mg-button-outline:hover {
+.mg-button.mg-button-outline:hover, .mg-button-outline.dts-tablist__button:hover {
   border-color: #4096FF;
   color: #4096FF;
 }
-.mg-button.mg-button-outline.mg-button-arrow:hover::after {
+.mg-button.mg-button-outline.mg-button-arrow:hover::after, .mg-button-outline.mg-button-arrow.dts-tablist__button:hover::after {
   background: url(~/stories/assets/icons/tick-sky-blue.svg) no-repeat left center;
 }
-.mg-button.mg-button-outline:focus-visible {
+.mg-button.mg-button-outline:focus-visible, .mg-button-outline.dts-tablist__button:focus-visible {
   border-color: transparent;
   -webkit-box-shadow: 0 0 0 2px rgba(145, 202, 255, 0.4);
           box-shadow: 0 0 0 2px rgba(145, 202, 255, 0.4);
 }
-.mg-button.mg-button-outline:disabled {
+.mg-button.mg-button-outline:disabled, .mg-button-outline.dts-tablist__button:disabled {
   color: #CCCCCC;
   border-color: #CCCCCC;
 }
 
-.mg-button.mg-button-system {
+.mg-button.mg-button-system, .mg-button-system.dts-tablist__button {
   background-color: #fff;
   color: #333333;
   border-color: #BEBEBE;
 }
-.mg-button.mg-button-system--transparent {
+.mg-button.mg-button-system--transparent, .mg-button-system--transparent.dts-tablist__button {
   background-color: transparent;
 }
-.mg-button.mg-button-system:hover {
+.mg-button.mg-button-system:hover, .mg-button-system.dts-tablist__button:hover {
   border-color: #4096FF;
   color: #4096FF;
 }
-.mg-button.mg-button-system:hover svg {
+.mg-button.mg-button-system:hover svg, .mg-button-system.dts-tablist__button:hover svg {
   color: #4096FF;
 }
-.mg-button.mg-button-system:focus-visible {
+.mg-button.mg-button-system:focus-visible, .mg-button-system.dts-tablist__button:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #4096FF;
           box-shadow: 0 0 0 2px #4096FF;
 }
-.mg-button.mg-button-system:disabled {
+.mg-button.mg-button-system:disabled, .mg-button-system.dts-tablist__button:disabled {
   color: #CCCCCC;
   border-color: #CCCCCC;
 }
 
-.mg-button.mg-button-arrow:disabled::after {
+.mg-button.mg-button-arrow:disabled::after, .mg-button-arrow.dts-tablist__button:disabled::after {
   background: url(~/stories/assets/icons/tick-grey.svg) no-repeat left center;
 }
 
@@ -2933,6 +2937,10 @@ header .mg-container {
   margin-bottom: 4.8rem;
 }
 
+.dts-page-section {
+  margin-top: 4rem;
+}
+
 .dts-page-title {
   background-color: #F3EBEC;
   padding: 3.2rem 0;
@@ -3036,6 +3044,30 @@ header .mg-container {
 }
 .dts-sub-navigation ul .dts-sub-navigation__item--current a {
   border-color: #004f91;
+}
+
+.dts-tablist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.dts-tablist__button {
+  border-radius: 0;
+  background-color: #F2F2F2;
+  border-color: #E3E3E3;
+  color: #979797;
+}
+.dts-tablist__button:hover, .dts-tablist__button:focus-visible {
+  color: #333333;
+}
+.dts-tablist__button[aria-selected=true] {
+  color: #333333;
 }
 
 [role=tooltip] {
