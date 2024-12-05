@@ -2252,6 +2252,7 @@ header .mg-container {
           align-items: center;
   height: 9rem;
   font-size: 3.4rem;
+  padding: 0 1.6rem;
   /* medium design - 768px up */
   /* medium design - 1024px up */
   /* large design - 1164px up */
