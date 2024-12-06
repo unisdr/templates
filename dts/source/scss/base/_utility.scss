@@ -83,6 +83,10 @@
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 // color map solid
 $colors-solid: (
   "yellow": $mg-color-yellow,
@@ -93,6 +97,7 @@ $colors-solid: (
 
 @each $name, $color in $colors-solid {
   .#{$name} {
+
     // statscard
     .stats-card {
       &:hover {
@@ -127,10 +132,11 @@ $colors-solid: (
 // Comma between child elements
 // https://gitlab.com/undrr/web-backlog/-/issues/864
 .mg-u-comma-between {
-  > *::after {
+  >*::after {
     content: ", ";
   }
-  > *:last-child::after {
+
+  >*:last-child::after {
     content: "";
   }
 }

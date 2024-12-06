@@ -20,8 +20,16 @@
   transform: rotate(45deg);
 }
 
-.dts-form-component__label .dts-tooltip__button,
-.dts-form-component__field--horizontal .dts-tooltip__button {
+.dts-tooltip__button {
   align-self: flex-start;
   margin-top: $dts-spacing-4;
+
+  svg {
+    height: $dts-spacing-16;
+    width: $dts-spacing-16;
+
+    * {
+      transform: scale(0.75) translate(-2px, -3px);
+    }
+  }
 }

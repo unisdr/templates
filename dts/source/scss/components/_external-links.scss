@@ -1,0 +1,10 @@
+.dts-external-links {
+  display: grid;
+  gap: $dts-spacing-24;
+  margin: $dts-spacing-16 0;
+
+  @include devicebreak(small) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

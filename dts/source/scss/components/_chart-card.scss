@@ -1,0 +1,9 @@
+.dts-chart-card {
+  background-color: $dts-coal-100;
+  padding: $dts-spacing-16;
+
+  &__category {
+    display: flex;
+    gap: $dts-spacing-8;
+  }
+}

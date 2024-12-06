@@ -1,0 +1,97 @@
+.dts-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+  font-size: 3.4rem;
+  padding: 0 $dts-spacing-16;
+
+  @include devicebreak(small) {
+    font-size: 2.6rem;
+  }
+
+  @include devicebreak(medium) {
+    font-size: 3.4rem;
+  }
+
+  @include devicebreak(large) {
+    font-size: 4.6rem;
+  }
+
+  &--target-number-a {
+    background-color: $dts-coal-100;
+    color: $dts-target-a;
+  }
+
+  &--target-box-a {
+    font-weight: 500;
+    background-color: $dts-coal-100;
+    color: $dts-target-a;
+  }
+
+  &--target-number-b {
+    background-color: $dts-coal-100;
+    color: $dts-target-b;
+  }
+
+  &--target-box-b {
+    font-weight: 500;
+    background-color: $dts-violet-100;
+    color: $dts-violet-800;
+  }
+
+  &--target-number-c {
+    background-color: $dts-coal-100;
+    color: $dts-tango-700;
+  }
+
+  &--target-box-c {
+    font-weight: 500;
+    background-color: $dts-tango-100;
+    color: $dts-tango-800;
+  }
+
+  &--target-number-d {
+    background-color: $dts-coal-100;
+    color: $dts-teal-800;
+  }
+
+  &--target-box-d {
+    font-weight: 500;
+    background-color: $dts-teal-100;
+    color: $dts-teal-800;
+  }
+
+  &--target-number-e {
+    background-color: $dts-coal-100;
+    color: $dts-killarney-700;
+  }
+
+  &--target-box-e {
+    font-weight: 500;
+    background-color: $dts-killarney-100;
+    color: $dts-killarney-800;
+  }
+
+  &--target-number-f {
+    background-color: $dts-coal-100;
+    color: $dts-target-f;
+  }
+
+  &--target-box-f {
+    font-weight: 500;
+    background-color: $dts-slate-100;
+    color: $dts-slate-800;
+  }
+
+  &--target-number-g {
+    background-color: $dts-coal-100;
+    color: $dts-target-g;
+  }
+
+  &--target-box-g {
+    font-weight: 500;
+    background-color: $dts-stiletto-100;
+    color: $dts-stiletto-700;
+  }
+}

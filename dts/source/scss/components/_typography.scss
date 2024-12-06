@@ -126,6 +126,8 @@
 
 //  Body label (duplicate of above?)
 .dts-body-label {
+  display: inline-flex;
+  gap: $dts-spacing-8;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 700;
