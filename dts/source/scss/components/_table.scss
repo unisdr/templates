@@ -1,0 +1,29 @@
+.dts-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.4rem;
+
+  th,
+  td {
+    border-bottom: 1px solid $dts-coal-100;
+    height: 5.4rem;
+    padding-top: $dts-spacing-8;
+  }
+
+  th {
+    background-color: $dts-coal-100;
+    text-align: left;
+    vertical-align: top;
+    font-weight: 500;
+
+    &.dts-table__filter--active {
+      background-color: $dts-coal-200;
+    }
+  }
+
+  td:hover {
+    background-color: $dts-coal-200;
+  }
+
+}

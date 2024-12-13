@@ -1356,6 +1356,7 @@ header .mg-container {
 
 .dts-footer {
   background-color: #F2F2F2;
+  margin-top: 4rem;
 }
 .dts-footer nav {
   -ms-flex-negative: 0;
@@ -3080,6 +3081,31 @@ header .mg-container {
 }
 .dts-tablist__button[aria-selected=true] {
   color: #333333;
+}
+
+.dts-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.4rem;
+}
+.dts-table th,
+.dts-table td {
+  border-bottom: 1px solid #F2F2F2;
+  height: 5.4rem;
+  padding-top: 0.8rem;
+}
+.dts-table th {
+  background-color: #F2F2F2;
+  text-align: left;
+  vertical-align: top;
+  font-weight: 500;
+}
+.dts-table th.dts-table__filter--active {
+  background-color: #E3E3E3;
+}
+.dts-table td:hover {
+  background-color: #E3E3E3;
 }
 
 [role=tooltip] {
