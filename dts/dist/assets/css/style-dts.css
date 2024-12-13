@@ -3085,27 +3085,41 @@ header .mg-container {
 
 .dts-table {
   width: 100%;
+  overflow-x: auto;
+  display: block;
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 1.4rem;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-table {
+    display: table;
+  }
 }
 .dts-table th,
 .dts-table td {
   border-bottom: 1px solid #F2F2F2;
   height: 5.4rem;
-  padding-top: 0.8rem;
+  padding: 0.8rem;
+  vertical-align: top;
 }
 .dts-table th {
   background-color: #F2F2F2;
   text-align: left;
-  vertical-align: top;
   font-weight: 500;
 }
 .dts-table th.dts-table__filter--active {
   background-color: #E3E3E3;
 }
-.dts-table td:hover {
-  background-color: #E3E3E3;
+.dts-table tbody {
+  white-space: nowrap;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-table tbody {
+    white-space: normal;
+  }
 }
 
 [role=tooltip] {
