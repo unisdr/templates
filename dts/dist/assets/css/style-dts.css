@@ -2206,7 +2206,7 @@ header .mg-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.8rem;
+  gap: 1.6rem;
   max-height: 86px;
   padding: 11px 0;
   /* large design - 1164px up */
@@ -2218,6 +2218,10 @@ header .mg-container {
 }
 .dts-header__logo img {
   height: 100%;
+}
+.dts-header__logo-flag {
+  max-width: 3.8rem;
+  max-height: 2.8rem;
 }
 .dts-header__logo-text {
   font-family: "Roboto Condensed", "Noto Sans SC", "Noto Sans Arabic", sans-serif;

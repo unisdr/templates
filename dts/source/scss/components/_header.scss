@@ -65,7 +65,7 @@
   &__logo {
     display: flex;
     align-items: center;
-    gap: $dts-spacing-8;
+    gap: $dts-spacing-16;
     max-height: 86px;
     padding: 11px 0;
 
@@ -75,6 +75,11 @@
 
     img {
       height: 100%;
+    }
+
+    &-flag {
+      max-width: 3.8rem;
+      max-height: 2.8rem;
     }
 
     &-text {
