@@ -15,7 +15,7 @@
     border-bottom: 1px solid $dts-coal-100;
     height: 5.4rem;
     padding: $dts-spacing-8;
-    vertical-align: top;
+    // vertical-align: top;
 
     // &:hover {
     //   @include devicebreak(large) {
@@ -43,6 +43,10 @@
     @include devicebreak(small) {
       white-space: normal;
     }
+  }
+
+  &__cell-centered {
+    text-align: center;
   }
 
 }

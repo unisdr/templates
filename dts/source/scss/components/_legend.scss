@@ -1,0 +1,12 @@
+.dts-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $dts-spacing-8 $dts-spacing-16;
+  margin-bottom: $dts-spacing-8;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $dts-spacing-8;
+  }
+}

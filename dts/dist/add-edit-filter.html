@@ -38,9 +38,9 @@
     <div class="dts-header">
       <div class='dts-header__logo'>
         <!-- DLDT/DTSW logo image -->
-        <img src="assets/images/dldt-logo-mark.svg" alt="DLDT logo mark" />
+        <!-- <img src="assets/images/dldt-logo-mark.svg" alt="DLDT logo mark" />-->
         <!-- Country/instance flag -->
-        <!-- <img class="dts-header__logo-flag" src="assets/images/argentina.png" alt="" /> -->
+        <img class="dts-header__logo-flag" src="assets/images/malawi.svg" alt="" />
         <div class='dts-header__logo-text' dir="auto">[DTS Country name]</div>
       </div>
       <div class="dts-header__main-menu">
@@ -113,7 +113,7 @@
 <h2 class="dts-element-summary__title"><span>Juneau Inundación Costera January 12 21</span><span>Juneau Coastal Flood Crisis</span></h2>
 <div class="dts-element-summary__status">
 <span class="dts-status dts-status--draft" aria-hidden="true"></span>
-<span id="draftDescription">Draft</span>
+<span>Draft</span>
 </div>
 <div class="dts-element-summary__metadata">
 <dl class="dts-metadata">
@@ -228,12 +228,38 @@
 </div>
 </form>
 <section class="dts-page-section">
+<div class="dts-heading-4">400 Events Found</div>
+<div class="dts-legend">
+<span class="dts-body-label">Status legend</span>
+<div class="dts-legend__item">
+<span class="dts-status dts-status--draft" aria-labelledby="legend1"></span>
+<span id="legend1">Draft</span>
+</div>
+<div class="dts-legend__item">
+<span class="dts-status dts-status--wait-info" aria-labelledby="legend2"></span>
+<span id="legend2">Waiting for information</span>
+</div>
+<div class="dts-legend__item">
+<span class="dts-status dts-status--wait-valid" aria-labelledby="legend3"></span>
+<span id="legend3">Waiting for validation</span>
+</div>
+<div class="dts-legend__item">
+<span class="dts-status dts-status--published" aria-labelledby="legend4"></span>
+<span id="legend4">Published</span>
+</div>
+<div class="dts-legend__item">
+<span class="dts-status dts-status--undrr" aria-labelledby="legend5"></span>
+<span id="legend5">Published to UNDRR</span>
+</div>
+</div>
 <table class="dts-table">
 <caption class="mg-u-sr-only">summary of the table's content</caption>
 <thead>
 <tr>
 <!--Selected filter
 --><th class="dts-table__filter dts-table__filter--active">ID</th>
+<th>Status</th>
+<th>Action required</th>
 <th>Effect or asset name</th>
 <th>Unit of measurement</th>
 <th>Unit Cost</th>
@@ -245,6 +271,14 @@
 <tbody>
 <tr>
 <td>#######</td>
+<td class="dts-table__cell-centered">
+<button type="button" class="dts-tooltip__button dts-status dts-status--draft" aria-labelledby="tooltip1"></button>
+<div id="tooltip1" class="dts-tooltip--status" role="tooltip">
+<span>Draft</span>
+<div class="dts-tooltip__arrow"></div>
+</div>
+</td>
+<td>#######</td>
 <td>placeholder text commonly used in the graphic, print, and publishing industries</td>
 <td>Unit type here</td>
 <td>$984,300</td>
@@ -254,14 +288,13 @@
 </tr>
 <tr>
 <td>#######</td>
-<td>Name of effect</td>
-<td>Unit type here</td>
-<td>$984,300</td>
-<td>Added manually</td>
-<td><time datetime="22-10-2024">October 13, 2025</time></td>
-<td><button class="mg-button mg-button--small mg-button-ghost">Edit</button></td>
-</tr>
-<tr>
+<td class="dts-table__cell-centered">
+<button type="button" class="dts-tooltip__button dts-status dts-status--wait-info" aria-labelledby="tooltip2"></button>
+<div id="tooltip2" class="dts-tooltip--status" role="tooltip">
+<span>Waiting for more information</span>
+<div class="dts-tooltip__arrow"></div>
+</div>
+</td>
 <td>#######</td>
 <td>Name of effect</td>
 <td>Unit type here</td>
@@ -271,6 +304,48 @@
 <td><button class="mg-button mg-button--small mg-button-ghost">Edit</button></td>
 </tr>
 <tr>
+<td>#######</td>
+<td class="dts-table__cell-centered">
+<button type="button" class="dts-tooltip__button dts-status dts-status--wait-valid" aria-labelledby="tooltip3"></button>
+<div id="tooltip3" class="dts-tooltip--status" role="tooltip">
+<span>Waiting for validation</span>
+<div class="dts-tooltip__arrow"></div>
+</div>
+</td>
+<td>#######</td>
+<td>Name of effect</td>
+<td>Unit type here</td>
+<td>$984,300</td>
+<td>Added manually</td>
+<td><time datetime="22-10-2024">October 13, 2025</time></td>
+<td><button class="mg-button mg-button--small mg-button-ghost">Edit</button></td>
+</tr>
+<tr>
+<td>#######</td>
+<td class="dts-table__cell-centered">
+<button type="button" class="dts-tooltip__button dts-status dts-status--published" aria-labelledby="tooltip4"></button>
+<div id="tooltip4" class="dts-tooltip--status" role="tooltip">
+<span>Published</span>
+<div class="dts-tooltip__arrow"></div>
+</div>
+</td>
+<td>#######</td>
+<td>Name of effect</td>
+<td>Unit type here</td>
+<td>$984,300</td>
+<td>Added manually</td>
+<td><time datetime="22-10-2024">October 13, 2025</time></td>
+<td><button class="mg-button mg-button--small mg-button-ghost">Edit</button></td>
+</tr>
+<tr>
+<td>#######</td>
+<td class="dts-table__cell-centered">
+<button type="button" class="dts-tooltip__button dts-status dts-status--undrr" aria-labelledby="tooltip5"></button>
+<div id="tooltip5" class="dts-tooltip--status" role="tooltip">
+<span>Published to UNDRR</span>
+<div class="dts-tooltip__arrow"></div>
+</div>
+</td>
 <td>#######</td>
 <td>Name of effect</td>
 <td>Unit type here</td>

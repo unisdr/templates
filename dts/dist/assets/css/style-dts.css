@@ -2356,6 +2356,25 @@ header .mg-container {
   color: #601F28;
 }
 
+.dts-legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.8rem 1.6rem;
+  margin-bottom: 0.8rem;
+}
+.dts-legend__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+}
+
 .dts-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3106,7 +3125,6 @@ header .mg-container {
   border-bottom: 1px solid #F2F2F2;
   height: 5.4rem;
   padding: 0.8rem;
-  vertical-align: top;
 }
 .dts-table th {
   background-color: #F2F2F2;
@@ -3125,6 +3143,23 @@ header .mg-container {
     white-space: normal;
   }
 }
+.dts-table__cell-centered {
+  text-align: center;
+}
+
+.dts-tooltip__button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 0.4rem;
+}
+.dts-tooltip__button svg {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.dts-tooltip__button svg * {
+  -webkit-transform: scale(0.75) translate(-2px, -3px);
+          transform: scale(0.75) translate(-2px, -3px);
+}
 
 [role=tooltip] {
   display: none;
@@ -3141,8 +3176,7 @@ header .mg-container {
   padding: 0.8rem;
   border-radius: 0.4rem;
 }
-
-.dts-tooltip__arrow {
+[role=tooltip] .dts-tooltip__arrow {
   position: absolute;
   background: #fff;
   width: 8px;
@@ -3150,19 +3184,14 @@ header .mg-container {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-
-.dts-tooltip__button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin-top: 0.4rem;
+[role=tooltip].dts-tooltip--status {
+  background: #000000;
+  color: #fff;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2007);
+          box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2007);
 }
-.dts-tooltip__button svg {
-  height: 1.6rem;
-  width: 1.6rem;
-}
-.dts-tooltip__button svg * {
-  -webkit-transform: scale(0.75) translate(-2px, -3px);
-          transform: scale(0.75) translate(-2px, -3px);
+[role=tooltip].dts-tooltip--status .dts-tooltip__arrow {
+  background: #000000;
 }
 
 /*
