@@ -1,0 +1,26 @@
+.dts-metadata {
+  margin: $dts-spacing-12 0 0;
+  padding: 0;
+  display: grid;
+  gap: $dts-spacing-8;
+
+  &--highlight {
+    background-color: $dts-cerulean-100;
+    padding: $dts-spacing-16;
+  }
+
+  &__item {
+    display: flex;
+    gap: $dts-spacing-8;
+  }
+
+  dt {
+    @extend .dts-body-label;
+  }
+
+  dd {
+    margin: 0;
+    display: flex;
+    gap: $dts-spacing-16;
+  }
+}

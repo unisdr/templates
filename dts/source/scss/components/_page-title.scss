@@ -1,0 +1,8 @@
+.dts-page-title {
+  background-color: $dts-stiletto-100;
+  padding: $dts-spacing-32 0;
+
+  [class*="heading"] {
+    margin-bottom: 0;
+  }
+}

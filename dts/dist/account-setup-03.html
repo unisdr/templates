@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<title>DTS</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+<body>
+<div class="dts-page-container">
+<main class="dts-main-container">
+<div class="mg-container">
+<form onsubmit="window.location.href = 'account-setup-04.html'; return false;" class="dts-form dts-form--vertical">
+<div class="dts-form__header">
+<a href="account-setup-02.html" class="mg-button mg-button--small mg-button-system">Back</a>
+<span>Disaster tracking system</span>
+</div>
+<div class="dts-form__intro">
+<h2 class="dts-heading-1">Enter code we sent to you at</h2>
+<p>name@organisation.org</p>
+</div>
+<div class="dts-form__body">
+<div class="dts-form-component">
+<label>
+<div class="dts-form-component__label">
+<span class="mg-u-sr-only">OTP code</span>
+</div>
+<input type="text" minlength="6" maxlength="6" name="" placeholder="Enter OTP code*" autofocus required>
+</label>
+</div>
+<div class="dts-form__additional-content dts-form__additional-content--centered">
+<div>Code expires in 30:00</div>
+<button type="button" class="mg-button mg-button--small mg-button-ghost">Send again</button>
+</div>
+</div>
+<div class="dts-form__actions">
+<button type="submit" class="mg-button mg-button-primary" disabled>Complete account setup</button>
+</div>
+</form>
+<div style="display: flex; justify-content:center; gap: 8px;">
+<button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('info');">display info snackbar</button>
+<button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('warning');">display warning snackbar</button>
+<button type="button" class="mg-button mg-button--small mg-button-system" onclick="openSnackbar('error');">display error snackbar</button>
+</div>
+<div id="OTPsnackbar" class="dts-snackbar">
+<div class="dts-alert">
+<div class="dts-alert__icon">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/info.svg#info"></use>
+</svg>
+</div>
+<span>Please verify your account. A one time password has been sent to your email.</span>
+</div>
+</div>
+</div>
+</main>
+</div><script>
+  // Snack bar display
+  function openSnackbar(alertType) {
+    var x = document.getElementById("OTPsnackbar");
+    if (x) {
+
+      x.querySelector("use").setAttribute("href", "assets/icons/" + alertType + ".svg#" + alertType);
+      x.classList.add("show");
+      x.querySelector('.dts-alert').classList.add("dts-alert--" + alertType);
+      setTimeout(function () {
+         x.classList.remove("show");
+      }, 15000);
+      setTimeout(function () {
+        x.querySelector('.dts-alert').classList.remove("dts-alert--" + alertType);
+      }, 15500);
+    }
+  }
+</script>
+<script type="module">
+  // Tooltip
+  import {
+    computePosition,
+    flip,
+    shift,
+    offset,
+    arrow,
+  } from "https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12/+esm";
+
+  const buttons = document.querySelectorAll('.dts-tooltip__button');
+
+  buttons.forEach((button) => {
+
+    let tooltip = button.nextElementSibling;
+    let arrowElement = button.nextElementSibling.querySelector(".dts-tooltip__arrow");
+
+    function update() {
+      computePosition(button, tooltip, {
+        placement: "top",
+        middleware: [
+          offset(6),
+          flip(),
+          shift({ padding: 5 }),
+          arrow({ element: arrowElement }),
+        ],
+      }).then(({ x, y, placement, middlewareData }) => {
+        Object.assign(tooltip.style, {
+          left: `${x}px`,
+          top: `${y}px`,
+        });
+
+        // Accessing the data
+        const { x: arrowX, y: arrowY } = middlewareData.arrow;
+
+        const staticSide = {
+          top: "bottom",
+          right: "left",
+          bottom: "top",
+          left: "right",
+        }[placement.split("-")[0]];
+
+        Object.assign(arrowElement.style, {
+          left: arrowX != null ? `${arrowX}px` : "",
+          top: arrowY != null ? `${arrowY}px` : "",
+          right: "",
+          bottom: "",
+          [staticSide]: "-4px",
+        });
+      });
+    }
+
+    function showTooltip() {
+      tooltip.style.display = "block";
+      update();
+    }
+
+    function hideTooltip() {
+      tooltip.style.display = "";
+    }
+
+    [
+      ["pointerenter", showTooltip],
+      ["pointerleave", hideTooltip],
+      ["focus", showTooltip],
+      ["blur", hideTooltip],
+    ].forEach(([event, listener]) => {
+      button.addEventListener(event, listener);
+    });
+
+  });
+
+</script>
+<script src="assets/js/scripts-dts.js"></script></body>
+</html>

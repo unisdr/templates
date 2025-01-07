@@ -1,0 +1,139 @@
+.dts-dialog {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100vw;
+  max-width: 480px;
+  height: 100vh;
+  max-height: none;
+  padding: $dts-spacing-32 $dts-spacing-16;
+  background-color: $mg-color-white;
+
+  @include devicebreak(small) {
+    width: 75vw;
+    height: fit-content;
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: $dts-spacing-32 $dts-spacing-24;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $dts-spacing-16;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .dts-form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    // @include devicebreak(small) {
+    //   flex-grow: unset;
+    // }
+
+    &__body {
+      flex-grow: 1;
+    }
+  }
+
+  &__logo {
+    width: $dts-spacing-48;
+    height: $dts-spacing-48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Block to be removed - BEGIN
+  // Login/Registration flow in a modal
+  &__form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    @include devicebreak(small) {
+      flex-grow: unset;
+    }
+
+    &--otp {
+      .dts-form-component input {
+        font-size: 5.2rem;
+      }
+    }
+  }
+
+  &__form-intro {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $dts-spacing-20;
+
+    [class*="heading"] {
+      margin-bottom: $dts-spacing-8;
+    }
+  }
+
+  &__form-body {
+    flex-grow: 1;
+  }
+
+  &__form-additional {
+    display: grid;
+    justify-items: center;
+    gap: $dts-spacing-8;
+  }
+
+  &__form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: $dts-spacing-8;
+    margin-top: $dts-spacing-20;
+  }
+
+  &--no-form {
+    .dts-dialog__form-intro {
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  &--centered {
+    text-align: center;
+
+    .dts-dialog__form {
+      gap: $dts-spacing-24;
+    }
+
+    .dts-dialog__form-body {
+      flex-grow: unset;
+    }
+
+    .dts-dialog__form-intro,
+    .dts-dialog__form-actions {
+      margin-top: auto;
+    }
+  }
+
+  // Block to be removed - END
+}
+
+[dir="rtl"] {
+  .dts-dialog {
+    @include devicebreak(small) {
+      left: auto;
+      right: 50%;
+      transform: translateX(50%) translateY(-50%);
+    }
+  }
+}

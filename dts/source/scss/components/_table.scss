@@ -1,0 +1,52 @@
+.dts-table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.4rem;
+
+  @include devicebreak(small) {
+    display: table;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $dts-coal-100;
+    height: 5.4rem;
+    padding: $dts-spacing-8;
+    // vertical-align: top;
+
+    // &:hover {
+    //   @include devicebreak(large) {
+    //     background-color: $dts-coal-200;
+    //   }
+    // }
+  }
+
+  th {
+    // position: sticky;
+    // top: 0;
+    background-color: $dts-coal-100;
+    text-align: left;
+    font-weight: 500;
+
+    &.dts-table__filter--active {
+      background-color: $dts-coal-200;
+    }
+  }
+
+
+  tbody {
+    white-space: nowrap;
+
+    @include devicebreak(small) {
+      white-space: normal;
+    }
+  }
+
+  &__cell-centered {
+    text-align: center;
+  }
+
+}

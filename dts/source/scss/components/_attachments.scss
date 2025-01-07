@@ -1,0 +1,36 @@
+.dts-attachments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: $dts-spacing-16;
+
+  &__item {
+    display: flex;
+    gap: $dts-spacing-16;
+    justify-content: space-between;
+
+    svg {
+      width: $dts-spacing-16;
+      height: $dts-spacing-16;
+
+      * {
+        transform: scale(0.6);
+      }
+    }
+  }
+
+  &__summary {
+    display: grid;
+    gap: $dts-spacing-4;
+
+    >strong {
+      overflow-wrap: anywhere;
+    }
+  }
+
+  &__metadata {
+    display: flex;
+    gap: $dts-spacing-8;
+  }
+}

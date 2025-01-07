@@ -1,0 +1,215 @@
+/* Our custom css grid based on : https://stable.visual-framework.dev/components/vf-grid/ */
+
+.mg-grid {
+  display: grid;
+  column-gap: $dts-spacing-16;
+
+  @include devicebreak(small) {
+    grid-auto-flow: column;
+  }
+}
+
+// Grid inside forms
+.dts-form .mg-grid {
+  row-gap: 0;
+
+  @include devicebreak(small) {
+    row-gap: $dts-spacing-8;
+  }
+}
+
+// 
+
+[class*="grid__"] {
+  grid-auto-flow: unset;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@include devicebreak(small) {
+
+  .mg-grid__col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mg-grid__col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mg-grid__col-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mg-grid__col-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mg-grid__col-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mg-grid__col-auto {
+    grid-template-columns: repeat(3, minmax(min-content, auto));
+  }
+}
+
+@include devicebreak(large) {
+
+  .mg-grid__col-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .mg-grid__col-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .mg-grid__col-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .mg-grid__col-auto {
+    grid-template-columns: repeat(6, minmax(min-content, auto));
+    grid-template-areas: "a b c d e f";
+  }
+}
+
+// Grid Spans and Offsets
+
+[class*="__col--span"] {
+  grid-column-end: span 1;
+}
+
+[class*="__col--offset"] {
+  grid-column-start: auto;
+}
+
+@include devicebreak(small) {
+  .mg-grid__col--span-2 {
+    grid-column-end: span 2;
+  }
+
+  .mg-grid__col--span-3 {
+    grid-column-end: span 3;
+  }
+
+  .mg-grid__col--span-4 {
+    grid-column-end: span 4;
+  }
+
+  .mg-grid__col--span-5 {
+    grid-column-end: span 5;
+  }
+
+  .mg-grid__col--span-6 {
+    grid-column-end: span 6;
+  }
+
+  .mg-grid__col--span-all {
+    grid-column: 1 / -1;
+  }
+
+  .mg-grid__row--span-2 {
+    grid-row-end: span 2;
+  }
+
+  .mg-grid__row--span-3 {
+    grid-row-end: span 3;
+  }
+
+  .mg-grid__row--span-4 {
+    grid-row-end: span 4;
+  }
+
+  .mg-grid__row--span-5 {
+    grid-row-end: span 5;
+  }
+
+  .mg-grid__row--span-6 {
+    grid-row-end: span 6;
+  }
+
+  .mg-grid__row--span-all {
+    grid-row: 1 / -1;
+  }
+}
+
+@include devicebreak(medium) {
+  .mg-grid__col--offset-1 {
+    grid-column-start: 1;
+  }
+
+  .mg-grid__col--offset-2 {
+    grid-column-start: 2;
+  }
+
+  .mg-grid__col--offset-3 {
+    grid-column-start: 3;
+  }
+
+  .mg-grid__col--offset-4 {
+    grid-column-start: 4;
+  }
+}
+
+@include devicebreak(large) {
+  .mg-grid__col--offset-5 {
+    grid-column-start: 5;
+  }
+
+  .mg-grid__col--offset-6 {
+    grid-column-start: 6;
+  }
+}
+
+// Specific classes for Human direct effects grouped fields
+.mg-grid__col--group {
+  grid-column-start: 1;
+
+  @include devicebreak(large) {
+    grid-column-start: auto;
+  }
+}
+
+.mg-grid__col--group-1 {
+  grid-row-start: 7;
+  grid-row-end: 10;
+
+  @include devicebreak(small) {
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 2;
+  }
+}
+
+.mg-grid__col--group-2 {
+  grid-row-start: 13;
+  grid-row-end: 16;
+
+  @include devicebreak(small) {
+    grid-row-start: 7;
+    grid-row-end: 10;
+    grid-column-start: 2;
+  }
+
+  @include devicebreak(large) {
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 3;
+  }
+}
+
+.mg-grid__col--group-3 {
+  grid-row-start: 19;
+  grid-row-end: 22;
+
+  @include devicebreak(small) {
+    grid-row-start: 10;
+    grid-row-end: 13;
+    grid-column-start: 2;
+  }
+
+  @include devicebreak(large) {
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 4;
+  }
+}

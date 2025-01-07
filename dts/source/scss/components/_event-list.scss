@@ -1,0 +1,16 @@
+.dts-event-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: $dts-spacing-16;
+
+  [class*="heading"] {
+    margin-bottom: 0;
+  }
+
+  &__metadata {
+    display: flex;
+    gap: $dts-spacing-16;
+  }
+}

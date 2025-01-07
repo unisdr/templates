@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<title>DTS</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+<body>
+<div class="mg-container">
+<h1>Buttons</h1>
+<p>Button styles can be applied to both <code>button</code> and <code>a</code> tags. It just depends on their semantic meaning (a button that performs an action rather than a link to another page).<br>They all can have an icon on the left, right or no text and icon only</p>
+<br>
+<h4>Standard size</h4>
+<ul style="list-style: none; margin:0; padding: 1rem; display: flex; flex-wrap: wrap; gap: 1.6rem; background: #F2F2F2">
+<li>
+<button type="button" class="mg-button mg-button-primary">Primary button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-primary">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/chevron-right.svg#chevron-right"></use>
+</svg>
+</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-secondary">
+<span>Secondary button/link</span>
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/chevron-right.svg#chevron-right"></use>
+</svg>
+</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-ghost">Ghost button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-outline">Outline button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-outline">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
+</svg>
+</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-system">System button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-system mg-button-system--transparent">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
+</svg>
+<span>System transparent button/link</span>
+</button>
+</li>
+</ul>
+<br><br>
+<h4>Small size</h4>
+<ul style="list-style: none; margin:0; padding: 1rem; display: flex; flex-wrap: wrap; gap: 1.6rem; background: #F2F2F2">
+<li>
+<button type="button" class="mg-button mg-button--small mg-button-primary">Primary button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button--small mg-button-secondary">Secondary button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button--small mg-button-ghost">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/chevron-left.svg#chevron-left"></use>
+</svg>
+<span>Ghost button/link</span>
+</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button--small mg-button-outline">Outline button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button--small mg-button-system">System button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button--small mg-button-system">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
+</svg>
+</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button--small mg-button-system mg-button-system--transparent">
+<span>System transparent button/link</span>
+</button>
+</li>
+</ul>
+<br><br>
+<h4>Disabled state</h4>
+<ul style="list-style: none; margin:0; padding: 1rem; display: flex; flex-wrap: wrap; gap: 1.6rem; background: #F2F2F2">
+<li>
+<button type="button" class="mg-button mg-button-primary" disabled>
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/chevron-left.svg#chevron-left"></use>
+</svg>
+<span>Primary button/link</span>
+</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-secondary" disabled>Secondary button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-ghost" disabled>Ghost button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-outline" disabled>Outline button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-system" disabled>System button/link</button>
+</li>
+<li>
+<button type="button" class="mg-button mg-button-system mg-button-system--transparent" disabled>
+<span>System transparent button/link</span>
+</button>
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+
+    include includes/_header.html
+
+    <main class="dts-main-container">
+
+      <div class="dts-page-header">
+        include includes/_page-title.html
+        include includes/_sub-navigation.html
+      </div>
+
+      <section>
+        <div class="mg-container">
+
+          <form class="dts-form">
+            <div class="dts-form__body">
+              <div class="mg-grid mg-grid__col-3">
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span>Sector</span>
+                    </div>
+                    <select>
+                      <option value="">Select Sector</option>
+                      <option value="value">Sector 1</option>
+                      <option value="value">Sector 2</option>
+                      <option value="value">Sector 3</option>
+                      <option value="value">Sector 4</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span>Disaster event</span>
+                    </div>
+                    <input type="search" list="events" placeholder="All events">
+                    <datalist id="events">
+                      <option value="Event 1">
+                      <option value="Event 2">
+                      <option value="Event 3">
+                      <option value="Event 4">
+                      <option value="Event 5">
+                    </datalist>
+                  </label>
+                </div>
+                <div class="dts-form-component">
+                  <label>
+                    <div class="dts-form-component__label">
+                      <span>Date range</span>
+                    </div>
+                    <input type="date">
+                  </label>
+                </div>
+              </div>
+              <div class="dts-form__actions">
+                <button type="button" class="mg-button mg-button--small mg-button-primary">Apply filters</button>
+                <button type="button" class="mg-button mg-button--small mg-button-outline">Clear</button>
+              </div>
+              <div class="dts-form__actions">
+                <button type="button" class="mg-button mg-button--small mg-button-ghost">Advanced search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="dts-page-section">
+        <div class="mg-container">
+          <h2 class="dts-heading-2">Disaster impacts across sectors</h2>
+          <p>These summaries represent disaster impact on all sectors combined. More explanation needed here.</p>
+
+          //
+            3 columns grid (1 - 2)
+          <div class="mg-grid mg-grid__col-3">
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId01">Events impacting sectors</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId01" aria-describedby="tooltip01">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip01" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </h3>
+              <div class="dts-indicator dts-indicator--target-box-g">
+                <span>99,382</span>
+              </div>
+            </div>
+            <div class="dts-data-box mg-grid__col--span-2">
+              <h3 class="dts-body-label">
+                <span id="elementId02">Events over time</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId02" aria-describedby="tooltip02">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip02" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </h3>
+              <div class="dts-placeholder" style="height: 164px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+          </div>
+
+          //
+            3 columns grid (2 - 1)
+          <div class="mg-grid mg-grid__col-3">
+            <div class="dts-data-box mg-grid__col--span-2">
+              <h3 class="dts-body-label">
+                <span id="elementId06">Hazard clusters with the most events</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId06" aria-describedby="tooltip06">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip06" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </h3>
+              <div class="dts-placeholder" style="height: 164px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId07">Hazards with the most events</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId07" aria-describedby="tooltip07">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip07" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </h3>
+              <div class="dts-placeholder" style="height: 164px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+          </div>
+
+          //
+            3 columns grid (1 - 1 - 1)
+          <div class="mg-grid mg-grid__col-3">
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId03">Damage in [currency] (in thousands)</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId03" aria-describedby="tooltip03">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip03" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </h3>
+              <div class="dts-indicator dts-indicator--target-box-d">
+                <span>$143,201,201</span>
+              </div>
+              <div class="dts-placeholder" style="height: 200px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId04">Losses in [currency]</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId04" aria-describedby="tooltip04">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip04" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </h3>
+              <div class="dts-indicator dts-indicator--target-box-c">
+                <span>$10,615</span>
+              </div>
+              <div class="dts-placeholder" style="height: 200px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId05">Recovery [currency] (in thousands)</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId05" aria-describedby="tooltip05">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip05" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </h3>
+              <div class="dts-indicator dts-indicator--target-box-f">
+                <span>$999,999,999,999</span>
+              </div>
+              <div class="dts-placeholder" style="height: 200px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dts-external-links">
+            <a href="#" class="dts-link">External link as needed
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/external-link-open-new.svg#external"></use>
+              </svg>
+            </a>
+            <a href="#" class="dts-link">External link as needed
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/external-link-open-new.svg#external"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dts-page-section">
+        <div class="mg-container">
+          <h2 class="dts-heading-2">Damage inventory</h2>
+          <div class="dts-placeholder" style="height: 270px;">
+            <span>Placeholder</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dts-page-section">
+        <div class="mg-container">
+          <h2 class="dts-heading-2">Impact by sector</h2>
+          <p>Here’s an explanation.</p>
+
+          <div class="mg-grid mg-grid__col-3">
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId03">Damage</span>
+              </h3>
+              <div class="dts-placeholder" style="height: 270px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId03">Loss</span>
+              </h3>
+              <div class="dts-placeholder" style="height: 270px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId03">Recovery need</span>
+              </h3>
+              <div class="dts-placeholder" style="height: 270px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dts-page-section">
+        <div class="mg-container">
+          <h2 class="dts-heading-2">Impact on sectors by location</h2>
+          <p>Here’s an explanation.</p>
+
+          <h2 class="mg-u-sr-only" id="tablist01">Tablist title</h2>
+          <ul class="dts-tablist" role="tablist" aria-labelledby="tablist01">
+            <li role="presentation">
+              <button type="button" class="dts-tablist__button" role="tab" id="tab01" aria-selected="true" aria-controls="tabpanel01">
+                  <span>Total Damage</span>
+              </button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="dts-tablist__button" role="tab" id="tab02" tabindex="-1" aria-controls="tabpanel02">
+                  <span>Total Affected</span>
+              </button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="dts-tablist__button" role="tab" id="tab03" tabindex="-1" aria-controls="tabpanel03">
+                  <span>Total Loss</span>
+              </button>
+            </li>
+          </ul>
+          <div class="dts-tablist__panel" id="tabpanel01" role="tabpanel" aria-labelledby="tab01">
+            <div class="dts-placeholder" style="height: 490px;">
+              <span>Placeholder map 1</span>
+            </div>
+          </div>
+
+          <div class="dts-tablist__panel hidden" id="tabpanel02" role="tabpanel" aria-labelledby="tab02">
+            <div class="dts-placeholder" style="height: 490px;">
+              <span>Placeholder map 2</span>
+            </div>
+          </div>
+
+          <div class="dts-tablist__panel hidden" id="tabpanel03" role="tabpanel" aria-labelledby="tab03">
+            <div class="dts-placeholder" style="height: 490px;">
+              <span>Placeholder map 3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dts-page-section">
+        <div class="mg-container">
+          <h2 class="dts-heading-2">The most damaging events across sectors</h2>
+          <p>Here’s an explanation.</p>
+
+          <div class="mg-grid mg-grid__col-3">
+            <div class="dts-chart-card">
+              <h4 class="dts-heading-3">Toronto storm surge, Sept 29 '22</h4>
+              <div>FL-2022-10-02-DL00</div>
+              <div class="dts-chart-card__category">
+                <span id="elementId06">Marine, Meteorological and Hydrological</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId06" aria-describedby="tooltip06">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip06" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </div>
+              <dl class="dts-metadata">
+                <div class="dts-metadata__item">
+                  <dt>Date:</dt>
+                  <dd>29-09-2022</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Last updated:</dt>
+                  <dd>5-12-2023 T00:00:00.000</dd>
+                </div>
+              </dl>
+              <div class="dts-placeholder" style="height: 360px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-chart-card">
+              <h4 class="dts-heading-3">Yarmouth Emergency Telecommunications Failure, Dec 22 '24</h4>
+              <div>FL-2022-10-02-DL00</div>
+              <div class="dts-chart-card__category">
+                <span id="elementId06">Marine, Meteorological and Hydrological</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId06" aria-describedby="tooltip06">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip06" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </div>
+              <dl class="dts-metadata">
+                <div class="dts-metadata__item">
+                  <dt>Date:</dt>
+                  <dd>29-09-2022</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Last updated:</dt>
+                  <dd>5-12-2023 T00:00:00.000</dd>
+                </div>
+              </dl>
+              <div class="dts-placeholder" style="height: 360px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-chart-card">
+              <h4 class="dts-heading-3">Toronto storm surge, Sept 29 '22</h4>
+              <div>FL-2022-10-02-DL00</div>
+              <div class="dts-chart-card__category">
+                <span id="elementId06">Marine, Meteorological and Hydrological</span>
+                <button type="button" class="dts-tooltip__button" aria-labelledby="elementId06" aria-describedby="tooltip06">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/information_outline.svg#information"></use>
+                  </svg>
+                </button>
+                <div id="tooltip06" role="tooltip">
+                  <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                  <div class="dts-tooltip__arrow"></div>
+                </div>
+              </div>
+              <dl class="dts-metadata">
+                <div class="dts-metadata__item">
+                  <dt>Date:</dt>
+                  <dd>29-09-2022</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Last updated:</dt>
+                  <dd>5-12-2023 T00:00:00.000</dd>
+                </div>
+              </dl>
+              <div class="dts-placeholder" style="height: 360px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    include includes/_footer.html
+
+  </div>
+
+  include includes/_scripts.html
+
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>DTS</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+<body>
+<div class="dts-page-container">
+<main class="dts-main-container">
+<section>
+<div class="mg-container">
+<!--id attribute is needed for screen visibility toggling Js function
+--><dialog id="modalForm00" class="dts-dialog dts-dialog--no-form">
+<div class="dts-dialog__content">
+<div class="dts-dialog__header">
+<!--
+id attribute is needed for visibility toggling Js function
+<button id="modalFormClose" autofocus>Close</button>
+--></div>
+<form class="dts-dialog__form">
+<div class="dts-dialog__form-intro">
+<div class="dts-dialog__logo">
+<img src="assets/images/undrr-logo-square-blue.svg" alt="UNDRR logo" />
+</div>
+<h2 class="dts-heading-1">Welcome to the Disaster tracking system.</h2>
+<p>Track disaster impacts, including damages, losses, and human effects, to support better recovery and resilience.</p>
+</div>
+<div class="dts-dialog__form-actions">
+<button type="button" class="mg-button mg-button-primary" onclick="navigateSteps('00', '01')">Set up account</button>
+<button type="button" class="mg-button mg-button-outline">Set up using SSO</button>
+</div>
+</form>
+</div>
+</dialog>
+<!--id attribute is needed for screen visibility toggling Js function
+--><dialog id="modalForm01" class="dts-dialog">
+<div class="dts-dialog__content">
+<div class="dts-dialog__header">
+<button type="button" class="mg-button mg-button--small mg-button-system" onclick="navigateSteps('01', '00')">back</button>
+</div>
+<!--onsubmit function needed just for static navigation among screens
+--><form name="step01" onsubmit="navigateSteps('01', '02')" class="dts-dialog__form">
+<div class="dts-dialog__form-intro">
+<h2 class="dts-heading-1">Set up account</h2>
+<div>Create your account by filling in the required details.</div>
+</div>
+<div class="dts-dialog__form-body">
+<p>*Required information</p>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Email address*</span>
+<input type="email" name="email" autocomplete="on" placeholder="Email address*" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">First name*</span>
+<input type="text" name="firstname" placeholder="First name*" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Last name</span>
+<input type="text" name="secondname" placeholder="Last name">
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Enter password</span>
+<div class="dts-form-component__pwd">
+<input type="password" name="password" minlength="12" placeholder="Enter password*" aria-describedBy="passwordDescription" required>
+<button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+<img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+</button>
+</div>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">Confirm password</span>
+<div class="dts-form-component__pwd">
+<input type="password" name="confirmPassword" minlength="12" placeholder="Confirm password*" aria-describedBy="passwordDescription" required>
+<button type="button" class="dts-form-component__pwd-toggle mg-button" aria-label="Toggle password visibility">
+<img src="assets/icons/eye-show-password.svg" id="passwordToggleImg" alt="">
+</button>
+</div>
+</label>
+<div class="dts-form-component__hint">
+<ul id="passwordDescription">
+<li>At least 12 characters long</li>
+<li>Must include two of the following:
+<ul>
+<li>Uppercase letters</li>
+<li>Lowercase letters</li>
+<li>Numbers</li>
+<li>Special characters</li>
+</ul>
+</li>
+<li>Cannot be the same as the username</li>
+<li>Should not be a simple or commonly used password</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dts-dialog__form-actions">
+<button type="submit" class="mg-button mg-button-primary" disabled>Set up account</button>
+</div>
+</form>
+</div>
+</dialog>
+<!--id attribute is needed for screen visibility toggling Js function
+--><dialog id="modalForm02" class="dts-dialog dts-dialog--centered">
+<div class="dts-dialog__content">
+<div class="dts-dialog__header">
+<button type="button" class="mg-button mg-button--small mg-button-system" onclick="navigateSteps('02', '01')">back</button>
+</div>
+<form name="step02" class="dts-dialog__form dts-dialog__form--otp">
+<div class="dts-dialog__form-intro">
+<h2 class="dts-heading-1">Enter code we sent to you at</h2>
+<div>name@organisation.org</div>
+</div>
+<div class="dts-dialog__form-body dts-form--horizontal">
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">OTP code first digit</span>
+<input type="number" name="otp01" autofocus required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">OTP code second digit</span>
+<input type="number" name="otp02" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">OTP code third digit</span>
+<input type="number" name="otp03" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">OTP code fourth digit</span>
+<input type="number" name="otp04" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">OTP code fifth digit</span>
+<input type="number" name="otp05" required>
+</label>
+</div>
+<div class="dts-form-component">
+<label>
+<span class="mg-u-sr-only">OTP code sixth digit</span>
+<input type="number" name="otp06" required>
+</label>
+</div>
+</div>
+<div class="dts-dialog__form-additional">
+<div>Code expires in 30:00</div>
+<button type="button" class="mg-button mg-button--small mg-button-ghost">Send again</button>
+</div>
+<div class="dts-dialog__form-actions">
+<button type="submit" class="mg-button mg-button-primary" disabled>Complete account setup</button>
+</div>
+</form>
+</div>
+<div id="OTPsnackbar" class="dts-alert dts-snackbar">Please verify your account. A one time password has been sent to your email.</div>
+</dialog>
+</div>
+</section>
+</main>
+</div><script>
+  // Snack bar display
+  function openSnackbar(alertType) {
+    var x = document.getElementById("OTPsnackbar");
+    if (x) {
+
+      x.querySelector("use").setAttribute("href", "assets/icons/" + alertType + ".svg#" + alertType);
+      x.classList.add("show");
+      x.querySelector('.dts-alert').classList.add("dts-alert--" + alertType);
+      setTimeout(function () {
+         x.classList.remove("show");
+      }, 15000);
+      setTimeout(function () {
+        x.querySelector('.dts-alert').classList.remove("dts-alert--" + alertType);
+      }, 15500);
+    }
+  }
+</script>
+<script type="module">
+  // Tooltip
+  import {
+    computePosition,
+    flip,
+    shift,
+    offset,
+    arrow,
+  } from "https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12/+esm";
+
+  const buttons = document.querySelectorAll('.dts-tooltip__button');
+
+  buttons.forEach((button) => {
+
+    let tooltip = button.nextElementSibling;
+    let arrowElement = button.nextElementSibling.querySelector(".dts-tooltip__arrow");
+
+    function update() {
+      computePosition(button, tooltip, {
+        placement: "top",
+        middleware: [
+          offset(6),
+          flip(),
+          shift({ padding: 5 }),
+          arrow({ element: arrowElement }),
+        ],
+      }).then(({ x, y, placement, middlewareData }) => {
+        Object.assign(tooltip.style, {
+          left: `${x}px`,
+          top: `${y}px`,
+        });
+
+        // Accessing the data
+        const { x: arrowX, y: arrowY } = middlewareData.arrow;
+
+        const staticSide = {
+          top: "bottom",
+          right: "left",
+          bottom: "top",
+          left: "right",
+        }[placement.split("-")[0]];
+
+        Object.assign(arrowElement.style, {
+          left: arrowX != null ? `${arrowX}px` : "",
+          top: arrowY != null ? `${arrowY}px` : "",
+          right: "",
+          bottom: "",
+          [staticSide]: "-4px",
+        });
+      });
+    }
+
+    function showTooltip() {
+      tooltip.style.display = "block";
+      update();
+    }
+
+    function hideTooltip() {
+      tooltip.style.display = "";
+    }
+
+    [
+      ["pointerenter", showTooltip],
+      ["pointerleave", hideTooltip],
+      ["focus", showTooltip],
+      ["blur", hideTooltip],
+    ].forEach(([event, listener]) => {
+      button.addEventListener(event, listener);
+    });
+
+  });
+
+</script>
+<script src="assets/js/scripts-dts.js"></script></body>
+</html>
