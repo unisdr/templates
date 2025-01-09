@@ -548,46 +548,6 @@ summary {
   display: none;
 }
 
-.yellow .stats-card:hover {
-  background-color: #ff0;
-}
-.yellow .progress-bar {
-  background: #ff0;
-}
-.yellow .blockquote {
-  background-color: #ff0;
-}
-
-.red .stats-card:hover {
-  background-color: #c10920;
-}
-.red .progress-bar {
-  background: #c10920;
-}
-.red .blockquote {
-  background-color: #c10920;
-}
-
-.green .stats-card:hover {
-  background-color: #008484;
-}
-.green .progress-bar {
-  background: #008484;
-}
-.green .blockquote {
-  background-color: #008484;
-}
-
-.blue .stats-card:hover {
-  background-color: #f0ffff;
-}
-.blue .progress-bar {
-  background: #f0ffff;
-}
-.blue .blockquote {
-  background-color: #f0ffff;
-}
-
 .mg-u-sr-only {
   position: absolute;
   width: 1px !important;

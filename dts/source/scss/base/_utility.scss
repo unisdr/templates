@@ -88,34 +88,34 @@
 }
 
 // color map solid
-$colors-solid: (
-  "yellow": $mg-color-yellow,
-  "red": $mg-color-red-900,
-  "green": $mg-color-green,
-  "blue": $mg-color-azure,
-);
+// $colors-solid: (
+//   "yellow": $mg-color-yellow,
+//   "red": $mg-color-red-900,
+//   "green": $mg-color-green,
+//   "blue": $mg-color-azure,
+// );
 
-@each $name, $color in $colors-solid {
-  .#{$name} {
+// @each $name, $color in $colors-solid {
+//   .#{$name} {
 
-    // statscard
-    .stats-card {
-      &:hover {
-        background-color: #{$color};
-      }
-    }
+//     // statscard
+//     .stats-card {
+//       &:hover {
+//         background-color: #{$color};
+//       }
+//     }
 
-    // progress-bar
-    .progress-bar {
-      background: #{$color};
-    }
+//     // progress-bar
+//     .progress-bar {
+//       background: #{$color};
+//     }
 
-    // .blockquote
-    .blockquote {
-      background-color: #{$color};
-    }
-  }
-}
+//     // .blockquote
+//     .blockquote {
+//       background-color: #{$color};
+//     }
+//   }
+// }
 
 // Show for screen readers only
 .mg-u-sr-only {
