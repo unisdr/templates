@@ -62,6 +62,7 @@
 
   &:hover {
     background-color: $mg-color-button-background--hover;
+    color: $dts-coal-600;
   }
 
   &:focus-visible {
@@ -70,10 +71,11 @@
 }
 
 .mg-button.mg-button-secondary {
-  background-color: $dts-undrr-teal-brand;
+  background-color: $dts-iris-400;
 
   &:hover {
     background-color: $dts-iris-200;
+    color: $dts-coal-600;
   }
 
   &:focus-visible {
@@ -82,7 +84,7 @@
 }
 
 .mg-button.mg-button-ghost {
-  color: $dts-cerulean-300;
+  color: $dts-cerulean-400;
 
   &.mg-button-arrow {
     &::after {
@@ -91,7 +93,7 @@
   }
 
   &:hover {
-    background-color: $dts-cerulean-300;
+    background-color: $dts-cerulean-400;
     color: $mg-color-white;
   }
 
@@ -132,8 +134,9 @@
   }
 
   &:hover {
-    border-color: $mg-color-button-background--hover;
-    color: $mg-color-button-background--hover;
+    border-color: $dts-cerulean-400;
+    background-color: $dts-cerulean-400;
+    color: $mg-color-white;
   }
 
   &.mg-button-arrow:hover {
@@ -163,11 +166,12 @@
   }
 
   &:hover {
-    border-color: $mg-color-button-background--hover;
-    color: $mg-color-button-background--hover;
+    border-color: $dts-cerulean-400;
+    background-color: $dts-cerulean-400;
+    color: $mg-color-white;
 
     svg {
-      color: $mg-color-button-background--hover;
+      color: $mg-color-white;
     }
   }
 

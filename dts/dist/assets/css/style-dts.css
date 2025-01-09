@@ -826,6 +826,7 @@ nav ul {
 }
 .mg-button.mg-button-primary:hover, .mg-button-primary.dts-tablist__button:hover {
   background-color: #4096FF;
+  color: #181823;
 }
 .mg-button.mg-button-primary:focus-visible, .mg-button-primary.dts-tablist__button:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #4096FF;
@@ -833,10 +834,11 @@ nav ul {
 }
 
 .mg-button.mg-button-secondary, .mg-button-secondary.dts-tablist__button {
-  background-color: #00AFAE;
+  background-color: #007B7A;
 }
 .mg-button.mg-button-secondary:hover, .mg-button-secondary.dts-tablist__button:hover {
   background-color: #78BCBC;
+  color: #181823;
 }
 .mg-button.mg-button-secondary:focus-visible, .mg-button-secondary.dts-tablist__button:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #78BCBC;
@@ -844,13 +846,13 @@ nav ul {
 }
 
 .mg-button.mg-button-ghost, .mg-button-ghost.dts-tablist__button {
-  color: #6093BD;
+  color: #106CB8;
 }
 .mg-button.mg-button-ghost.mg-button-arrow::after, .mg-button-ghost.mg-button-arrow.dts-tablist__button::after {
   background: url(~/stories/assets/icons/tick-ghost-blue.svg) no-repeat left center;
 }
 .mg-button.mg-button-ghost:hover, .mg-button-ghost.dts-tablist__button:hover {
-  background-color: #6093BD;
+  background-color: #106CB8;
   color: #fff;
 }
 .mg-button.mg-button-ghost.mg-button-arrow:hover::after, .mg-button-ghost.mg-button-arrow.dts-tablist__button:hover::after {
@@ -881,8 +883,9 @@ nav ul {
   background: url(~/stories/assets/icons/tick-blue.svg) no-repeat left center;
 }
 .mg-button.mg-button-outline:hover, .mg-button-outline.dts-tablist__button:hover {
-  border-color: #4096FF;
-  color: #4096FF;
+  border-color: #106CB8;
+  background-color: #106CB8;
+  color: #fff;
 }
 .mg-button.mg-button-outline.mg-button-arrow:hover::after, .mg-button-outline.mg-button-arrow.dts-tablist__button:hover::after {
   background: url(~/stories/assets/icons/tick-sky-blue.svg) no-repeat left center;
@@ -906,11 +909,12 @@ nav ul {
   background-color: transparent;
 }
 .mg-button.mg-button-system:hover, .mg-button-system.dts-tablist__button:hover {
-  border-color: #4096FF;
-  color: #4096FF;
+  border-color: #106CB8;
+  background-color: #106CB8;
+  color: #fff;
 }
 .mg-button.mg-button-system:hover svg, .mg-button-system.dts-tablist__button:hover svg {
-  color: #4096FF;
+  color: #fff;
 }
 .mg-button.mg-button-system:focus-visible, .mg-button-system.dts-tablist__button:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #4096FF;
