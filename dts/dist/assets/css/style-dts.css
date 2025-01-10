@@ -598,7 +598,7 @@ hr {
 }
 
 a {
-  color: #00AFAE;
+  color: #007B7A;
   text-decoration: none;
 }
 
@@ -1284,7 +1284,7 @@ header .mg-container {
   font-family: "Roboto Condensed", sans-serif;
 }
 .mg-undrr-footer__container .btn:hover {
-  color: #ffffff;
+  color: #181823;
   border: 1px solid #9abbd6;
   background-color: #9abbd6;
 }
@@ -1313,7 +1313,6 @@ header .mg-container {
   list-style: none;
 }
 .mg-undrr-footer .menu a {
-  text-decoration: none;
   color: #fff;
   font-size: 1.4rem;
 }
@@ -2915,7 +2914,7 @@ header .mg-container {
   gap: 0.8rem;
 }
 .dts-metadata--highlight {
-  background-color: #DDE8F0;
+  background-color: #F2F2F2;
   padding: 1.6rem;
 }
 .dts-metadata__item {
@@ -2986,24 +2985,24 @@ header .mg-container {
 
 .dts-status {
   display: inline-block;
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
 }
 .dts-status--draft {
-  background-color: #F4E496;
+  border: 1px solid #181823;
 }
 .dts-status--wait-info {
-  background-color: #BCAE67;
+  background-color: #D87838;
 }
 .dts-status--wait-valid {
-  background-color: #FEC124;
+  background-color: #AD66A1;
 }
 .dts-status--published {
-  background-color: #026666;
+  background-color: #6D9A75;
 }
 .dts-status--undrr {
-  background-color: #9ABBD6;
+  background-color: #106CB8;
 }
 
 .dts-sub-navigation .mg-container {
@@ -3059,15 +3058,14 @@ header .mg-container {
 }
 .dts-tablist__button {
   border-radius: 0;
-  background-color: #F2F2F2;
   border-color: #E3E3E3;
-  color: #979797;
+  color: #333333;
 }
 .dts-tablist__button:hover, .dts-tablist__button:focus-visible {
-  color: #333333;
+  background-color: #F2F2F2;
 }
 .dts-tablist__button[aria-selected=true] {
-  color: #333333;
+  background-color: #F2F2F2;
 }
 
 .dts-table {

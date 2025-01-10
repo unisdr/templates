@@ -8,17 +8,16 @@
   &__button {
     @extend .mg-button;
     border-radius: 0;
-    background-color: $dts-coal-100;
     border-color: $dts-coal-200;
-    color: $dts-coal-400;
+    color: $dts-grey-500;
 
     &:hover,
     &:focus-visible {
-      color: $dts-grey-500;
+      background-color: $dts-coal-100;
     }
 
     &[aria-selected="true"] {
-      color: $dts-grey-500;
+      background-color: $dts-coal-100;
     }
   }
 }
