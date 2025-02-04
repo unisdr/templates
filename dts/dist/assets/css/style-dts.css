@@ -3003,6 +3003,9 @@ header .mg-container {
 .dts-status--undrr {
   background-color: #106CB8;
 }
+.dts-status--rejected {
+  background-color: #c10920;
+}
 
 .dts-sub-navigation .mg-container {
   border-bottom: 1px solid #E3E3E3;
