@@ -4,7 +4,8 @@
   height: 1rem;
   border-radius: 50%;
 
-  &--draft {
+  &--draft,
+  &--pending {
     border: 1px solid $dts-coal-600;
   }
 
@@ -20,7 +21,8 @@
     background-color: $dts-killarney-500;
   }
 
-  &--undrr {
+  &--undrr,
+  &--activated {
     background-color: $dts-cerulean-400;
   }
 

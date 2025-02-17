@@ -2988,7 +2988,7 @@ header .mg-container {
   height: 1rem;
   border-radius: 50%;
 }
-.dts-status--draft {
+.dts-status--draft, .dts-status--pending {
   border: 1px solid #181823;
 }
 .dts-status--wait-info {
@@ -3000,7 +3000,7 @@ header .mg-container {
 .dts-status--published {
   background-color: #6D9A75;
 }
-.dts-status--undrr {
+.dts-status--undrr, .dts-status--activated {
   background-color: #106CB8;
 }
 .dts-status--rejected {
