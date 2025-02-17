@@ -800,16 +800,12 @@ nav ul {
   width: 1.6rem;
 }
 .mg-button svg *, .dts-tablist__button svg * {
-  -webkit-transform: scale(0.6);
-          transform: scale(0.6);
+  -webkit-transform: scale(0.75) translate(-2px, -2px);
+          transform: scale(0.75) translate(-2px, -2px);
 }
 
 .mg-button.mg-button--small, .mg-button--small.dts-tablist__button {
   padding: 0.8rem 1.6rem;
-}
-.mg-button.mg-button--small svg *, .mg-button--small.dts-tablist__button svg * {
-  -webkit-transform: scale(0.55) translate(4px, 0px);
-          transform: scale(0.55) translate(4px, 0px);
 }
 
 .mg-button.mg-button-arrow::after, .mg-button-arrow.dts-tablist__button::after {
