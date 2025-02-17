@@ -1,0 +1,10 @@
+.dts-pagination {
+  margin: $dts-spacing-12 0;
+  @extend .dts-body-text-small;
+
+  ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+}

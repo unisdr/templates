@@ -2946,6 +2946,21 @@ header .mg-container {
   margin-bottom: 0;
 }
 
+.dts-pagination {
+  margin: 1.2rem 0;
+}
+.dts-pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .dts-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3293,7 +3308,7 @@ header .mg-container {
 .dts-form-component textarea,
 .dts-form-component select, .dts-form-component input[type=file]::-webkit-file-upload-button,
 .dts-form-component textarea[type=file]::-webkit-file-upload-button,
-.dts-form-component select[type=file]::-webkit-file-upload-button, [role=tooltip] {
+.dts-form-component select[type=file]::-webkit-file-upload-button, .dts-pagination, [role=tooltip] {
   font-size: 1.4rem;
   line-height: 1.43;
   font-weight: 400;
@@ -3304,7 +3319,7 @@ header .mg-container {
   .dts-form-component textarea,
   .dts-form-component select, .dts-form-component input[type=file]::-webkit-file-upload-button,
   .dts-form-component textarea[type=file]::-webkit-file-upload-button,
-  .dts-form-component select[type=file]::-webkit-file-upload-button, [role=tooltip] {
+  .dts-form-component select[type=file]::-webkit-file-upload-button, .dts-pagination, [role=tooltip] {
     line-height: 1.57;
   }
 }
@@ -3356,7 +3371,7 @@ header .mg-container {
 [dir=rtl] .dts-form-component textarea[type=file]::-webkit-file-upload-button,
 .dts-form-component [dir=rtl] textarea[type=file]::-webkit-file-upload-button,
 [dir=rtl] .dts-form-component select[type=file]::-webkit-file-upload-button,
-.dts-form-component [dir=rtl] select[type=file]::-webkit-file-upload-button, [dir=rtl] [role=tooltip] {
+.dts-form-component [dir=rtl] select[type=file]::-webkit-file-upload-button, [dir=rtl] .dts-pagination, [dir=rtl] [role=tooltip] {
   font-size: 1.6rem;
   line-height: 1.375;
 }
