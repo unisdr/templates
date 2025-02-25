@@ -2945,6 +2945,16 @@ header .mg-container {
 }
 
 .dts-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
   margin: 1.2rem 0;
 }
 .dts-pagination ul {
@@ -2957,6 +2967,7 @@ header .mg-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1.6rem;
 }
 
 .dts-placeholder {

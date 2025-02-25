@@ -1,4 +1,8 @@
 .dts-pagination {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: $dts-spacing-8;
   margin: $dts-spacing-12 0;
   @extend .dts-body-text-small;
 
@@ -6,5 +10,6 @@
     display: flex;
     justify-content: right;
     align-items: center;
+    margin-bottom: $dts-spacing-16;
   }
 }
