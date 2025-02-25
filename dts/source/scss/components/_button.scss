@@ -51,15 +51,14 @@
 }
 
 .mg-button.mg-button-primary {
-  background-color: $mg-color-button-background;
+  background-color: $dts-undrr-blue-brand;
 
   &:hover {
-    background-color: $mg-color-button-background--hover;
-    color: $dts-coal-600;
+    background-color: $dts-cerulean-400;
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px $mg-color-button-background--hover;
+    box-shadow: 0 0 0 2px $dts-cerulean-400;
   }
 }
 
@@ -67,12 +66,11 @@
   background-color: $dts-iris-400;
 
   &:hover {
-    background-color: $dts-iris-200;
-    color: $dts-coal-600;
+    background-color: $dts-teal-500;
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px $dts-iris-200;
+    box-shadow: 0 0 0 2px $dts-teal-500;
   }
 }
 
@@ -86,7 +84,7 @@
   }
 
   &:hover {
-    background-color: $dts-cerulean-400;
+    background-color: $dts-cerulean-300;
     color: $mg-color-white;
   }
 
@@ -117,8 +115,8 @@
 
 .mg-button.mg-button-outline {
   background-color: $mg-color-white;
-  border-color: $mg-color-button-background;
-  color: $mg-color-button-background;
+  border-color: $dts-undrr-blue-brand;
+  color: $dts-undrr-blue-brand;
 
   &.mg-button-arrow {
     &::after {
@@ -128,8 +126,8 @@
 
   &:hover {
     border-color: $dts-cerulean-400;
-    background-color: $dts-cerulean-400;
-    color: $mg-color-white;
+    box-shadow: 0 0 0 2px #91CAFF66;
+    color: $dts-cerulean-400;
   }
 
   &.mg-button-arrow:hover {
@@ -160,11 +158,10 @@
 
   &:hover {
     border-color: $dts-cerulean-400;
-    background-color: $dts-cerulean-400;
-    color: $mg-color-white;
+    color: $dts-cerulean-400;
 
     svg {
-      color: $mg-color-white;
+      color: $dts-cerulean-400;
     }
   }
 

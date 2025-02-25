@@ -821,24 +821,22 @@ nav ul {
   background-color: #004f91;
 }
 .mg-button.mg-button-primary:hover, .mg-button-primary.dts-tablist__button:hover {
-  background-color: #4096FF;
-  color: #181823;
+  background-color: #106CB8;
 }
 .mg-button.mg-button-primary:focus-visible, .mg-button-primary.dts-tablist__button:focus-visible {
-  -webkit-box-shadow: 0 0 0 2px #4096FF;
-          box-shadow: 0 0 0 2px #4096FF;
+  -webkit-box-shadow: 0 0 0 2px #106CB8;
+          box-shadow: 0 0 0 2px #106CB8;
 }
 
 .mg-button.mg-button-secondary, .mg-button-secondary.dts-tablist__button {
   background-color: #007B7A;
 }
 .mg-button.mg-button-secondary:hover, .mg-button-secondary.dts-tablist__button:hover {
-  background-color: #78BCBC;
-  color: #181823;
+  background-color: #359999;
 }
 .mg-button.mg-button-secondary:focus-visible, .mg-button-secondary.dts-tablist__button:focus-visible {
-  -webkit-box-shadow: 0 0 0 2px #78BCBC;
-          box-shadow: 0 0 0 2px #78BCBC;
+  -webkit-box-shadow: 0 0 0 2px #359999;
+          box-shadow: 0 0 0 2px #359999;
 }
 
 .mg-button.mg-button-ghost, .mg-button-ghost.dts-tablist__button {
@@ -848,7 +846,7 @@ nav ul {
   background: url(~/stories/assets/icons/tick-ghost-blue.svg) no-repeat left center;
 }
 .mg-button.mg-button-ghost:hover, .mg-button-ghost.dts-tablist__button:hover {
-  background-color: #106CB8;
+  background-color: #6093BD;
   color: #fff;
 }
 .mg-button.mg-button-ghost.mg-button-arrow:hover::after, .mg-button-ghost.mg-button-arrow.dts-tablist__button:hover::after {
@@ -880,8 +878,9 @@ nav ul {
 }
 .mg-button.mg-button-outline:hover, .mg-button-outline.dts-tablist__button:hover {
   border-color: #106CB8;
-  background-color: #106CB8;
-  color: #fff;
+  -webkit-box-shadow: 0 0 0 2px rgba(145, 202, 255, 0.4);
+          box-shadow: 0 0 0 2px rgba(145, 202, 255, 0.4);
+  color: #106CB8;
 }
 .mg-button.mg-button-outline.mg-button-arrow:hover::after, .mg-button-outline.mg-button-arrow.dts-tablist__button:hover::after {
   background: url(~/stories/assets/icons/tick-sky-blue.svg) no-repeat left center;
@@ -906,11 +905,10 @@ nav ul {
 }
 .mg-button.mg-button-system:hover, .mg-button-system.dts-tablist__button:hover {
   border-color: #106CB8;
-  background-color: #106CB8;
-  color: #fff;
+  color: #106CB8;
 }
 .mg-button.mg-button-system:hover svg, .mg-button-system.dts-tablist__button:hover svg {
-  color: #fff;
+  color: #106CB8;
 }
 .mg-button.mg-button-system:focus-visible, .mg-button-system.dts-tablist__button:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #4096FF;
