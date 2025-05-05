@@ -1,3 +1,7 @@
 .dts-page-intro {
   margin-bottom: $dts-spacing-48;
+
+  @include devicebreak(large) {
+    padding: 0 $dts-spacing-64 0 $dts-spacing-32;
+  }
 }

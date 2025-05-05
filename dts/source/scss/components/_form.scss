@@ -19,6 +19,12 @@
     text-align: center;
   }
 
+  &:not(.dts-form--horizontal):not(.dts-form--vertical):not(.dts-form--spaced) {
+    @include devicebreak(large) {
+      padding: 0 $dts-spacing-64 0 $dts-spacing-32;
+    }
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;

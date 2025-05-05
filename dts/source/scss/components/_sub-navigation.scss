@@ -1,6 +1,8 @@
 .dts-sub-navigation {
-  .mg-container {
-    border-bottom: 1px solid $dts-coal-200;
+  border-bottom: 1px solid $dts-coal-200;
+
+  @include devicebreak(large) {
+    margin:0 $dts-spacing-64 0 $dts-spacing-32;
   }
 
   &__container {

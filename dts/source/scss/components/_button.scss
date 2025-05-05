@@ -12,6 +12,7 @@
   cursor: pointer;
   padding: $mg-padding-button;
   border: 1px solid transparent;
+  transition: 0.3s;
 
   @include devicebreak(medium) {
     display: inline-flex;
@@ -178,5 +179,16 @@
 .mg-button.mg-button-arrow:disabled {
   &::after {
     background: url(#{$img-path-Iconfourback}/tick-grey.svg) no-repeat left center;
+  }
+}
+
+.mg-button.mg-button-table {
+  background-color: transparent;
+  color: $dts-grey-500;
+  border-color: transparent;
+
+  &:hover {
+    background-color: $dts-grey-200;
+    color: $dts-undrr-blue-brand;
   }
 }

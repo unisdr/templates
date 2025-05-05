@@ -19,6 +19,12 @@
 
 }
 
+.dts-page-title .mg-container {
+  @include devicebreak(large) {
+    padding: 0 $dts-spacing-64;
+  }
+}
+
 header .mg-container {
   overflow-y: hidden;
 }
