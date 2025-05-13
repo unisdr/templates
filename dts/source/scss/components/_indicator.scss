@@ -1,10 +1,10 @@
 .dts-indicator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   height: 9rem;
   font-size: 3.4rem;
   padding: 0 $dts-spacing-16;
+  background-color: $dts-coal-100;
 
   @include devicebreak(small) {
     font-size: 2.6rem;
@@ -19,18 +19,15 @@
   }
 
   &--target-number-a {
-    background-color: $dts-coal-100;
     color: $dts-target-a;
   }
 
   &--target-box-a {
     font-weight: 500;
-    background-color: $dts-coal-100;
     color: $dts-target-a;
   }
 
   &--target-number-b {
-    background-color: $dts-coal-100;
     color: $dts-target-b;
   }
 
@@ -41,7 +38,6 @@
   }
 
   &--target-number-c {
-    background-color: $dts-coal-100;
     color: $dts-tango-700;
   }
 
@@ -52,7 +48,6 @@
   }
 
   &--target-number-d {
-    background-color: $dts-coal-100;
     color: $dts-teal-800;
   }
 
@@ -63,7 +58,6 @@
   }
 
   &--target-number-e {
-    background-color: $dts-coal-100;
     color: $dts-killarney-700;
   }
 
@@ -74,7 +68,6 @@
   }
 
   &--target-number-f {
-    background-color: $dts-coal-100;
     color: $dts-target-f;
   }
 
@@ -85,7 +78,6 @@
   }
 
   &--target-number-g {
-    background-color: $dts-coal-100;
     color: $dts-target-g;
   }
 
