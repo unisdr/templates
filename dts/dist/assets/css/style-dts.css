@@ -2976,26 +2976,50 @@ header .mg-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 0.8rem;
-  margin: 1.2rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1.2rem 0 0;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-pagination {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
 }
 .dts-pagination ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1.6rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* medium design - 768px up */
+}
+@media (width >= 768px) {
+  .dts-pagination ul {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+.dts-pagination .dts-form-component {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-bottom: 0;
 }
 
 .dts-placeholder {

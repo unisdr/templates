@@ -1,15 +1,30 @@
 .dts-pagination {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   gap: $dts-spacing-8;
-  margin: $dts-spacing-12 0;
+  flex-wrap: wrap;
+  margin: $dts-spacing-12 0 0;
   @extend .dts-body-text-small;
+
+  @include devicebreak(small) {
+    justify-content: right;
+  }
 
   ul {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    margin-bottom: $dts-spacing-16;
+    flex-wrap: wrap;
+
+    // margin-bottom: $dts-spacing-16;
+    @include devicebreak(small) {
+      justify-content: right;
+    }
+  }
+
+  .dts-form-component {
+    flex-shrink: 0;
+    margin-bottom: 0;
   }
 }
