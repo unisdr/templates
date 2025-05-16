@@ -2983,8 +2983,6 @@ header .mg-container {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.8rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 1.2rem 0 0;
   /* medium design - 768px up */
 }
@@ -2999,9 +2997,9 @@ header .mg-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3011,9 +3009,9 @@ header .mg-container {
 }
 @media (width >= 768px) {
   .dts-pagination ul {
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
 }
 .dts-pagination .dts-form-component {
