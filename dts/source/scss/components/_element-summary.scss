@@ -1,10 +1,6 @@
 .dts-element-summary {
   margin: $dts-spacing-32 0;
 
-  @include devicebreak(large) {
-    padding: 0 $dts-spacing-64 0 $dts-spacing-32;
-  }
-
   &__title {
     display: grid;
     gap: $dts-spacing-24;

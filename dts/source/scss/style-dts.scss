@@ -10,6 +10,7 @@
 @import "./base/foundational";
 
 // Component imports: design pattern components
+@import "./components/additional-actions";
 @import "./components/alert";
 @import "./components/attachments";
 @import "./components/button";
@@ -19,7 +20,6 @@
 @import "./components/dialog";
 @import "./components/element-summary";
 @import "./components/event-list";
-@import "./components/external-links";
 @import "./components/footer";
 @import "./components/form";
 @import "./components/grid";

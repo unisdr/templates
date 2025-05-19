@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+
+    include includes/_header.html
+
+    <main class="dts-main-container">
+
+      <div class="dts-page-header">
+        include includes/_page-title.html
+      </div>
+
+      <div class="mg-container">
+
+        include includes/_page-intro.html
+
+        <form class="dts-form">
+          <div class="dts-form__body">
+            <div class="mg-grid mg-grid__col-3">
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span>Organisation</span>
+                  </div>
+                  <input type="text" placeholder="Type organisation name">
+                </label>
+              </div>
+              <div class="dts-form-component">
+                <label>
+                  <div class="dts-form-component__label">
+                    <span>Role</span>
+                  </div>
+                  <select>
+                    <option value="all">All Roles</option>
+                    <option value="data-viewer">Data Viewer</option>
+                    <option value="data-collector">Data Collector</option>
+                    <option value="data-validator">Data Validator</option>
+                    <option value="admin">Admin</option>
+                  </select>
+              </label>
+              </div>
+            </div>
+            <div class="dts-form__actions">
+              <button type="button" class="mg-button mg-button--small mg-button-primary">Apply filters</button>
+              <a href="#" class="mg-button mg-button--small mg-button-outline">Clear filters</a>
+            </div>
+          </div>
+        </form>
+
+        <section class="dts-page-section">
+          <div class="dts-heading-4">400 Users found</div>
+          <div class="dts-legend">
+            <span class="dts-body-label">Status legend</span>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--activated" aria-labelledby="legend7"></span>
+              <span id="legend7">Account activated</span>
+            </div>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--pending" aria-labelledby="legend8"></span>
+              <span id="legend8">Account activation pending</span>
+            </div>
+          </div>
+          <table class="dts-table">
+            <caption class="mg-u-sr-only">summary of the table's content</caption>
+            <thead>
+              <tr>
+                <th>Status</th>
+                //
+                  Selected filter
+                <th class="dts-table__filter dts-table__filter--active">Name</th>
+                <th>Organisation</th>
+                <th>Role</th>
+                <th>Location</th>
+                <th>Modified</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--activated" aria-labelledby="tooltip10"></button>
+                  <div id="tooltip10" class="dts-tooltip--status" role="tooltip">
+                    <span>Account activated</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>[First name] [last name]</td>
+                <td>WMO</td>
+                <td>Admin</td>
+                <td>North Thailand, Chaing Mai</td>
+                <td>31-10-2026</td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--pending" aria-labelledby="tooltip20"></button>
+                  <div id="tooltip20" class="dts-tooltip--status" role="tooltip">
+                    <span>Account activation pending</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>[First name] [last name]</td>
+                <td>UNDP</td>
+                <td>Role</td>
+                <td>Level, sub-level</td>
+                <td>31-10-2023</td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <nav class="dts-pagination" role="navigation" aria-label="Pagination">
+            <ul>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Previous page">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/chevron-left.svg#chevron-left"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Page 1">1</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Current page, page 2" aria-current="true">2</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Page 3">3</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Page 4">4</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Page 5">5</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Page 6">6</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Page 7">7</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Page 8">8</a>
+              </li>
+              <li>
+                <a class="mg-button mg-button--small mg-button-ghost" href="#" aria-label="Next page">
+                  <svg aria-hidden="true" focusable="false" role="img">
+                    <use href="assets/icons/chevron-right.svg#chevron-right"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="dts-form-component">
+              <select>
+                <option>10 / page</option>
+                <option>20 / page</option>
+                <option>30 / page</option>
+                <option>40 / page</option>
+                <option>50 / page</option>
+              </select>
+            </div>
+          </nav>
+        </section>
+
+        <section class="dts-page-section">
+          <div class="dts-heading-4">400 Events Found</div>
+          <div class="dts-legend">
+            <span class="dts-body-label">Status legend</span>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--draft" aria-labelledby="legend1"></span>
+              <span id="legend1">Draft</span>
+            </div>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--wait-info" aria-labelledby="legend2"></span>
+              <span id="legend2">Waiting for information</span>
+            </div>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--wait-valid" aria-labelledby="legend3"></span>
+              <span id="legend3">Waiting for validation</span>
+            </div>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--published" aria-labelledby="legend4"></span>
+              <span id="legend4">Published</span>
+            </div>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--undrr" aria-labelledby="legend5"></span>
+              <span id="legend5">Published to UNDRR</span>
+            </div>
+            <div class="dts-legend__item">
+              <span class="dts-status dts-status--rejected" aria-labelledby="legend6"></span>
+              <span id="legend6">Rejected</span>
+            </div>
+          </div>
+          <table class="dts-table">
+            <caption class="mg-u-sr-only">summary of the table's content</caption>
+            <thead>
+              <tr>
+                //
+                  Selected filter
+                <th class="dts-table__filter dts-table__filter--active">ID</th>
+                <th>Status</th>
+                <th>Action required</th>
+                <th>Effect or asset name</th>
+                <th>Unit of measurement</th>
+                <th>Unit Cost</th>
+                <th>Baseline Data Source</th>
+                <th>Unit Cost last edited</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#######</td>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--draft" aria-labelledby="tooltip1"></button>
+                  <div id="tooltip1" class="dts-tooltip--status" role="tooltip">
+                    <span>Draft</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>placeholder text commonly used in the graphic, print, and publishing industries</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Edited system default</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--wait-info" aria-labelledby="tooltip2"></button>
+                  <div id="tooltip2" class="dts-tooltip--status" role="tooltip">
+                    <span>Waiting for more information</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--wait-valid" aria-labelledby="tooltip3"></button>
+                  <div id="tooltip3" class="dts-tooltip--status" role="tooltip">
+                    <span>Waiting for validation</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--published" aria-labelledby="tooltip4"></button>
+                  <div id="tooltip4" class="dts-tooltip--status" role="tooltip">
+                    <span>Published</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--undrr" aria-labelledby="tooltip5"></button>
+                  <div id="tooltip5" class="dts-tooltip--status" role="tooltip">
+                    <span>Published to UNDRR</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td>
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--rejected" aria-labelledby="tooltip6"></button>
+                  <div id="tooltip6" class="dts-tooltip--status" role="tooltip">
+                    <span>Rejected</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td>
+                  <button type="button" class="mg-button mg-button-table">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+
+    </main>
+
+    include includes/_footer.html
+
+  </div>
+
+  include includes/_scripts.html
+
+</body>
+
+</html>
