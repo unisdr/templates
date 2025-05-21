@@ -1,3 +1,7 @@
 .dts-page-section {
   margin-top: $dts-spacing-40;
+
+  @include devicebreak(large) {
+    padding: 0 $dts-spacing-64 0 $dts-spacing-32;
+  }
 }
