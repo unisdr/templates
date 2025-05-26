@@ -43,6 +43,14 @@ a:hover {
 svg {
   width: $dts-spacing-24;
   height: $dts-spacing-24;
+
+  &.dts-icon--ocha {
+    width: $dts-spacing-48;
+    height: $dts-spacing-48;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 button {
