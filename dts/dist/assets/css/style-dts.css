@@ -1832,8 +1832,9 @@ header .mg-container {
 }
 
 .dts-indicator {
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 9rem;
   font-size: 3.4rem;
   padding: 0 1.6rem;
@@ -1841,6 +1842,14 @@ header .mg-container {
   /* medium design - 768px up */
   /* medium design - 1024px up */
   /* large design - 1164px up */
+}
+.dts-indicator--empty {
+  display: grid;
+  place-content: center;
+}
+.dts-indicator > span {
+  flex-grow: 1;
+  text-align: center;
 }
 @media (width >= 768px) {
   .dts-indicator {

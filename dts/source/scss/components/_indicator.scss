@@ -1,10 +1,21 @@
 .dts-indicator {
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 9rem;
   font-size: 3.4rem;
   padding: 0 $dts-spacing-16;
   background-color: $dts-coal-100;
+
+  &--empty {
+    display: grid;
+    place-content: center;
+  }
+
+  >span {
+    flex-grow: 1;
+    text-align: center;
+  }
 
   @include devicebreak(small) {
     font-size: 2.6rem;
