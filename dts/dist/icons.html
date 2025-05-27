@@ -175,30 +175,37 @@
 </ul>
 <br><br><br>
 <h4>OCHA icons coming from DTS Figma - Atoms/Icons screen</h4>
-<ul style="list-style: none; margin:0; padding: 1rem; display: flex; flex-wrap: wrap; gap: 1.6rem; background: #F2F2F2; color:red">
+<p>Instructions for adding OCHA icons:</p>
+<ol>
+<li>export each icon as an svg file from Figma to the assets/icons folder</li>
+<li>open each svg file in a text editor and add a unique id parameter to the <code>svg</code> tag</li>
+<li>make sure to have parameters <code>width="48" height="48"</code> set on the <code>svg</code> tag</li>
+<li>set parameter <code>fill="currentColor"</code> to each <code>path</code> tag in the svg file</li>
+</ol>
+<ul style="list-style: none; margin:0; padding: 1rem; display: flex; flex-wrap: wrap; gap: 1.6rem; background: #F2F2F2;">
 <li style="display:flex; align-items:center">
 <svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Abduction-kidnapping.svg#abduction"></use>
+<use href="assets/icons/Person-1-1.svg#person_1"></use>
 </svg>
 </li>
 <li style="display:flex; align-items:center">
 <svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/About.svg#about"></use>
+<use href="assets/icons/Person-2-1.svg#person_2"></use>
 </svg>
 </li>
 <li style="display:flex; align-items:center">
 <svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Alert.svg#alert"></use>
+<use href="assets/icons/Couple.svg#couple"></use>
 </svg>
 </li>
 <li style="display:flex; align-items:center">
 <svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Add-document.svg#add_document"></use>
+<use href="assets/icons/Dead-1.svg#dead_1"></use>
 </svg>
 </li>
 <li style="display:flex; align-items:center">
 <svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/advocacy.svg#advocacy"></use>
+<use href="assets/icons/Missing-1.svg#missing_1"></use>
 </svg>
 </li>
 <li style="display:flex; align-items:center">
@@ -208,200 +215,236 @@
 </li>
 <li style="display:flex; align-items:center">
 <svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Agile.svg#agile"></use>
+<use href="assets/icons/Internally-displaced.svg#displaced"></use>
 </svg>
 </li>
 <li style="display:flex; align-items:center">
 <svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Agriculture.svg#agriculture"></use>
+<use href="assets/icons/Injured-1.svg#injured_1"></use>
 </svg>
+</li>
+<!--
+<li style="display:flex; align-items:center">
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Abduction-kidnapping.svg#abduction"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/AI-chat.svg#ai"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/About.svg#about"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Airport.svg#airport"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Alert.svg#alert"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Airport-affected.svg#airport_affected"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Add-document.svg#add_document"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Airport-closed.svg#airport_closed"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/advocacy.svg#advocacy"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Airport-destroyed.svg#airport_destroyed"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Agile.svg#agile"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Airport-not-affected.svg#airport_not_affected"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Agriculture.svg#agriculture"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Airport-military.svg#airport_military"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/AI-chat.svg#ai"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Analysis.svg#analysis"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Airport.svg#airport"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Anticipatory-action.svg#anticipatory"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Airport-affected.svg#airport_affected"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/API.svg#api"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Airport-closed.svg#airport_closed"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Apps.svg#apps"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Airport-destroyed.svg#airport_destroyed"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Arrest-detention.svg#arrest"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Airport-not-affected.svg#airport_not_affected"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Assault.svg#assault"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Airport-military.svg#airport_military"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Assembly-point.svg#assembly"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Analysis.svg#analysis"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Assessment.svg#assessment"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Anticipatory-action.svg#anticipatory"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Attack.svg#attack"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/API.svg#api"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bacteria.svg#bacteria"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Apps.svg#apps"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Blanket.svg#blanket"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Arrest-detention.svg#arrest"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Blog.svg#blog"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Assault.svg#assault"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Boat.svg#boat"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Assembly-point.svg#assembly"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bookmark.svg#bookmark"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Assessment.svg#assessment"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Border-closed.svg#border_closed"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Attack.svg#attack"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Border-crossing.svg#border_crossing"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bacteria.svg#bacteria"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Borehole.svg#borehole"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Blanket.svg#blanket"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bottled-water.svg#bottled"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Blog.svg#blog"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bridge-affected.svg#bridge_affected"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Boat.svg#boat"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bridge-closed.svg#bridge_closed"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bookmark.svg#bookmark"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bridge-destroyed.svg#bridge_destroyed"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Border-closed.svg#border_closed"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bridge-not-affected.svg#bridge_not_affected"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Border-crossing.svg#border_crossing"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bridge.svg#bridge"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Borehole.svg#borehole"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Bucket.svg#bucket"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bottled-water.svg#bottled"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Buddhist-temple.svg#buddhist"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bridge-affected.svg#bridge_affected"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Building-closed.svg#building_closed"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bridge-closed.svg#bridge_closed"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Building-facility-affected.svg#building_affected"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bridge-destroyed.svg#bridge_destroyed"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Building-facility-destroyed.svg#building_destroyed"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bridge-not-affected.svg#bridge_not_affected"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Building-facility-not-affected.svg#building_not_affected"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bridge.svg#bridge"></use>
+	</svg>
 </li>
 <li style="display:flex; align-items:center">
-<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
-<use href="assets/icons/Building.svg#building"></use>
-</svg>
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Bucket.svg#bucket"></use>
+	</svg>
 </li>
-</ul>
+<li style="display:flex; align-items:center">
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Buddhist-temple.svg#buddhist"></use>
+	</svg>
+</li>
+<li style="display:flex; align-items:center">
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Building-closed.svg#building_closed"></use>
+	</svg>
+</li>
+<li style="display:flex; align-items:center">
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Building-facility-affected.svg#building_affected"></use>
+	</svg>
+</li>
+<li style="display:flex; align-items:center">
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Building-facility-destroyed.svg#building_destroyed"></use>
+	</svg>
+</li>
+<li style="display:flex; align-items:center">
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Building-facility-not-affected.svg#building_not_affected"></use>
+	</svg>
+</li>
+<li style="display:flex; align-items:center">
+	<svg aria-hidden="true" focusable="false" role="img" class="dts-icon--ocha">
+		<use href="assets/icons/Building.svg#building"></use>
+	</svg>
+</li>
+--></ul>
 <br><br><br>
 <h4 style="margin-bottom: 0;">Icons coming from Mangrove</h4>
 <p>(not listed in DTS Figma - Atoms/Icons screen)</p>
