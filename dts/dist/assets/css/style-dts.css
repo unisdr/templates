@@ -1218,7 +1218,7 @@ header .mg-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3.2rem 0;
+  margin: 3.2rem 0 4.8rem;
 }
 .dts-form__header > span {
   flex-grow: 1;
@@ -1228,6 +1228,7 @@ header .mg-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  margin-top: 6.4rem;
 }
 .dts-form__intro [class*=heading] {
   margin-bottom: 0.8rem;
@@ -1269,7 +1270,7 @@ header .mg-container {
 .dts-form__actions {
   display: grid;
   gap: 1.6rem;
-  margin: 1.6rem 0;
+  margin: 6.4rem 0 1.6rem;
 }
 
 .dts-dialog .dts-form--vertical .dts-form__actions {
@@ -1285,14 +1286,16 @@ header .mg-container {
 .dts-form .dts-form__body .dts-form__actions--centered {
   justify-content: center;
 }
+.dts-form .dts-form__body .dts-form__actions--standalone {
+  flex-direction: row;
+  margin-top: 0;
+}
 
-.dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered),
-.dts-form__actions--standalone {
+.dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered):not(.dts-form__actions--standalone) {
   /* medium design - 768px up */
 }
 @media (width >= 768px) {
-  .dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered),
-  .dts-form__actions--standalone {
+  .dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered):not(.dts-form__actions--standalone) {
     display: flex;
     justify-content: flex-start;
     flex-direction: row-reverse;
@@ -1343,6 +1346,10 @@ header .mg-container {
 }
 .dts-form-component__hint--error {
   color: #c10920;
+}
+.dts-form-component__hint > div {
+  display: flex;
+  justify-content: space-between;
 }
 .dts-form-component__hint ul {
   margin: 0;
@@ -1408,11 +1415,8 @@ header .mg-container {
 .dts-form-component select:disabled,
 .dts-form-component select:read-only:not([type=file]):not([type=checkbox]):not([type=radio]):not(select) {
   cursor: not-allowed;
-}
-.dts-form-component input:disabled,
-.dts-form-component textarea:disabled,
-.dts-form-component select:disabled {
   background-color: #F2F2F2;
+  color: #4A4A4A;
 }
 .dts-form-component input[type=file],
 .dts-form-component textarea[type=file],
@@ -1442,7 +1446,7 @@ header .mg-container {
 .dts-form-component input::placeholder,
 .dts-form-component textarea::placeholder,
 .dts-form-component select::placeholder {
-  color: #979797;
+  color: #4A4A4A;
 }
 .dts-form-component select {
   appearance: none;
@@ -2437,13 +2441,16 @@ header .mg-container {
 }
 
 .dts-page-intro {
-  margin-bottom: 4.8rem;
   /* large design - 1164px up */
 }
 @media (width >= 1164px) {
   .dts-page-intro {
     padding: 0 6.4rem 0 3.2rem;
   }
+}
+
+.dts-form .dts-page-intro {
+  padding: 0;
 }
 
 .dts-page-section {

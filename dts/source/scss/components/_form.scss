@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: $dts-spacing-32 0;
+    margin: $dts-spacing-32 0 $dts-spacing-48;
 
     >span {
       flex-grow: 1;
@@ -41,6 +41,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: $dts-spacing-20;
+    margin-top: $dts-spacing-64;
 
     [class*="heading"] {
       margin-bottom: $dts-spacing-8;
@@ -91,7 +92,7 @@
   &__actions {
     display: grid;
     gap: $dts-spacing-16;
-    margin: $dts-spacing-16 0;
+    margin: $dts-spacing-64 0 $dts-spacing-16;
   }
 }
 
@@ -108,10 +109,14 @@
   &--centered {
     justify-content: center;
   }
+
+  &--standalone {
+    flex-direction: row;
+    margin-top: 0;
+  }
 }
 
-.dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered),
-.dts-form__actions--standalone {
+.dts-form:not(.dts-form--vertical) .dts-form__actions:not(.dts-form__actions--centered):not(.dts-form__actions--standalone) {
   @include devicebreak(small) {
     display: flex;
     justify-content: flex-start;
@@ -165,6 +170,11 @@
 
     &--error {
       color: $mg-color-red-900;
+    }
+
+    >div {
+      display: flex;
+      justify-content: space-between;
     }
 
     ul {
@@ -238,10 +248,8 @@
     &:disabled,
     &:read-only:not([type="file"]):not([type="checkbox"]):not([type="radio"]):not(select) {
       cursor: not-allowed;
-    }
-
-    &:disabled {
       background-color: $dts-coal-100;
+      color: $dts-coal-500;
     }
 
     &[type="file"] {
@@ -269,7 +277,7 @@
     }
 
     &::placeholder {
-      color: $dts-coal-400;
+      color: $dts-coal-500;
     }
   }
 
