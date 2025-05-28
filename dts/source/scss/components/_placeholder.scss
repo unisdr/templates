@@ -1,6 +1,10 @@
 .dts-placeholder {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $dts-coal-100;
+  font-size: 1.4rem;
+  line-height: 1.43;
+  font-weight: 400;
 }

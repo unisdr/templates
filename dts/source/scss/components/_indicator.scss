@@ -2,14 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 9rem;
+  min-height: 9rem;
   font-size: 3.4rem;
-  padding: 0 $dts-spacing-16;
+  padding: $dts-spacing-16;
   background-color: $dts-coal-100;
 
   &--empty {
     display: grid;
     place-content: center;
+  }
+
+  &--chart {
+    >svg {
+      align-self: flex-start;
+    }
   }
 
   >span {
