@@ -191,4 +191,10 @@
     background-color: $dts-grey-100;
     color: $dts-undrr-blue-brand;
   }
+
+  &:focus-visible {
+    background-color: $dts-grey-100;
+    color: $dts-undrr-blue-brand;
+    box-shadow: 0 0 0 2px $mg-color-button-background--hover;
+  }
 }

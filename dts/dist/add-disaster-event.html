@@ -117,7 +117,12 @@
 <div class="mg-container">
 <form class="dts-form">
 <div class="dts-form__header">
-<a href="#" class="mg-button mg-button--small mg-button-system">Back</a>
+<a href="#" class="mg-button mg-button--small mg-button-system">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/arrow-left.svg#arrow-left"></use>
+</svg>
+<span>Back</span>
+</a>
 </div>
 <div class="dts-page-intro">
 <p>What are events for? Here’s some information on how to create an event here. What to do, what not to do in brief. Here’s how to attach something: you have to make a record.</p>
@@ -186,12 +191,6 @@
 </label>
 </div>
 </div>
-</div>
-<div class="dts-form__intro">
-<h2 class="dts-heading-2">Event name and type (optional)</h2>
-<p>What to do, what not to do in brief. For big events, you may want to create a name. The generated name will be used if a name is not created.</p>
-</div>
-<div class="dts-form__body">
 <div class="mg-grid mg-grid__col-3">
 <div class="dts-form-component">
 <label>
@@ -204,19 +203,27 @@
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
-<span>Data source</span>
+<span>Originator</span>
 </div>
-<input type="text" placeholder="Primary data sources">
+<input type="text" placeholder="Add originator">
 </label>
 </div>
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
-<span>Recording institution</span>
+<span>Data source</span>
 </div>
-<input type="text" placeholder="Recording institution information">
+<input type="text" placeholder="Add data sources">
 </label>
 </div>
+</div>
+</div>
+<div class="dts-form__intro">
+<h2 class="dts-heading-2">Event name and type (optional)</h2>
+<p>What to do, what not to do in brief. For big events, you may want to create a name. The generated name will be used if a name is not created.</p>
+</div>
+<div class="dts-form__body">
+<div class="mg-grid mg-grid__col-3">
 <div class="dts-form-component">
 <label>
 <div class="dts-form-component__label">
@@ -304,18 +311,12 @@
 </label>
 </div>
 <div class="dts-form-component">
-<label>
-<div class="dts-form-component__label">
-<span>Subsequent event <span style="color: red;">(to be implemented as a React autocomplete component)</span></span>
+<div></div>
+<div class="dts-form__actions dts-form__actions--standalone">
+<button type="button" class="mg-button mg-button--small mg-button-system">
+<span>Search all events</span>
+</button>
 </div>
-<input type="search" list="events" placeholder="Type to search...">
-<datalist id="events">
-<option value="Event 1">
-<option value="Event 2">
-<option value="Event 3">
-<option value="Event 4">
-</datalist>
-</label>
 </div>
 </div>
 </div>
@@ -416,7 +417,7 @@
 </button>
 </div>
 </div>
-<div class="dts-form__actions">
+<div class="dts-form__actions dts-form__actions--bottom">
 <button type="submit" class="mg-button mg-button-primary">Save</button>
 <button type="button" class="mg-button mg-button-outline">Discard</button>
 </div>

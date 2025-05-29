@@ -147,12 +147,12 @@
 <div class="dts-legend">
 <span class="dts-body-label">Status legend</span>
 <div class="dts-legend__item">
-<span class="dts-status dts-status--activated" aria-labelledby="legend7"></span>
-<span id="legend7">Account activated</span>
-</div>
-<div class="dts-legend__item">
 <span class="dts-status dts-status--pending" aria-labelledby="legend8"></span>
 <span id="legend8">Account activation pending</span>
+</div>
+<div class="dts-legend__item">
+<span class="dts-status dts-status--activated" aria-labelledby="legend7"></span>
+<span id="legend7">Account activated</span>
 </div>
 </div>
 <table class="dts-table">
@@ -184,7 +184,7 @@
 <td>North Thailand, Chaing Mai</td>
 <td>31-10-2026</td>
 <td>
-<button type="button" class="mg-button mg-button-table">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
 </svg>
@@ -205,7 +205,7 @@
 <td>Level, sub-level</td>
 <td>31-10-2023</td>
 <td>
-<button type="button" class="mg-button mg-button-table">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
 </svg>
@@ -276,19 +276,19 @@
 </div>
 <div class="dts-legend__item">
 <span class="dts-status dts-status--wait-info" aria-labelledby="legend2"></span>
-<span id="legend2">Waiting for information</span>
+<span id="legend2">Waiting for approval</span>
 </div>
 <div class="dts-legend__item">
 <span class="dts-status dts-status--wait-valid" aria-labelledby="legend3"></span>
-<span id="legend3">Waiting for validation</span>
-</div>
-<div class="dts-legend__item">
-<span class="dts-status dts-status--published" aria-labelledby="legend4"></span>
-<span id="legend4">Published</span>
+<span id="legend3">Needs revision</span>
 </div>
 <div class="dts-legend__item">
 <span class="dts-status dts-status--undrr" aria-labelledby="legend5"></span>
-<span id="legend5">Published to UNDRR</span>
+<span id="legend5">Approved</span>
+</div>
+<div class="dts-legend__item">
+<span class="dts-status dts-status--published" aria-labelledby="legend4"></span>
+<span id="legend4">Published to [instance]</span>
 </div>
 <div class="dts-legend__item">
 <span class="dts-status dts-status--rejected" aria-labelledby="legend6"></span>
@@ -327,10 +327,20 @@
 <td>$984,300</td>
 <td>Edited system default</td>
 <td><time datetime="22-10-2024">October 13, 2025</time></td>
-<td>
-<button type="button" class="mg-button mg-button-table">
+<td class="dts-table__actions">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="View">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/eye-show-password.svg#eye-show"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="Delete">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
 </svg>
 </button>
 </td>
@@ -350,10 +360,20 @@
 <td>$984,300</td>
 <td>Added manually</td>
 <td><time datetime="22-10-2024">October 13, 2025</time></td>
-<td>
-<button type="button" class="mg-button mg-button-table">
+<td class="dts-table__actions">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="View">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/eye-show-password.svg#eye-show"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="Delete">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
 </svg>
 </button>
 </td>
@@ -373,10 +393,20 @@
 <td>$984,300</td>
 <td>Added manually</td>
 <td><time datetime="22-10-2024">October 13, 2025</time></td>
-<td>
-<button type="button" class="mg-button mg-button-table">
+<td class="dts-table__actions">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="View">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/eye-show-password.svg#eye-show"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="Delete">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
 </svg>
 </button>
 </td>
@@ -396,10 +426,20 @@
 <td>$984,300</td>
 <td>Added manually</td>
 <td><time datetime="22-10-2024">October 13, 2025</time></td>
-<td>
-<button type="button" class="mg-button mg-button-table">
+<td class="dts-table__actions">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="View">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/eye-show-password.svg#eye-show"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="Delete">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
 </svg>
 </button>
 </td>
@@ -419,10 +459,20 @@
 <td>$984,300</td>
 <td>Added manually</td>
 <td><time datetime="22-10-2024">October 13, 2025</time></td>
-<td>
-<button type="button" class="mg-button mg-button-table">
+<td class="dts-table__actions">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="View">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/eye-show-password.svg#eye-show"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="Delete">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
 </svg>
 </button>
 </td>
@@ -442,10 +492,20 @@
 <td>$984,300</td>
 <td>Added manually</td>
 <td><time datetime="22-10-2024">October 13, 2025</time></td>
-<td>
-<button type="button" class="mg-button mg-button-table">
+<td class="dts-table__actions">
+<button type="button" class="mg-button mg-button-table" aria-label="Edit">
 <svg aria-hidden="true" focusable="false" role="img">
 <use href="assets/icons/edit.svg#edit"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="View">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/eye-show-password.svg#eye-show"></use>
+</svg>
+</button>
+<button type="button" class="mg-button mg-button-table" aria-label="Delete">
+<svg aria-hidden="true" focusable="false" role="img">
+<use href="assets/icons/trash-alt.svg#delete"></use>
 </svg>
 </button>
 </td>

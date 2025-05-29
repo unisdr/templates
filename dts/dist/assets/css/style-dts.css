@@ -815,6 +815,11 @@ nav ul {
   background-color: #E6E6E6;
   color: #004f91;
 }
+.mg-button.mg-button-table:focus-visible, .mg-button-table.dts-tablist__button:focus-visible {
+  background-color: #E6E6E6;
+  color: #004f91;
+  box-shadow: 0 0 0 2px #4096FF;
+}
 
 .dts-chart-card {
   background-color: #F2F2F2;
@@ -1270,7 +1275,10 @@ header .mg-container {
 .dts-form__actions {
   display: grid;
   gap: 1.6rem;
-  margin: 6.4rem 0 1.6rem;
+  margin: 1.6rem 0;
+}
+.dts-form__actions--bottom {
+  margin-top: 6.4rem;
 }
 
 .dts-dialog .dts-form--vertical .dts-form__actions {
@@ -1392,6 +1400,7 @@ header .mg-container {
   border: 1px solid #CCCCCC;
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
+  line-height: 1.7 !important;
 }
 .dts-form-component input:hover:not(:disabled):not([readonly]),
 .dts-form-component textarea:hover:not(:disabled):not([readonly]),
@@ -1446,7 +1455,7 @@ header .mg-container {
 .dts-form-component input::placeholder,
 .dts-form-component textarea::placeholder,
 .dts-form-component select::placeholder {
-  color: #4A4A4A;
+  color: #767676;
 }
 .dts-form-component select {
   appearance: none;
@@ -2652,6 +2661,9 @@ header .mg-container {
 }
 .dts-table__cell-centered {
   text-align: center;
+}
+.dts-table__actions {
+  display: flex;
 }
 
 .dts-tooltip__button {

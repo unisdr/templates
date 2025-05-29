@@ -92,7 +92,11 @@
   &__actions {
     display: grid;
     gap: $dts-spacing-16;
-    margin: $dts-spacing-64 0 $dts-spacing-16;
+    margin: $dts-spacing-16 0;
+
+    &--bottom {
+      margin-top: $dts-spacing-64;
+    }
   }
 }
 
@@ -231,6 +235,7 @@
     border-radius: 6px;
     padding: $dts-spacing-4 $dts-spacing-8;
     @extend .dts-body-text-small;
+    line-height: 1.7 !important;
 
     &:hover:not(:disabled):not([readonly]) {
       border-color: $dts-undrr-blue-brand;
@@ -277,7 +282,7 @@
     }
 
     &::placeholder {
-      color: $dts-coal-500;
+      color: $dts-grey-350;
     }
   }
 

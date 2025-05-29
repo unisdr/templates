@@ -25,11 +25,16 @@
 
         <form class="dts-form">
           <div class="dts-form__header">
-            <a href="#" class="mg-button mg-button--small mg-button-system">Back</a>
+            <a href="#" class="mg-button mg-button--small mg-button-system">
+              <svg aria-hidden="true" focusable="false" role="img">
+                <use href="assets/icons/arrow-left.svg#arrow-left"></use>
+              </svg>
+              <span>Back</span>
+            </a>
           </div>
 
           <div class="dts-element-summary">
-            <h2 class="dts-element-summary__title"><span>Juneau Inundación Costera January 12 21</span><span>Juneau Coastal Flood Crisis</span></h2>
+            <h2 class="dts-element-summary__title"><span>Event ID ########</span><span>subtitle (if available)</span></h2>
             <div class="dts-element-summary__status">
               <span class="dts-status dts-status--draft" aria-hidden="true"></span>
               <span>Draft</span>
@@ -37,12 +42,16 @@
             <div class="dts-element-summary__metadata">
               <dl class="dts-metadata">
                 <div class="dts-metadata__item">
-                  <dt>Event added to system:</dt>
+                  <dt>Recipient:</dt>
+                  <dd>Firstname Lastname (email here)</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Created:</dt>
                   <dd>12-01-2021 T00:00:00.001</dd>
                 </div>
                 <div class="dts-metadata__item">
-                  <dt>Added by:</dt>
-                  <dd>Firstname Lastname, Org Name</dd>
+                  <dt>Created by:</dt>
+                  <dd>Firstname Lastname, Depart or Org name</dd>
                 </div>
               </dl>
               <dl class="dts-metadata dts-metadata--highlight">
@@ -136,10 +145,10 @@
                 <div>A [Role] is able to... Details here... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
               </div>
             </div>
-            <div class="dts-form__actions">
-              <button type="button" class="mg-button mg-button-primary">Save</button>
-              <a href="#" class="mg-button mg-button-outline">Discard</a>
-            </div>
+          </div>
+          <div class="dts-form__actions dts-form__actions--bottom">
+            <button type="button" class="mg-button mg-button-primary">Save</button>
+            <a href="#" class="mg-button mg-button-outline">Discard</a>
           </div>
         </form>
 
