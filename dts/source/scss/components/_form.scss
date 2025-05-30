@@ -235,7 +235,10 @@
     border-radius: 6px;
     padding: $dts-spacing-4 $dts-spacing-8;
     @extend .dts-body-text-small;
-    line-height: 1.7 !important;
+
+    &:not([type="date"]):not([type="time"]) {
+      line-height: 1.7 !important;
+    }
 
     &:hover:not(:disabled):not([readonly]) {
       border-color: $dts-undrr-blue-brand;

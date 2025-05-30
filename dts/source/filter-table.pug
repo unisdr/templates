@@ -83,12 +83,12 @@
                 <th>Role</th>
                 <th>Location</th>
                 <th>Modified</th>
-                <th>Edit</th>
+                <th class="dts-table__cell-centered">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--activated" aria-labelledby="tooltip10"></button>
                   <div id="tooltip10" class="dts-tooltip--status" role="tooltip">
                     <span>Account activated</span>
@@ -100,16 +100,21 @@
                 <td>Admin</td>
                 <td>North Thailand, Chaing Mai</td>
                 <td>31-10-2026</td>
-                <td>
+                <td class="dts-table__actions">
                   <button type="button" class="mg-button mg-button-table" aria-label="Edit">
                     <svg aria-hidden="true" focusable="false" role="img">
                       <use href="assets/icons/edit.svg#edit"></use>
                     </svg>
                   </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
+                    </svg>
+                  </button>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--pending" aria-labelledby="tooltip20"></button>
                   <div id="tooltip20" class="dts-tooltip--status" role="tooltip">
                     <span>Account activation pending</span>
@@ -121,10 +126,15 @@
                 <td>Role</td>
                 <td>Level, sub-level</td>
                 <td>31-10-2023</td>
-                <td>
+                <td class="dts-table__actions">
                   <button type="button" class="mg-button mg-button-table" aria-label="Edit">
                     <svg aria-hidden="true" focusable="false" role="img">
                       <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
                     </svg>
                   </button>
                 </td>
@@ -208,10 +218,11 @@
               <span class="dts-status dts-status--published" aria-labelledby="legend4"></span>
               <span id="legend4">Published to [instance]</span>
             </div>
-            <div class="dts-legend__item">
-              <span class="dts-status dts-status--rejected" aria-labelledby="legend6"></span>
-              <span id="legend6">Rejected</span>
-            </div>
+            //
+              <div class="dts-legend__item">
+                <span class="dts-status dts-status--rejected" aria-labelledby="legend6"></span>
+                <span id="legend6">Rejected</span>
+              </div>
           </div>
           <table class="dts-table">
             <caption class="mg-u-sr-only">summary of the table's content</caption>
@@ -227,13 +238,13 @@
                 <th>Unit Cost</th>
                 <th>Baseline Data Source</th>
                 <th>Unit Cost last edited</th>
-                <th>Edit</th>
+                <th class="dts-table__cell-centered">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>#######</td>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--draft" aria-labelledby="tooltip1"></button>
                   <div id="tooltip1" class="dts-tooltip--status" role="tooltip">
                     <span>Draft</span>
@@ -266,7 +277,7 @@
               </tr>
               <tr>
                 <td>#######</td>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--wait-info" aria-labelledby="tooltip2"></button>
                   <div id="tooltip2" class="dts-tooltip--status" role="tooltip">
                     <span>Waiting for more information</span>
@@ -299,7 +310,7 @@
               </tr>
               <tr>
                 <td>#######</td>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--wait-valid" aria-labelledby="tooltip3"></button>
                   <div id="tooltip3" class="dts-tooltip--status" role="tooltip">
                     <span>Waiting for validation</span>
@@ -332,7 +343,7 @@
               </tr>
               <tr>
                 <td>#######</td>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--published" aria-labelledby="tooltip4"></button>
                   <div id="tooltip4" class="dts-tooltip--status" role="tooltip">
                     <span>Published</span>
@@ -365,7 +376,7 @@
               </tr>
               <tr>
                 <td>#######</td>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--undrr" aria-labelledby="tooltip5"></button>
                   <div id="tooltip5" class="dts-tooltip--status" role="tooltip">
                     <span>Published to UNDRR</span>
@@ -398,7 +409,7 @@
               </tr>
               <tr>
                 <td>#######</td>
-                <td>
+                <td class="dts-table__cell-centered">
                   <button type="button" class="dts-tooltip__button dts-status dts-status--rejected" aria-labelledby="tooltip6"></button>
                   <div id="tooltip6" class="dts-tooltip--status" role="tooltip">
                     <span>Rejected</span>

@@ -15,13 +15,10 @@
     border-bottom: 1px solid $dts-coal-100;
     height: 5.4rem;
     padding: $dts-spacing-8;
-    // vertical-align: top;
 
-    // &:hover {
-    //   @include devicebreak(large) {
-    //     background-color: $dts-coal-200;
-    //   }
-    // }
+    &.dts-table__cell-centered {
+      text-align: center;
+    }
   }
 
   th {
@@ -45,11 +42,8 @@
     }
   }
 
-  &__cell-centered {
-    text-align: center;
-  }
-
   &__actions {
     display: flex;
+    justify-content: center;
   }
 }
