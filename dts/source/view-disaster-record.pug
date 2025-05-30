@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>DTS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style-dts.css">
+</head>
+
+<body>
+  <div class="dts-page-container">
+
+    include includes/_header.html
+
+    <main class="dts-main-container">
+
+      <div class="dts-page-header">
+        <header class="dts-page-title">
+          <div class="mg-container">
+            <h1 class="dts-heading-1">View disaster record</h1>
+          </div>
+        </header>
+        <div class="mg-container">
+          <nav class="dts-sub-navigation">
+            <div class="dts-sub-navigation__container">
+              <ul>
+                <li>
+                  <a href="">Disaster event</a>
+                </li>
+                <li>
+                  <a href="">Hazardous event</a>
+                </li>
+                <li class="dts-sub-navigation__item--current">
+                  <a href="">Disaster records</a>
+                </li>
+                <li>
+                  <a href="">Baseline data</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="mg-container">
+
+        <form class="dts-form">
+
+          <div class="dts-element-summary">
+            <h2 class="dts-element-summary__title"><span>Record ID ########</span></h2>
+            <div class="dts-element-summary__status">
+              <span class="dts-status dts-status--wait-info" aria-hidden="true"></span>
+              <span>Waiting for approval</span>
+            </div>
+            <div class="dts-element-summary__metadata">
+              <dl class="dts-metadata">
+                <div class="dts-metadata__item">
+                  <dt>Recipient:</dt>
+                  <dd>Firstname Lastname (email here)</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Created:</dt>
+                  <dd>12-01-2021 T00:00:00.001</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Created by:</dt>
+                  <dd>Firstname Lastname, Depart or Org name</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="dts-form__actions">
+              <button type="submit" class="mg-button mg-button--small mg-button-primary">Edit record</button>
+              <button type="button" class="mg-button mg-button--small mg-button-outline">Manage record</button>
+            </div>
+          </div>
+
+          <div class="dts-element-summary">
+            <h2 class="dts-element-summary__title"><span>Related event: Name of related event here</span></h2>
+            <div class="dts-element-summary__metadata">
+              <dl class="dts-metadata">
+                <div class="dts-metadata__item">
+                  <dt>UUID:</dt>
+                  <dd>TY-2022-09-02-DL51</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>
+                    <span id="glideId">GLIDE</span>
+                    <button type="button" class="dts-tooltip__button" aria-labelledby="glideId" aria-describedby="tooltipGlide">
+                      <svg aria-hidden="true" focusable="false" role="img">
+                        <use href="assets/icons/information_outline.svg#information"></use>
+                      </svg>
+                    </button>:
+                    <div id="tooltipGlide" role="tooltip">
+                      <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                      <div class="dts-tooltip__arrow"></div>
+                    </div>
+                  </dt>
+                  <dd>2022-5555555</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>
+                    <span id="nationalId">National #</span>
+                    <button type="button" class="dts-tooltip__button" aria-labelledby="nationalId" aria-describedby="tooltipNational">
+                      <svg aria-hidden="true" focusable="false" role="img">
+                        <use href="assets/icons/information_outline.svg#information"></use>
+                      </svg>
+                    </button>:
+                    <div id="tooltipNational" role="tooltip">
+                      <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</span>
+                      <div class="dts-tooltip__arrow"></div>
+                    </div>
+                  </dt>
+                  <dd>########</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Date:</dt>
+                  <dd>01-09-2022 to 25-09-2022</dd>
+                </div>
+                <div class="dts-metadata__item">
+                  <dt>Data last updated:</dt>
+                  <dd>28-09-2022 T00:00:00.000</dd>
+                </div>
+              </dl>
+              <div>
+                <dl class="dts-metadata dts-metadata--highlight">
+                  <div class="dts-metadata__item">
+                    <dt>Caused in part by:</dt>
+                    <dd><a href="#">Parent event name</a></dd>
+                  </div>
+                  <div class="dts-metadata__item">
+                    <dt>Contributed to:</dt>
+                    <dd><a href="#">Child event name</a></dd>
+                  </div>
+                </dl>
+                <dl class="dts-metadata">
+                  <div class="dts-metadata__item dts-metadata__item--end">
+                    <dt>Affiliated records:</dt>
+                    <dd><span>7</span><a href="#">View records</a></dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="dts-form__actions">
+              <button type="button" class="mg-button mg-button--small mg-button-system">View record notes</button>
+              <button type="button" class="mg-button mg-button--small mg-button-system">More event details</button>
+            </div>
+          </div>
+
+        </form>
+
+        <section class="dts-page-section">
+          <h2 class="dts-heading-2">Effects across the country</h2>
+          <div class="dts-placeholder" style="height: 270px;">
+            <span>Map placeholder</span>
+          </div>
+        </section>
+
+        <section class="dts-page-section">
+          <h2 class="dts-heading-2">Effect details</h2>
+          <p>What to do and what not to do.</p>
+          <h3 class="dts-heading-3">Human direct effects</h3>
+          <table class="dts-table">
+            <caption class="mg-u-sr-only">summary of the table's content</caption>
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th class="dts-table__filter dts-table__filter--active">Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="dts-page-section">
+          <h2 class="dts-heading-2">Record ######## sector effects</h2>
+          <p>Here’s an explanation.</p>
+        
+          <div class="mg-grid mg-grid__col-3">
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId03">Damage</span>
+              </h3>
+              <div class="dts-placeholder" style="height: 270px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId03">Loss</span>
+              </h3>
+              <div class="dts-placeholder" style="height: 270px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div class="dts-data-box">
+              <h3 class="dts-body-label">
+                <span id="elementId03">Recovery need</span>
+              </h3>
+              <div class="dts-placeholder" style="height: 270px;">
+                <span>Placeholder</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dts-page-section">
+          <h3 class="dts-heading-3">Damages</h3>
+          <table class="dts-table">
+            <caption class="mg-u-sr-only">summary of the table's content</caption>
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th class="dts-table__filter dts-table__filter--active">Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="dts-form__actions dts-form__actions--standalone">
+            <button type="button" class="mg-button mg-button--small mg-button-system">Media attachments (2)</button>
+          </div>
+        </section>
+
+        <section class="dts-page-section">
+          <h3 class="dts-heading-3">Losses</h3>
+          <table class="dts-table">
+            <caption class="mg-u-sr-only">summary of the table's content</caption>
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th class="dts-table__filter dts-table__filter--active">Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="dts-form__actions dts-form__actions--standalone">
+            <button type="button" class="mg-button mg-button--small mg-button-system">Media attachments (2)</button>
+          </div>
+        </section>
+
+        <section class="dts-page-section">
+          <h3 class="dts-heading-3">Disruptions</h3>
+          <table class="dts-table">
+            <caption class="mg-u-sr-only">summary of the table's content</caption>
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th class="dts-table__filter dts-table__filter--active">Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+              <tr>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+                <td>Cell data</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="dts-form__actions dts-form__actions--standalone">
+            <button type="button" class="mg-button mg-button--small mg-button-system">Media attachments (2)</button>
+          </div>
+        </section>
+
+        <section class="dts-page-section">
+          <h3 class="dts-heading-3">Records related to the same event</h3>
+          <table class="dts-table">
+            <caption class="mg-u-sr-only">summary of the table's content</caption>
+            <thead>
+              <tr>
+                <th class="dts-table__filter dts-table__filter--active">ID</th>
+                <th>Status</th>
+                <th>Action required</th>
+                <th>Effect or asset name</th>
+                <th>Unit of measurement</th>
+                <th>Unit Cost</th>
+                <th>Baseline Data Source</th>
+                <th>Unit Cost last edited</th>
+                <th class="dts-table__cell-centered">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#######</td>
+                <td class="dts-table__cell-centered">
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--draft" aria-labelledby="tooltip1"></button>
+                  <div id="tooltip1" class="dts-tooltip--status" role="tooltip">
+                    <span>Draft</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>placeholder text commonly used in the graphic, print, and publishing industries</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Edited system default</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td class="dts-table__actions">
+                  <button type="button" class="mg-button mg-button-table" aria-label="Edit">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="View">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td class="dts-table__cell-centered">
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--wait-info" aria-labelledby="tooltip2"></button>
+                  <div id="tooltip2" class="dts-tooltip--status" role="tooltip">
+                    <span>Waiting for more information</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td class="dts-table__actions">
+                  <button type="button" class="mg-button mg-button-table" aria-label="Edit">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="View">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td class="dts-table__cell-centered">
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--wait-valid" aria-labelledby="tooltip3"></button>
+                  <div id="tooltip3" class="dts-tooltip--status" role="tooltip">
+                    <span>Waiting for validation</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td class="dts-table__actions">
+                  <button type="button" class="mg-button mg-button-table" aria-label="Edit">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="View">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td class="dts-table__cell-centered">
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--published" aria-labelledby="tooltip4"></button>
+                  <div id="tooltip4" class="dts-tooltip--status" role="tooltip">
+                    <span>Published</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td class="dts-table__actions">
+                  <button type="button" class="mg-button mg-button-table" aria-label="Edit">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="View">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td class="dts-table__cell-centered">
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--undrr" aria-labelledby="tooltip5"></button>
+                  <div id="tooltip5" class="dts-tooltip--status" role="tooltip">
+                    <span>Published to UNDRR</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td class="dts-table__actions">
+                  <button type="button" class="mg-button mg-button-table" aria-label="Edit">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="View">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#######</td>
+                <td class="dts-table__cell-centered">
+                  <button type="button" class="dts-tooltip__button dts-status dts-status--rejected" aria-labelledby="tooltip6"></button>
+                  <div id="tooltip6" class="dts-tooltip--status" role="tooltip">
+                    <span>Rejected</span>
+                    <div class="dts-tooltip__arrow"></div>
+                  </div>
+                </td>
+                <td>#######</td>
+                <td>Name of effect</td>
+                <td>Unit type here</td>
+                <td>$984,300</td>
+                <td>Added manually</td>
+                <td><time datetime="22-10-2024">October 13, 2025</time></td>
+                <td class="dts-table__actions">
+                  <button type="button" class="mg-button mg-button-table" aria-label="Edit">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/edit.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="View">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/eye-show-password.svg#eye-show"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="mg-button mg-button-table" aria-label="Delete">
+                    <svg aria-hidden="true" focusable="false" role="img">
+                      <use href="assets/icons/trash-alt.svg#delete"></use>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+
+    </main>
+
+    include includes/_footer.html
+
+  </div>
+
+  include includes/_scripts.html
+
+</body>
+
+</html>

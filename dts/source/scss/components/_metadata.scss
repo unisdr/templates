@@ -7,11 +7,16 @@
   &--highlight {
     background-color: $dts-coal-100;
     padding: $dts-spacing-16;
+    align-self: end;
   }
 
   &__item {
     display: flex;
     gap: $dts-spacing-8;
+
+    &--end {
+      justify-content: end
+    }
   }
 
   dt {

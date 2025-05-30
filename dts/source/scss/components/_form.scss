@@ -97,6 +97,12 @@
     &--bottom {
       margin-top: $dts-spacing-64;
     }
+
+    &--standalone {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+    }
   }
 }
 
